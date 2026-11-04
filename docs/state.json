@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-04T06:06:04+00:00",
- "updated_local": "Wed 4 Nov 5:06 PM",
+ "updated_utc": "2026-11-04T06:54:26+00:00",
+ "updated_local": "Wed 4 Nov 5:54 PM",
  "timezone": "Sydney",
  "mode": "PAPER",
  "paused": false,
@@ -13,8 +13,8 @@
  },
  "limits": {
   "max_loss_per_trade_usd": 1.0,
-  "max_daily_loss_usd": 3.0,
-  "max_trades_per_day": 3,
+  "max_daily_loss_usd": 5.0,
+  "max_trades_per_day": 10,
   "min_reward_risk": 1.5,
   "no_entries_before": "09:45",
   "no_entries_after": "15:30",
@@ -24,6 +24,65 @@
   "trades": 0,
   "risk_used": 0
  },
+ "goals": {
+  "day_pl": 0.0,
+  "week_pl": 0.0,
+  "daily_goal": 1.0,
+  "weekly_goal": 4.0,
+  "day_hit": false,
+  "week_hit": false
+ },
+ "equity_history": [
+  {
+   "t": "2026-11-04T06:54:26+00:00",
+   "eq": 50.0
+  }
+ ],
+ "stats": {
+  "trades": 0,
+  "wins": 0,
+  "losses": 0,
+  "win_rate": null,
+  "avg_win": null,
+  "avg_loss": null,
+  "best": null,
+  "worst": null,
+  "auto": 0,
+  "ideas": 0,
+  "passed": 0
+ },
+ "charts": {},
+ "focus": [
+  {
+   "symbol": "QQQ"
+  },
+  {
+   "symbol": "SPY"
+  },
+  {
+   "symbol": "TSLA"
+  },
+  {
+   "symbol": "NVDA"
+  },
+  {
+   "symbol": "AAPL"
+  }
+ ],
+ "market_open": false,
+ "next_checkin_utc": "2026-11-04T12:00:00+00:00",
+ "settings": {
+  "auto": "ON for high and medium confidence",
+  "target": "2R",
+  "candidates": 30,
+  "always_watch": [
+   "QQQ",
+   "SPY",
+   "TSLA",
+   "NVDA",
+   "AAPL"
+  ]
+ },
  "positions": [],
  "bots": [
   {
@@ -32,7 +91,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-04T06:06:04+00:00"
+   "t": "2026-11-04T06:54:26+00:00"
   },
   {
    "id": "scanner",

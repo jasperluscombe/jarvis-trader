@@ -1220,6 +1220,16 @@ class Jarvis:
             self.st["charts"] = {"date": session, "updated": self.now_utc.isoformat(timespec="seconds"),
                                  "symbols": charts}
 
+    def next_checkin(self):
+        """The next slot of the GitHub schedule: every 5 min, 12:00-21:55 UTC, Monday-Friday (UTC)."""
+        t = self.now_utc.replace(second=0, microsecond=0)
+        t += dt.timedelta(minutes=5 - t.minute % 5)
+        for _ in range(8 * 24 * 12):
+            if t.weekday() < 5 and 12 <= t.hour <= 21:
+                return t
+            t += dt.timedelta(minutes=5)
+        return t
+
     def stats(self):
         done = [t for t in self.st["trades"] if t.get("result") is not None]
         wins = [t["result"] for t in done if t["result"] > 0]
@@ -1268,7 +1278,7 @@ class Jarvis:
             "focus": [dict({"symbol": s}, **(self.st.get("watch", {}).get(s) or {}))
                       for s in (self.settings.get("always_watch") or [])],
             "market_open": bool(self.cal) and self.cal[0] <= self.ny.time() < self.cal[1],
-            "next_checkin_utc": (self.now_utc + dt.timedelta(minutes=5)).isoformat(timespec="seconds"),
+            "next_checkin_utc": self.next_checkin().isoformat(timespec="seconds"),
             "settings": {"auto": self.auto_label(), "target": self.settings.get("target"),
                          "candidates": self.settings.get("candidates"), "always_watch": self.settings.get("always_watch")},
             "positions": [{"symbol": p["symbol"], "qty": float(p["qty"]), "value": float(p["market_value"]),

@@ -426,8 +426,13 @@ function tick(){
   else if(next){$("countdown").textContent=fmt(next.o-now);$("nextopen").textContent="opens "+next.s.open_local+" your time";}
   else{$("countdown").textContent="—";$("nextopen").textContent="";}
   if(state.next_checkin_utc){
-    const ms=new Date(state.next_checkin_utc).getTime()-now;
-    $("updated").textContent="last check-in "+ago(state.updated_utc)+(state.market_open||ms>-600000?(ms>0?" · next in ~"+Math.ceil(ms/60000)+" min":" · next any moment"):"")+" · "+state.timezone;
+    const nxt=new Date(state.next_checkin_utc), ms=nxt.getTime()-now;
+    let when;
+    if(ms>90*60000) when=" · next check-in "+nxt.toLocaleString([], {weekday:"short",hour:"numeric",minute:"2-digit"});
+    else if(ms>0) when=" · next in ~"+Math.ceil(ms/60000)+" min";
+    else if(ms>-15*60000) when=" · next any moment";
+    else when=" · running late (GitHub can lag)";
+    $("updated").textContent="last check-in "+ago(state.updated_utc)+when+" · "+state.timezone;
   }
 }
 

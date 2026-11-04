@@ -26,8 +26,10 @@ Telegram commands: `yes` / `no` (latest idea), `/status`, `/pause`, `/resume`, `
 - Auto-buy works on paper only (`auto_trade_live: false` in `jarvis/settings.json`). On paper it buys
   medium and high confidence ideas (`auto_paper_min_confidence`); with real money it never buys below high,
   and only if you turn `auto_trade_live` on.
-- Every trade, auto or approved, goes through the risk check: $1 max loss a trade, $3 a day,
-  3 trades a day, reward:risk at least 1.5, a stop-loss on every order, no margin, no shorting, no options.
+- Every trade, auto or approved, goes through the risk check: $1 max loss a trade, $5 a day,
+  5 trades a day, reward:risk at least 1.5, a stop-loss on every order, no margin, no shorting, no options.
+  These are **paper practice** limits (the day-trade counter is off). Real money stays locked until
+  `live_limits_reviewed` is set to true in `jarvis/settings.json` after reviewing them.
 - A "yes" re-checks the price and the limits before anything is sent.
 - Everything is closed before the bell: nothing held overnight.
 

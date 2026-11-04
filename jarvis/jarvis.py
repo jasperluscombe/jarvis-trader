@@ -488,6 +488,8 @@ class Jarvis:
             return "👍 Skipped %s." % p["symbol"]
         if self.st["paused"]:
             return "I'm paused. Send /resume first."
+        if self.live_locked():
+            return "🔒 Real money is locked until your limits are reviewed."
         p["approved_by"] = source
         self.event("jarvis", "You said yes to %s. Re-checking the price and your limits." % p["symbol"])
         ok, msg = self.recheck_and_place(p, source="your yes")
@@ -651,9 +653,23 @@ class Jarvis:
         return "ON for %s" % ("high and medium confidence" if self.auto_floor() == "medium" else "high confidence")
 
     # ---- hunting
+    def live_locked(self):
+        """The current limits were set for paper practice. Real money stays locked until they're reviewed."""
+        if self.paper or self.settings.get("live_limits_reviewed"):
+            return False
+        if self.once("live_lock_note"):
+            self.tg.send("🔒 <b>Real-money mode is locked.</b> Your limits (5 trades a day, $5 daily loss, "
+                         "no day-trade counter) were set for paper practice. Review them and set "
+                         "<code>live_limits_reviewed</code> to true in jarvis/settings.json before I trade real money.")
+            self.event("risk", "Real money is locked until the limits are reviewed.")
+        self.bot("risk", "idle", "Real money locked: limits not reviewed yet.")
+        return True
+
     def hunt(self):
         if self.st["paused"]:
             self.bot("entry", "idle", "Paused by you.")
+            return
+        if self.live_locked():
             return
         if self.st.get("candidates_day") != self.today or not self.st["candidates"]:
             self.scan()

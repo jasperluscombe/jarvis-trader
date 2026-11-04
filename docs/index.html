@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jarvis HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b14; --bg2:#0d1424; --card:#111a2e; --line:#1f2b47; --ink:#e7ecf7; --mute:#8a97b4; --dim:#56627f;
+  --cyan:#3ee6ff; --green:#3dffa2; --red:#ff5c7a; --amber:#ffc24b; --violet:#9b8cff;
+  --glow:0 0 18px rgba(62,230,255,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif}
+body{background:radial-gradient(1200px 600px at 80% -10%,rgba(62,230,255,.08),transparent 60%),
+  radial-gradient(900px 500px at -10% 20%,rgba(155,140,255,.08),transparent 60%),var(--bg);min-height:100vh}
+.grid-bg{position:fixed;inset:0;pointer-events:none;opacity:.25;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:40px 40px;mask-image:radial-gradient(circle at 50% 0,black,transparent 75%)}
+.wrap{position:relative;max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px;letter-spacing:.5px}
+.logo .core{width:34px;height:34px;border-radius:50%;background:radial-gradient(circle,#fff 0,var(--cyan) 30%,rgba(62,230,255,.1) 70%);
+  box-shadow:var(--glow);animation:pulse 2.4s ease-in-out infinite}
+.badge{font:600 12px "JetBrains Mono",monospace;padding:5px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mute)}
+.badge.paper{color:var(--cyan);border-color:rgba(62,230,255,.4)}
+.badge.live{color:var(--red);border-color:rgba(255,92,122,.5)}
+.badge.paused{color:var(--amber);border-color:rgba(255,194,75,.5)}
+.spacer{flex:1}
+.updated{font:12px "JetBrains Mono",monospace;color:var(--dim)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.kpi{background:linear-gradient(180deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.kpi .l{font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:1px}
+.kpi .v{font:600 26px "JetBrains Mono",monospace;margin-top:6px}
+.kpi .s{font-size:12px;color:var(--mute);margin-top:4px}
+.up{color:var(--green)} .down{color:var(--red)}
+h2{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--mute);margin:26px 0 12px;font-weight:500}
+.bots{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.bot{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 10px 12px;text-align:center;position:relative;overflow:hidden}
+.bot.working{border-color:rgba(62,230,255,.45);box-shadow:inset 0 0 30px rgba(62,230,255,.06)}
+.bot .name{font-weight:700;margin-top:4px}
+.bot .role{font-size:11px;color:var(--dim);min-height:30px;margin-top:2px}
+.bot .say{font-size:12px;color:var(--ink);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:7px 8px;margin-top:8px;min-height:52px;text-align:left}
+.bot .dot{position:absolute;top:10px;right:10px;width:8px;height:8px;border-radius:50%;background:var(--dim)}
+.bot.working .dot{background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 1.2s infinite}
+svg.robot{width:64px;height:64px;display:block;margin:0 auto}
+.bot.working svg.robot{animation:bob 1.6s ease-in-out infinite}
+.bot svg .eye{animation:blink 4s infinite;transform-origin:center;transform-box:fill-box}
+.bot.working svg .ant{animation:pulse .9s infinite}
+.bot svg .mouth{transition:all .3s}
+.cols{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.feed{max-height:420px;overflow:auto}
+.ev{display:flex;gap:10px;padding:8px 2px;border-bottom:1px dashed var(--line);font-size:13px}
+.ev:last-child{border:0}
+.ev .who{font:600 11px "JetBrains Mono",monospace;color:var(--cyan);min-width:62px}
+.ev .t{font:11px "JetBrains Mono",monospace;color:var(--dim);min-width:62px}
+.idea{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;background:var(--bg2)}
+.idea .top{display:flex;align-items:center;gap:8px}
+.idea .sym{font:700 16px "JetBrains Mono",monospace}
+.pill{font:600 10px "JetBrains Mono",monospace;padding:3px 7px;border-radius:99px;text-transform:uppercase;border:1px solid var(--line);color:var(--mute)}
+.pill.high{color:var(--green);border-color:rgba(61,255,162,.4)} .pill.medium{color:var(--amber);border-color:rgba(255,194,75,.4)} .pill.low{color:var(--red);border-color:rgba(255,92,122,.4)}
+.pill.placed{color:var(--cyan);border-color:rgba(62,230,255,.4)}
+.odds{display:flex;height:8px;border-radius:99px;overflow:hidden;margin:8px 0 6px;background:#1a2440}
+.odds .g{background:var(--green)} .odds .r{background:var(--red)} .odds .n{background:#33415f}
+.idea .nums{display:flex;gap:14px;font:12px "JetBrains Mono",monospace;color:var(--mute);flex-wrap:wrap}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-weight:500;color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:6px 4px;border-bottom:1px solid var(--line)}
+td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains Mono",monospace}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:12px;min-width:150px;flex:1}
+.chip b{font-family:"JetBrains Mono",monospace;font-size:14px}
+.chip .n{color:var(--dim);font-size:11px;margin-top:4px;line-height:1.35}
+.clock{display:flex;gap:14px;flex-wrap:wrap}
+.session{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;flex:1;min-width:180px}
+.session b{font-family:"JetBrains Mono",monospace}
+.count{font:600 22px "JetBrains Mono",monospace;color:var(--cyan)}
+.empty{color:var(--dim);font-size:13px;padding:10px 2px}
+.foot{margin-top:28px;color:var(--dim);font-size:12px;line-height:1.6}
+.err{color:var(--amber);font-size:12px;margin-top:8px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+@media (max-width:980px){.bots{grid-template-columns:repeat(4,1fr)}.cols{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.bots{grid-template-columns:repeat(2,1fr)}.kpi .v{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="wrap">
+  <header>
+    <div class="logo"><div class="core"></div>JARVIS HQ</div>
+    <span id="mode" class="badge paper">PAPER</span>
+    <span id="paused" class="badge paused" hidden>PAUSED</span>
+    <span id="auto" class="badge">AUTO-BUY</span>
+    <div class="spacer"></div>
+    <div class="updated" id="updated">connecting…</div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi"><div class="l">Account</div><div class="v" id="equity">$—</div><div class="s" id="start">started at $50.00</div></div>
+    <div class="kpi"><div class="l">Today</div><div class="v" id="daypl">$—</div><div class="s" id="dayinfo">—</div></div>
+    <div class="kpi"><div class="l">Record</div><div class="v" id="record">—</div><div class="s" id="recordinfo">—</div></div>
+    <div class="kpi"><div class="l">Next bell (your time)</div><div class="v count" id="countdown">—</div><div class="s" id="nextopen">—</div></div>
+  </div>
+
+  <h2>The crew</h2>
+  <div class="bots" id="bots"></div>
+
+  <div class="cols">
+    <div>
+      <h2>Live feed</h2>
+      <div class="panel feed" id="feed"></div>
+    </div>
+    <div>
+      <h2>Trade ideas</h2>
+      <div class="panel" id="ideas"></div>
+      <h2>Open positions</h2>
+      <div class="panel" id="positions"></div>
+    </div>
+  </div>
+
+  <h2>Trades</h2>
+  <div class="panel" id="trades"></div>
+
+  <h2>Watching today</h2>
+  <div class="panel"><div class="chips" id="watch"></div></div>
+
+  <h2>Market hours in your time</h2>
+  <div class="panel"><div class="clock" id="sessions"></div></div>
+
+  <h2>Your limits</h2>
+  <div class="panel"><div class="chips" id="limits"></div></div>
+
+  <div class="err" id="err"></div>
+  <div class="foot">Jarvis checks in about every 5 minutes on US trading days. Odds come from each stock's last 60 days
+    of price data: they are estimates, not promises. Most people who day trade lose money. Not financial advice.</div>
+</div>
+
+<script>
+const COLORS={jarvis:"#3ee6ff",scanner:"#9b8cff",news:"#ffc24b",entry:"#3dffa2",oracle:"#ff7ad9",risk:"#ff5c7a",broker:"#5ca8ff"};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money=(x,sign)=>x==null?"$—":(x<0?"-":(sign&&x>0?"+":""))+"$"+Math.abs(x).toFixed(2);
+const pct=x=>x==null?"—":Math.round(x*100)+"%";
+let state=null;
+
+function robot(id,working){
+  const c=COLORS[id]||"#3ee6ff";
+  const accents={
+    jarvis:`<circle cx="32" cy="10" r="4" fill="${c}" class="ant"/><path d="M14 30 Q8 32 10 40" stroke="${c}" stroke-width="2" fill="none"/>`,
+    scanner:`<rect x="20" y="4" width="24" height="6" rx="3" fill="${c}" class="ant"/>`,
+    news:`<rect x="44" y="40" width="14" height="16" rx="2" fill="#1d2742" stroke="${c}"/><line x1="47" y1="45" x2="55" y2="45" stroke="${c}"/><line x1="47" y1="49" x2="55" y2="49" stroke="${c}"/>`,
+    entry:`<circle cx="32" cy="9" r="3" fill="${c}" class="ant"/><circle cx="50" cy="22" r="6" fill="none" stroke="${c}" stroke-width="2"/>`,
+    oracle:`<circle cx="32" cy="56" r="6" fill="${c}" opacity=".7" class="ant"/>`,
+    risk:`<path d="M26 4 L38 4 L36 11 L28 11 Z" fill="${c}" class="ant"/>`,
+    broker:`<rect x="46" y="44" width="12" height="9" rx="2" fill="${c}" class="ant"/>`
+  }[id]||"";
+  return `<svg class="robot" viewBox="0 0 64 64" aria-hidden="true">
+    <line x1="32" y1="12" x2="32" y2="18" stroke="${c}" stroke-width="2"/>
+    ${accents}
+    <rect x="14" y="18" width="36" height="28" rx="9" fill="#18233d" stroke="${c}" stroke-width="2"/>
+    <rect x="19" y="23" width="26" height="15" rx="6" fill="#0a1020"/>
+    <circle class="eye" cx="26" cy="30" r="3" fill="${c}"/>
+    <circle class="eye" cx="38" cy="30" r="3" fill="${c}"/>
+    <path class="mouth" d="${working?"M27 35 Q32 38 37 35":"M28 35 L36 35"}" stroke="${c}" stroke-width="1.6" fill="none"/>
+    <rect x="22" y="47" width="20" height="9" rx="3" fill="#18233d" stroke="${c}" stroke-width="1.5"/>
+  </svg>`;
+}
+
+function ago(iso){
+  const s=(Date.now()-new Date(iso).getTime())/1000;
+  if(s<90)return "just now"; if(s<3600)return Math.round(s/60)+" min ago";
+  if(s<86400)return Math.round(s/3600)+" h ago"; return Math.round(s/86400)+" d ago";
+}
+function localTime(iso){return new Date(iso).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})}
+
+function render(d){
+  state=d;
+  $("mode").textContent=d.mode; $("mode").className="badge "+(d.mode==="PAPER"?"paper":"live");
+  $("paused").hidden=!d.paused;
+  $("auto").textContent="AUTO-BUY "+(d.auto_trade?"ON":"OFF");
+  $("updated").textContent="last check-in "+ago(d.updated_utc)+" · "+d.updated_local+" "+d.timezone;
+  const a=d.account||{};
+  $("equity").textContent=money(a.equity);
+  const total=(a.equity||0)-(a.start||50);
+  $("start").innerHTML=`started at ${money(a.start)} · <span class="${total>=0?"up":"down"}">${money(total,true)}</span>`;
+  $("daypl").textContent=money(a.day_pl,true); $("daypl").className="v "+((a.day_pl||0)>=0?"up":"down");
+  const L=d.limits||{};
+  $("dayinfo").textContent=`${d.today.trades} of ${L.max_trades_per_day} trades · ${money(d.today.risk_used)} of ${money(L.max_daily_loss_usd)} risk used`;
+  const r=d.record||{};
+  $("record").textContent=r.trades?`${r.wins}/${r.trades}`:"0/0";
+  $("recordinfo").innerHTML=r.trades?`winners · total <span class="${r.total>=0?"up":"down"}">${money(r.total,true)}</span>`:"no finished trades yet";
+
+  $("bots").innerHTML=(d.bots||[]).map(b=>`<div class="bot ${b.status}">
+    <span class="dot"></span>${robot(b.id,b.status==="working")}
+    <div class="name" style="color:${COLORS[b.id]}">${esc(b.name)}</div>
+    <div class="role">${esc(b.role)}</div>
+    <div class="say">${esc(b.text)}</div></div>`).join("");
+
+  const ev=d.events||[];
+  $("feed").innerHTML=ev.length?ev.map(e=>`<div class="ev"><span class="t">${localTime(e.t)}</span>
+    <span class="who" style="color:${COLORS[e.bot]}">${esc(nameOf(e.bot))}</span><span>${esc(e.text)}</span></div>`).join("")
+    :`<div class="empty">Quiet so far. The crew wakes up before the US open.</div>`;
+
+  const ideas=d.proposals||[];
+  $("ideas").innerHTML=ideas.length?ideas.slice(0,6).map(p=>{
+    const g=(p.p_target||0)*100, rr=(p.p_stop||0)*100, n=Math.max(0,100-g-rr);
+    return `<div class="idea"><div class="top"><span class="sym">${esc(p.symbol)}</span>
+      <span class="pill ${esc(p.confidence)}">${esc(p.confidence)}</span><span class="pill ${p.status==="placed"?"placed":""}">${esc(p.status)}</span>
+      <span class="spacer"></span><span class="updated">${ago(p.created)}</span></div>
+      <div class="odds"><div class="g" style="width:${g}%"></div><div class="n" style="width:${n}%"></div><div class="r" style="width:${rr}%"></div></div>
+      <div class="nums"><span class="up">win ${money(p.target_profit,true)} · ${pct(p.p_target)}</span>
+      <span class="down">lose ${money(-(p.max_loss||0))} · ${pct(p.p_stop)}</span><span>avg ${money(p.expected,true)}</span></div></div>`;
+  }).join(""):`<div class="empty">No ideas yet today. Jarvis only speaks up when a chart breaks out and the odds look decent.</div>`;
+
+  const pos=d.positions||[];
+  $("positions").innerHTML=pos.length?`<table><tr><th>Stock</th><th>Shares</th><th>Value</th><th>P/L</th></tr>${
+    pos.map(p=>`<tr><td>${esc(p.symbol)}</td><td>${p.qty}</td><td>${money(p.value)}</td><td class="${p.pl>=0?"up":"down"}">${money(p.pl,true)}</td></tr>`).join("")}</table>`
+    :`<div class="empty">Nothing open. Everything is closed before each bell.</div>`;
+
+  const tr=d.trades||[];
+  $("trades").innerHTML=tr.length?`<table><tr><th>Date</th><th>Stock</th><th>Shares</th><th>Entry</th><th>Stop / Target</th><th>Why</th><th>Result</th></tr>${
+    tr.map(t=>`<tr><td>${esc(t.date)}</td><td>${esc(t.symbol)}</td><td>${t.qty}</td><td>${money(t.entry)}</td>
+      <td>${money(t.stop)} / ${money(t.target)}</td><td>${esc(t.source)}</td>
+      <td class="${t.result==null?"":(t.result>=0?"up":"down")}">${t.result==null?"open / pending":money(t.result,true)}</td></tr>`).join("")}</table>`
+    :`<div class="empty">No trades yet. When Jarvis buys (or you say yes), it shows up here.</div>`;
+
+  const w=d.watchlist||[];
+  $("watch").innerHTML=w.length?w.map(h=>`<div class="chip"><b>${esc(h.symbol)}</b> ${money(h.price)}
+    <div class="n">${esc((h.setups||[]).join(", ").replace(/_/g," "))}${h.news&&h.news[0]?"<br>📰 "+esc(h.news[0].title):""}</div></div>`).join("")
+    :`<div class="empty">The watchlist is built before each open.</div>`;
+
+  const ss=d.sessions||[];
+  $("sessions").innerHTML=ss.length?ss.map(s=>`<div class="session">US session ${esc(s.date)}<br>
+    opens <b>${esc(s.open_local)}</b><br>closes <b>${esc(s.close_local)}</b></div>`).join(""):`<div class="empty">—</div>`;
+
+  $("limits").innerHTML=[
+    ["Max loss per trade",money(L.max_loss_per_trade_usd)],["Max loss per day",money(L.max_daily_loss_usd)],
+    ["Trades per day",L.max_trades_per_day],["Min reward : risk",L.min_reward_risk+"×"],
+    ["New trades (New York)",`${L.no_entries_before}–${L.no_entries_after}`],["Out of everything by",L.flat_by+" NY"]
+  ].map(([k,v])=>`<div class="chip">${esc(k)}<br><b>${esc(v)}</b></div>`).join("");
+
+  $("err").textContent=(d.errors||[]).length?"Heads up: "+d.errors.join(" · "):"";
+  tick();
+}
+function nameOf(id){const b=(state.bots||[]).find(x=>x.id===id);return b?b.name:id}
+
+function tick(){
+  if(!state)return;
+  const now=Date.now();
+  const ss=(state.sessions||[]).map(s=>({o:new Date(s.open_utc).getTime(),c:new Date(s.close_utc).getTime(),s}));
+  const open=ss.find(x=>x.o<=now&&now<x.c);
+  const next=ss.find(x=>x.o>now);
+  const fmt=ms=>{const m=Math.floor(ms/60000),h=Math.floor(m/60);return h>0?`${h}h ${m%60}m`:`${m}m`};
+  if(open){$("countdown").textContent="OPEN · "+fmt(open.c-now);$("nextopen").textContent="closes "+open.s.close_local+" your time";}
+  else if(next){$("countdown").textContent=fmt(next.o-now);$("nextopen").textContent="opens "+next.s.open_local+" your time";}
+  else{$("countdown").textContent="—";$("nextopen").textContent="";}
+}
+
+async function load(){
+  const file=new URLSearchParams(location.search).has("dry")?"state.dryrun.json":"state.json";
+  try{
+    const r=await fetch(file+"?t="+Date.now(),{cache:"no-store"});
+    if(!r.ok)throw new Error(r.status);
+    render(await r.json());
+  }catch(e){$("updated").textContent="waiting for Jarvis's first check-in…";}
+}
+load(); setInterval(load,60000); setInterval(tick,15000);
+</script>
+</body>
+</html>

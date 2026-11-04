@@ -1,0 +1,27 @@
+{
+  "timezone": "Australia/Sydney",
+
+  "auto_trade_paper": true,
+  "auto_trade_live": false,
+
+  "auto_min_avg_r": 0.15,
+  "auto_min_p_target": 0.35,
+  "auto_min_history_trades": 8,
+  "auto_min_history_avg_r": 0.0,
+  "ask_min_avg_r": 0.0,
+  "ask_min_history_avg_r": -0.1,
+
+  "target": "2R",
+  "stop": "or-mid",
+  "replays": 5000,
+
+  "candidates": 20,
+  "min_price": 5,
+  "max_price": 40,
+  "min_volume": 1000000,
+  "setups": ["breakout_20d", "bull_flag", "reclaim_ma20", "oversold_bounce"],
+  "max_trigger_age_minutes": 15,
+
+  "approval_minutes": 20,
+  "brief_at": "08:00"
+}

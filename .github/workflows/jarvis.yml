@@ -1,0 +1,50 @@
+name: Jarvis
+
+# Every 5 minutes, Monday-Friday, 12:00-21:59 UTC. That covers the US pre-market
+# brief, the whole session and the recap in both US summer and winter time.
+# Jarvis works out New York time itself and does nothing when there's nothing to do.
+on:
+  schedule:
+    - cron: "*/5 12-21 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jarvis
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Jarvis check-in
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python jarvis/jarvis.py
+
+      - name: Save state and dashboard
+        if: always()
+        run: |
+          git config user.name "jarvis-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/jarvis.json docs/state.json trader/ || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Jarvis check-in [skip ci]"
+          for i in 1 2 3; do
+            git pull -q --rebase -X theirs && git push -q && exit 0
+            sleep 5
+          done
+          echo "could not push state" && exit 1

@@ -578,10 +578,11 @@ class Jarvis:
         """Size the planned trade and run the risk check. Returns (sizing, order, None) or (None, None, why)."""
         plan_path = os.path.join("trader", "work", "%s-plan.json" % sym)
         orders_path = os.path.join("trader", "work", "%s-orders.json" % sym)
-        if self.is_fractional(sym):
-            plan = load_json(P(plan_path))
-            if not plan:
-                return None, None, "no plan"
+        plan = load_json(P(plan_path)) or {}
+        # Part-shares only when a whole share costs more than one order may spend; otherwise whole shares,
+        # which carry their stop and target at Alpaca as a bracket.
+        too_dear = float(plan.get("entry") or 0) > float(self.cfg.get("max_order_usd") or 0)
+        if self.is_fractional(sym) and too_dear:
             sizing, order, why = self.size_fractional(plan)
             if why:
                 return None, None, why
@@ -791,7 +792,7 @@ class Jarvis:
                      money(self.goals()["weekly_goal"], sign=True),
                      money(self.goals()["week_pl"], sign=True),
                      " I stop for the day once today's goal is in." if self.settings.get("stop_when_goal_hit", True) else ""),
-                 "📈 Always watching: <b>%s</b> (part-shares)" % ", ".join(self.settings.get("always_watch") or [])
+                 "📈 Always watching: <b>%s</b> (PSQ and SH rise when the market falls)" % ", ".join(self.settings.get("always_watch") or [])
                  if self.settings.get("always_watch") else "",
                  "", "👀 <b>Watching today</b> (%d stocks):" % len(c)]
         for h in c[:8]:

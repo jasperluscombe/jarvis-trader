@@ -213,7 +213,11 @@ class Alpaca:
 class Telegram:
     def __init__(self, dry_run):
         self.token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-        self.chat = str(os.environ.get("TELEGRAM_CHAT_ID", "")).strip()
+        # Keep only the ID itself (digits and a leading minus for groups): a stray space, dot or quote pasted
+        # into the secret makes every reply look like it came from a stranger.
+        raw = str(os.environ.get("TELEGRAM_CHAT_ID", "")).strip()
+        digits = "".join(ch for ch in raw if ch.isdigit())
+        self.chat = ("-" if raw.startswith("-") else "") + digits if digits else ""
         self.dry = dry_run
         self.ok = bool(self.token and self.chat)
         self.health = {}
@@ -633,6 +637,12 @@ class Jarvis:
 
     def place(self, p, source):
         o = {k: v for k, v in p["order"].items() if k not in ("why", "plan")}
+        # The sizing tool writes the MCP tool's flat fields; Alpaca's REST API wants them nested.
+        tp, sl = o.pop("take_profit_limit_price", None), o.pop("stop_loss_stop_price", None)
+        if tp is not None:
+            o["take_profit"] = {"limit_price": str(tp)}
+        if sl is not None:
+            o["stop_loss"] = {"stop_price": str(sl)}
         o["client_order_id"] = "jarvis-%s" % p["id"]
         s = p["sizing"]
         if self.args.dry_run:

@@ -443,7 +443,7 @@ class Jarvis:
                 "I watch the US market for you (it's open %s–%s your time on trading days).\n\n"
                 "• I message you a <b>morning brief</b> before the open\n"
                 "• When a chart breaks out I send a <b>trade idea</b> with the profit if it works, the loss if it doesn't, and the odds. Tap <b>Buy</b> or <b>Skip</b>\n"
-                "• On the paper account I buy <b>high-confidence</b> ideas by myself and tell you\n"
+                "• On the paper account I buy ideas that pass your rules by myself and tell you (real money always asks first)\n"
                 "• I close everything before the bell and send a <b>recap</b>\n\n"
                 "Commands: /status /pause /resume, or just reply yes / no.\n"
                 "Note: I check in every ~5 minutes, so a tap can take a few minutes to act on."
@@ -457,7 +457,7 @@ class Jarvis:
                  "Trades today: %d of %s · risk used %s of %s" % (
                      len(self.entries_today()), self.cfg.get("max_trades_per_day"),
                      money(self.risk_used_today()), money(float(self.cfg.get("max_daily_loss_usd") or 0))),
-                 "Auto-buy on paper: %s" % ("ON" if self.settings.get("auto_trade_paper") else "OFF"),
+                 "Auto-buy: %s" % self.auto_label(),
                  "Paused: %s" % ("yes" if self.st["paused"] else "no")]
         for p in self.positions:
             lines.append("• %s %s sh, %s (%s)" % (p["symbol"], p["qty"], money(float(p["market_value"])),
@@ -611,8 +611,10 @@ class Jarvis:
                  "Breakouts usually trigger in the first 2 hours: if you want to approve trades yourself, "
                  "be awake about <b>%s–%s</b>." % (self.ny_time_local(dt.time(9, 45)), self.ny_time_local(dt.time(11, 30))),
                  "",
-                 "Mode: <b>%s</b> · auto-buy high-confidence ideas: <b>%s</b>" % (
-                     self.mode(), "ON" if self.auto_allowed() else "OFF (I'll ask you)"),
+                 "Mode: <b>%s</b> · auto-buy: <b>%s</b>" % (self.mode(), self.auto_label()),
+                 "You can sleep: I'll trade the ideas that pass your rules and tell you what I did."
+                 if self.auto_ok("medium") else
+                 "I'll ask before each trade, so ideas expire if you're asleep.",
                  "Your limits: %s max loss a trade, %s a day, %s trades." % (
                      money(float(self.cfg.get("max_loss_per_trade_usd") or 0)),
                      money(float(self.cfg.get("max_daily_loss_usd") or 0)), self.cfg.get("max_trades_per_day")),
@@ -631,6 +633,22 @@ class Jarvis:
 
     def auto_allowed(self):
         return bool(self.settings.get("auto_trade_paper")) if self.paper else bool(self.settings.get("auto_trade_live"))
+
+    def auto_floor(self):
+        """The lowest confidence Jarvis buys without asking. Real money: high only, whatever the settings say."""
+        if not self.paper:
+            return "high"
+        f = str(self.settings.get("auto_paper_min_confidence", "high")).lower()
+        return f if f in ("high", "medium") else "high"
+
+    def auto_ok(self, conf):
+        rank = {"low": 0, "medium": 1, "high": 2}
+        return self.auto_allowed() and rank.get(conf, 0) >= rank[self.auto_floor()]
+
+    def auto_label(self):
+        if not self.auto_allowed():
+            return "OFF (I'll ask you)"
+        return "ON for %s" % ("high and medium confidence" if self.auto_floor() == "medium" else "high confidence")
 
     # ---- hunting
     def hunt(self):
@@ -728,8 +746,8 @@ class Jarvis:
             p["status"] = "passed"
             self.event("jarvis", "Passed on %s: the odds are no better than a coin flip (avg %+.2fR)." % (sym, avg_r))
             return
-        if conf == "high" and self.auto_allowed():
-            ok, msg = self.place(p, "auto: high confidence")
+        if self.auto_ok(conf):
+            ok, msg = self.place(p, "auto: %s confidence" % conf)
             self.tg.send(self.idea_text(p, auto=True) + "\n\n" + msg)
             return
         p["status"] = "pending"

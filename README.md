@@ -26,8 +26,12 @@ Telegram commands: `yes` / `no` (latest idea), `/status`, `/pause`, `/resume`, `
 - Auto-buy works on paper only (`auto_trade_live: false` in `jarvis/settings.json`). On paper it buys
   medium and high confidence ideas (`auto_paper_min_confidence`); with real money it never buys below high,
   and only if you turn `auto_trade_live` on.
+- Goals: +$1 a day, +$4 a week (`daily_goal_usd` / `weekly_goal_usd`). Once a goal is reached Jarvis stops
+  opening trades (today / this week) to lock the profit in. Below the goal it keeps hunting, but never past the loss limits.
+- QQQ is always watched and bought in part-shares (about $45). Alpaca holds its stop-loss; Jarvis sells at the
+  target itself on a check-in.
 - Every trade, auto or approved, goes through the risk check: $1 max loss a trade, $5 a day,
-  5 trades a day, reward:risk at least 1.5, a stop-loss on every order, no margin, no shorting, no options.
+  10 trades a day, reward:risk at least 1.5, a stop-loss on every order, no margin, no shorting, no options.
   These are **paper practice** limits (the day-trade counter is off). Real money stays locked until
   `live_limits_reviewed` is set to true in `jarvis/settings.json` after reviewing them.
 - A "yes" re-checks the price and the limits before anything is sent.

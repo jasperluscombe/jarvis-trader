@@ -501,24 +501,81 @@ class Jarvis:
         sym = p["symbol"]
         if not self.args.now:
             run_tool("alerts.py", "quote", sym, "--write", "trader/prices.json", timeout=60)
-        plan_path = os.path.join("trader", "work", "%s-plan.json" % sym)
-        orders_path = os.path.join("trader", "work", "%s-orders.json" % sym)
-        code, sz, err = tool_json("size.py", "--plan", plan_path, "--write", orders_path, "--json", *self.extra("size.py"))
-        if not sz or (sz.get("sizing") or {}).get("refusal") or not sz.get("orders"):
-            why = ((sz or {}).get("sizing") or {}).get("refusal") or err or "sizing failed"
+        sizing, order, why = self.size_and_check(sym)
+        if why:
             p["status"] = "blocked"
             self.event("risk", "%s no longer fits your limits: %s" % (sym, why))
             return False, "🛑 Not placed: %s no longer fits your limits (%s)." % (sym, why)
-        code, chk, err = tool_json("check.py", "--orders", orders_path, "--no-write", "--json", *self.extra("check.py"))
-        res = (chk or {}).get("results") or [{}]
-        if not chk or chk.get("block") or res[0].get("verdict") != "PASS":
-            why = "; ".join(res[0].get("reasons") or res[0].get("block_reasons") or []) or err or "risk check failed"
-            p["status"] = "blocked"
-            self.event("risk", "Blocked %s: %s" % (sym, why))
-            return False, "🛑 Blocked by your limits: %s" % why
-        p["order"] = sz["orders"][0]
-        p["sizing"] = sz["sizing"]
+        p["order"], p["sizing"] = order, sizing
         return self.place(p, source)
+
+    def is_fractional(self, sym):
+        return sym in set(self.settings.get("fractional") or [])
+
+    def size_fractional(self, plan):
+        """Size a part-share buy (e.g. QQQ at ~$500 with a $50 account) to the same $ limits size.py uses."""
+        c = self.cfg
+        entry, stop, target = float(plan["entry"]), float(plan["stop"]), float(plan["target"])
+        rps = round(entry - stop, 4)
+        if rps <= 0:
+            return None, None, "the stop isn't below the entry"
+        budget = float(c.get("budget") or 0)
+        cash = float((self.account or {}).get("cash") or (load_json(self.portfolio_path(), {}) or {}).get("cash") or budget)
+        cap = min(float(c.get("max_order_usd") or budget), budget * float(c.get("max_position_pct") or 100) / 100,
+                  cash - budget * float(c.get("cash_buffer_pct") or 0) / 100)
+        by_loss = float(c.get("max_loss_per_trade_usd") or 0) / rps * entry
+        notional = int(min(cap, by_loss) * 100) / 100.0
+        if notional < float(c.get("min_order_usd") or 1):
+            return None, None, "only %s fits your limits, under the %s minimum order" % (money(notional), money(float(c.get("min_order_usd") or 1)))
+        qty = notional / entry
+        rr = (target - entry) / rps
+        if rr + 1e-9 < float(c.get("min_reward_risk") or 0):
+            return None, None, "reward:risk %.2f is under your %.2f minimum" % (rr, float(c.get("min_reward_risk")))
+        bound = "max loss" if by_loss <= cap else "cash / order cap"
+        max_loss = round(qty * rps, 2)
+        sizing = {"symbol": plan["symbol"], "entry": entry, "stop": stop, "target": target, "risk_per_share": rps,
+                  "reward_risk": round(rr, 2), "qty": round(qty, 6), "cost": notional, "max_loss": max_loss,
+                  "bound_by": bound, "fractional": True, "refusal": None}
+        order = {"symbol": plan["symbol"], "side": "buy", "notional": "%.2f" % notional, "type": "market",
+                 "time_in_force": "day",
+                 "why": "part-share %s breakout: %s, bound by your %s" % (plan["symbol"], money(notional), bound),
+                 "plan": {"entry": entry, "stop": stop, "target": target, "risk_per_share": rps, "max_loss": max_loss,
+                          "setup": plan.get("setup"), "entry_time": plan.get("entry_time"), "flat_by": plan.get("flat_by")}}
+        return sizing, order, None
+
+    def portfolio_path(self):
+        return self.args.test_portfolio or PORTFOLIO_PATH
+
+    def size_and_check(self, sym):
+        """Size the planned trade and run the risk check. Returns (sizing, order, None) or (None, None, why)."""
+        plan_path = os.path.join("trader", "work", "%s-plan.json" % sym)
+        orders_path = os.path.join("trader", "work", "%s-orders.json" % sym)
+        if self.is_fractional(sym):
+            plan = load_json(P(plan_path))
+            if not plan:
+                return None, None, "no plan"
+            sizing, order, why = self.size_fractional(plan)
+            if why:
+                return None, None, why
+            save_json(P(orders_path), [order])
+        else:
+            code, sz, err = tool_json("size.py", "--plan", plan_path, "--write", orders_path, "--json", *self.extra("size.py"))
+            sizing = (sz or {}).get("sizing") or {}
+            if not sz or sizing.get("refusal") or not sz.get("orders"):
+                return None, None, sizing.get("refusal") or (err or "sizing failed")[-160:]
+            order = sz["orders"][0]
+            sizing["qty"] = int(float(order["qty"]))
+        code, chk, err = tool_json("check.py", "--orders", orders_path, "--no-write", "--json", *self.extra("check.py"))
+        res = ((chk or {}).get("results") or [{}])[0]
+        if not chk or res.get("verdict") != "PASS":
+            return None, None, "; ".join(res.get("reasons") or []) or (err or "risk check failed")[-160:]
+        return sizing, order, None
+
+    def qty_text(self, p):
+        s = p["sizing"]
+        if s.get("fractional"):
+            return "%s of %s (≈%.4f shares)" % (money(s["cost"]), p["symbol"], s["qty"])
+        return "%d %s" % (s["qty"], p["symbol"])
 
     def place(self, p, source):
         o = {k: v for k, v in p["order"].items() if k not in ("why", "plan")}
@@ -536,21 +593,102 @@ class Jarvis:
         p["status"] = "placed"
         p["broker_id"] = res.get("id")
         self.log_order({"date": self.today, "at": self.now_utc.isoformat(timespec="seconds"),
-                        "symbol": p["symbol"], "side": "buy", "kind": "entry", "qty": o.get("qty"),
-                        "max_loss": s.get("max_loss"), "status": "placed", "broker_id": res.get("id"),
-                        "source": source, "paper": self.paper})
+                        "symbol": p["symbol"], "side": "buy", "kind": "entry", "qty": o.get("qty") or s.get("qty"),
+                        "notional": o.get("notional"), "max_loss": s.get("max_loss"), "status": "placed",
+                        "broker_id": res.get("id"), "source": source, "paper": self.paper})
         self.st["trades"].append({"date": self.today, "t": self.now_utc.isoformat(timespec="seconds"),
-                                  "symbol": p["symbol"], "qty": int(float(o["qty"])), "entry": s.get("entry"),
+                                  "symbol": p["symbol"], "qty": s.get("qty"), "entry": s.get("entry"),
                                   "stop": s.get("stop"), "target": s.get("target"), "max_loss": s.get("max_loss"),
                                   "target_profit": p.get("target_profit"), "source": source,
                                   "confidence": p.get("confidence"), "paper": self.paper, "result": None})
         self.st["trades"] = self.st["trades"][-150:]
-        msg = ("✅ <b>Bought %s %s</b> (%s, %s)\nAbout %s. Stop %s, target %s are waiting at Alpaca.\n"
+        if s.get("fractional"):
+            # Alpaca won't attach a stop/target to part-shares: put a real stop order at the broker as soon as
+            # the buy fills, and Jarvis sells at the target itself on a check-in.
+            m = {"symbol": p["symbol"], "date": self.today, "order_id": res.get("id"), "stop": s["stop"],
+                 "target": s["target"], "qty": None, "stop_order_id": None, "done": False}
+            self.st.setdefault("managed", []).append(m)
+            if not self.args.dry_run:
+                for _ in range(8):
+                    if self.place_managed_stop(m):
+                        break
+                    time.sleep(2)
+            where = ("Stop %s is at Alpaca%s; I sell at the target %s myself (I check every ~5 min, so it can "
+                     "fill a little either side)." % (money(s["stop"]), "" if m["stop_order_id"] or self.args.dry_run
+                                                     else " as soon as the buy fills", money(s["target"])))
+        else:
+            where = "Stop %s, target %s are waiting at Alpaca." % (money(s.get("stop")), money(s.get("target")))
+        msg = ("✅ <b>Bought %s</b> (%s, %s)\nAbout %s. %s\n"
                "If the target hits: <b>%s</b> · if the stop hits: <b>%s</b>"
-               % (o["qty"], p["symbol"], self.mode(), source, money(s.get("cost")), money(s.get("stop")),
-                  money(s.get("target")), money(p.get("target_profit"), sign=True), money(-(s.get("max_loss") or 0))))
-        self.event("broker", "Bought %s %s (%s)." % (o["qty"], p["symbol"], source))
+               % (self.qty_text(p), self.mode(), source, money(s.get("cost")), where,
+                  money(p.get("target_profit"), sign=True), money(-(s.get("max_loss") or 0))))
+        self.event("broker", "Bought %s (%s)." % (self.qty_text(p), source))
         return True, msg
+
+    def place_managed_stop(self, m):
+        """Once a part-share buy has filled, park a stop-loss for exactly the filled shares at Alpaca."""
+        if m.get("stop_order_id"):
+            return True
+        try:
+            o = self.alpaca.get("/v2/orders/%s" % m["order_id"])
+        except Exception as e:
+            self.errors.append(str(e))
+            return False
+        if o.get("status") in ("canceled", "expired", "rejected"):
+            m["done"] = True
+            self.event("broker", "%s buy was %s." % (m["symbol"], o.get("status")))
+            return True
+        filled = float(o.get("filled_qty") or 0)
+        if o.get("status") != "filled" or filled <= 0:
+            return False
+        m["qty"], m["fill"] = filled, float(o.get("filled_avg_price") or 0)
+        try:
+            so = self.alpaca.call("POST", "/v2/orders", {
+                "symbol": m["symbol"], "qty": ("%.9f" % filled).rstrip("0").rstrip("."), "side": "sell",
+                "type": "stop", "stop_price": "%.2f" % m["stop"], "time_in_force": "day",
+                "client_order_id": "jarvis-stop-%s" % uuid.uuid4().hex[:8]})
+            m["stop_order_id"] = so.get("id")
+            self.event("broker", "Stop-loss for %s parked at Alpaca at %s." % (m["symbol"], money(m["stop"])))
+        except Exception as e:
+            self.event("broker", "Couldn't park the %s stop at Alpaca: %s. I'll watch it myself." % (m["symbol"], e))
+            m["stop_order_id"] = "self-watch"
+        return True
+
+    def manage_open(self):
+        """Each check-in during the session: look after part-share trades (stop parked? target reached?)."""
+        held = {p["symbol"]: p for p in self.positions}
+        for m in self.st.get("managed", []):
+            if m.get("done") or m.get("date") != self.today:
+                continue
+            if not m.get("stop_order_id"):
+                self.place_managed_stop(m)
+            pos = held.get(m["symbol"])
+            if not pos:
+                if m.get("qty"):
+                    m["done"] = True  # stopped out (or closed elsewhere)
+                    self.event("broker", "%s is closed (stop or manual)." % m["symbol"])
+                continue
+            price = float(pos.get("current_price") or 0)
+            hit_target = price >= m["target"]
+            hit_self_stop = m.get("stop_order_id") == "self-watch" and price <= m["stop"]
+            if not (hit_target or hit_self_stop) or self.args.dry_run:
+                continue
+            try:
+                if m.get("stop_order_id") not in (None, "self-watch"):
+                    self.alpaca.call("DELETE", "/v2/orders/%s" % m["stop_order_id"])
+                    time.sleep(1)
+                self.alpaca.call("DELETE", "/v2/positions/%s" % urllib.parse.quote(m["symbol"]))
+                m["done"] = True
+                pl = float(pos.get("unrealized_pl") or 0)
+                self.log_order({"date": self.today, "at": self.now_utc.isoformat(timespec="seconds"),
+                                "symbol": m["symbol"], "side": "sell", "kind": "exit", "qty": pos["qty"],
+                                "status": "placed", "source": "target" if hit_target else "stop (self-watched)"})
+                self.event("broker", "%s %s at %s (%s)." % ("🎯 Target hit: sold" if hit_target else "Stop hit: sold",
+                                                          m["symbol"], money(price), money(pl, sign=True)))
+                self.tg.send("%s <b>%s</b> at about %s: <b>%s</b>" % (
+                    "🎯 Target hit! Sold" if hit_target else "🛑 Stop hit. Sold", m["symbol"], money(price), money(pl, sign=True)))
+            except Exception as e:
+                self.event("broker", "Couldn't sell %s: %s" % (m["symbol"], e))
 
     # ---- morning brief
     def scan(self):
@@ -620,6 +758,13 @@ class Jarvis:
                  "Your limits: %s max loss a trade, %s a day, %s trades." % (
                      money(float(self.cfg.get("max_loss_per_trade_usd") or 0)),
                      money(float(self.cfg.get("max_daily_loss_usd") or 0)), self.cfg.get("max_trades_per_day")),
+                 "🎯 Goals: <b>%s today</b>, <b>%s this week</b> (week so far %s).%s" % (
+                     money(float(self.settings.get("daily_goal_usd") or 0), sign=True),
+                     money(float(self.settings.get("weekly_goal_usd") or 0), sign=True),
+                     money(self.goals()["week_pl"], sign=True),
+                     " I stop for the day once today's goal is in." if self.settings.get("stop_when_goal_hit", True) else ""),
+                 "📈 Always watching: <b>%s</b> (part-shares)" % ", ".join(self.settings.get("always_watch") or [])
+                 if self.settings.get("always_watch") else "",
                  "", "👀 <b>Watching today</b> (%d stocks):" % len(c)]
         for h in c[:8]:
             n = news.get(h["symbol"], {})
@@ -653,6 +798,46 @@ class Jarvis:
         return "ON for %s" % ("high and medium confidence" if self.auto_floor() == "medium" else "high confidence")
 
     # ---- hunting
+    def goals(self):
+        """Today's and this week's profit against the goals. Sends a message the first time each is reached."""
+        a = self.account or {}
+        eq, last = float(a.get("equity") or 0), float(a.get("last_equity") or 0)
+        wk = "%d-W%02d" % self.ny.date().isocalendar()[:2]
+        w = self.st.get("week") or {}
+        if w.get("id") != wk and last:
+            w = {"id": wk, "start": last}
+            self.st["week"] = w
+        day_pl = round(eq - last, 2) if a else 0.0
+        week_pl = round(eq - float(w.get("start") or eq), 2) if a else 0.0
+        dg = float(self.settings.get("daily_goal_usd") or 0)
+        wg = float(self.settings.get("weekly_goal_usd") or 0)
+        g = {"day_pl": day_pl, "week_pl": week_pl, "daily_goal": dg, "weekly_goal": wg,
+             "day_hit": bool(dg) and day_pl >= dg, "week_hit": bool(wg) and week_pl >= wg}
+        stop = self.settings.get("stop_when_goal_hit", True)
+        if g["day_hit"] and self.once("daily_goal"):
+            self.event("jarvis", "🎯 Daily goal reached: %s today." % money(day_pl, sign=True))
+            self.tg.send("🎯 <b>Daily goal reached!</b> %s today (goal %s).%s" % (
+                money(day_pl, sign=True), money(dg), " Locking it in: no new trades today." if stop else ""))
+        if g["week_hit"] and self.st.get("week_goal_sent") != wk:
+            self.st["week_goal_sent"] = wk
+            self.event("jarvis", "🏆 Weekly goal reached: %s this week." % money(week_pl, sign=True))
+            self.tg.send("🏆 <b>Weekly goal reached!</b> %s this week (goal %s).%s" % (
+                money(week_pl, sign=True), money(wg), " Taking the rest of the week off to protect it." if stop else ""))
+        return g
+
+    def record_equity(self):
+        a = self.account
+        if not a:
+            return
+        eq = float(a.get("equity") or 0)
+        h = self.st.setdefault("equity_history", [])
+        if h:
+            last_t = dt.datetime.fromisoformat(h[-1]["t"])
+            if abs(h[-1]["eq"] - eq) < 0.005 and (self.now_utc - last_t) < dt.timedelta(hours=6):
+                return
+        h.append({"t": self.now_utc.isoformat(timespec="seconds"), "eq": round(eq, 2)})
+        del h[:-800]
+
     def live_locked(self):
         """The current limits were set for paper practice. Real money stays locked until they're reviewed."""
         if self.paper or self.settings.get("live_limits_reviewed"):
@@ -673,6 +858,11 @@ class Jarvis:
             return
         if self.st.get("candidates_day") != self.today or not self.st["candidates"]:
             self.scan()
+        g = self.goals()
+        if self.settings.get("stop_when_goal_hit", True) and (g["day_hit"] or g["week_hit"]):
+            self.bot("entry", "idle", "%s goal reached: locking in the profit, no new trades %s." % (
+                "Weekly" if g["week_hit"] else "Daily", "until next week" if g["week_hit"] else "today"))
+            return
         max_trades = int(self.cfg.get("max_trades_per_day") or 3)
         if len(self.entries_today()) >= max_trades:
             self.bot("entry", "idle", "Done for today: %d of %d trades used." % (max_trades, max_trades))
@@ -686,7 +876,13 @@ class Jarvis:
         pending = {p["symbol"] for p in self.st["proposals"] if p["status"] == "pending"}
         os.makedirs(WORK, exist_ok=True)
         checked = triggered = 0
-        for h in self.st["candidates"]:
+        always = [{"symbol": s, "setups": ["always watched"]} for s in (self.settings.get("always_watch") or [])]
+        names = {h["symbol"] for h in always}
+        watch = self.st.setdefault("watch", {})
+        if watch.get("_day") != self.today:
+            watch.clear()
+            watch["_day"] = self.today
+        for h in always + [c for c in self.st["candidates"] if c["symbol"] not in names]:
             sym = h["symbol"]
             if sym in self.st["seen"] or sym in held or sym in pending:
                 continue
@@ -697,6 +893,9 @@ class Jarvis:
             if not e:
                 continue
             status = e.get("status")
+            watch[sym] = {"status": status, "level": e.get("level"), "last": (e.get("last") or {}).get("close"),
+                          "vs": (e.get("last") or {}).get("vs_level_pct"), "reason": e.get("reason"),
+                          "t": self.now_utc.isoformat(timespec="seconds")}
             if status == "expired":
                 self.st["seen"][sym] = "expired"
             elif status == "triggered":
@@ -735,18 +934,11 @@ class Jarvis:
         self.event("oracle", "%s: target first %s, stop first %s, neither %s (%d replays). History: %s fired, %s won, %s lost."
                    % (sym, pct(mc.get("p_target")), pct(mc.get("p_stop")), pct(mc.get("p_neither")),
                       mc.get("replays", 0), hist.get("triggered"), hist.get("target"), hist.get("stop")))
-        code, sz, err = tool_json("size.py", "--plan", plan_path, "--write", orders_path, "--json", *self.extra("size.py"))
-        sizing = (sz or {}).get("sizing") or {}
-        if not sz or sizing.get("refusal") or not sz.get("orders"):
-            self.event("risk", "Skipped %s: %s" % (sym, sizing.get("refusal") or (err or "")[-160:]))
+        sizing, order, why = self.size_and_check(sym)
+        if why:
+            self.event("risk", "Skipped %s: %s" % (sym, why))
             return
-        code, chk, err = tool_json("check.py", "--orders", orders_path, "--no-write", "--json", *self.extra("check.py"))
-        res = ((chk or {}).get("results") or [{}])[0]
-        if not chk or res.get("verdict") != "PASS":
-            why = "; ".join(res.get("reasons") or res.get("block_reasons") or []) or (err or "")[-160:]
-            self.event("risk", "Blocked %s: %s" % (sym, why))
-            return
-        qty = int(float(sz["orders"][0]["qty"]))
+        qty = sizing["qty"]
         target_profit = round(qty * (sizing["target"] - sizing["entry"]), 2)
         avg_r = mc.get("avg_R") or 0.0
         exp = round(avg_r * (sizing.get("max_loss") or 0), 2)
@@ -754,7 +946,7 @@ class Jarvis:
         p = {"id": uuid.uuid4().hex[:8], "symbol": sym, "created": self.now_utc.isoformat(timespec="seconds"),
              "expires": (self.now_utc + dt.timedelta(minutes=int(S.get("approval_minutes", 20)))).isoformat(timespec="seconds"),
              "status": "new", "plan": {k: plan.get(k) for k in ("entry", "stop", "target", "entry_time", "stop_label", "target_label", "flat_by")},
-             "sizing": sizing, "order": sz["orders"][0], "odds": mc, "history": {k: hist.get(k) for k in ("sessions", "triggered", "target", "stop", "close", "avg_R")},
+             "sizing": sizing, "order": order, "odds": mc, "history": {k: hist.get(k) for k in ("sessions", "triggered", "target", "stop", "close", "avg_R")},
              "target_profit": target_profit, "expected": exp, "confidence": conf}
         self.st["proposals"].append(p)
         self.st["proposals"] = self.st["proposals"][-60:]
@@ -784,11 +976,10 @@ class Jarvis:
 
     def idea_text(self, p, auto=False):
         s, mc, h = p["sizing"], p["odds"], p["history"]
-        qty = int(float(p["order"]["qty"]))
         exp_local = clock_str(self.local(dt.datetime.fromisoformat(p["expires"])))
         badge = {"high": "🟢 HIGH", "medium": "🟡 MEDIUM", "low": "🔴 LOW"}[p["confidence"]]
         lines = ["%s <b>%s: %s</b> (%s)" % ("🤖" if auto else "💡", "Auto-trade" if auto else "Trade idea", p["symbol"], self.mode()),
-                 "Buy <b>%d shares</b> at about %s = %s" % (qty, money(s["entry"]), money(s.get("cost"))),
+                 "Buy <b>%s</b> at about %s a share = %s" % (self.qty_text(p), money(s["entry"]), money(s.get("cost"))),
                  "🎯 Target %s → <b>%s</b> if it gets there" % (money(s["target"]), money(p["target_profit"], sign=True)),
                  "🛑 Stop %s → <b>%s</b> if it drops there (a fast drop can fill worse)" % (money(s["stop"]), money(-(s.get("max_loss") or 0))),
                  "⏱ Either way I close it by %s your time." % self.ny_time_local(hhmm(self.cfg.get("flat_by", "15:55"))),
@@ -815,6 +1006,9 @@ class Jarvis:
             self.alpaca.call("DELETE", "/v2/orders")
         except Exception as e:
             self.event("broker", "Couldn't cancel open orders: %s" % e)
+        for m in self.st.get("managed", []):
+            if m.get("date") == self.today:
+                m["done"] = True
         for pos in self.positions:
             sym = pos["symbol"]
             try:
@@ -852,7 +1046,7 @@ class Jarvis:
                  "Account: <b>%s</b> · today <b>%s</b>" % (money(eq), money(eq - last, sign=True)), ""]
         if trades:
             for t in trades:
-                lines.append("• %s %d sh (%s): %s" % (t["symbol"], t["qty"], t["source"],
+                lines.append("• %s %s sh (%s): %s" % (t["symbol"], ("%g" % round(t["qty"] or 0, 4)), t["source"],
                                                     money(t["result"], sign=True) if t["result"] is not None else "result pending"))
         else:
             lines.append("No trades today: nothing cleared your rules. That's normal, and it's a good day too.")
@@ -860,6 +1054,10 @@ class Jarvis:
         if done:
             wins = sum(1 for t in done if t["result"] > 0)
             lines.append("\nSo far: %d trades, %d winners, total %s." % (len(done), wins, money(sum(t["result"] for t in done), sign=True)))
+        g = self.goals()
+        lines.append("\n🎯 Daily goal %s: %s %s · 🏆 week %s of %s %s" % (
+            money(g["daily_goal"]), money(g["day_pl"], sign=True), "✅" if g["day_hit"] else "❌",
+            money(g["week_pl"], sign=True), money(g["weekly_goal"]), "✅" if g["week_hit"] else ""))
         nxt = [s for s in self.st.get("next_sessions", []) if s["date"] > self.today]
         if nxt:
             n = nxt[0]
@@ -884,8 +1082,12 @@ class Jarvis:
             self.st["welcomed"] = self.today
             self.tg.send(self.help_text())
         t = self.ny.time()
+        self.goals()
+        self.record_equity()
         if self.cal:
             open_t, close_t = self.cal
+            if open_t <= t < close_t:
+                self.manage_open()
             flat = min(hhmm(self.cfg.get("flat_by", "15:55")),
                        (dt.datetime.combine(self.ny.date(), close_t) - dt.timedelta(minutes=5)).time())
             start = max(hhmm(self.cfg.get("no_entries_before", "09:45")), open_t)
@@ -916,6 +1118,20 @@ class Jarvis:
         self.write_dashboard()
         save_json(self.state_path, self.st)
 
+    def stats(self):
+        done = [t for t in self.st["trades"] if t.get("result") is not None]
+        wins = [t["result"] for t in done if t["result"] > 0]
+        losses = [t["result"] for t in done if t["result"] <= 0]
+        return {"trades": len(done), "wins": len(wins), "losses": len(losses),
+                "win_rate": round(len(wins) / len(done), 3) if done else None,
+                "avg_win": round(sum(wins) / len(wins), 2) if wins else None,
+                "avg_loss": round(sum(losses) / len(losses), 2) if losses else None,
+                "best": max((t["result"] for t in done), default=None),
+                "worst": min((t["result"] for t in done), default=None),
+                "auto": sum(1 for t in self.st["trades"] if str(t.get("source", "")).startswith("auto")),
+                "ideas": len(self.st["proposals"]),
+                "passed": sum(1 for p in self.st["proposals"] if p.get("status") == "passed")}
+
     def _bot_view(self, b):
         """A bot looks busy on the dashboard only if it did something this check-in."""
         b = dict(b)
@@ -943,6 +1159,15 @@ class Jarvis:
             "limits": {k: self.cfg.get(k) for k in ("max_loss_per_trade_usd", "max_daily_loss_usd", "max_trades_per_day",
                                                      "min_reward_risk", "no_entries_before", "no_entries_after", "flat_by")},
             "today": {"trades": len(self.entries_today()), "risk_used": self.risk_used_today()},
+            "goals": self.goals(),
+            "equity_history": self.st.get("equity_history", [])[-400:],
+            "stats": self.stats(),
+            "focus": [dict({"symbol": s}, **(self.st.get("watch", {}).get(s) or {}))
+                      for s in (self.settings.get("always_watch") or [])],
+            "market_open": bool(self.cal) and self.cal[0] <= self.ny.time() < self.cal[1],
+            "next_checkin_utc": (self.now_utc + dt.timedelta(minutes=5)).isoformat(timespec="seconds"),
+            "settings": {"auto": self.auto_label(), "target": self.settings.get("target"),
+                         "candidates": self.settings.get("candidates"), "always_watch": self.settings.get("always_watch")},
             "positions": [{"symbol": p["symbol"], "qty": float(p["qty"]), "value": float(p["market_value"]),
                            "pl": float(p["unrealized_pl"]), "entry": float(p["avg_entry_price"])} for p in self.positions],
             "bots": [dict({"id": k, "name": v[0], "role": v[1]},

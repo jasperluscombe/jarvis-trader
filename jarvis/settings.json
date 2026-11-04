@@ -17,7 +17,14 @@
   "stop": "or-mid",
   "replays": 5000,
 
-  "candidates": 20,
+  "daily_goal_usd": 1.00,
+  "weekly_goal_usd": 4.00,
+  "stop_when_goal_hit": true,
+
+  "always_watch": ["QQQ"],
+  "fractional": ["QQQ"],
+
+  "candidates": 30,
   "min_price": 5,
   "max_price": 40,
   "min_volume": 1000000,

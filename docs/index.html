@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jarvis HQ</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#070b14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -80,6 +83,34 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
 .empty{color:var(--dim);font-size:13px;padding:10px 2px}
 .foot{margin-top:28px;color:var(--dim);font-size:12px;line-height:1.6}
 .err{color:var(--amber);font-size:12px;margin-top:8px}
+.badge.open{color:var(--green);border-color:rgba(61,255,162,.45)}
+.goals{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.goal{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;position:relative;overflow:hidden}
+.goal .row{display:flex;justify-content:space-between;align-items:baseline}
+.goal .big{font:600 24px "JetBrains Mono",monospace}
+.goal .of{color:var(--mute);font-size:13px}
+.bar{height:12px;border-radius:99px;background:#1a2440;margin-top:10px;overflow:hidden;position:relative}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--violet),var(--cyan));box-shadow:var(--glow);transition:width .8s}
+.goal.hit .bar i{background:linear-gradient(90deg,var(--green),#b6ffd9)}
+.goal.hit::after{content:"GOAL REACHED";position:absolute;top:12px;right:14px;font:600 10px "JetBrains Mono",monospace;color:var(--green);letter-spacing:1px}
+.goal .note{font-size:12px;color:var(--dim);margin-top:8px}
+.chartwrap{position:relative;height:220px}
+.chartwrap svg{width:100%;height:100%;display:block}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.stat .l{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
+.stat .v{font:600 18px "JetBrains Mono",monospace;margin-top:4px}
+.focus{display:flex;gap:12px;flex-wrap:wrap}
+.fcard{flex:1;min-width:240px;background:linear-gradient(135deg,rgba(155,140,255,.12),rgba(62,230,255,.06));border:1px solid rgba(155,140,255,.35);border-radius:16px;padding:14px 16px}
+.fcard .sym{font:700 22px "JetBrains Mono",monospace}
+.fcard .st{font:600 11px "JetBrains Mono",monospace;text-transform:uppercase;padding:3px 8px;border-radius:99px;border:1px solid var(--line);margin-left:8px}
+.fcard .st.triggered{color:var(--green);border-color:rgba(61,255,162,.5)} .fcard .st.waiting{color:var(--amber);border-color:rgba(255,194,75,.4)}
+.fcard .meter{height:6px;background:#1a2440;border-radius:99px;margin:12px 0 6px;position:relative}
+.fcard .meter i{position:absolute;top:-4px;width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:var(--glow);transform:translateX(-50%)}
+.fcard .meter b{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--green);left:70%}
+.pulse-line{height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);background-size:200% 100%;animation:sweep 3s linear infinite;border-radius:2px;margin:-8px 0 14px;opacity:.6}
+@keyframes sweep{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@media (max-width:980px){.stats{grid-template-columns:repeat(3,1fr)}.goals{grid-template-columns:1fr}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
@@ -95,9 +126,11 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
     <span id="mode" class="badge paper">PAPER</span>
     <span id="paused" class="badge paused" hidden>PAUSED</span>
     <span id="auto" class="badge">AUTO-BUY</span>
+    <span id="market" class="badge">MARKET CLOSED</span>
     <div class="spacer"></div>
     <div class="updated" id="updated">connecting…</div>
   </header>
+  <div class="pulse-line"></div>
 
   <div class="kpis">
     <div class="kpi"><div class="l">Account</div><div class="v" id="equity">$—</div><div class="s" id="start">started at $50.00</div></div>
@@ -106,8 +139,25 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
     <div class="kpi"><div class="l">Next bell (your time)</div><div class="v count" id="countdown">—</div><div class="s" id="nextopen">—</div></div>
   </div>
 
+  <h2>Goals</h2>
+  <div class="goals">
+    <div class="goal" id="g-day"><div class="row"><span class="of">Today</span><span class="of" id="g-day-of"></span></div>
+      <div class="big" id="g-day-v">$—</div><div class="bar"><i id="g-day-bar" style="width:0"></i></div><div class="note" id="g-day-note"></div></div>
+    <div class="goal" id="g-week"><div class="row"><span class="of">This week</span><span class="of" id="g-week-of"></span></div>
+      <div class="big" id="g-week-v">$—</div><div class="bar"><i id="g-week-bar" style="width:0"></i></div><div class="note" id="g-week-note"></div></div>
+  </div>
+
+  <h2>Account value</h2>
+  <div class="panel"><div class="chartwrap" id="chart"></div></div>
+
+  <h2>Always watching</h2>
+  <div class="focus" id="focus"></div>
+
   <h2>The crew</h2>
   <div class="bots" id="bots"></div>
+
+  <h2>Scoreboard</h2>
+  <div class="stats" id="stats"></div>
 
   <div class="cols">
     <div>
@@ -244,7 +294,65 @@ function render(d){
   ].map(([k,v])=>`<div class="chip">${esc(k)}<br><b>${esc(v)}</b></div>`).join("");
 
   $("err").textContent=(d.errors||[]).length?"Heads up: "+d.errors.join(" · "):"";
+  $("market").textContent=d.market_open?"MARKET OPEN":"MARKET CLOSED"; $("market").className="badge"+(d.market_open?" open":"");
+  renderGoals(d); renderChart(d); renderFocus(d); renderStats(d);
   tick();
+}
+
+function renderGoals(d){
+  const g=d.goals||{};
+  [["day",g.day_pl,g.daily_goal,g.day_hit,"Jarvis stops opening trades for the day once this is in."],
+   ["week",g.week_pl,g.weekly_goal,g.week_hit,"Once this is in, Jarvis takes the rest of the week off."]].forEach(([k,v,goal,hit,note])=>{
+    $("g-"+k+"-v").textContent=money(v||0,true); $("g-"+k+"-v").className="big "+((v||0)>=0?"up":"down");
+    $("g-"+k+"-of").textContent="goal "+money(goal||0,true);
+    $("g-"+k+"-bar").style.width=Math.max(0,Math.min(100,goal?100*(v||0)/goal:0))+"%";
+    $("g-"+k).className="goal"+(hit?" hit":"");
+    $("g-"+k+"-note").textContent=hit?"Reached. Profit locked in.":((v||0)<0?"Behind for now: the loss limits still apply, it won't chase.":note);
+  });
+}
+
+function renderChart(d){
+  const h=(d.equity_history||[]).map(p=>({t:new Date(p.t).getTime(),v:p.eq}));
+  const el=$("chart");
+  if(h.length<2){el.innerHTML=`<div class="empty">The line starts drawing after a few check-ins. Starting value: ${money((d.account||{}).equity)}.</div>`;return}
+  const W=1000,H=220,P=28;
+  const t0=h[0].t,t1=h[h.length-1].t||t0+1;
+  const vs=h.map(p=>p.v).concat([d.account.start||50]);
+  let lo=Math.min(...vs),hi=Math.max(...vs); if(hi-lo<1){const m=(hi+lo)/2;lo=m-.5;hi=m+.5}
+  const x=t=>P+(W-2*P)*((t-t0)/Math.max(1,t1-t0)), y=v=>H-P-(H-2*P)*((v-lo)/(hi-lo));
+  const pts=h.map(p=>`${x(p.t).toFixed(1)},${y(p.v).toFixed(1)}`).join(" ");
+  const up=h[h.length-1].v>=(d.account.start||50), col=up?"#3dffa2":"#ff5c7a";
+  const base=y(d.account.start||50);
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity=".35"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
+    <line x1="${P}" x2="${W-P}" y1="${base}" y2="${base}" stroke="#33415f" stroke-dasharray="4 6"/>
+    <text x="${W-P}" y="${base-6}" fill="#56627f" font-size="13" text-anchor="end" font-family="JetBrains Mono">start ${money(d.account.start||50)}</text>
+    <polygon points="${x(t0)},${H-P} ${pts} ${x(t1)},${H-P}" fill="url(#fill)"/>
+    <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+    <circle cx="${x(t1)}" cy="${y(h[h.length-1].v)}" r="5" fill="${col}"><animate attributeName="r" values="4;8;4" dur="1.6s" repeatCount="indefinite"/></circle>
+    <text x="${P}" y="${P-8}" fill="#8a97b4" font-size="13" font-family="JetBrains Mono">${money(hi)}</text>
+    <text x="${P}" y="${H-8}" fill="#8a97b4" font-size="13" font-family="JetBrains Mono">${money(lo)}</text>
+  </svg>`;
+}
+
+function renderFocus(d){
+  const f=d.focus||[];
+  $("focus").innerHTML=f.length?f.map(s=>{
+    const st=s.status||"not checked yet";
+    const vs=s.vs; const pos=vs==null?50:Math.max(3,Math.min(97,70+vs*20));
+    return `<div class="fcard"><div><span class="sym">${esc(s.symbol)}</span><span class="st ${esc(st)}">${esc(st)}</span></div>
+      <div class="meter"><b title="breakout level"></b><i style="left:${pos}%"></i></div>
+      <div class="nums" style="font:12px 'JetBrains Mono',monospace;color:var(--mute)">
+        ${s.last!=null?"last "+money(s.last):""}${s.level!=null?" · breakout above "+money(s.level):""}${vs!=null?" · "+(vs>=0?"+":"")+vs.toFixed(2)+"% vs level":""}</div>
+      <div class="n" style="font-size:12px;color:var(--dim);margin-top:6px">${esc(s.reason||"Checked every ~5 min during the session. Bought in part-shares (about $45 a go).")}</div></div>`;
+  }).join(""):`<div class="empty">Nothing on the always-watch list.</div>`;
+}
+
+function renderStats(d){
+  const s=d.stats||{};
+  const items=[["Win rate",s.win_rate==null?"—":Math.round(s.win_rate*100)+"%"],["Avg win",money(s.avg_win)],["Avg loss",money(s.avg_loss)],
+    ["Best",money(s.best,true)],["Worst",money(s.worst,true)],["Ideas / passed",`${s.ideas||0} / ${s.passed||0}`]];
+  $("stats").innerHTML=items.map(([l,v])=>`<div class="stat"><div class="l">${l}</div><div class="v">${esc(v)}</div></div>`).join("");
 }
 function nameOf(id){const b=(state.bots||[]).find(x=>x.id===id);return b?b.name:id}
 
@@ -258,6 +366,10 @@ function tick(){
   if(open){$("countdown").textContent="OPEN · "+fmt(open.c-now);$("nextopen").textContent="closes "+open.s.close_local+" your time";}
   else if(next){$("countdown").textContent=fmt(next.o-now);$("nextopen").textContent="opens "+next.s.open_local+" your time";}
   else{$("countdown").textContent="—";$("nextopen").textContent="";}
+  if(state.next_checkin_utc){
+    const ms=new Date(state.next_checkin_utc).getTime()-now;
+    $("updated").textContent="last check-in "+ago(state.updated_utc)+(state.market_open||ms>-600000?(ms>0?" · next in ~"+Math.ceil(ms/60000)+" min":" · next any moment"):"")+" · "+state.timezone;
+  }
 }
 
 async function load(){

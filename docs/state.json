@@ -1,0 +1,127 @@
+{
+ "updated_utc": "2026-11-04T06:06:04+00:00",
+ "updated_local": "Wed 4 Nov 5:06 PM",
+ "timezone": "Sydney",
+ "mode": "PAPER",
+ "paused": false,
+ "auto_trade": true,
+ "account": {
+  "equity": 50.0,
+  "cash": 50.0,
+  "day_pl": 0.0,
+  "start": 50.0
+ },
+ "limits": {
+  "max_loss_per_trade_usd": 1.0,
+  "max_daily_loss_usd": 3.0,
+  "max_trades_per_day": 3,
+  "min_reward_risk": 1.5,
+  "no_entries_before": "09:45",
+  "no_entries_after": "15:30",
+  "flat_by": "15:55"
+ },
+ "today": {
+  "trades": 0,
+  "risk_used": 0
+ },
+ "positions": [],
+ "bots": [
+  {
+   "id": "jarvis",
+   "name": "Jarvis",
+   "role": "Your buddy. Messages you, takes your yes.",
+   "status": "idle",
+   "text": "All good. Next check-in in about 5 minutes.",
+   "t": "2026-11-04T06:06:04+00:00"
+  },
+  {
+   "id": "scanner",
+   "name": "Scout",
+   "role": "Scans ~6,000 US stocks for setups before the open.",
+   "status": "idle",
+   "text": "Standing by."
+  },
+  {
+   "id": "news",
+   "name": "Herald",
+   "role": "Reads headlines and SEC filings for the watchlist.",
+   "status": "idle",
+   "text": "Standing by."
+  },
+  {
+   "id": "entry",
+   "name": "Spotter",
+   "role": "Watches each chart for a breakout above the opening range.",
+   "status": "idle",
+   "text": "Standing by."
+  },
+  {
+   "id": "oracle",
+   "name": "Oracle",
+   "role": "Replays the rest of the day thousands of times: the odds.",
+   "status": "idle",
+   "text": "Standing by."
+  },
+  {
+   "id": "risk",
+   "name": "Guard",
+   "role": "Sizes the trade to your $ limits and blocks anything over them.",
+   "status": "idle",
+   "text": "Standing by."
+  },
+  {
+   "id": "broker",
+   "name": "Trader",
+   "role": "Sends approved orders to Alpaca and closes by the bell.",
+   "status": "idle",
+   "text": "Standing by."
+  }
+ ],
+ "watchlist": [],
+ "proposals": [],
+ "trades": [],
+ "record": {
+  "trades": 0,
+  "wins": 0,
+  "total": 0
+ },
+ "sessions": [
+  {
+   "date": "2026-11-04",
+   "open_utc": "2026-11-04T14:30:00+00:00",
+   "close_utc": "2026-11-04T21:00:00+00:00",
+   "open_local": "Thu 5 Nov 1:30 AM",
+   "close_local": "8:00 AM"
+  },
+  {
+   "date": "2026-11-05",
+   "open_utc": "2026-11-05T14:30:00+00:00",
+   "close_utc": "2026-11-05T21:00:00+00:00",
+   "open_local": "Fri 6 Nov 1:30 AM",
+   "close_local": "8:00 AM"
+  },
+  {
+   "date": "2026-11-06",
+   "open_utc": "2026-11-06T14:30:00+00:00",
+   "close_utc": "2026-11-06T21:00:00+00:00",
+   "open_local": "Sat 7 Nov 1:30 AM",
+   "close_local": "8:00 AM"
+  },
+  {
+   "date": "2026-11-09",
+   "open_utc": "2026-11-09T14:30:00+00:00",
+   "close_utc": "2026-11-09T21:00:00+00:00",
+   "open_local": "Tue 10 Nov 1:30 AM",
+   "close_local": "8:00 AM"
+  },
+  {
+   "date": "2026-11-10",
+   "open_utc": "2026-11-10T14:30:00+00:00",
+   "close_utc": "2026-11-10T21:00:00+00:00",
+   "open_local": "Wed 11 Nov 1:30 AM",
+   "close_local": "8:00 AM"
+  }
+ ],
+ "events": [],
+ "errors": []
+}

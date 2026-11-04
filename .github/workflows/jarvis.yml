@@ -6,9 +6,12 @@ name: Jarvis
 # to start a run now and then; the concurrency group keeps it to one at a time.
 # 12:00-21:59 UTC covers the US pre-market brief, the session and the recap in
 # both US summer and winter time. Jarvis works out New York time itself.
+# Outside those hours a run does one check-in and stops, every 30 minutes, so
+# Telegram commands (/status etc.) still get an answer during the Australian day.
 on:
   schedule:
     - cron: "*/10 12-21 * * 1-5"
+    - cron: "15,45 * * * *"
   workflow_dispatch: {}
   push:
     branches: [main]

@@ -503,7 +503,8 @@ class Jarvis:
                 "• On the paper account I buy ideas that pass your rules by myself and tell you (real money always asks first)\n"
                 "• I close everything before the bell and send a <b>recap</b>\n\n"
                 "Commands: /status /pause /resume, or just reply yes / no.\n"
-                "Note: I check in every ~5 minutes, so a tap can take a few minutes to act on."
+                "Note: I check in every ~5 minutes while the market's around, every ~30 minutes otherwise, "
+                "so a reply can take a little while."
                 % (self.ny_time_local(dt.time(9, 30)), self.ny_time_local(dt.time(16, 0))))
 
     def status_text(self):
@@ -1263,11 +1264,11 @@ class Jarvis:
                                  "symbols": charts}
 
     def next_checkin(self):
-        """The next slot of the GitHub schedule: every 5 min, 12:00-21:55 UTC, Monday-Friday (UTC)."""
+        """The next check-in: every 5 min 12:00-21:55 UTC Monday-Friday, otherwise at :15 and :45."""
         t = self.now_utc.replace(second=0, microsecond=0)
         t += dt.timedelta(minutes=5 - t.minute % 5)
         for _ in range(8 * 24 * 12):
-            if t.weekday() < 5 and 12 <= t.hour <= 21:
+            if (t.weekday() < 5 and 12 <= t.hour <= 21) or t.minute in (15, 45):
                 return t
             t += dt.timedelta(minutes=5)
         return t

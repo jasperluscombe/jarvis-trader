@@ -110,7 +110,16 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
 .fcard .meter b{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--green);left:70%}
 .pulse-line{height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);background-size:200% 100%;animation:sweep 3s linear infinite;border-radius:2px;margin:-8px 0 14px;opacity:.6}
 @keyframes sweep{0%{background-position:200% 0}100%{background-position:-200% 0}}
-@media (max-width:980px){.stats{grid-template-columns:repeat(3,1fr)}.goals{grid-template-columns:1fr}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tab{font:600 12px "JetBrains Mono",monospace;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--bg2);color:var(--mute);cursor:pointer}
+.tab.on{color:var(--bg);background:var(--cyan);border-color:var(--cyan)}
+.tab .d{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-left:6px;vertical-align:middle}
+.tab .chg{margin-left:6px;font-weight:400}
+.candles{height:340px;position:relative}
+.candles svg{width:100%;height:100%;display:block}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--dim);margin-top:8px}
+.legend i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px}
+@media (max-width:980px){.stats{grid-template-columns:repeat(3,1fr)}.goals{grid-template-columns:1fr}.candles{height:260px}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
@@ -137,6 +146,17 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
     <div class="kpi"><div class="l">Today</div><div class="v" id="daypl">$—</div><div class="s" id="dayinfo">—</div></div>
     <div class="kpi"><div class="l">Record</div><div class="v" id="record">—</div><div class="s" id="recordinfo">—</div></div>
     <div class="kpi"><div class="l">Next bell (your time)</div><div class="v count" id="countdown">—</div><div class="s" id="nextopen">—</div></div>
+  </div>
+
+  <h2>Live chart <span class="updated" id="chart-upd" style="text-transform:none;letter-spacing:0"></span></h2>
+  <div class="panel">
+    <div class="tabs" id="tabs"></div>
+    <div class="candles" id="candles"></div>
+    <div class="legend">
+      <span><i style="background:#ffc24b"></i>breakout level (opening-range high)</span>
+      <span><i style="background:#3ee6ff"></i>entry</span><span><i style="background:#3dffa2"></i>target</span>
+      <span><i style="background:#ff5c7a"></i>stop</span><span>▲ buy filled</span><span>▼ sell filled</span>
+    </div>
   </div>
 
   <h2>Goals</h2>
@@ -295,7 +315,7 @@ function render(d){
 
   $("err").textContent=(d.errors||[]).length?"Heads up: "+d.errors.join(" · "):"";
   $("market").textContent=d.market_open?"MARKET OPEN":"MARKET CLOSED"; $("market").className="badge"+(d.market_open?" open":"");
-  renderGoals(d); renderChart(d); renderFocus(d); renderStats(d);
+  renderGoals(d); renderChart(d); renderFocus(d); renderStats(d); renderCandles(d);
   tick();
 }
 
@@ -346,6 +366,45 @@ function renderFocus(d){
         ${s.last!=null?"last "+money(s.last):""}${s.level!=null?" · breakout above "+money(s.level):""}${vs!=null?" · "+(vs>=0?"+":"")+vs.toFixed(2)+"% vs level":""}</div>
       <div class="n" style="font-size:12px;color:var(--dim);margin-top:6px">${esc(s.reason||"Checked every ~5 min during the session. Bought in part-shares (about $45 a go).")}</div></div>`;
   }).join(""):`<div class="empty">Nothing on the always-watch list.</div>`;
+}
+
+let chartSym=null;
+try{chartSym=localStorage.getItem("jarvis.chart")}catch(e){}
+function pickSym(s){chartSym=s;try{localStorage.setItem("jarvis.chart",s)}catch(e){};renderCandles(state)}
+
+function renderCandles(d){
+  const C=(d.charts||{}).symbols||{}, syms=Object.keys(C);
+  $("chart-upd").textContent=(d.charts||{}).date?"· session "+d.charts.date+" · updates every check-in (~5 min)":"";
+  if(!syms.length){$("tabs").innerHTML="";$("candles").innerHTML=`<div class="empty">The chart fills in once the US market opens (${(d.sessions&&d.sessions[0]&&d.sessions[0].open_local)||"next session"} your time).</div>`;return}
+  const traded=new Set((d.trades||[]).filter(t=>t.date===d.charts.date).map(t=>t.symbol));
+  if(!chartSym||!C[chartSym]) chartSym=syms.find(s=>traded.has(s))||syms[0];
+  $("tabs").innerHTML=syms.map(s=>{const b=C[s].bars,ch=b.length?(b[b.length-1][4]/b[0][1]-1)*100:0;
+    return `<span class="tab ${s===chartSym?"on":""}" onclick="pickSym('${esc(s)}')">${esc(s)}<span class="chg ${s===chartSym?"":(ch>=0?"up":"down")}">${ch>=0?"+":""}${ch.toFixed(2)}%</span>${traded.has(s)?'<span class="d" title="traded today"></span>':""}</span>`}).join("");
+  const c=C[chartSym], bars=c.bars;
+  const W=1000,H=340,PL=10,PR=64,PT=14,PB=26;
+  const lv=[];bars.forEach(b=>{lv.push(b[2],b[3])});
+  [c.or_high,c.or_low].forEach(v=>v!=null&&lv.push(v));
+  (c.plans||[]).forEach(p=>[p.entry,p.stop,p.target].forEach(v=>v!=null&&lv.push(v)));
+  (c.fills||[]).forEach(f=>lv.push(f.price));
+  let lo=Math.min(...lv),hi=Math.max(...lv);const pad=(hi-lo)*.06||1;lo-=pad;hi+=pad;
+  const n=78, bw=(W-PL-PR)/n, t0=bars[0][0];
+  const xi=i=>PL+bw*(i+.5), xt=t=>PL+bw*((t-t0)/300+.5), y=v=>PT+(H-PT-PB)*(1-(v-lo)/(hi-lo));
+  let g="";
+  for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+=`<line x1="${PL}" x2="${W-PR}" y1="${y(v)}" y2="${y(v)}" stroke="#1f2b47"/><text x="${W-PR+6}" y="${y(v)+4}" fill="#56627f" font-size="12" font-family="JetBrains Mono">${v.toFixed(2)}</text>`}
+  for(let i=0;i<bars.length;i+=12){const tl=new Date(bars[i][0]*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});g+=`<text x="${xi(i)}" y="${H-6}" fill="#56627f" font-size="11" text-anchor="${i?"middle":"start"}" font-family="JetBrains Mono">${tl}</text>`}
+  g+=`<rect x="${xi(0)-bw/2}" width="${bw*3}" y="${y(c.or_high)}" height="${Math.max(1,y(c.or_low)-y(c.or_high))}" fill="#ffc24b" opacity=".07"/>`;
+  const hl=(v,col,label,dash)=>`<line x1="${PL}" x2="${W-PR}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1.4" ${dash?'stroke-dasharray="6 5"':""}/><rect x="${W-PR+2}" y="${y(v)-9}" width="${PR-4}" height="17" rx="4" fill="${col}"/><text x="${W-PR+6}" y="${y(v)+4}" fill="#070b14" font-size="11" font-weight="700" font-family="JetBrains Mono">${label}</text>`;
+  g+=hl(c.or_high,"#ffc24b",c.or_high.toFixed(2),true);
+  bars.forEach((b,i)=>{const up=b[4]>=b[1],col=up?"#3dffa2":"#ff5c7a",x=xi(i);
+    g+=`<line x1="${x}" x2="${x}" y1="${y(b[2])}" y2="${y(b[3])}" stroke="${col}" stroke-width="1"/>`+
+       `<rect x="${x-bw*.32}" width="${bw*.64}" y="${y(Math.max(b[1],b[4]))}" height="${Math.max(1,Math.abs(y(b[1])-y(b[4])))}" fill="${col}" ${up?'fill-opacity=".85"':""}/>`});
+  (c.plans||[]).forEach(p=>{if(p.target)g+=hl(p.target,"#3dffa2","T "+p.target.toFixed(2));if(p.stop)g+=hl(p.stop,"#ff5c7a","S "+p.stop.toFixed(2));if(p.entry)g+=hl(p.entry,"#3ee6ff","E "+p.entry.toFixed(2),true)});
+  (c.fills||[]).forEach(f=>{const x=xt(new Date(f.t).getTime()/1000),yy=y(f.price),buy=f.side==="buy";
+    g+=buy?`<path d="M${x} ${yy+4} l-8 14 h16 z" fill="#3dffa2" stroke="#070b14"/>`:`<path d="M${x} ${yy-4} l-8 -14 h16 z" fill="#ff5c7a" stroke="#070b14"/>`;
+    g+=`<text x="${x}" y="${buy?yy+32:yy-22}" fill="${buy?"#3dffa2":"#ff5c7a"}" font-size="11" text-anchor="middle" font-family="JetBrains Mono">${buy?"BUY":"SELL"} ${f.price.toFixed(2)}</text>`});
+  const last=bars[bars.length-1];
+  g+=`<circle cx="${xi(bars.length-1)}" cy="${y(last[4])}" r="4" fill="#3ee6ff"><animate attributeName="r" values="3;7;3" dur="1.6s" repeatCount="indefinite"/></circle>`;
+  $("candles").innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${g}</svg>`;
 }
 
 function renderStats(d){

@@ -28,7 +28,8 @@ Telegram commands: `yes` / `no` (latest idea), `/status`, `/pause`, `/resume`, `
   and only if you turn `auto_trade_live` on.
 - Goals: +$1 a day, +$4 a week (`daily_goal_usd` / `weekly_goal_usd`). Once a goal is reached Jarvis stops
   opening trades (today / this week) to lock the profit in. Below the goal it keeps hunting, but never past the loss limits.
-- QQQ is always watched and bought in part-shares (about $45). Alpaca holds its stop-loss; Jarvis sells at the
+- QQQ (Nasdaq-100), SPY (S&P 500), TSLA, NVDA and AAPL are always watched, on top of the ~30 stocks from
+  each morning's scan, and bought in part-shares (about $45). Alpaca holds its stop-loss; Jarvis sells at the
   target itself on a check-in.
 - Every trade, auto or approved, goes through the risk check: $1 max loss a trade, $5 a day,
   10 trades a day, reward:risk at least 1.5, a stop-loss on every order, no margin, no shorting, no options.

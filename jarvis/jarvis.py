@@ -1111,12 +1111,82 @@ class Jarvis:
                 if self.once("recap"):
                     self.recap()
                 self.bot("entry", "idle", "Market closed. Back tomorrow.")
+            close_plus = (dt.datetime.combine(self.ny.date(), close_t) + dt.timedelta(minutes=15)).time()
+            if open_t <= t <= close_plus or self.st.get("charts", {}).get("date") != self.today and t > open_t:
+                self.update_charts()
         else:
             self.bot("entry", "idle", "No US market today. Resting.")
         self.expire()
         self.bot("jarvis", "idle", "All good. Next check-in in about 5 minutes.")
         self.write_dashboard()
         save_json(self.state_path, self.st)
+
+    # ---- live chart data
+    def fetch_bars(self, sym):
+        """Today's 5-minute bars from Yahoo's free chart endpoint: [[epoch, open, high, low, close], ...]."""
+        url = "https://query2.finance.yahoo.com/v8/finance/chart/%s?range=1d&interval=5m" % urllib.parse.quote(sym)
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                res = json.loads(r.read())["chart"]["result"][0]
+        except Exception as e:
+            print("bars failed for", sym, e, file=sys.stderr)
+            return []
+        q = res["indicators"]["quote"][0]
+        out = []
+        for i, t in enumerate(res.get("timestamp") or []):
+            o, h, l, c = (q[k][i] for k in ("open", "high", "low", "close"))
+            if None in (o, h, l, c):
+                continue
+            out.append([int(t), round(o, 2), round(h, 2), round(l, 2), round(c, 2)])
+        return out
+
+    def fills_today(self):
+        """Every filled buy and sell today at Alpaca (bracket legs included): the dots on the chart."""
+        if not self.alpaca.ok:
+            return []
+        try:
+            after = ny_to_utc(dt.datetime.combine(self.ny.date(), dt.time(0, 0))).isoformat().replace("+00:00", "Z")
+            orders = self.alpaca.get("/v2/orders?status=all&nested=true&limit=200&after=%s" % after) or []
+        except Exception as e:
+            self.errors.append(str(e))
+            return []
+        out = []
+        for o in orders:
+            for x in [o] + (o.get("legs") or []):
+                if x.get("filled_at") and float(x.get("filled_qty") or 0) > 0:
+                    out.append({"symbol": x["symbol"], "side": x["side"], "price": float(x["filled_avg_price"]),
+                                "qty": float(x["filled_qty"]), "t": x["filled_at"], "type": x.get("type")})
+        return out
+
+    def update_charts(self):
+        syms = list(self.settings.get("always_watch") or [])
+        for t in self.st["trades"]:
+            if t["date"] == self.today and t["symbol"] not in syms:
+                syms.insert(0, t["symbol"])
+        for p in self.positions:
+            if p["symbol"] not in syms:
+                syms.insert(0, p["symbol"])
+        syms = syms[:8]
+        fills = self.fills_today()
+        charts = {}
+        for s in syms:
+            bars = self.fetch_bars(s)
+            if not bars:
+                continue
+            first = [b for b in bars[:3]]  # 9:30, 9:35, 9:40: the 15-minute opening range
+            charts[s] = {
+                "bars": bars,
+                "or_high": max(b[2] for b in first), "or_low": min(b[3] for b in first),
+                "plans": [{k: t.get(k) for k in ("entry", "stop", "target", "t", "source")}
+                          for t in self.st["trades"] if t["date"] == self.today and t["symbol"] == s],
+                "fills": [f for f in fills if f["symbol"] == s],
+            }
+        if charts:
+            first_bar = next(iter(charts.values()))["bars"][0][0]
+            session = to_ny(dt.datetime.fromtimestamp(first_bar, UTC)).date().isoformat()
+            self.st["charts"] = {"date": session, "updated": self.now_utc.isoformat(timespec="seconds"),
+                                 "symbols": charts}
 
     def stats(self):
         done = [t for t in self.st["trades"] if t.get("result") is not None]
@@ -1162,6 +1232,7 @@ class Jarvis:
             "goals": self.goals(),
             "equity_history": self.st.get("equity_history", [])[-400:],
             "stats": self.stats(),
+            "charts": self.st.get("charts") or {},
             "focus": [dict({"symbol": s}, **(self.st.get("watch", {}).get(s) or {}))
                       for s in (self.settings.get("always_watch") or [])],
             "market_open": bool(self.cal) and self.cal[0] <= self.ny.time() < self.cal[1],

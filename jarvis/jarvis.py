@@ -216,6 +216,7 @@ class Telegram:
         self.chat = str(os.environ.get("TELEGRAM_CHAT_ID", "")).strip()
         self.dry = dry_run
         self.ok = bool(self.token and self.chat)
+        self.health = {}
 
     def api(self, method, payload):
         url = "https://api.telegram.org/bot%s/%s" % (self.token, method)
@@ -234,9 +235,21 @@ class Telegram:
         if buttons:
             payload["reply_markup"] = {"inline_keyboard": [[{"text": t, "callback_data": d} for t, d in buttons]]}
         try:
-            return self.api("sendMessage", payload).get("result", {}).get("message_id")
+            mid = self.api("sendMessage", payload).get("result", {}).get("message_id")
+            self.health["sent_ok"] = self.health.get("sent_ok", 0) + 1
+            return mid
         except Exception as e:  # never let a message failure stop trading logic
-            print("telegram send failed:", e, file=sys.stderr)
+            why = str(e)
+            if isinstance(e, urllib.error.HTTPError):
+                try:
+                    why = "HTTP %s %s" % (e.code, json.loads(e.read()).get("description", ""))
+                except Exception:
+                    why = "HTTP %s" % e.code
+            if self.token:
+                why = why.replace(self.token, "<token>")
+            self.health["send_failed"] = self.health.get("send_failed", 0) + 1
+            self.health["last_error"] = why[:200]
+            print("telegram send failed:", why, file=sys.stderr)
             return None
 
     def edit_buttons_off(self, message_id, note):
@@ -258,6 +271,7 @@ class Telegram:
                                           "allowed_updates": ["message", "callback_query"]})
             return res.get("result", [])
         except Exception as e:
+            self.health["updates_error"] = str(e).replace(self.token, "<token>")[:200]
             print("telegram getUpdates failed:", e, file=sys.stderr)
             return []
 
@@ -441,8 +455,13 @@ class Jarvis:
                 self.tg.answer(cq["id"], reply)
             elif "message" in u:
                 m = u["message"]
-                if str(m.get("chat", {}).get("id")) != self.tg.chat:
+                cid = str(m.get("chat", {}).get("id"))
+                if cid != self.tg.chat:
+                    # Masked, the repo is public: enough to tell the IDs apart, not to use them.
+                    mask = lambda s: "%s…%s (%d digits)" % (s[:2], s[-2:], len(s))
+                    self.tg.health["ignored_other_chat"] = "message from %s, secret is %s" % (mask(cid), mask(self.tg.chat))
                     continue
+                self.tg.health["handled"] = self.tg.health.get("handled", 0) + 1
                 self.command(str(m.get("text", "")).strip())
 
     def command(self, text):
@@ -1157,6 +1176,12 @@ class Jarvis:
             self.bot("entry", "idle", "No US market today. Resting.")
         self.expire()
         self.bot("jarvis", "idle", "All good. Next check-in in about 5 minutes.")
+        if self.tg.health:
+            h = dict(self.tg.health, at=self.now_utc.isoformat(timespec="seconds"))
+            self.st["telegram_health"] = h
+            log = self.st.setdefault("telegram_log", [])
+            log.append(h)
+            del log[:-20]
         self.write_dashboard()
         save_json(self.state_path, self.st)
 

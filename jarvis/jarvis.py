@@ -1265,7 +1265,7 @@ class Jarvis:
         dash = {
             "updated_utc": self.now_utc.isoformat(timespec="seconds"),
             "updated_local": "%s %s" % (day_str(self.local()), clock_str(self.local())),
-            "timezone": self.tz_label(), "mode": self.mode(), "paused": self.st["paused"],
+            "timezone": self.tz_label(), "tz": self.tz, "mode": self.mode(), "paused": self.st["paused"],
             "auto_trade": self.auto_allowed(),
             "account": {"equity": eq, "cash": float(a.get("cash") or 0), "day_pl": round(eq - last, 2), "start": 50.0},
             "limits": {k: self.cfg.get(k) for k in ("max_loss_per_trade_usd", "max_daily_loss_usd", "max_trades_per_day",

@@ -245,7 +245,10 @@ function ago(iso){
   if(s<90)return "just now"; if(s<3600)return Math.round(s/60)+" min ago";
   if(s<86400)return Math.round(s/3600)+" h ago"; return Math.round(s/86400)+" d ago";
 }
-function localTime(iso){return new Date(iso).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})}
+// Every time on the page is shown in Jarvis's time zone (Adelaide), whatever the device's clock says.
+function TZ(){return (state&&state.tz)||"Australia/Adelaide"}
+function fmtT(d,opts){try{return d.toLocaleString("en-AU",Object.assign({timeZone:TZ()},opts))}catch(e){return d.toLocaleString([],opts)}}
+function localTime(iso){return fmtT(new Date(iso),{hour:"numeric",minute:"2-digit"})}
 
 function render(d){
   state=d;
@@ -391,7 +394,7 @@ function renderCandles(d){
   const xi=i=>PL+bw*(i+.5), xt=t=>PL+bw*((t-t0)/300+.5), y=v=>PT+(H-PT-PB)*(1-(v-lo)/(hi-lo));
   let g="";
   for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4;g+=`<line x1="${PL}" x2="${W-PR}" y1="${y(v)}" y2="${y(v)}" stroke="#1f2b47"/><text x="${W-PR+6}" y="${y(v)+4}" fill="#56627f" font-size="12" font-family="JetBrains Mono">${v.toFixed(2)}</text>`}
-  for(let i=0;i<bars.length;i+=12){const tl=new Date(bars[i][0]*1000).toLocaleTimeString([], {hour:"numeric",minute:"2-digit"});g+=`<text x="${xi(i)}" y="${H-6}" fill="#56627f" font-size="11" text-anchor="${i?"middle":"start"}" font-family="JetBrains Mono">${tl}</text>`}
+  for(let i=0;i<bars.length;i+=12){const tl=fmtT(new Date(bars[i][0]*1000),{hour:"numeric",minute:"2-digit"});g+=`<text x="${xi(i)}" y="${H-6}" fill="#56627f" font-size="11" text-anchor="${i?"middle":"start"}" font-family="JetBrains Mono">${tl}</text>`}
   g+=`<rect x="${xi(0)-bw/2}" width="${bw*3}" y="${y(c.or_high)}" height="${Math.max(1,y(c.or_low)-y(c.or_high))}" fill="#ffc24b" opacity=".07"/>`;
   const hl=(v,col,label,dash)=>`<line x1="${PL}" x2="${W-PR}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1.4" ${dash?'stroke-dasharray="6 5"':""}/><rect x="${W-PR+2}" y="${y(v)-9}" width="${PR-4}" height="17" rx="4" fill="${col}"/><text x="${W-PR+6}" y="${y(v)+4}" fill="#070b14" font-size="11" font-weight="700" font-family="JetBrains Mono">${label}</text>`;
   g+=hl(c.or_high,"#ffc24b",c.or_high.toFixed(2),true);
@@ -428,7 +431,7 @@ function tick(){
   if(state.next_checkin_utc){
     const nxt=new Date(state.next_checkin_utc), ms=nxt.getTime()-now;
     let when;
-    if(ms>90*60000) when=" · next check-in "+nxt.toLocaleString([], {weekday:"short",hour:"numeric",minute:"2-digit"});
+    if(ms>90*60000) when=" · next check-in "+fmtT(nxt,{weekday:"short",hour:"numeric",minute:"2-digit"});
     else if(ms>0) when=" · next in ~"+Math.ceil(ms/60000)+" min";
     else if(ms>-15*60000) when=" · next any moment";
     else when=" · running late (GitHub can lag)";

@@ -889,7 +889,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-04T19:55:00+00:00"
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "scanner": {
    "status": "working",
@@ -898,8 +898,8 @@
   },
   "entry": {
    "status": "working",
-   "text": "Checked 20 charts at 2:55 PM New York: 0 breakouts.",
-   "t": "2026-11-04T19:55:00+00:00"
+   "text": "Checked 20 charts at 3:00 PM New York: 0 breakouts.",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "oracle": {
    "status": "working",
@@ -962,7 +962,7 @@
  ],
  "charts": {
   "date": "2026-11-04",
-  "updated": "2026-11-04T19:55:00+00:00",
+  "updated": "2026-11-04T20:00:01+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1422,11 +1422,18 @@
       692.9
      ],
      [
-      1793822104,
-      693.16,
-      693.16,
-      693.16,
-      693.16
+      1793822100,
+      692.96,
+      693.19,
+      692.34,
+      692.37
+     ],
+     [
+      1793822405,
+      692.6,
+      692.6,
+      692.6,
+      692.6
      ]
     ],
     "or_high": 697.63,
@@ -1892,11 +1899,18 @@
       767.59
      ],
      [
-      1793822103,
-      767.71,
-      767.71,
-      767.71,
-      767.71
+      1793822100,
+      767.6,
+      767.74,
+      767.16,
+      767.29
+     ],
+     [
+      1793822406,
+      767.39,
+      767.39,
+      767.39,
+      767.39
      ]
     ],
     "or_high": 767.78,
@@ -2362,11 +2376,18 @@
       389.61
      ],
      [
-      1793822104,
-      389.78,
-      389.78,
-      389.78,
-      389.78
+      1793822100,
+      389.61,
+      389.82,
+      388.22,
+      388.32
+     ],
+     [
+      1793822405,
+      388.44,
+      388.44,
+      388.44,
+      388.44
      ]
     ],
     "or_high": 383.07,
@@ -2832,11 +2853,18 @@
       202.69
      ],
      [
-      1793822105,
-      202.85,
-      202.85,
-      202.85,
-      202.85
+      1793822100,
+      202.69,
+      202.88,
+      202.4,
+      202.49
+     ],
+     [
+      1793822406,
+      202.58,
+      202.58,
+      202.58,
+      202.58
      ]
     ],
     "or_high": 206.6,
@@ -3299,14 +3327,21 @@
       352.74,
       352.79,
       352.29,
-      352.52
+      352.55
      ],
      [
-      1793822095,
-      352.62,
-      352.62,
-      352.62,
-      352.62
+      1793822100,
+      352.56,
+      352.61,
+      351.9,
+      352.07
+     ],
+     [
+      1793822406,
+      352.15,
+      352.15,
+      352.15,
+      352.15
      ]
     ],
     "or_high": 350.48,
@@ -3769,14 +3804,21 @@
       26.54,
       26.56,
       26.54,
-      26.55
+      26.56
      ],
      [
-      1793822094,
-      26.56,
-      26.56,
-      26.56,
-      26.56
+      1793822100,
+      26.54,
+      26.57,
+      26.54,
+      26.57
+     ],
+     [
+      1793822402,
+      26.57,
+      26.57,
+      26.57,
+      26.57
      ]
     ],
     "or_high": 26.75,
@@ -4242,11 +4284,18 @@
       32.37
      ],
      [
-      1793822103,
+      1793822100,
+      32.37,
+      32.38,
       32.35,
-      32.35,
-      32.35,
-      32.35
+      32.38
+     ],
+     [
+      1793822401,
+      32.38,
+      32.38,
+      32.38,
+      32.38
      ]
     ],
     "or_high": 32.58,
@@ -4285,10 +4334,10 @@
   "NVDA": {
    "status": "waiting",
    "level": 206.6,
-   "last": 202.69,
-   "vs": -1.89,
-   "reason": "last close $202.69 (14:50 bar), $3.91 under the range high $206.60 (-1.89%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 202.49,
+   "vs": -1.99,
+   "reason": "last close $202.49 (14:55 bar), $4.12 under the range high $206.60 (-1.99%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "AAPL": {
    "status": "triggered",
@@ -4301,58 +4350,58 @@
   "PSQ": {
    "status": "waiting",
    "level": 26.75,
-   "last": 26.53,
-   "vs": -0.8,
-   "reason": "last close $26.53 (14:45 bar), $0.22 under the range high $26.75 (-0.80%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 26.57,
+   "vs": -0.65,
+   "reason": "last close $26.57 (14:55 bar), $0.18 under the range high $26.75 (-0.65%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "SH": {
    "status": "waiting",
    "level": 32.58,
-   "last": 32.37,
-   "vs": -0.64,
-   "reason": "last close $32.37 (14:50 bar), $0.21 under the range high $32.58 (-0.64%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 32.38,
+   "vs": -0.61,
+   "reason": "last close $32.38 (14:55 bar), $0.20 under the range high $32.58 (-0.61%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "IREN": {
    "status": "waiting",
    "level": 23.69,
-   "last": 21.77,
-   "vs": -8.13,
-   "reason": "last close $21.77 (14:50 bar), $1.93 under the range high $23.69 (-8.13%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 21.73,
+   "vs": -8.3,
+   "reason": "last close $21.73 (14:55 bar), $1.97 under the range high $23.69 (-8.30%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "RIOT": {
    "status": "waiting",
    "level": 16.18,
-   "last": 15.65,
-   "vs": -3.24,
-   "reason": "last close $15.65 (14:50 bar), $0.52 under the range high $16.18 (-3.24%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 15.64,
+   "vs": -3.34,
+   "reason": "last close $15.64 (14:55 bar), $0.54 under the range high $16.18 (-3.34%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "WULF": {
    "status": "waiting",
    "level": 12.97,
-   "last": 11.81,
-   "vs": -8.91,
-   "reason": "last close $11.81 (14:50 bar), $1.16 under the range high $12.97 (-8.91%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 11.8,
+   "vs": -9.06,
+   "reason": "last close $11.80 (14:55 bar), $1.18 under the range high $12.97 (-9.06%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "CIFR": {
    "status": "waiting",
    "level": 7.34,
    "last": 6.41,
-   "vs": -12.59,
-   "reason": "last close $6.41 (14:50 bar), $0.92 under the range high $7.34 (-12.59%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "vs": -12.73,
+   "reason": "last close $6.41 (14:55 bar), $0.93 under the range high $7.34 (-12.73%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "ENPH": {
    "status": "waiting",
    "level": 34.3,
-   "last": 32.09,
-   "vs": -6.44,
-   "reason": "last close $32.09 (14:50 bar), $2.21 under the range high $34.30 (-6.44%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 32.01,
+   "vs": -6.66,
+   "reason": "last close $32.01 (14:55 bar), $2.28 under the range high $34.30 (-6.66%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "RKT": {
    "status": "triggered",
@@ -4381,10 +4430,10 @@
   "SEDG": {
    "status": "waiting",
    "level": 34.22,
-   "last": 31.15,
-   "vs": -8.97,
-   "reason": "last close $31.15 (14:45 bar), $3.07 under the range high $34.22 (-8.97%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 31.22,
+   "vs": -8.77,
+   "reason": "last close $31.22 (14:55 bar), $3.00 under the range high $34.22 (-8.77%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "CMG": {
    "status": "triggered",
@@ -4405,34 +4454,34 @@
   "CLSK": {
    "status": "waiting",
    "level": 7.55,
-   "last": 6.94,
-   "vs": -8.02,
-   "reason": "last close $6.94 (14:50 bar), $0.61 under the range high $7.55 (-8.02%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 6.93,
+   "vs": -8.16,
+   "reason": "last close $6.93 (14:55 bar), $0.62 under the range high $7.55 (-8.16%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "CORZ": {
    "status": "waiting",
    "level": 13.45,
-   "last": 12.85,
-   "vs": -4.42,
-   "reason": "last close $12.85 (14:50 bar), $0.60 under the range high $13.45 (-4.42%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 12.82,
+   "vs": -4.65,
+   "reason": "last close $12.82 (14:55 bar), $0.62 under the range high $13.45 (-4.65%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "VRDN": {
    "status": "waiting",
    "level": 29.74,
-   "last": 28.3,
-   "vs": -4.84,
-   "reason": "last close $28.30 (14:45 bar), $1.44 under the range high $29.74 (-4.84%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 28.29,
+   "vs": -4.88,
+   "reason": "last close $28.29 (14:55 bar), $1.45 under the range high $29.74 (-4.88%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "SHLS": {
    "status": "waiting",
    "level": 9.94,
-   "last": 9.02,
-   "vs": -9.16,
-   "reason": "last close $9.02 (14:50 bar), $0.91 under the range high $9.94 (-9.16%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 8.93,
+   "vs": -10.17,
+   "reason": "last close $8.93 (14:55 bar), $1.01 under the range high $9.94 (-10.17%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "DKNG": {
    "status": "triggered",
@@ -4445,10 +4494,10 @@
   "RUN": {
    "status": "waiting",
    "level": 9.9,
-   "last": 8.84,
-   "vs": -10.76,
-   "reason": "last close $8.84 (14:45 bar), $1.06 under the range high $9.90 (-10.76%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 8.86,
+   "vs": -10.51,
+   "reason": "last close $8.86 (14:55 bar), $1.04 under the range high $9.90 (-10.51%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "JD": {
    "status": "triggered",
@@ -4493,10 +4542,10 @@
   "INIO": {
    "status": "waiting",
    "level": 17.58,
-   "last": 14.72,
-   "vs": -16.27,
-   "reason": "last close $14.72 (14:45 bar), $2.86 under the range high $17.58 (-16.27%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 14.73,
+   "vs": -16.18,
+   "reason": "last close $14.73 (14:50 bar), $2.85 under the range high $17.58 (-16.18%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "ROL": {
    "status": "triggered",
@@ -4509,26 +4558,26 @@
   "DOW": {
    "status": "waiting",
    "level": 33.75,
-   "last": 32.33,
-   "vs": -4.19,
-   "reason": "last close $32.33 (14:45 bar), $1.42 under the range high $33.75 (-4.19%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 32.4,
+   "vs": -3.99,
+   "reason": "last close $32.40 (14:55 bar), $1.35 under the range high $33.75 (-3.99%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "CRBG": {
    "status": "waiting",
    "level": 36.71,
    "last": 36.19,
-   "vs": -1.43,
-   "reason": "last close $36.19 (14:45 bar), $0.52 under the range high $36.71 (-1.43%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "vs": -1.42,
+   "reason": "last close $36.19 (14:55 bar), $0.52 under the range high $36.71 (-1.42%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "HST": {
    "status": "waiting",
    "level": 26.05,
-   "last": 26.0,
-   "vs": -0.19,
-   "reason": "last close $26.00 (14:45 bar), $0.05 under the range high $26.05 (-0.19%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 25.98,
+   "vs": -0.29,
+   "reason": "last close $25.98 (14:55 bar), $0.07 under the range high $26.05 (-0.29%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "FLNC": {
    "status": "triggered",
@@ -4541,18 +4590,18 @@
   "UMC": {
    "status": "waiting",
    "level": 16.59,
-   "last": 16.01,
-   "vs": -3.5,
-   "reason": "last close $16.01 (14:50 bar), $0.58 under the range high $16.59 (-3.50%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 15.99,
+   "vs": -3.62,
+   "reason": "last close $15.99 (14:55 bar), $0.60 under the range high $16.59 (-3.62%)",
+   "t": "2026-11-04T20:00:01+00:00"
   },
   "MWH": {
    "status": "waiting",
    "level": 28.48,
-   "last": 26.54,
-   "vs": -6.81,
-   "reason": "last close $26.54 (14:45 bar), $1.94 under the range high $28.48 (-6.81%)",
-   "t": "2026-11-04T19:55:00+00:00"
+   "last": 26.39,
+   "vs": -7.34,
+   "reason": "last close $26.39 (14:50 bar), $2.09 under the range high $28.48 (-7.34%)",
+   "t": "2026-11-04T20:00:01+00:00"
   }
  },
  "telegram_health": {

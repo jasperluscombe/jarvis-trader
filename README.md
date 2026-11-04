@@ -26,7 +26,10 @@ Telegram commands: `yes` / `no` (latest idea), `/status`, `/pause`, `/resume`, `
 - Auto-buy works on paper only (`auto_trade_live: false` in `jarvis/settings.json`). On paper it buys
   medium and high confidence ideas (`auto_paper_min_confidence`); with real money it never buys below high,
   and only if you turn `auto_trade_live` on.
-- Goals: +$1 a day, +$4 a week (`daily_goal_usd` / `weekly_goal_usd`). Once a goal is reached Jarvis stops
+- Sizing grows with the account: each trade risks 2% of yesterday's closing value (`risk_per_trade_pct`),
+  the daily loss limit is 10% (`daily_loss_pct`), orders up to 90%. Jarvis rewrites those $ numbers in
+  `trader/config.json` each day. At $50 that's $1 a trade and $5 a day.
+- Goals: +2% a day, +8% a week (`daily_goal_pct` / `weekly_goal_pct`): +$1 / +$4 at $50. Once a goal is reached Jarvis stops
   opening trades (today / this week) to lock the profit in. Below the goal it keeps hunting, but never past the loss limits.
 - QQQ (Nasdaq-100), SPY (S&P 500), TSLA, NVDA and AAPL are always watched, on top of the ~30 stocks from
   each morning's scan, and bought in part-shares (about $45). Alpaca holds its stop-loss; Jarvis sells at the

@@ -392,6 +392,34 @@ class Jarvis:
             "cash": float(self.account.get("cash") or 0),
             "positions": [{"symbol": p["symbol"], "qty": float(p["qty"])} for p in self.positions],
             "synced_from": "alpaca", "at": self.now_utc.isoformat(timespec="seconds")})
+        self.scale_limits()
+
+    def size_base(self):
+        """The account value sizing is measured from: yesterday's closing value, so it holds still all day."""
+        a = self.account or {}
+        return float(a.get("last_equity") or a.get("equity") or 0)
+
+    def scale_limits(self):
+        """Grow (or shrink) the $ limits with the account: risk a fixed % of its value, not a fixed $1."""
+        S = self.settings
+        pct = S.get("risk_per_trade_pct")
+        base = self.size_base()
+        if not pct or base <= 0 or self.args.test_config:
+            return
+        new = {
+            "budget": round(base, 2),
+            "max_loss_per_trade_usd": round(base * float(pct) / 100, 2),
+            "max_daily_loss_usd": round(base * float(S.get("daily_loss_pct", 10)) / 100, 2),
+            "max_order_usd": round(base * float(self.cfg.get("max_position_pct") or 90) / 100, 2),
+        }
+        changed = {k: v for k, v in new.items() if self.cfg.get(k) != v}
+        if not changed:
+            return
+        self.cfg.update(new)
+        if not self.args.dry_run:
+            save_json(CONFIG_PATH, self.cfg)
+        self.event("risk", "Limits resized to your %s account: %s a trade, %s a day, orders up to %s." % (
+            money(base), money(new["max_loss_per_trade_usd"]), money(new["max_daily_loss_usd"]), money(new["max_order_usd"])))
 
     # ---- Telegram replies
     def handle_messages(self):
@@ -759,8 +787,8 @@ class Jarvis:
                      money(float(self.cfg.get("max_loss_per_trade_usd") or 0)),
                      money(float(self.cfg.get("max_daily_loss_usd") or 0)), self.cfg.get("max_trades_per_day")),
                  "🎯 Goals: <b>%s today</b>, <b>%s this week</b> (week so far %s).%s" % (
-                     money(float(self.settings.get("daily_goal_usd") or 0), sign=True),
-                     money(float(self.settings.get("weekly_goal_usd") or 0), sign=True),
+                     money(self.goals()["daily_goal"], sign=True),
+                     money(self.goals()["weekly_goal"], sign=True),
                      money(self.goals()["week_pl"], sign=True),
                      " I stop for the day once today's goal is in." if self.settings.get("stop_when_goal_hit", True) else ""),
                  "📈 Always watching: <b>%s</b> (part-shares)" % ", ".join(self.settings.get("always_watch") or [])
@@ -809,8 +837,12 @@ class Jarvis:
             self.st["week"] = w
         day_pl = round(eq - last, 2) if a else 0.0
         week_pl = round(eq - float(w.get("start") or eq), 2) if a else 0.0
-        dg = float(self.settings.get("daily_goal_usd") or 0)
-        wg = float(self.settings.get("weekly_goal_usd") or 0)
+        S = self.settings
+        dg = (round(last * float(S["daily_goal_pct"]) / 100, 2) if S.get("daily_goal_pct") and last
+              else float(S.get("daily_goal_usd") or 0))
+        wstart = float(w.get("start") or last or 0)
+        wg = (round(wstart * float(S["weekly_goal_pct"]) / 100, 2) if S.get("weekly_goal_pct") and wstart
+              else float(S.get("weekly_goal_usd") or 0))
         g = {"day_pl": day_pl, "week_pl": week_pl, "daily_goal": dg, "weekly_goal": wg,
              "day_hit": bool(dg) and day_pl >= dg, "week_hit": bool(wg) and week_pl >= wg}
         stop = self.settings.get("stop_when_goal_hit", True)
@@ -843,7 +875,7 @@ class Jarvis:
         if self.paper or self.settings.get("live_limits_reviewed"):
             return False
         if self.once("live_lock_note"):
-            self.tg.send("🔒 <b>Real-money mode is locked.</b> Your limits (5 trades a day, $5 daily loss, "
+            self.tg.send("🔒 <b>Real-money mode is locked.</b> Your limits (up to 10 trades a day, a 10% daily loss limit, "
                          "no day-trade counter) were set for paper practice. Review them and set "
                          "<code>live_limits_reviewed</code> to true in jarvis/settings.json before I trade real money.")
             self.event("risk", "Real money is locked until the limits are reviewed.")

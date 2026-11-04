@@ -17,6 +17,11 @@
   "stop": "or-mid",
   "replays": 5000,
 
+  "risk_per_trade_pct": 2.0,
+  "daily_loss_pct": 10.0,
+
+  "daily_goal_pct": 2.0,
+  "weekly_goal_pct": 8.0,
   "daily_goal_usd": 1.00,
   "weekly_goal_usd": 4.00,
   "stop_when_goal_hit": true,

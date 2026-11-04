@@ -396,8 +396,14 @@ class Jarvis:
 
     def size_base(self):
         """The account value sizing is measured from: yesterday's closing value, so it holds still all day."""
+        return self.last_close()
+
+    def last_close(self):
+        """Yesterday's closing value. A brand-new account reports 0 there, so use today's value instead
+        (otherwise the whole balance looks like today's profit)."""
         a = self.account or {}
-        return float(a.get("last_equity") or a.get("equity") or 0)
+        last = float(a.get("last_equity") or 0)
+        return last if last > 0 else float(a.get("equity") or 0)
 
     def scale_limits(self):
         """Grow (or shrink) the $ limits with the account: risk a fixed % of its value, not a fixed $1."""
@@ -479,7 +485,7 @@ class Jarvis:
 
     def status_text(self):
         a = self.account or {}
-        eq, last = float(a.get("equity") or 0), float(a.get("last_equity") or 0)
+        eq, last = float(a.get("equity") or 0), self.last_close()
         lines = ["📊 <b>Status</b> (%s)" % self.mode(),
                  "Account: %s (today %s)" % (money(eq), money(eq - last, sign=True)),
                  "Trades today: %d of %s · risk used %s of %s" % (
@@ -830,7 +836,7 @@ class Jarvis:
     def goals(self):
         """Today's and this week's profit against the goals. Sends a message the first time each is reached."""
         a = self.account or {}
-        eq, last = float(a.get("equity") or 0), float(a.get("last_equity") or 0)
+        eq, last = float(a.get("equity") or 0), self.last_close()
         wk = "%d-W%02d" % self.ny.date().isocalendar()[:2]
         w = self.st.get("week") or {}
         if w.get("id") != wk and last:
@@ -1058,7 +1064,7 @@ class Jarvis:
 
     def recap(self):
         a = self.account or {}
-        eq, last = float(a.get("equity") or 0), float(a.get("last_equity") or 0)
+        eq, last = float(a.get("equity") or 0), self.last_close()
         trades = [t for t in self.st["trades"] if t["date"] == self.today]
         fills = {}
         if self.alpaca.ok and not self.args.dry_run:
@@ -1254,7 +1260,7 @@ class Jarvis:
 
     def write_dashboard(self):
         a = self.account or {}
-        eq, last = float(a.get("equity") or 0), float(a.get("last_equity") or 0)
+        eq, last = float(a.get("equity") or 0), self.last_close()
         sessions = []
         for s in self.st.get("next_sessions", [])[:5]:
             o = ny_to_utc(dt.datetime.strptime(s["date"] + " " + s["open"], "%Y-%m-%d %H:%M"))

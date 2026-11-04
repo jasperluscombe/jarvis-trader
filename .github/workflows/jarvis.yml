@@ -1,12 +1,20 @@
 name: Jarvis
 
-# Every 5 minutes, Monday-Friday, 12:00-21:59 UTC. That covers the US pre-market
-# brief, the whole session and the recap in both US summer and winter time.
-# Jarvis works out New York time itself and does nothing when there's nothing to do.
+# GitHub's scheduler is unreliable for frequent crons (runs get delayed or never
+# start), so each run stays alive and checks in every 5 minutes by itself until
+# 22:00 UTC or for about 5h45m, whichever comes first. The schedule below only has
+# to start a run now and then; the concurrency group keeps it to one at a time.
+# 12:00-21:59 UTC covers the US pre-market brief, the session and the recap in
+# both US summer and winter time. Jarvis works out New York time itself.
 on:
   schedule:
-    - cron: "*/5 12-21 * * 1-5"
+    - cron: "*/10 12-21 * * 1-5"
   workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/jarvis.yml"
+      - "jarvis/**"
 
 permissions:
   contents: write
@@ -18,7 +26,7 @@ concurrency:
 jobs:
   tick:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
 
@@ -26,25 +34,38 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Jarvis check-in
+      - name: Jarvis check-ins (every 5 minutes)
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
-        run: python jarvis/jarvis.py
-
-      - name: Save state and dashboard
-        if: always()
         run: |
           git config user.name "jarvis-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/jarvis.json docs/state.json trader/ || true
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -q -m "Jarvis check-in [skip ci]"
-          for i in 1 2 3; do
-            git pull -q --rebase -X theirs && git push -q && exit 0
-            sleep 5
+          started=$(date +%s)
+          save() {
+            git add state/jarvis.json docs/state.json trader/ || true
+            if git diff --cached --quiet; then return 0; fi
+            git commit -q -m "Jarvis check-in [skip ci]"
+            for i in 1 2 3; do
+              git pull -q --rebase -X theirs && git push -q && return 0
+              sleep 5
+            done
+            echo "could not push state"
+          }
+          while true; do
+            echo "::group::check-in $(date -u +%H:%M) UTC"
+            python jarvis/jarvis.py || echo "check-in failed (will try again next time)"
+            save
+            echo "::endgroup::"
+            now=$(date +%s)
+            hour=$(date -u +%-H)
+            # Stop near the job time limit, or once the US day is over.
+            if [ $((now - started)) -gt 20400 ] || [ "$hour" -ge 22 ] || [ "$hour" -lt 12 ]; then
+              echo "done for this run"; break
+            fi
+            # Sleep to the next 5-minute mark.
+            sleep $(( 300 - now % 300 ))
           done
-          echo "could not push state" && exit 1

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-05T19:45:00+00:00",
- "updated_local": "Fri 6 Nov 6:15 AM",
+ "updated_utc": "2026-11-05T19:50:00+00:00",
+ "updated_local": "Fri 6 Nov 6:20 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.82,
-  "cash": 49.82,
-  "day_pl": -0.18,
+  "equity": 49.99,
+  "cash": 19.5,
+  "day_pl": -0.01,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 1.07
  },
  "goals": {
-  "day_pl": -0.18,
-  "week_pl": -0.18,
+  "day_pl": -0.01,
+  "week_pl": -0.01,
   "daily_goal": 1.0,
   "weekly_goal": 4.0,
   "day_hit": false,
@@ -97,6 +97,10 @@
   {
    "t": "2026-11-05T15:50:00+00:00",
    "eq": 49.82
+  },
+  {
+   "t": "2026-11-05T19:50:00+00:00",
+   "eq": 49.99
   }
  ],
  "stats": {
@@ -114,7 +118,7 @@
  },
  "charts": {
   "date": "2026-11-05",
-  "updated": "2026-11-05T19:45:00+00:00",
+  "updated": "2026-11-05T19:50:00+00:00",
   "symbols": {
    "RIOT": {
     "bars": [
@@ -560,11 +564,18 @@
       15.14
      ],
      [
-      1793907909,
-      15.18,
-      15.18,
-      15.18,
-      15.18
+      1793907900,
+      15.15,
+      15.4,
+      15.15,
+      15.24
+     ],
+     [
+      1793908207,
+      15.25,
+      15.25,
+      15.25,
+      15.25
      ]
     ],
     "or_high": 15.07,
@@ -1033,11 +1044,18 @@
       30.26
      ],
      [
-      1793907908,
+      1793907900,
       30.26,
-      30.26,
-      30.26,
-      30.26
+      30.27,
+      30.23,
+      30.25
+     ],
+     [
+      1793908206,
+      30.25,
+      30.25,
+      30.25,
+      30.25
      ]
     ],
     "or_high": 31.22,
@@ -1514,11 +1532,18 @@
       656.01
      ],
      [
-      1793907908,
-      656.47,
-      656.47,
-      656.47,
-      656.47
+      1793907900,
+      656.03,
+      658.23,
+      655.83,
+      656.95
+     ],
+     [
+      1793908206,
+      657.03,
+      657.03,
+      657.03,
+      657.03
      ]
     ],
     "or_high": 683.64,
@@ -1952,7 +1977,7 @@
       1793907000,
       735.5,
       736.7,
-      735.26,
+      735.25,
       736.53
      ],
      [
@@ -1970,11 +1995,18 @@
       738.75
      ],
      [
-      1793907909,
-      739.13,
-      739.13,
-      739.13,
-      739.13
+      1793907900,
+      738.76,
+      740.52,
+      738.53,
+      739.54
+     ],
+     [
+      1793908206,
+      739.66,
+      739.66,
+      739.66,
+      739.66
      ]
     ],
     "or_high": 765.97,
@@ -2426,11 +2458,18 @@
       343.9
      ],
      [
-      1793907908,
-      344.25,
-      344.25,
-      344.25,
-      344.25
+      1793907900,
+      343.97,
+      346.13,
+      343.9,
+      344.6
+     ],
+     [
+      1793908201,
+      344.71,
+      344.71,
+      344.71,
+      344.71
      ]
     ],
     "or_high": 371.85,
@@ -2882,11 +2921,18 @@
       184.42
      ],
      [
-      1793907909,
-      184.56,
-      184.56,
-      184.56,
+      1793907900,
+      184.44,
+      185.18,
+      184.22,
       184.56
+     ],
+     [
+      1793908207,
+      184.65,
+      184.65,
+      184.65,
+      184.65
      ]
     ],
     "or_high": 196.23,
@@ -3338,11 +3384,18 @@
       344.42
      ],
      [
-      1793907909,
-      344.54,
-      344.54,
-      344.54,
-      344.54
+      1793907900,
+      344.44,
+      345.51,
+      344.42,
+      345.39
+     ],
+     [
+      1793908208,
+      345.38,
+      345.38,
+      345.38,
+      345.38
      ]
     ],
     "or_high": 355.38,
@@ -3794,11 +3847,18 @@
       27.98
      ],
      [
-      1793907902,
-      27.96,
-      27.96,
-      27.96,
-      27.96
+      1793907900,
+      27.97,
+      27.98,
+      27.89,
+      27.89
+     ],
+     [
+      1793908196,
+      27.93,
+      27.93,
+      27.93,
+      27.93
      ]
     ],
     "or_high": 27.39,
@@ -3813,46 +3873,46 @@
    "symbol": "QQQ",
    "status": "waiting",
    "level": 683.64,
-   "last": 656.01,
-   "vs": -4.04,
-   "reason": "last close $656.01 (14:40 bar), $27.63 under the range high $683.64 (-4.04%)",
-   "t": "2026-11-05T19:45:00+00:00"
+   "last": 656.95,
+   "vs": -3.9,
+   "reason": "last close $656.95 (14:45 bar), $26.69 under the range high $683.64 (-3.90%)",
+   "t": "2026-11-05T19:50:00+00:00"
   },
   {
    "symbol": "SPY",
    "status": "waiting",
    "level": 765.97,
-   "last": 738.75,
-   "vs": -3.55,
-   "reason": "last close $738.75 (14:40 bar), $27.22 under the range high $765.97 (-3.55%)",
-   "t": "2026-11-05T19:45:00+00:00"
+   "last": 739.54,
+   "vs": -3.45,
+   "reason": "last close $739.54 (14:45 bar), $26.42 under the range high $765.97 (-3.45%)",
+   "t": "2026-11-05T19:50:00+00:00"
   },
   {
    "symbol": "TSLA",
    "status": "waiting",
    "level": 371.85,
-   "last": 343.9,
-   "vs": -7.52,
-   "reason": "last close $343.90 (14:40 bar), $27.95 under the range high $371.85 (-7.52%)",
-   "t": "2026-11-05T19:45:00+00:00"
+   "last": 344.6,
+   "vs": -7.33,
+   "reason": "last close $344.60 (14:45 bar), $27.25 under the range high $371.85 (-7.33%)",
+   "t": "2026-11-05T19:50:00+00:00"
   },
   {
    "symbol": "NVDA",
    "status": "waiting",
    "level": 196.23,
-   "last": 184.42,
-   "vs": -6.02,
-   "reason": "last close $184.42 (14:40 bar), $11.81 under the range high $196.23 (-6.02%)",
-   "t": "2026-11-05T19:45:00+00:00"
+   "last": 184.56,
+   "vs": -5.94,
+   "reason": "last close $184.56 (14:45 bar), $11.67 under the range high $196.23 (-5.94%)",
+   "t": "2026-11-05T19:50:00+00:00"
   },
   {
    "symbol": "AAPL",
    "status": "waiting",
    "level": 355.38,
-   "last": 344.42,
-   "vs": -3.08,
-   "reason": "last close $344.42 (14:40 bar), $10.96 under the range high $355.38 (-3.08%)",
-   "t": "2026-11-05T19:45:00+00:00"
+   "last": 345.39,
+   "vs": -2.81,
+   "reason": "last close $345.39 (14:45 bar), $9.99 under the range high $355.38 (-2.81%)",
+   "t": "2026-11-05T19:50:00+00:00"
   },
   {
    "symbol": "PSQ",
@@ -3874,7 +3934,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-05T19:50:00+00:00",
+ "next_checkin_utc": "2026-11-05T19:55:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -3889,7 +3949,15 @@
    "SH"
   ]
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "RIOT",
+   "qty": 2.0,
+   "value": 30.49,
+   "pl": 0.17,
+   "entry": 15.16
+  }
+ ],
  "bots": [
   {
    "id": "jarvis",
@@ -3897,7 +3965,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-05T19:45:00+00:00"
+   "t": "2026-11-05T19:50:00+00:00"
   },
   {
    "id": "scanner",
@@ -3920,14 +3988,14 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 31 charts at 2:45 PM New York: 1 breakouts.",
-   "t": "2026-11-05T19:45:00+00:00"
+   "text": "Checked 30 charts at 2:50 PM New York: 0 breakouts.",
+   "t": "2026-11-05T19:50:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "working",
+   "status": "idle",
    "text": "RIOT: target first 0%, stop first 3%, neither 97% (5000 replays). History: 34 fired, 10 won, 16 lost.",
    "t": "2026-11-05T19:45:00+00:00"
   },
@@ -3943,7 +4011,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Bought 2 RIOT (auto: medium confidence).",
    "t": "2026-11-05T19:45:00+00:00"
   }

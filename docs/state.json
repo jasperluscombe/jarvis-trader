@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-05T12:55:00+00:00",
- "updated_local": "Thu 5 Nov 11:25 PM",
+ "updated_utc": "2026-11-05T13:00:00+00:00",
+ "updated_local": "Thu 5 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -4049,7 +4049,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-05T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-05T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4072,30 +4072,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-05T12:55:00+00:00"
+   "t": "2026-11-05T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks for setups before the open.",
-   "status": "idle",
-   "text": "Scanned the US market: 141 charts matched a setup, 89 fit your $5-$40 price range. Watching the top 30.",
-   "t": "2026-11-04T15:38:03+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 1080 charts matched a setup, 550 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-05T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "Standing by."
+   "status": "working",
+   "text": "Read 28 headlines and filings for 8 stocks.",
+   "t": "2026-11-05T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-05T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-05T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -4123,56 +4124,126 @@
  ],
  "watchlist": [
   {
-   "symbol": "IREN",
-   "price": 24.46,
+   "symbol": "PFE",
+   "price": 30.79,
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "Is Regeneron Stock Riskier Than It Looks?",
+     "url": "https://www.trefis.com/stock/regn/articles/622879/is-regeneron-stock-riskier-than-it-looks/2026-11-05?.tsrc=rss",
+     "tags": []
+    }
+   ]
   },
   {
-   "symbol": "RIOT",
-   "price": 14.02,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "WULF",
-   "price": 12.53,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CIFR",
-   "price": 8.12,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ENPH",
-   "price": 30.42,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "RKT",
-   "price": 13.81,
+   "symbol": "OMH",
+   "price": 15.55,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
+   "symbol": "RIOT",
+   "price": 15.37,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": [
+    {
+     "title": "CleanSpark Lost 21% in a Week to a New 52-Week Low. Bernstein Still Sees 62% Upside",
+     "url": "https://www.tikr.com/blog/cleanspark-lost-21-in-a-week-to-a-new-52-week-low-bernstein-still-sees-62-upside?ref=yahoofinance&tlnk=yf-261105-p7rhc5w8&.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "AAL",
+   "price": 13.63,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "What Happens To American Airlines Stock If Fuel Stays High?",
+     "url": "https://www.trefis.com/stock/aal/articles/622616/what-happens-to-american-airlines-stock-if-fuel-stays-high/2026-11-04?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "CCL",
+   "price": 31.32,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "RKT",
+   "price": 15.01,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CMCSA",
+   "price": 24.85,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "State Street Comm Services SPDR (XLC) Sells $102.6 Million of Meta on Nov. 3",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-comm-services-spdr-110423766.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "CMG",
+   "price": 35.2,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "McDonald\u2019s Is Rallying, but Can You Sleep at Night Owning It?",
+     "url": "https://247wallst.com/investing/2026/11/05/mcdonalds-is-rallying-but-can-you-sleep-at-night-owning-it/?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
    "symbol": "TOST",
-   "price": 33.53,
+   "price": 35.37,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HL",
+   "price": 14.95,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "F",
+   "price": 12.67,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "KHC",
+   "price": 25.44,
    "setups": [
     "breakout_20d"
    ],
@@ -4180,187 +4251,148 @@
   },
   {
    "symbol": "ONON",
-   "price": 36.5,
+   "price": 38.62,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "SEDG",
-   "price": 32.88,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CMG",
-   "price": 33.26,
+   "symbol": "CPNG",
+   "price": 17.05,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "MARA",
-   "price": 7.16,
+   "symbol": "NCLH",
+   "price": 18.6,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MOS",
+   "price": 21.62,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "OSCR",
+   "price": 35.19,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "GIS",
+   "price": 35.85,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "LYFT",
+   "price": 18.74,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "VALE",
+   "price": 11.43,
    "setups": [
     "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "CLSK",
-   "price": 8.15,
+   "symbol": "TSCO",
+   "price": 36.58,
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "CORZ",
-   "price": 14.24,
+   "symbol": "HBAN",
+   "price": 16.06,
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "VRDN",
-   "price": 25.15,
+   "symbol": "ROIV",
+   "price": 38.23,
    "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "SHLS",
-   "price": 8.47,
-   "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
    "news": []
   },
   {
    "symbol": "DKNG",
-   "price": 21.93,
+   "price": 23.11,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "RUN",
-   "price": 8.68,
+   "symbol": "VICI",
+   "price": 25.25,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "JD",
-   "price": 26.91,
+   "symbol": "ADT",
+   "price": 9.9,
    "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "VFC",
-   "price": 20.04,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PURR",
-   "price": 10.16,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MGM",
-   "price": 31.02,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "SIRI",
-   "price": 30.8,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "INIO",
-   "price": 18.31,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ROL",
-   "price": 37.35,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "DOW",
-   "price": 33.79,
-   "setups": [
+    "breakout_20d",
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "CRBG",
-   "price": 35.74,
+   "symbol": "CPRT",
+   "price": 32.62,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "HST",
-   "price": 25.78,
+   "symbol": "KEY",
+   "price": 21.55,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "FLNC",
-   "price": 5.5,
+   "symbol": "PCG",
+   "price": 13.4,
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "UMC",
-   "price": 16.4,
+   "symbol": "JHX",
+   "price": 29.52,
    "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MWH",
-   "price": 26.81,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
+    "breakout_20d"
    ],
    "news": []
   }
@@ -4433,6 +4465,21 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-05T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-05T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 28 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-05T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 1080 charts matched a setup, 550 fit your $5-$40 price range. Watching the top 30."
+  },
   {
    "t": "2026-11-04T21:05:00+00:00",
    "bot": "jarvis",

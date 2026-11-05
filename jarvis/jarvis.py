@@ -1162,7 +1162,11 @@ class Jarvis:
             start = max(hhmm(self.cfg.get("no_entries_before", "09:45")), open_t)
             stop = min(hhmm(self.cfg.get("no_entries_after", "15:30")),
                        (dt.datetime.combine(self.ny.date(), close_t) - dt.timedelta(minutes=30)).time())
-            if hhmm(self.settings.get("brief_at", "08:00")) <= t < open_t:
+            brief_t = hhmm(self.settings.get("brief_at", "08:00"))
+            if t < min(brief_t, open_t):
+                self.bot("entry", "idle", "Trading day ahead: morning brief at %s, market opens %s (your time)."
+                         % (self.ny_time_local(brief_t), self.ny_time_local(open_t)))
+            elif brief_t <= t < open_t:
                 if self.once("brief"):
                     self.brief()
                 self.bot("entry", "idle", "Waiting for the opening bell (%s your time)." % self.ny_time_local(open_t))

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-05T21:00:00+00:00",
- "updated_local": "Fri 6 Nov 7:30 AM",
+ "updated_utc": "2026-11-05T21:05:00+00:00",
+ "updated_local": "Fri 6 Nov 7:35 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.02,
+  "equity": 48.7,
   "cash": 19.5,
-  "day_pl": -0.98,
+  "day_pl": -1.3,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 1.07
  },
  "goals": {
-  "day_pl": -0.98,
-  "week_pl": -0.98,
+  "day_pl": -1.3,
+  "week_pl": -1.3,
   "daily_goal": 1.0,
   "weekly_goal": 4.0,
   "day_hit": false,
@@ -157,24 +157,28 @@
   {
    "t": "2026-11-05T21:00:00+00:00",
    "eq": 49.02
+  },
+  {
+   "t": "2026-11-05T21:05:00+00:00",
+   "eq": 48.7
   }
  ],
  "stats": {
-  "trades": 0,
+  "trades": 2,
   "wins": 0,
-  "losses": 0,
-  "win_rate": null,
+  "losses": 2,
+  "win_rate": 0.0,
   "avg_win": null,
-  "avg_loss": null,
-  "best": null,
-  "worst": null,
+  "avg_loss": -15.25,
+  "best": -0.18,
+  "worst": -30.32,
   "auto": 2,
   "ideas": 6,
   "passed": 2
  },
  "charts": {
   "date": "2026-11-05",
-  "updated": "2026-11-05T21:00:00+00:00",
+  "updated": "2026-11-05T21:05:00+00:00",
   "symbols": {
    "RIOT": {
     "bars": [
@@ -721,8 +725,15 @@
       1793912100,
       15.1,
       15.1,
-      14.74,
-      14.74
+      14.72,
+      14.77
+     ],
+     [
+      1793912400,
+      14.76,
+      14.76,
+      14.76,
+      14.76
      ]
     ],
     "or_high": 15.07,
@@ -742,7 +753,7 @@
       "side": "buy",
       "price": 15.16,
       "qty": 2.0,
-      "t": "2026-11-05T19:45:04.374325887Z",
+      "t": "2026-11-05T19:45:04.374326Z",
       "type": "market"
      }
     ]
@@ -1276,7 +1287,7 @@
      ],
      [
       1793911500,
-      30.02,
+      30.03,
       30.09,
       30.01,
       30.04
@@ -1292,8 +1303,8 @@
       1793912100,
       29.95,
       30.0,
-      29.88,
-      29.9
+      29.85,
+      29.87
      ]
     ],
     "or_high": 31.22,
@@ -1871,8 +1882,15 @@
       1793912100,
       651.52,
       651.71,
-      647.69,
-      647.69
+      647.27,
+      648.06
+     ],
+     [
+      1793912400,
+      647.05,
+      647.05,
+      647.05,
+      647.05
      ]
     ],
     "or_high": 683.64,
@@ -2405,7 +2423,7 @@
       734.68,
       735.04,
       734.04,
-      734.41
+      734.45
      ],
      [
       1793911500,
@@ -2425,8 +2443,15 @@
       1793912100,
       734.7,
       735.91,
-      733.27,
-      733.27
+      732.71,
+      733.25
+     ],
+     [
+      1793912400,
+      733.11,
+      733.11,
+      733.11,
+      733.11
      ]
     ],
     "or_high": 765.97,
@@ -2979,8 +3004,15 @@
       1793912100,
       344.86,
       346.01,
-      343.28,
-      343.33
+      343.08,
+      343.57
+     ],
+     [
+      1793912400,
+      343.69,
+      343.69,
+      343.69,
+      343.69
      ]
     ],
     "or_high": 371.85,
@@ -3533,8 +3565,15 @@
       1793912100,
       183.35,
       183.63,
-      181.83,
-      181.85
+      181.46,
+      181.6
+     ],
+     [
+      1793912400,
+      181.6,
+      181.6,
+      181.6,
+      181.6
      ]
     ],
     "or_high": 196.23,
@@ -4087,8 +4126,15 @@
       1793912100,
       346.02,
       346.09,
-      344.5,
-      344.61
+      344.1,
+      344.31
+     ],
+     [
+      1793912400,
+      344.17,
+      344.17,
+      344.17,
+      344.17
      ]
     ],
     "or_high": 355.38,
@@ -4628,7 +4674,7 @@
       28.19,
       28.21,
       28.13,
-      28.17
+      28.18
      ],
      [
       1793911800,
@@ -4640,9 +4686,9 @@
      [
       1793912100,
       28.14,
-      28.29,
+      28.31,
       28.14,
-      28.28
+      28.26
      ]
     ],
     "or_high": 27.39,
@@ -4718,7 +4764,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-05T21:05:00+00:00",
+ "next_checkin_utc": "2026-11-05T21:10:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4737,8 +4783,8 @@
   {
    "symbol": "RIOT",
    "qty": 2.0,
-   "value": 29.53,
-   "pl": -0.79,
+   "value": 29.1,
+   "pl": -1.22,
    "entry": 15.16
   }
  ],
@@ -4749,7 +4795,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-05T21:00:00+00:00"
+   "t": "2026-11-05T21:05:00+00:00"
   },
   {
    "id": "scanner",
@@ -4772,8 +4818,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "No new entries this late. Watching open trades.",
-   "t": "2026-11-05T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-05T21:05:00+00:00"
   },
   {
    "id": "oracle",
@@ -4795,7 +4841,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-05T21:00:00+00:00"
   }
@@ -5157,7 +5203,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": -30.32
   },
   {
    "date": "2026-11-05",
@@ -5172,13 +5218,13 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": -0.18
   }
  ],
  "record": {
-  "trades": 0,
+  "trades": 2,
   "wins": 0,
-  "total": 0
+  "total": -30.5
  },
  "sessions": [
   {
@@ -5218,6 +5264,11 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-05T21:05:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
   {
    "t": "2026-11-05T21:00:00+00:00",
    "bot": "broker",
@@ -5412,11 +5463,6 @@
    "t": "2026-11-04T15:50:00+00:00",
    "bot": "entry",
    "text": "JD broke out 45 min ago: too late to chase."
-  },
-  {
-   "t": "2026-11-04T15:50:00+00:00",
-   "bot": "entry",
-   "text": "DKNG broke out 50 min ago: too late to chase."
   }
  ],
  "errors": []

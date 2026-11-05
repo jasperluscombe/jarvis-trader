@@ -872,30 +872,12 @@
   }
  ],
  "candidates_day": "2026-11-04",
- "seen": {
-  "QQQ": "triggered",
-  "SPY": "triggered",
-  "TSLA": "triggered",
-  "AAPL": "triggered",
-  "RKT": "triggered",
-  "TOST": "triggered",
-  "CMG": "triggered",
-  "MARA": "triggered",
-  "DKNG": "triggered",
-  "JD": "triggered",
-  "PURR": "triggered",
-  "MGM": "triggered",
-  "SIRI": "triggered",
-  "ROL": "triggered",
-  "FLNC": "triggered",
-  "VFC": "triggered",
-  "ONON": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-05T02:47:57+00:00"
+   "t": "2026-11-05T10:51:19+00:00"
   },
   "scanner": {
    "status": "working",
@@ -918,13 +900,8 @@
    "t": "2026-11-04T21:00:00+00:00"
   }
  },
- "seen_day": "2026-11-04",
+ "seen_day": "2026-11-05",
  "next_sessions": [
-  {
-   "date": "2026-11-04",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-05",
    "open": "09:30",
@@ -949,6 +926,11 @@
    "date": "2026-11-11",
    "open": "09:30",
    "close": "16:00"
+  },
+  {
+   "date": "2026-11-12",
+   "open": "09:30",
+   "close": "16:00"
   }
  ],
  "welcomed": "2026-11-04",
@@ -967,6 +949,10 @@
   },
   {
    "t": "2026-11-04T22:00:13+00:00",
+   "eq": 50.0
+  },
+  {
+   "t": "2026-11-05T10:51:19+00:00",
    "eq": 50.0
   }
  ],

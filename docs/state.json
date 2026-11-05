@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-05T21:05:00+00:00",
- "updated_local": "Fri 6 Nov 7:35 AM",
+ "updated_utc": "2026-11-05T21:10:00+00:00",
+ "updated_local": "Fri 6 Nov 7:40 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 48.7,
+  "equity": 48.76,
   "cash": 19.5,
-  "day_pl": -1.3,
+  "day_pl": -1.24,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 1.07
  },
  "goals": {
-  "day_pl": -1.3,
-  "week_pl": -1.3,
+  "day_pl": -1.24,
+  "week_pl": -1.24,
   "daily_goal": 1.0,
   "weekly_goal": 4.0,
   "day_hit": false,
@@ -161,6 +161,10 @@
   {
    "t": "2026-11-05T21:05:00+00:00",
    "eq": 48.7
+  },
+  {
+   "t": "2026-11-05T21:10:00+00:00",
+   "eq": 48.76
   }
  ],
  "stats": {
@@ -178,7 +182,7 @@
  },
  "charts": {
   "date": "2026-11-05",
-  "updated": "2026-11-05T21:05:00+00:00",
+  "updated": "2026-11-05T21:10:00+00:00",
   "symbols": {
    "RIOT": {
     "bars": [
@@ -2436,8 +2440,8 @@
       1793911800,
       734.88,
       736.4,
-      734.4,
-      735.72
+      734.43,
+      735.73
      ],
      [
       1793912100,
@@ -4678,7 +4682,7 @@
      ],
      [
       1793911800,
-      28.16,
+      28.17,
       28.2,
       28.11,
       28.14
@@ -4764,7 +4768,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-05T21:10:00+00:00",
+ "next_checkin_utc": "2026-11-05T21:15:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4783,8 +4787,8 @@
   {
    "symbol": "RIOT",
    "qty": 2.0,
-   "value": 29.1,
-   "pl": -1.22,
+   "value": 29.26,
+   "pl": -1.06,
    "entry": 15.16
   }
  ],
@@ -4795,7 +4799,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-05T21:05:00+00:00"
+   "t": "2026-11-05T21:10:00+00:00"
   },
   {
    "id": "scanner",
@@ -4819,7 +4823,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-05T21:05:00+00:00"
+   "t": "2026-11-05T21:10:00+00:00"
   },
   {
    "id": "oracle",

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-05T20:55:00+00:00",
- "updated_local": "Fri 6 Nov 7:25 AM",
+ "updated_utc": "2026-11-05T21:00:00+00:00",
+ "updated_local": "Fri 6 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.71,
+  "equity": 49.02,
   "cash": 19.5,
-  "day_pl": -0.29,
+  "day_pl": -0.98,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 1.07
  },
  "goals": {
-  "day_pl": -0.29,
-  "week_pl": -0.29,
+  "day_pl": -0.98,
+  "week_pl": -0.98,
   "daily_goal": 1.0,
   "weekly_goal": 4.0,
   "day_hit": false,
@@ -153,6 +153,10 @@
   {
    "t": "2026-11-05T20:55:00+00:00",
    "eq": 49.71
+  },
+  {
+   "t": "2026-11-05T21:00:00+00:00",
+   "eq": 49.02
   }
  ],
  "stats": {
@@ -170,7 +174,7 @@
  },
  "charts": {
   "date": "2026-11-05",
-  "updated": "2026-11-05T20:55:00+00:00",
+  "updated": "2026-11-05T21:00:00+00:00",
   "symbols": {
    "RIOT": {
     "bars": [
@@ -715,10 +719,10 @@
      ],
      [
       1793912100,
-      14.99,
-      14.99,
-      14.99,
-      14.99
+      15.1,
+      15.1,
+      14.74,
+      14.74
      ]
     ],
     "or_high": 15.07,
@@ -1281,15 +1285,15 @@
       1793911800,
       30.03,
       30.06,
-      29.94,
+      29.93,
       29.95
      ],
      [
-      1793912097,
+      1793912100,
       29.95,
-      29.95,
-      29.95,
-      29.95
+      30.0,
+      29.88,
+      29.9
      ]
     ],
     "or_high": 31.22,
@@ -1865,10 +1869,10 @@
      ],
      [
       1793912100,
-      650.98,
-      650.98,
-      650.98,
-      650.98
+      651.52,
+      651.71,
+      647.69,
+      647.69
      ]
     ],
     "or_high": 683.64,
@@ -2419,10 +2423,10 @@
      ],
      [
       1793912100,
-      735.82,
-      735.82,
-      735.82,
-      735.82
+      734.7,
+      735.91,
+      733.27,
+      733.27
      ]
     ],
     "or_high": 765.97,
@@ -2967,16 +2971,16 @@
      [
       1793911800,
       343.56,
-      344.32,
+      345.18,
       342.26,
-      343.99
+      344.86
      ],
      [
-      1793912094,
+      1793912100,
       344.86,
-      344.86,
-      344.86,
-      344.86
+      346.01,
+      343.28,
+      343.33
      ]
     ],
     "or_high": 371.85,
@@ -3527,10 +3531,10 @@
      ],
      [
       1793912100,
-      183.07,
-      183.07,
-      183.07,
-      183.07
+      183.35,
+      183.63,
+      181.83,
+      181.85
      ]
     ],
     "or_high": 196.23,
@@ -4081,10 +4085,10 @@
      ],
      [
       1793912100,
-      345.51,
-      345.51,
-      345.51,
-      345.51
+      346.02,
+      346.09,
+      344.5,
+      344.61
      ]
     ],
     "or_high": 355.38,
@@ -4635,10 +4639,10 @@
      ],
      [
       1793912100,
-      28.16,
-      28.16,
-      28.16,
-      28.16
+      28.14,
+      28.29,
+      28.14,
+      28.28
      ]
     ],
     "or_high": 27.39,
@@ -4713,8 +4717,8 @@
    "t": "2026-11-05T14:55:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-05T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-05T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4733,8 +4737,8 @@
   {
    "symbol": "RIOT",
    "qty": 2.0,
-   "value": 30.0,
-   "pl": -0.32,
+   "value": 29.53,
+   "pl": -0.79,
    "entry": 15.16
   }
  ],
@@ -4745,7 +4749,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-05T20:55:00+00:00"
+   "t": "2026-11-05T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -4793,7 +4797,7 @@
    "role": "Sends approved orders to Alpaca and closes by the bell.",
    "status": "working",
    "text": "Closing anything still open before the bell.",
-   "t": "2026-11-05T20:55:00+00:00"
+   "t": "2026-11-05T21:00:00+00:00"
   }
  ],
  "watchlist": [
@@ -5215,6 +5219,11 @@
  ],
  "events": [
   {
+   "t": "2026-11-05T21:00:00+00:00",
+   "bot": "broker",
+   "text": "Closed 2 RIOT before the bell (-$0.79)."
+  },
+  {
    "t": "2026-11-05T20:55:00+00:00",
    "bot": "broker",
    "text": "Couldn't close RIOT: Alpaca DELETE /v2/positions/RIOT: HTTP 403 {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"2\",\"held_for_orders\":\"2\",\"message\":\"insufficient qty available for order (requested: 2, available: 0)\",\"symbol\":\"RIOT\"}"
@@ -5408,11 +5417,6 @@
    "t": "2026-11-04T15:50:00+00:00",
    "bot": "entry",
    "text": "DKNG broke out 50 min ago: too late to chase."
-  },
-  {
-   "t": "2026-11-04T15:50:00+00:00",
-   "bot": "entry",
-   "text": "MARA broke out 30 min ago: too late to chase."
   }
  ],
  "errors": []

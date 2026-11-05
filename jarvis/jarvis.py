@@ -1264,11 +1264,11 @@ class Jarvis:
                                  "symbols": charts}
 
     def next_checkin(self):
-        """The next check-in: every 5 min 12:00-21:55 UTC Monday-Friday, otherwise at :15 and :45."""
+        """The next check-in: every 5 min 12:00-21:55 UTC Monday-Friday, otherwise on the hour and half hour."""
         t = self.now_utc.replace(second=0, microsecond=0)
         t += dt.timedelta(minutes=5 - t.minute % 5)
         for _ in range(8 * 24 * 12):
-            if (t.weekday() < 5 and 12 <= t.hour <= 21) or t.minute in (15, 45):
+            if (t.weekday() < 5 and 12 <= t.hour <= 21) or t.minute in (0, 30):
                 return t
             t += dt.timedelta(minutes=5)
         return t

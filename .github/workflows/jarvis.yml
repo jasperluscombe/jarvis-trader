@@ -1,13 +1,11 @@
 name: Jarvis
 
-# GitHub's scheduler is unreliable for frequent crons (runs get delayed or never
-# start), so each run stays alive and checks in every 5 minutes by itself until
-# 22:00 UTC or for about 5h45m, whichever comes first. The schedule below only has
-# to start a run now and then; the concurrency group keeps it to one at a time.
-# 12:00-21:59 UTC covers the US pre-market brief, the session and the recap in
-# both US summer and winter time. Jarvis works out New York time itself.
-# Outside those hours a run does one check-in and stops, every 30 minutes, so
-# Telegram commands (/status etc.) still get an answer during the Australian day.
+# GitHub's scheduler is unreliable (it skipped most of our slots, including the
+# 10:30 PM Adelaide start), so Jarvis keeps itself running: each run checks in
+# by itself for about 5h40m (every 5 minutes while the US market is around,
+# 12:00-21:59 UTC Mon-Fri, otherwise every 30 minutes), then starts the next run
+# before it ends. The schedule is only a backup to restart the chain if it ever
+# breaks; the concurrency group keeps it to one run at a time.
 on:
   schedule:
     - cron: "*/10 12-21 * * 1-5"
@@ -21,6 +19,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: jarvis
@@ -37,7 +36,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Jarvis check-ins (every 5 minutes)
+      - name: Jarvis check-ins
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
@@ -64,11 +63,22 @@ jobs:
             save
             echo "::endgroup::"
             now=$(date +%s)
-            hour=$(date -u +%-H)
-            # Stop near the job time limit, or once the US day is over.
-            if [ $((now - started)) -gt 20400 ] || [ "$hour" -ge 22 ] || [ "$hour" -lt 12 ]; then
-              echo "done for this run"; break
+            hour=$(date -u +%-H); dow=$(date -u +%u)
+            if [ "$dow" -le 5 ] && [ "$hour" -ge 12 ] && [ "$hour" -le 21 ]; then
+              step=300     # market hours: every 5 minutes
+            else
+              step=1800    # otherwise: every 30 minutes (for Telegram replies)
             fi
-            # Sleep to the next 5-minute mark.
-            sleep $(( 300 - now % 300 ))
+            wait=$(( step - now % step ))
+            # Hand over to the next run before the job time limit.
+            if [ $((now + wait - started)) -gt 20400 ]; then
+              echo "handing over to the next run"; break
+            fi
+            sleep $wait
           done
+
+      - name: Start the next run
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run jarvis.yml --ref main --repo "$GITHUB_REPOSITORY"

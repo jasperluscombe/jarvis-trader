@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-06T20:55:00+00:00",
- "updated_local": "Sat 7 Nov 7:25 AM",
+ "updated_utc": "2026-11-06T21:00:00+00:00",
+ "updated_local": "Sat 7 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 53.25,
-  "cash": 36.35,
-  "day_pl": 4.25,
+  "equity": 53.27,
+  "cash": 53.27,
+  "day_pl": 4.27,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.91
  },
  "goals": {
-  "day_pl": 4.25,
-  "week_pl": 3.25,
+  "day_pl": 4.27,
+  "week_pl": 3.27,
   "daily_goal": 0.98,
   "weekly_goal": 4.0,
   "day_hit": true,
@@ -645,24 +645,28 @@
   {
    "t": "2026-11-06T20:55:00+00:00",
    "eq": 53.25
+  },
+  {
+   "t": "2026-11-06T21:00:00+00:00",
+   "eq": 53.27
   }
  ],
  "stats": {
-  "trades": 2,
-  "wins": 0,
+  "trades": 4,
+  "wins": 2,
   "losses": 2,
-  "win_rate": 0.0,
-  "avg_win": null,
-  "avg_loss": -15.25,
-  "best": -0.18,
-  "worst": -30.32,
+  "win_rate": 0.5,
+  "avg_win": 1.75,
+  "avg_loss": -0.1,
+  "best": 1.92,
+  "worst": -0.18,
   "auto": 4,
   "ideas": 14,
   "passed": 8
  },
  "charts": {
   "date": "2026-11-06",
-  "updated": "2026-11-06T20:55:00+00:00",
+  "updated": "2026-11-06T21:00:00+00:00",
   "symbols": {
    "RUN": {
     "bars": [
@@ -1206,11 +1210,11 @@
       10.1
      ],
      [
-      1793998506,
-      10.02,
-      10.02,
-      10.02,
-      10.02
+      1793998500,
+      10.1,
+      10.1,
+      9.97,
+      9.98
      ]
     ],
     "or_high": 9.91,
@@ -1785,11 +1789,18 @@
       655.87
      ],
      [
-      1793998505,
-      656.18,
-      656.18,
-      656.18,
-      656.18
+      1793998500,
+      655.84,
+      657.0,
+      655.72,
+      656.22
+     ],
+     [
+      1793998800,
+      656.1,
+      656.1,
+      656.1,
+      656.1
      ]
     ],
     "or_high": 661.73,
@@ -2339,11 +2350,11 @@
       735.26
      ],
      [
-      1793998504,
-      735.41,
-      735.41,
-      735.41,
-      735.41
+      1793998500,
+      735.33,
+      736.02,
+      735.07,
+      735.74
      ]
     ],
     "or_high": 738.99,
@@ -2893,11 +2904,18 @@
       358.58
      ],
      [
-      1793998505,
-      358.11,
-      358.11,
-      358.11,
-      358.11
+      1793998500,
+      358.65,
+      358.72,
+      357.89,
+      358.16
+     ],
+     [
+      1793998800,
+      358.22,
+      358.22,
+      358.22,
+      358.22
      ]
     ],
     "or_high": 354.8,
@@ -3447,11 +3465,18 @@
       186.56
      ],
      [
-      1793998503,
-      186.28,
-      186.28,
-      186.28,
-      186.28
+      1793998500,
+      186.57,
+      186.94,
+      186.12,
+      186.68
+     ],
+     [
+      1793998800,
+      186.64,
+      186.64,
+      186.64,
+      186.64
      ]
     ],
     "or_high": 194.53,
@@ -4002,10 +4027,17 @@
      ],
      [
       1793998500,
-      342.77,
-      342.77,
-      342.77,
-      342.77
+      342.86,
+      343.07,
+      342.26,
+      342.36
+     ],
+     [
+      1793998800,
+      342.37,
+      342.37,
+      342.37,
+      342.37
      ]
     ],
     "or_high": 341.68,
@@ -4560,9 +4592,9 @@
      ],
      [
       1793997600,
-      27.86,
+      27.85,
       27.88,
-      27.84,
+      27.83,
       27.87
      ],
      [
@@ -4580,11 +4612,11 @@
       27.95
      ],
      [
-      1793998504,
+      1793998500,
       27.95,
-      27.95,
-      27.95,
-      27.95
+      27.96,
+      27.91,
+      27.92
      ]
     ],
     "or_high": 27.97,
@@ -5134,11 +5166,11 @@
       33.75
      ],
      [
-      1793998503,
+      1793998500,
       33.75,
-      33.75,
-      33.75,
-      33.75
+      33.76,
+      33.72,
+      33.72
      ]
     ],
     "or_high": 33.78,
@@ -5213,8 +5245,8 @@
    "t": "2026-11-06T15:25:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-06T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-06T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5229,15 +5261,7 @@
    "SH"
   ]
  },
- "positions": [
-  {
-   "symbol": "AAPL",
-   "qty": 0.04933741,
-   "value": 16.917305,
-   "pl": -0.022695,
-   "entry": 343.35
-  }
- ],
+ "positions": [],
  "bots": [
   {
    "id": "jarvis",
@@ -5245,7 +5269,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T20:55:00+00:00"
+   "t": "2026-11-06T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -5268,8 +5292,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "No new entries this late. Watching open trades.",
-   "t": "2026-11-06T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-06T21:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -5291,7 +5315,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-06T20:55:00+00:00"
   }
@@ -5737,7 +5761,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": -0.02
   },
   {
    "date": "2026-11-06",
@@ -5752,7 +5776,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 1.57
   },
   {
    "date": "2026-11-05",
@@ -5767,7 +5791,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": -30.32
+   "result": 1.92
   },
   {
    "date": "2026-11-05",
@@ -5786,9 +5810,9 @@
   }
  ],
  "record": {
-  "trades": 2,
-  "wins": 0,
-  "total": -30.5
+  "trades": 4,
+  "wins": 2,
+  "total": 3.29
  },
  "sessions": [
   {
@@ -5828,6 +5852,11 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-06T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
   {
    "t": "2026-11-06T20:55:00+00:00",
    "bot": "broker",
@@ -6022,11 +6051,6 @@
    "t": "2026-11-06T14:55:00+00:00",
    "bot": "oracle",
    "text": "CAG: target first 17%, stop first 54%, neither 29% (5000 replays). History: 33 fired, 3 won, 18 lost."
-  },
-  {
-   "t": "2026-11-06T14:55:00+00:00",
-   "bot": "entry",
-   "text": "CAG broke out at $15.02 (9:55 AM)."
   }
  ],
  "errors": []

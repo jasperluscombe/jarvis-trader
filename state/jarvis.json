@@ -1329,6 +1329,1327 @@
    "expected": 0.06,
    "confidence": "medium",
    "broker_id": "8777fb3e-6995-480e-8e5e-e6ff1b3b8ec4"
+  },
+  {
+   "id": "93631383",
+   "symbol": "QQQ",
+   "created": "2026-11-06T14:50:00+00:00",
+   "expires": "2026-11-06T15:10:00+00:00",
+   "status": "passed",
+   "plan": {
+    "entry": 662.66,
+    "stop": 658.45,
+    "target": 671.08,
+    "entry_time": "9:50 AM",
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "flat_by": "15:55"
+   },
+   "sizing": {
+    "symbol": "QQQ",
+    "entry": 662.66,
+    "stop": 658.45,
+    "target": 671.08,
+    "risk_per_share": 4.21,
+    "reward_risk": 2.0,
+    "qty": 0.06655,
+    "cost": 44.1,
+    "max_loss": 0.28,
+    "bound_by": "cash / order cap",
+    "fractional": true,
+    "refusal": null
+   },
+   "order": {
+    "symbol": "QQQ",
+    "side": "buy",
+    "notional": "44.10",
+    "type": "market",
+    "time_in_force": "day",
+    "why": "part-share QQQ breakout: $44.10, bound by your cash / order cap",
+    "plan": {
+     "entry": 662.66,
+     "stop": 658.45,
+     "target": 671.08,
+     "risk_per_share": 4.21,
+     "max_loss": 0.28,
+     "setup": "orb",
+     "entry_time": "9:50 AM",
+     "flat_by": "15:55"
+    }
+   },
+   "odds": {
+    "replays": 5000,
+    "seed": 19,
+    "window": 2,
+    "bars_left": 74,
+    "p_target": 0.0648,
+    "p_stop": 0.4292,
+    "p_neither": 0.506,
+    "p_green": 0.411,
+    "median_close": 662.04,
+    "p5_close": 654.07,
+    "p95_close": 670.03,
+    "avg_R": -0.115,
+    "r_at_target": 2.0,
+    "band_paths": 2000,
+    "hist": {
+     "lo": 650.89,
+     "hi": 673.44,
+     "bins": [
+      55,
+      63,
+      66,
+      106,
+      154,
+      161,
+      209,
+      287,
+      294,
+      345,
+      391,
+      388,
+      357,
+      413,
+      347,
+      305,
+      260,
+      208,
+      156,
+      116,
+      94,
+      76,
+      46,
+      26
+     ]
+    },
+    "until": "16:00",
+    "pool_sessions": 59,
+    "pool_from": "2026-08-14",
+    "pool_to": "2026-11-05",
+    "band_times": [
+     "09:50",
+     "09:55",
+     "10:00",
+     "10:05",
+     "10:10",
+     "10:15",
+     "10:20",
+     "10:25",
+     "10:30",
+     "10:35",
+     "10:40",
+     "10:45",
+     "10:50",
+     "10:55",
+     "11:00",
+     "11:05",
+     "11:10",
+     "11:15",
+     "11:20",
+     "11:25",
+     "11:30",
+     "11:35",
+     "11:40",
+     "11:45",
+     "11:50",
+     "11:55",
+     "12:00",
+     "12:05",
+     "12:10",
+     "12:15",
+     "12:20",
+     "12:25",
+     "12:30",
+     "12:35",
+     "12:40",
+     "12:45",
+     "12:50",
+     "12:55",
+     "13:00",
+     "13:05",
+     "13:10",
+     "13:15",
+     "13:20",
+     "13:25",
+     "13:30",
+     "13:35",
+     "13:40",
+     "13:45",
+     "13:50",
+     "13:55",
+     "14:00",
+     "14:05",
+     "14:10",
+     "14:15",
+     "14:20",
+     "14:25",
+     "14:30",
+     "14:35",
+     "14:40",
+     "14:45",
+     "14:50",
+     "14:55",
+     "15:00",
+     "15:05",
+     "15:10",
+     "15:15",
+     "15:20",
+     "15:25",
+     "15:30",
+     "15:35",
+     "15:40",
+     "15:45",
+     "15:50",
+     "15:55",
+     "16:00"
+    ]
+   },
+   "history": {
+    "sessions": 59,
+    "triggered": 42,
+    "target": 10,
+    "stop": 25,
+    "close": 7,
+    "avg_R": 0.01
+   },
+   "target_profit": 0.56,
+   "expected": -0.03,
+   "confidence": "low"
+  },
+  {
+   "id": "e8859f06",
+   "symbol": "SPY",
+   "created": "2026-11-06T14:50:00+00:00",
+   "expires": "2026-11-06T15:10:00+00:00",
+   "status": "passed",
+   "plan": {
+    "entry": 740.55,
+    "stop": 736.78,
+    "target": 748.09,
+    "entry_time": "9:50 AM",
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "flat_by": "15:55"
+   },
+   "sizing": {
+    "symbol": "SPY",
+    "entry": 740.55,
+    "stop": 736.78,
+    "target": 748.09,
+    "risk_per_share": 3.77,
+    "reward_risk": 2.0,
+    "qty": 0.05955,
+    "cost": 44.1,
+    "max_loss": 0.22,
+    "bound_by": "cash / order cap",
+    "fractional": true,
+    "refusal": null
+   },
+   "order": {
+    "symbol": "SPY",
+    "side": "buy",
+    "notional": "44.10",
+    "type": "market",
+    "time_in_force": "day",
+    "why": "part-share SPY breakout: $44.10, bound by your cash / order cap",
+    "plan": {
+     "entry": 740.55,
+     "stop": 736.78,
+     "target": 748.09,
+     "risk_per_share": 3.77,
+     "max_loss": 0.22,
+     "setup": "orb",
+     "entry_time": "9:50 AM",
+     "flat_by": "15:55"
+    }
+   },
+   "odds": {
+    "replays": 5000,
+    "seed": 19,
+    "window": 2,
+    "bars_left": 74,
+    "p_target": 0.044,
+    "p_stop": 0.3504,
+    "p_neither": 0.6056,
+    "p_green": 0.418,
+    "median_close": 739.91,
+    "p5_close": 733.91,
+    "p95_close": 745.63,
+    "avg_R": -0.114,
+    "r_at_target": 2.0,
+    "band_paths": 2000,
+    "hist": {
+     "lo": 731.22,
+     "hi": 748.19,
+     "bins": [
+      53,
+      35,
+      63,
+      98,
+      133,
+      156,
+      189,
+      258,
+      328,
+      306,
+      354,
+      389,
+      386,
+      399,
+      360,
+      310,
+      294,
+      259,
+      175,
+      142,
+      91,
+      72,
+      47,
+      27
+     ]
+    },
+    "until": "16:00",
+    "pool_sessions": 59,
+    "pool_from": "2026-08-14",
+    "pool_to": "2026-11-05",
+    "band_times": [
+     "09:50",
+     "09:55",
+     "10:00",
+     "10:05",
+     "10:10",
+     "10:15",
+     "10:20",
+     "10:25",
+     "10:30",
+     "10:35",
+     "10:40",
+     "10:45",
+     "10:50",
+     "10:55",
+     "11:00",
+     "11:05",
+     "11:10",
+     "11:15",
+     "11:20",
+     "11:25",
+     "11:30",
+     "11:35",
+     "11:40",
+     "11:45",
+     "11:50",
+     "11:55",
+     "12:00",
+     "12:05",
+     "12:10",
+     "12:15",
+     "12:20",
+     "12:25",
+     "12:30",
+     "12:35",
+     "12:40",
+     "12:45",
+     "12:50",
+     "12:55",
+     "13:00",
+     "13:05",
+     "13:10",
+     "13:15",
+     "13:20",
+     "13:25",
+     "13:30",
+     "13:35",
+     "13:40",
+     "13:45",
+     "13:50",
+     "13:55",
+     "14:00",
+     "14:05",
+     "14:10",
+     "14:15",
+     "14:20",
+     "14:25",
+     "14:30",
+     "14:35",
+     "14:40",
+     "14:45",
+     "14:50",
+     "14:55",
+     "15:00",
+     "15:05",
+     "15:10",
+     "15:15",
+     "15:20",
+     "15:25",
+     "15:30",
+     "15:35",
+     "15:40",
+     "15:45",
+     "15:50",
+     "15:55",
+     "16:00"
+    ]
+   },
+   "history": {
+    "sessions": 59,
+    "triggered": 38,
+    "target": 15,
+    "stop": 22,
+    "close": 1,
+    "avg_R": 0.218
+   },
+   "target_profit": 0.45,
+   "expected": -0.03,
+   "confidence": "low"
+  },
+  {
+   "id": "f157f072",
+   "symbol": "RUN",
+   "created": "2026-11-06T14:50:00+00:00",
+   "expires": "2026-11-06T15:10:00+00:00",
+   "status": "placed",
+   "plan": {
+    "entry": 9.98,
+    "stop": 9.73,
+    "target": 10.48,
+    "entry_time": "9:50 AM",
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "flat_by": "15:55"
+   },
+   "sizing": {
+    "symbol": "RUN",
+    "side": "buy",
+    "setup": "orb",
+    "date": "2026-11-06",
+    "entry_time": "9:50 AM",
+    "entry_plan": 9.98,
+    "entry": 9.98,
+    "entry_from": "plan",
+    "stop": 9.73,
+    "target": 10.48,
+    "risk_per_share": 0.25,
+    "reward_risk": 2.0,
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "budget": 49.0,
+    "cash_buffer_pct": 10.0,
+    "cash_buffer": 4.9,
+    "cash_available": 44.1,
+    "max_loss_per_trade_usd": 0.98,
+    "limits": [
+     {
+      "name": "max loss",
+      "usd": 0.98,
+      "per": 0.25,
+      "shares": 3,
+      "how": "$0.98 max loss / 0.25 risk a share",
+      "binds": true
+     },
+     {
+      "name": "position cap",
+      "usd": 44.1,
+      "per": 9.98,
+      "shares": 4,
+      "how": "90% of $49 = $44.10 / 9.98",
+      "binds": false
+     },
+     {
+      "name": "max order",
+      "usd": 44.1,
+      "per": 9.98,
+      "shares": 4,
+      "how": "$44.10 / 9.98",
+      "binds": false
+     },
+     {
+      "name": "cash",
+      "usd": 44.1,
+      "per": 9.98,
+      "shares": 4,
+      "how": "budget $49 minus the $4.90 cash buffer = $44.10 / 9.98",
+      "binds": false
+     }
+    ],
+    "qty": 3,
+    "bound_by": "max loss",
+    "cost": 29.94,
+    "max_loss": 0.75,
+    "flat_by": "15:55",
+    "order_type": "market",
+    "refusal": null
+   },
+   "order": {
+    "symbol": "RUN",
+    "side": "buy",
+    "qty": "3",
+    "type": "market",
+    "time_in_force": "day",
+    "order_class": "bracket",
+    "take_profit_limit_price": "10.48",
+    "stop_loss_stop_price": "9.73",
+    "why": "opening-range breakout on RUN: 3 shares, bound by your $0.98 max loss per trade (3 x 0.25 = $0.75 at the stop)",
+    "plan": {
+     "entry": 9.98,
+     "stop": 9.73,
+     "target": 10.48,
+     "risk_per_share": 0.25,
+     "max_loss": 0.75,
+     "setup": "orb",
+     "entry_time": "9:50 AM",
+     "flat_by": "15:55"
+    }
+   },
+   "odds": {
+    "replays": 5000,
+    "seed": 19,
+    "window": 2,
+    "bars_left": 74,
+    "p_target": 0.0862,
+    "p_stop": 0.3618,
+    "p_neither": 0.552,
+    "p_green": 0.456,
+    "median_close": 9.97,
+    "p5_close": 9.53,
+    "p95_close": 10.45,
+    "avg_R": 0.004,
+    "r_at_target": 2.0,
+    "band_paths": 2000,
+    "hist": {
+     "lo": 9.36,
+     "hi": 10.66,
+     "bins": [
+      68,
+      58,
+      88,
+      135,
+      170,
+      208,
+      265,
+      302,
+      322,
+      387,
+      402,
+      323,
+      407,
+      350,
+      295,
+      270,
+      230,
+      172,
+      139,
+      124,
+      72,
+      55,
+      55,
+      23
+     ]
+    },
+    "until": "16:00",
+    "pool_sessions": 59,
+    "pool_from": "2026-08-14",
+    "pool_to": "2026-11-05",
+    "band_times": [
+     "09:50",
+     "09:55",
+     "10:00",
+     "10:05",
+     "10:10",
+     "10:15",
+     "10:20",
+     "10:25",
+     "10:30",
+     "10:35",
+     "10:40",
+     "10:45",
+     "10:50",
+     "10:55",
+     "11:00",
+     "11:05",
+     "11:10",
+     "11:15",
+     "11:20",
+     "11:25",
+     "11:30",
+     "11:35",
+     "11:40",
+     "11:45",
+     "11:50",
+     "11:55",
+     "12:00",
+     "12:05",
+     "12:10",
+     "12:15",
+     "12:20",
+     "12:25",
+     "12:30",
+     "12:35",
+     "12:40",
+     "12:45",
+     "12:50",
+     "12:55",
+     "13:00",
+     "13:05",
+     "13:10",
+     "13:15",
+     "13:20",
+     "13:25",
+     "13:30",
+     "13:35",
+     "13:40",
+     "13:45",
+     "13:50",
+     "13:55",
+     "14:00",
+     "14:05",
+     "14:10",
+     "14:15",
+     "14:20",
+     "14:25",
+     "14:30",
+     "14:35",
+     "14:40",
+     "14:45",
+     "14:50",
+     "14:55",
+     "15:00",
+     "15:05",
+     "15:10",
+     "15:15",
+     "15:20",
+     "15:25",
+     "15:30",
+     "15:35",
+     "15:40",
+     "15:45",
+     "15:50",
+     "15:55",
+     "16:00"
+    ]
+   },
+   "history": {
+    "sessions": 59,
+    "triggered": 33,
+    "target": 8,
+    "stop": 14,
+    "close": 11,
+    "avg_R": 0.123
+   },
+   "target_profit": 1.5,
+   "expected": 0.0,
+   "confidence": "medium",
+   "broker_id": "6cb66049-4d16-4fbe-a08f-aab482a3543d"
+  },
+  {
+   "id": "68b64d98",
+   "symbol": "MGNI",
+   "created": "2026-11-06T14:50:00+00:00",
+   "expires": "2026-11-06T15:10:00+00:00",
+   "status": "passed",
+   "plan": {
+    "entry": 27.67,
+    "stop": 27.05,
+    "target": 28.91,
+    "entry_time": "9:50 AM",
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "flat_by": "15:55"
+   },
+   "sizing": {
+    "symbol": "MGNI",
+    "side": "buy",
+    "setup": "orb",
+    "date": "2026-11-06",
+    "entry_time": "9:50 AM",
+    "entry_plan": 27.67,
+    "entry": 27.67,
+    "entry_from": "plan",
+    "stop": 27.05,
+    "target": 28.91,
+    "risk_per_share": 0.62,
+    "reward_risk": 2.0,
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "budget": 49.0,
+    "cash_buffer_pct": 10.0,
+    "cash_buffer": 4.9,
+    "cash_available": 44.1,
+    "max_loss_per_trade_usd": 0.98,
+    "limits": [
+     {
+      "name": "max loss",
+      "usd": 0.98,
+      "per": 0.62,
+      "shares": 1,
+      "how": "$0.98 max loss / 0.62 risk a share",
+      "binds": true
+     },
+     {
+      "name": "position cap",
+      "usd": 44.1,
+      "per": 27.67,
+      "shares": 1,
+      "how": "90% of $49 = $44.10 / 27.67",
+      "binds": false
+     },
+     {
+      "name": "max order",
+      "usd": 44.1,
+      "per": 27.67,
+      "shares": 1,
+      "how": "$44.10 / 27.67",
+      "binds": false
+     },
+     {
+      "name": "cash",
+      "usd": 44.1,
+      "per": 27.67,
+      "shares": 1,
+      "how": "budget $49 minus the $4.90 cash buffer = $44.10 / 27.67",
+      "binds": false
+     }
+    ],
+    "qty": 1,
+    "bound_by": "max loss",
+    "cost": 27.67,
+    "max_loss": 0.62,
+    "flat_by": "15:55",
+    "order_type": "market",
+    "refusal": null
+   },
+   "order": {
+    "symbol": "MGNI",
+    "side": "buy",
+    "qty": "1",
+    "type": "market",
+    "time_in_force": "day",
+    "order_class": "bracket",
+    "take_profit_limit_price": "28.91",
+    "stop_loss_stop_price": "27.05",
+    "why": "opening-range breakout on MGNI: 1 shares, bound by your $0.98 max loss per trade (1 x 0.62 = $0.62 at the stop)",
+    "plan": {
+     "entry": 27.67,
+     "stop": 27.05,
+     "target": 28.91,
+     "risk_per_share": 0.62,
+     "max_loss": 0.62,
+     "setup": "orb",
+     "entry_time": "9:50 AM",
+     "flat_by": "15:55"
+    }
+   },
+   "odds": {
+    "replays": 5000,
+    "seed": 19,
+    "window": 2,
+    "bars_left": 74,
+    "p_target": 0.071,
+    "p_stop": 0.3448,
+    "p_neither": 0.5842,
+    "p_green": 0.4472,
+    "median_close": 27.62,
+    "p5_close": 26.59,
+    "p95_close": 28.72,
+    "avg_R": -0.03,
+    "r_at_target": 2.0,
+    "band_paths": 2000,
+    "hist": {
+     "lo": 26.16,
+     "hi": 29.27,
+     "bins": [
+      60,
+      49,
+      67,
+      136,
+      157,
+      216,
+      273,
+      309,
+      351,
+      377,
+      383,
+      402,
+      389,
+      352,
+      344,
+      254,
+      226,
+      177,
+      126,
+      96,
+      76,
+      41,
+      29,
+      25
+     ]
+    },
+    "until": "16:00",
+    "pool_sessions": 59,
+    "pool_from": "2026-08-14",
+    "pool_to": "2026-11-05",
+    "band_times": [
+     "09:50",
+     "09:55",
+     "10:00",
+     "10:05",
+     "10:10",
+     "10:15",
+     "10:20",
+     "10:25",
+     "10:30",
+     "10:35",
+     "10:40",
+     "10:45",
+     "10:50",
+     "10:55",
+     "11:00",
+     "11:05",
+     "11:10",
+     "11:15",
+     "11:20",
+     "11:25",
+     "11:30",
+     "11:35",
+     "11:40",
+     "11:45",
+     "11:50",
+     "11:55",
+     "12:00",
+     "12:05",
+     "12:10",
+     "12:15",
+     "12:20",
+     "12:25",
+     "12:30",
+     "12:35",
+     "12:40",
+     "12:45",
+     "12:50",
+     "12:55",
+     "13:00",
+     "13:05",
+     "13:10",
+     "13:15",
+     "13:20",
+     "13:25",
+     "13:30",
+     "13:35",
+     "13:40",
+     "13:45",
+     "13:50",
+     "13:55",
+     "14:00",
+     "14:05",
+     "14:10",
+     "14:15",
+     "14:20",
+     "14:25",
+     "14:30",
+     "14:35",
+     "14:40",
+     "14:45",
+     "14:50",
+     "14:55",
+     "15:00",
+     "15:05",
+     "15:10",
+     "15:15",
+     "15:20",
+     "15:25",
+     "15:30",
+     "15:35",
+     "15:40",
+     "15:45",
+     "15:50",
+     "15:55",
+     "16:00"
+    ]
+   },
+   "history": {
+    "sessions": 59,
+    "triggered": 31,
+    "target": 5,
+    "stop": 15,
+    "close": 11,
+    "avg_R": -0.077
+   },
+   "target_profit": 1.24,
+   "expected": -0.02,
+   "confidence": "low"
+  },
+  {
+   "id": "c8013f25",
+   "symbol": "GFI",
+   "created": "2026-11-06T14:50:00+00:00",
+   "expires": "2026-11-06T15:10:00+00:00",
+   "status": "passed",
+   "plan": {
+    "entry": 38.01,
+    "stop": 37.61,
+    "target": 38.81,
+    "entry_time": "9:50 AM",
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "flat_by": "15:55"
+   },
+   "sizing": {
+    "symbol": "GFI",
+    "side": "buy",
+    "setup": "orb",
+    "date": "2026-11-06",
+    "entry_time": "9:50 AM",
+    "entry_plan": 38.01,
+    "entry": 38.01,
+    "entry_from": "plan",
+    "stop": 37.61,
+    "target": 38.81,
+    "risk_per_share": 0.4,
+    "reward_risk": 2.0,
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "budget": 49.0,
+    "cash_buffer_pct": 10.0,
+    "cash_buffer": 4.9,
+    "cash_available": 44.1,
+    "max_loss_per_trade_usd": 0.98,
+    "limits": [
+     {
+      "name": "max loss",
+      "usd": 0.98,
+      "per": 0.4,
+      "shares": 2,
+      "how": "$0.98 max loss / 0.40 risk a share",
+      "binds": false
+     },
+     {
+      "name": "position cap",
+      "usd": 44.1,
+      "per": 38.01,
+      "shares": 1,
+      "how": "90% of $49 = $44.10 / 38.01",
+      "binds": true
+     },
+     {
+      "name": "max order",
+      "usd": 44.1,
+      "per": 38.01,
+      "shares": 1,
+      "how": "$44.10 / 38.01",
+      "binds": false
+     },
+     {
+      "name": "cash",
+      "usd": 44.1,
+      "per": 38.01,
+      "shares": 1,
+      "how": "budget $49 minus the $4.90 cash buffer = $44.10 / 38.01",
+      "binds": false
+     }
+    ],
+    "qty": 1,
+    "bound_by": "position cap",
+    "cost": 38.01,
+    "max_loss": 0.4,
+    "flat_by": "15:55",
+    "order_type": "market",
+    "refusal": null
+   },
+   "order": {
+    "symbol": "GFI",
+    "side": "buy",
+    "qty": "1",
+    "type": "market",
+    "time_in_force": "day",
+    "order_class": "bracket",
+    "take_profit_limit_price": "38.81",
+    "stop_loss_stop_price": "37.61",
+    "why": "opening-range breakout on GFI: 1 shares, bound by your position cap (1 x 0.40 = $0.40 at the stop)",
+    "plan": {
+     "entry": 38.01,
+     "stop": 37.61,
+     "target": 38.81,
+     "risk_per_share": 0.4,
+     "max_loss": 0.4,
+     "setup": "orb",
+     "entry_time": "9:50 AM",
+     "flat_by": "15:55"
+    }
+   },
+   "odds": {
+    "replays": 5000,
+    "seed": 19,
+    "window": 2,
+    "bars_left": 74,
+    "p_target": 0.1776,
+    "p_stop": 0.5722,
+    "p_neither": 0.2502,
+    "p_green": 0.3706,
+    "median_close": 37.98,
+    "p5_close": 36.88,
+    "p95_close": 39.08,
+    "avg_R": -0.078,
+    "r_at_target": 2.0,
+    "band_paths": 2000,
+    "hist": {
+     "lo": 36.42,
+     "hi": 39.52,
+     "bins": [
+      54,
+      53,
+      70,
+      88,
+      126,
+      153,
+      204,
+      265,
+      320,
+      313,
+      390,
+      410,
+      384,
+      349,
+      363,
+      340,
+      254,
+      231,
+      175,
+      127,
+      95,
+      71,
+      51,
+      37
+     ]
+    },
+    "until": "16:00",
+    "pool_sessions": 59,
+    "pool_from": "2026-08-14",
+    "pool_to": "2026-11-05",
+    "band_times": [
+     "09:50",
+     "09:55",
+     "10:00",
+     "10:05",
+     "10:10",
+     "10:15",
+     "10:20",
+     "10:25",
+     "10:30",
+     "10:35",
+     "10:40",
+     "10:45",
+     "10:50",
+     "10:55",
+     "11:00",
+     "11:05",
+     "11:10",
+     "11:15",
+     "11:20",
+     "11:25",
+     "11:30",
+     "11:35",
+     "11:40",
+     "11:45",
+     "11:50",
+     "11:55",
+     "12:00",
+     "12:05",
+     "12:10",
+     "12:15",
+     "12:20",
+     "12:25",
+     "12:30",
+     "12:35",
+     "12:40",
+     "12:45",
+     "12:50",
+     "12:55",
+     "13:00",
+     "13:05",
+     "13:10",
+     "13:15",
+     "13:20",
+     "13:25",
+     "13:30",
+     "13:35",
+     "13:40",
+     "13:45",
+     "13:50",
+     "13:55",
+     "14:00",
+     "14:05",
+     "14:10",
+     "14:15",
+     "14:20",
+     "14:25",
+     "14:30",
+     "14:35",
+     "14:40",
+     "14:45",
+     "14:50",
+     "14:55",
+     "15:00",
+     "15:05",
+     "15:10",
+     "15:15",
+     "15:20",
+     "15:25",
+     "15:30",
+     "15:35",
+     "15:40",
+     "15:45",
+     "15:50",
+     "15:55",
+     "16:00"
+    ]
+   },
+   "history": {
+    "sessions": 59,
+    "triggered": 29,
+    "target": 5,
+    "stop": 15,
+    "close": 9,
+    "avg_R": -0.131
+   },
+   "target_profit": 0.8,
+   "expected": -0.03,
+   "confidence": "low"
+  },
+  {
+   "id": "5d289bde",
+   "symbol": "COLD",
+   "created": "2026-11-06T14:50:00+00:00",
+   "expires": "2026-11-06T15:10:00+00:00",
+   "status": "passed",
+   "plan": {
+    "entry": 15.67,
+    "stop": 15.35,
+    "target": 16.31,
+    "entry_time": "9:50 AM",
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "flat_by": "15:55"
+   },
+   "sizing": {
+    "symbol": "COLD",
+    "side": "buy",
+    "setup": "orb",
+    "date": "2026-11-06",
+    "entry_time": "9:50 AM",
+    "entry_plan": 15.67,
+    "entry": 15.67,
+    "entry_from": "plan",
+    "stop": 15.35,
+    "target": 16.31,
+    "risk_per_share": 0.32,
+    "reward_risk": 2.0,
+    "stop_label": "opening-range midpoint",
+    "target_label": "2R (two times the risk)",
+    "budget": 49.0,
+    "cash_buffer_pct": 10.0,
+    "cash_buffer": 4.9,
+    "cash_available": 44.1,
+    "max_loss_per_trade_usd": 0.98,
+    "limits": [
+     {
+      "name": "max loss",
+      "usd": 0.98,
+      "per": 0.32,
+      "shares": 3,
+      "how": "$0.98 max loss / 0.32 risk a share",
+      "binds": false
+     },
+     {
+      "name": "position cap",
+      "usd": 44.1,
+      "per": 15.67,
+      "shares": 2,
+      "how": "90% of $49 = $44.10 / 15.67",
+      "binds": true
+     },
+     {
+      "name": "max order",
+      "usd": 44.1,
+      "per": 15.67,
+      "shares": 2,
+      "how": "$44.10 / 15.67",
+      "binds": false
+     },
+     {
+      "name": "cash",
+      "usd": 44.1,
+      "per": 15.67,
+      "shares": 2,
+      "how": "budget $49 minus the $4.90 cash buffer = $44.10 / 15.67",
+      "binds": false
+     }
+    ],
+    "qty": 2,
+    "bound_by": "position cap",
+    "cost": 31.34,
+    "max_loss": 0.64,
+    "flat_by": "15:55",
+    "order_type": "market",
+    "refusal": null
+   },
+   "order": {
+    "symbol": "COLD",
+    "side": "buy",
+    "qty": "2",
+    "type": "market",
+    "time_in_force": "day",
+    "order_class": "bracket",
+    "take_profit_limit_price": "16.31",
+    "stop_loss_stop_price": "15.35",
+    "why": "opening-range breakout on COLD: 2 shares, bound by your position cap (2 x 0.32 = $0.64 at the stop)",
+    "plan": {
+     "entry": 15.67,
+     "stop": 15.35,
+     "target": 16.31,
+     "risk_per_share": 0.32,
+     "max_loss": 0.64,
+     "setup": "orb",
+     "entry_time": "9:50 AM",
+     "flat_by": "15:55"
+    }
+   },
+   "odds": {
+    "replays": 5000,
+    "seed": 19,
+    "window": 2,
+    "bars_left": 74,
+    "p_target": 0.0214,
+    "p_stop": 0.25,
+    "p_neither": 0.7286,
+    "p_green": 0.4638,
+    "median_close": 15.65,
+    "p5_close": 15.22,
+    "p95_close": 16.12,
+    "avg_R": -0.036,
+    "r_at_target": 2.0,
+    "band_paths": 2000,
+    "hist": {
+     "lo": 15.04,
+     "hi": 16.34,
+     "bins": [
+      48,
+      60,
+      84,
+      114,
+      175,
+      226,
+      260,
+      316,
+      339,
+      359,
+      393,
+      369,
+      387,
+      342,
+      302,
+      271,
+      236,
+      199,
+      141,
+      97,
+      87,
+      59,
+      35,
+      19
+     ]
+    },
+    "until": "16:00",
+    "pool_sessions": 59,
+    "pool_from": "2026-08-14",
+    "pool_to": "2026-11-05",
+    "band_times": [
+     "09:50",
+     "09:55",
+     "10:00",
+     "10:05",
+     "10:10",
+     "10:15",
+     "10:20",
+     "10:25",
+     "10:30",
+     "10:35",
+     "10:40",
+     "10:45",
+     "10:50",
+     "10:55",
+     "11:00",
+     "11:05",
+     "11:10",
+     "11:15",
+     "11:20",
+     "11:25",
+     "11:30",
+     "11:35",
+     "11:40",
+     "11:45",
+     "11:50",
+     "11:55",
+     "12:00",
+     "12:05",
+     "12:10",
+     "12:15",
+     "12:20",
+     "12:25",
+     "12:30",
+     "12:35",
+     "12:40",
+     "12:45",
+     "12:50",
+     "12:55",
+     "13:00",
+     "13:05",
+     "13:10",
+     "13:15",
+     "13:20",
+     "13:25",
+     "13:30",
+     "13:35",
+     "13:40",
+     "13:45",
+     "13:50",
+     "13:55",
+     "14:00",
+     "14:05",
+     "14:10",
+     "14:15",
+     "14:20",
+     "14:25",
+     "14:30",
+     "14:35",
+     "14:40",
+     "14:45",
+     "14:50",
+     "14:55",
+     "15:00",
+     "15:05",
+     "15:10",
+     "15:15",
+     "15:20",
+     "15:25",
+     "15:30",
+     "15:35",
+     "15:40",
+     "15:45",
+     "15:50",
+     "15:55",
+     "16:00"
+    ]
+   },
+   "history": {
+    "sessions": 59,
+    "triggered": 34,
+    "target": 5,
+    "stop": 14,
+    "close": 15,
+    "avg_R": 0.073
+   },
+   "target_profit": 1.28,
+   "expected": -0.02,
+   "confidence": "low"
   }
  ],
  "events": [
@@ -1616,6 +2937,96 @@
    "t": "2026-11-06T13:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "entry",
+   "text": "QQQ broke out at $662.66 (9:50 AM)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "oracle",
+   "text": "QQQ: target first 6%, stop first 43%, neither 51% (5000 replays). History: 42 fired, 10 won, 25 lost."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on QQQ: the odds are no better than a coin flip (avg -0.12R)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "entry",
+   "text": "SPY broke out at $740.55 (9:50 AM)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "oracle",
+   "text": "SPY: target first 4%, stop first 35%, neither 61% (5000 replays). History: 38 fired, 15 won, 22 lost."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on SPY: the odds are no better than a coin flip (avg -0.11R)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "entry",
+   "text": "RUN broke out at $9.98 (9:50 AM)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "oracle",
+   "text": "RUN: target first 9%, stop first 36%, neither 55% (5000 replays). History: 33 fired, 8 won, 14 lost."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "broker",
+   "text": "Bought 3 RUN (auto: medium confidence)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "entry",
+   "text": "MGNI broke out at $27.67 (9:50 AM)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "oracle",
+   "text": "MGNI: target first 7%, stop first 34%, neither 58% (5000 replays). History: 31 fired, 5 won, 15 lost."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on MGNI: the odds are no better than a coin flip (avg -0.03R)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "entry",
+   "text": "GFI broke out at $38.01 (9:50 AM)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "oracle",
+   "text": "GFI: target first 18%, stop first 57%, neither 25% (5000 replays). History: 29 fired, 5 won, 15 lost."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on GFI: the odds are no better than a coin flip (avg -0.08R)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "entry",
+   "text": "COLD broke out at $15.67 (9:50 AM)."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "oracle",
+   "text": "COLD: target first 2%, stop first 25%, neither 73% (5000 replays). History: 34 fired, 5 won, 14 lost."
+  },
+  {
+   "t": "2026-11-06T14:50:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on COLD: the odds are no better than a coin flip (avg -0.04R)."
   }
  ],
  "trades": [
@@ -1648,6 +3059,21 @@
    "confidence": "medium",
    "paper": true,
    "result": -30.32
+  },
+  {
+   "date": "2026-11-06",
+   "t": "2026-11-06T14:50:00+00:00",
+   "symbol": "RUN",
+   "qty": 3,
+   "entry": 9.98,
+   "stop": 9.73,
+   "target": 10.48,
+   "max_loss": 0.75,
+   "target_profit": 1.5,
+   "source": "auto: medium confidence",
+   "confidence": "medium",
+   "paper": true,
+   "result": null
   }
  ],
  "done": {
@@ -1962,12 +3388,19 @@
   }
  ],
  "candidates_day": "2026-11-06",
- "seen": {},
+ "seen": {
+  "QQQ": "triggered",
+  "SPY": "triggered",
+  "RUN": "triggered",
+  "MGNI": "triggered",
+  "GFI": "triggered",
+  "COLD": "triggered"
+ },
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T14:45:00+00:00"
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -1976,18 +3409,18 @@
   },
   "entry": {
    "status": "working",
-   "text": "Checked 37 charts at 9:45 AM New York: 0 breakouts.",
-   "t": "2026-11-06T14:45:00+00:00"
+   "text": "Checked 37 charts at 9:50 AM New York: 6 breakouts.",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "oracle": {
    "status": "working",
-   "text": "RIOT: target first 0%, stop first 3%, neither 97% (5000 replays). History: 34 fired, 10 won, 16 lost.",
-   "t": "2026-11-05T19:45:00+00:00"
+   "text": "COLD: target first 2%, stop first 25%, neither 73% (5000 replays). History: 34 fired, 5 won, 14 lost.",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "broker": {
    "status": "working",
-   "text": "Closing anything still open before the bell.",
-   "t": "2026-11-05T21:00:00+00:00"
+   "text": "Bought 3 RUN (auto: medium confidence).",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "news": {
    "status": "working",
@@ -2434,8 +3867,68 @@
  ],
  "charts": {
   "date": "2026-11-06",
-  "updated": "2026-11-06T14:45:00+00:00",
+  "updated": "2026-11-06T14:50:00+00:00",
   "symbols": {
+   "RUN": {
+    "bars": [
+     [
+      1793975400,
+      9.81,
+      9.91,
+      9.58,
+      9.62
+     ],
+     [
+      1793975700,
+      9.66,
+      9.81,
+      9.56,
+      9.78
+     ],
+     [
+      1793976000,
+      9.8,
+      9.82,
+      9.68,
+      9.76
+     ],
+     [
+      1793976300,
+      9.75,
+      9.98,
+      9.71,
+      9.98
+     ],
+     [
+      1793976612,
+      9.95,
+      9.95,
+      9.95,
+      9.95
+     ]
+    ],
+    "or_high": 9.91,
+    "or_low": 9.56,
+    "plans": [
+     {
+      "entry": 9.98,
+      "stop": 9.73,
+      "target": 10.48,
+      "t": "2026-11-06T14:50:00+00:00",
+      "source": "auto: medium confidence"
+     }
+    ],
+    "fills": [
+     {
+      "symbol": "RUN",
+      "side": "buy",
+      "price": 9.96,
+      "qty": 1.0,
+      "t": "2026-11-06T14:50:10.820948Z",
+      "type": "market"
+     }
+    ]
+   },
    "QQQ": {
     "bars": [
      [
@@ -2460,11 +3953,18 @@
       660.88
      ],
      [
-      1793976306,
-      661.08,
-      661.08,
-      661.08,
-      661.08
+      1793976300,
+      660.87,
+      663.66,
+      660.73,
+      662.66
+     ],
+     [
+      1793976612,
+      662.59,
+      662.59,
+      662.59,
+      662.59
      ]
     ],
     "or_high": 661.73,
@@ -2476,10 +3976,10 @@
     "bars": [
      [
       1793975400,
-      734.81,
+      734.82,
       736.41,
       734.58,
-      735.68
+      735.63
      ],
      [
       1793975700,
@@ -2496,11 +3996,18 @@
       738.79
      ],
      [
-      1793976306,
-      739.04,
-      739.04,
-      739.04,
-      739.04
+      1793976300,
+      738.79,
+      741.01,
+      735.62,
+      740.55
+     ],
+     [
+      1793976612,
+      740.48,
+      740.48,
+      740.48,
+      740.48
      ]
     ],
     "or_high": 738.98,
@@ -2532,11 +4039,18 @@
       352.73
      ],
      [
-      1793976306,
-      352.73,
-      352.73,
-      352.73,
-      352.73
+      1793976300,
+      352.67,
+      355.2,
+      352.41,
+      354.39
+     ],
+     [
+      1793976612,
+      353.89,
+      353.89,
+      353.89,
+      353.89
      ]
     ],
     "or_high": 354.8,
@@ -2568,11 +4082,18 @@
       193.57
      ],
      [
-      1793976306,
-      193.55,
-      193.55,
-      193.55,
-      193.55
+      1793976300,
+      193.58,
+      194.77,
+      193.37,
+      194.05
+     ],
+     [
+      1793976612,
+      193.89,
+      193.89,
+      193.89,
+      193.89
      ]
     ],
     "or_high": 194.53,
@@ -2604,11 +4125,18 @@
       339.6
      ],
      [
-      1793976306,
-      339.73,
-      339.73,
-      339.73,
-      339.73
+      1793976300,
+      339.58,
+      341.17,
+      339.54,
+      340.99
+     ],
+     [
+      1793976603,
+      341.16,
+      341.16,
+      341.16,
+      341.16
      ]
     ],
     "or_high": 341.68,
@@ -2620,10 +4148,10 @@
     "bars": [
      [
       1793975400,
-      27.83,
+      27.84,
       27.95,
       27.83,
-      27.95
+      27.92
      ],
      [
       1793975700,
@@ -2637,14 +4165,21 @@
       27.79,
       27.8,
       27.7,
-      27.75
+      27.74
      ],
      [
-      1793976298,
-      27.74,
-      27.74,
-      27.74,
-      27.74
+      1793976300,
+      27.73,
+      27.86,
+      27.62,
+      27.65
+     ],
+     [
+      1793976605,
+      27.66,
+      27.66,
+      27.66,
+      27.66
      ]
     ],
     "or_high": 27.97,
@@ -2656,7 +4191,7 @@
     "bars": [
      [
       1793975400,
-      33.76,
+      33.77,
       33.78,
       33.71,
       33.74
@@ -2676,11 +4211,18 @@
       33.59
      ],
      [
-      1793976303,
-      33.58,
-      33.58,
-      33.58,
-      33.58
+      1793976300,
+      33.59,
+      33.74,
+      33.49,
+      33.51
+     ],
+     [
+      1793976604,
+      33.5,
+      33.5,
+      33.5,
+      33.5
      ]
     ],
     "or_high": 33.78,
@@ -2693,92 +4235,92 @@
  "watch": {
   "_day": "2026-11-06",
   "QQQ": {
-   "status": "waiting",
+   "status": "triggered",
    "level": 661.73,
-   "last": 660.88,
-   "vs": -0.13,
-   "reason": "last close $660.88 (9:40 bar), $0.85 under the range high $661.73 (-0.13%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 662.66,
+   "vs": 0.14,
+   "reason": "the 9:45 bar closed above the range high",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "SPY": {
-   "status": "waiting",
+   "status": "triggered",
    "level": 738.98,
-   "last": 738.79,
-   "vs": -0.03,
-   "reason": "last close $738.79 (9:40 bar), $0.19 under the range high $738.98 (-0.03%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 740.55,
+   "vs": 0.21,
+   "reason": "the 9:45 bar closed above the range high",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "TSLA": {
    "status": "waiting",
    "level": 354.8,
-   "last": 352.73,
-   "vs": -0.58,
-   "reason": "last close $352.73 (9:40 bar), $2.07 under the range high $354.80 (-0.58%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 354.39,
+   "vs": -0.12,
+   "reason": "last close $354.39 (9:45 bar), $0.41 under the range high $354.80 (-0.12%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "NVDA": {
    "status": "waiting",
    "level": 194.53,
-   "last": 193.57,
-   "vs": -0.49,
-   "reason": "last close $193.57 (9:40 bar), $0.96 under the range high $194.53 (-0.49%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 194.05,
+   "vs": -0.25,
+   "reason": "last close $194.05 (9:45 bar), $0.48 under the range high $194.53 (-0.25%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "AAPL": {
    "status": "waiting",
    "level": 341.68,
-   "last": 339.6,
-   "vs": -0.61,
-   "reason": "last close $339.60 (9:40 bar), $2.08 under the range high $341.68 (-0.61%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 340.99,
+   "vs": -0.2,
+   "reason": "last close $340.99 (9:45 bar), $0.70 under the range high $341.68 (-0.20%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "PSQ": {
    "status": "waiting",
    "level": 27.97,
-   "last": 27.77,
-   "vs": -0.72,
-   "reason": "last close $27.77 (9:35 bar), $0.20 under the range high $27.97 (-0.72%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 27.65,
+   "vs": -1.15,
+   "reason": "last close $27.65 (9:45 bar), $0.32 under the range high $27.97 (-1.15%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "SH": {
    "status": "waiting",
    "level": 33.78,
-   "last": 33.59,
-   "vs": -0.56,
-   "reason": "last close $33.59 (9:40 bar), $0.19 under the range high $33.78 (-0.56%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 33.51,
+   "vs": -0.81,
+   "reason": "last close $33.51 (9:45 bar), $0.27 under the range high $33.78 (-0.81%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "CMCSA": {
    "status": "waiting",
    "level": 24.39,
-   "last": 24.25,
-   "vs": -0.57,
-   "reason": "last close $24.25 (9:40 bar), $0.14 under the range high $24.39 (-0.57%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 24.33,
+   "vs": -0.25,
+   "reason": "last close $24.33 (9:45 bar), $0.06 under the range high $24.39 (-0.25%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "CMG": {
    "status": "waiting",
    "level": 34.76,
-   "last": 34.33,
-   "vs": -1.24,
-   "reason": "last close $34.33 (9:40 bar), $0.43 under the range high $34.76 (-1.24%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 34.62,
+   "vs": -0.4,
+   "reason": "last close $34.62 (9:45 bar), $0.14 under the range high $34.76 (-0.40%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "KDP": {
    "status": "waiting",
    "level": 36.2,
-   "last": 36.12,
-   "vs": -0.22,
-   "reason": "last close $36.12 (9:40 bar), $0.08 under the range high $36.20 (-0.22%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 36.06,
+   "vs": -0.39,
+   "reason": "last close $36.06 (9:45 bar), $0.14 under the range high $36.20 (-0.39%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "IBN": {
    "status": "waiting",
    "level": 33.99,
-   "last": 33.76,
-   "vs": -0.69,
-   "reason": "last close $33.76 (9:40 bar), $0.24 under the range high $33.99 (-0.69%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 33.82,
+   "vs": -0.5,
+   "reason": "last close $33.82 (9:45 bar), $0.17 under the range high $33.99 (-0.50%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "JAN": {
    "status": "waiting",
@@ -2786,23 +4328,23 @@
    "last": 30.66,
    "vs": -0.24,
    "reason": "last close $30.66 (9:40 bar), $0.07 under the range high $30.73 (-0.24%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "DKNG": {
    "status": "waiting",
    "level": 17.83,
-   "last": 16.96,
-   "vs": -4.89,
-   "reason": "last close $16.96 (9:40 bar), $0.87 under the range high $17.83 (-4.89%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 17.12,
+   "vs": -3.99,
+   "reason": "last close $17.12 (9:45 bar), $0.71 under the range high $17.83 (-3.99%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "JD": {
    "status": "waiting",
    "level": 28.97,
-   "last": 28.83,
-   "vs": -0.47,
-   "reason": "last close $28.83 (9:40 bar), $0.14 under the range high $28.97 (-0.47%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 28.92,
+   "vs": -0.16,
+   "reason": "last close $28.92 (9:45 bar), $0.05 under the range high $28.97 (-0.16%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "AEHL": {
    "status": "waiting",
@@ -2810,7 +4352,7 @@
    "last": 12.87,
    "vs": -4.04,
    "reason": "last close $12.87 (9:40 bar), $0.54 under the range high $13.41 (-4.04%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "MOS": {
    "status": "waiting",
@@ -2818,119 +4360,119 @@
    "last": 21.88,
    "vs": -0.91,
    "reason": "last close $21.88 (9:40 bar), $0.20 under the range high $22.08 (-0.91%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "TSCO": {
    "status": "waiting",
    "level": 35.74,
-   "last": 35.74,
-   "vs": 0.0,
-   "reason": "last close $35.74 (9:40 bar), $0.00 under the range high $35.74 (+0.00%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 35.67,
+   "vs": -0.2,
+   "reason": "last close $35.67 (9:45 bar), $0.07 under the range high $35.74 (-0.20%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "GIS": {
    "status": "waiting",
    "level": 35.48,
-   "last": 35.08,
-   "vs": -1.13,
-   "reason": "last close $35.08 (9:35 bar), $0.40 under the range high $35.48 (-1.13%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 35.21,
+   "vs": -0.76,
+   "reason": "last close $35.21 (9:45 bar), $0.27 under the range high $35.48 (-0.76%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "RUN": {
-   "status": "waiting",
+   "status": "triggered",
    "level": 9.91,
-   "last": 9.76,
-   "vs": -1.51,
-   "reason": "last close $9.76 (9:40 bar), $0.15 under the range high $9.91 (-1.51%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 9.98,
+   "vs": 0.69,
+   "reason": "the 9:45 bar closed above the range high",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "SONY": {
    "status": "waiting",
    "level": 26.74,
-   "last": 26.59,
-   "vs": -0.52,
-   "reason": "last close $26.59 (9:40 bar), $0.14 under the range high $26.74 (-0.52%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 26.66,
+   "vs": -0.28,
+   "reason": "last close $26.66 (9:45 bar), $0.08 under the range high $26.74 (-0.28%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "HDB": {
    "status": "waiting",
    "level": 25.64,
-   "last": 25.17,
-   "vs": -1.85,
-   "reason": "last close $25.17 (9:40 bar), $0.47 under the range high $25.64 (-1.85%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 25.24,
+   "vs": -1.56,
+   "reason": "last close $25.24 (9:45 bar), $0.40 under the range high $25.64 (-1.56%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "ROL": {
    "status": "waiting",
    "level": 37.68,
-   "last": 37.65,
-   "vs": -0.09,
-   "reason": "last close $37.65 (9:40 bar), $0.03 under the range high $37.68 (-0.09%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 37.49,
+   "vs": -0.52,
+   "reason": "last close $37.49 (9:45 bar), $0.19 under the range high $37.68 (-0.52%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "WRBY": {
    "status": "waiting",
-   "level": 26.45,
-   "last": 26.0,
-   "vs": -1.7,
-   "reason": "last close $26.00 (9:35 bar), $0.45 under the range high $26.45 (-1.70%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "level": 26.58,
+   "last": 26.24,
+   "vs": -1.28,
+   "reason": "last close $26.24 (9:45 bar), $0.34 under the range high $26.58 (-1.28%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "MGNI": {
-   "status": "waiting",
+   "status": "triggered",
    "level": 27.43,
-   "last": 27.35,
-   "vs": -0.29,
-   "reason": "last close $27.35 (9:40 bar), $0.08 under the range high $27.43 (-0.29%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 27.67,
+   "vs": 0.86,
+   "reason": "the 9:45 bar closed above the range high",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "PRMB": {
    "status": "waiting",
    "level": 21.76,
-   "last": 21.66,
-   "vs": -0.46,
-   "reason": "last close $21.66 (9:40 bar), $0.10 under the range high $21.76 (-0.46%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 21.52,
+   "vs": -1.1,
+   "reason": "last close $21.52 (9:45 bar), $0.24 under the range high $21.76 (-1.10%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "ADT": {
    "status": "waiting",
    "level": 9.89,
    "last": 9.88,
    "vs": -0.15,
-   "reason": "last close $9.88 (9:35 bar), $0.02 under the range high $9.89 (-0.15%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "reason": "last close $9.88 (9:45 bar), $0.02 under the range high $9.89 (-0.15%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "AGI": {
    "status": "waiting",
    "level": 30.93,
-   "last": 30.57,
-   "vs": -1.2,
-   "reason": "last close $30.57 (9:35 bar), $0.37 under the range high $30.93 (-1.20%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 30.55,
+   "vs": -1.24,
+   "reason": "last close $30.55 (9:40 bar), $0.39 under the range high $30.93 (-1.24%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "GFI": {
-   "status": "waiting",
+   "status": "triggered",
    "level": 37.94,
-   "last": 37.81,
-   "vs": -0.34,
-   "reason": "last close $37.81 (9:35 bar), $0.13 under the range high $37.94 (-0.34%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 38.01,
+   "vs": 0.18,
+   "reason": "the 9:45 bar closed above the range high",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "BEKE": {
    "status": "waiting",
    "level": 18.95,
    "last": 18.91,
-   "vs": -0.24,
-   "reason": "last close $18.91 (9:40 bar), $0.05 under the range high $18.95 (-0.24%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "vs": -0.21,
+   "reason": "last close $18.91 (9:45 bar), $0.04 under the range high $18.95 (-0.21%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "ADMA": {
    "status": "waiting",
    "level": 13.2,
-   "last": 13.15,
-   "vs": -0.42,
-   "reason": "last close $13.15 (9:40 bar), $0.05 under the range high $13.20 (-0.42%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 12.98,
+   "vs": -1.63,
+   "reason": "last close $12.98 (9:45 bar), $0.22 under the range high $13.20 (-1.63%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "EWTX": {
    "status": "waiting",
@@ -2938,15 +4480,15 @@
    "last": 38.25,
    "vs": -4.26,
    "reason": "last close $38.25 (9:40 bar), $1.70 under the range high $39.95 (-4.26%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "CAG": {
    "status": "waiting",
    "level": 14.98,
-   "last": 14.92,
-   "vs": -0.37,
-   "reason": "last close $14.92 (9:40 bar), $0.06 under the range high $14.98 (-0.37%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 14.9,
+   "vs": -0.5,
+   "reason": "last close $14.90 (9:45 bar), $0.08 under the range high $14.98 (-0.50%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "ACHC": {
    "status": "waiting",
@@ -2954,44 +4496,44 @@
    "last": 34.86,
    "vs": -2.43,
    "reason": "last close $34.86 (9:40 bar), $0.87 under the range high $35.73 (-2.43%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "COLD": {
-   "status": "waiting",
+   "status": "triggered",
    "level": 15.58,
-   "last": 15.51,
-   "vs": -0.45,
-   "reason": "last close $15.51 (9:40 bar), $0.07 under the range high $15.58 (-0.45%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 15.67,
+   "vs": 0.58,
+   "reason": "the 9:45 bar closed above the range high",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "WU": {
    "status": "waiting",
    "level": 6.91,
-   "last": 6.85,
-   "vs": -0.87,
-   "reason": "last close $6.85 (9:40 bar), $0.06 under the range high $6.91 (-0.87%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 6.83,
+   "vs": -1.16,
+   "reason": "last close $6.83 (9:45 bar), $0.08 under the range high $6.91 (-1.16%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "XERS": {
    "status": "waiting",
    "level": 14.21,
-   "last": 13.97,
-   "vs": -1.66,
-   "reason": "last close $13.97 (9:35 bar), $0.24 under the range high $14.21 (-1.66%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "last": 14.05,
+   "vs": -1.1,
+   "reason": "last close $14.05 (9:45 bar), $0.16 under the range high $14.21 (-1.10%)",
+   "t": "2026-11-06T14:50:00+00:00"
   },
   "EGO": {
    "status": "waiting",
-   "level": 34.49,
+   "level": 34.55,
    "last": 34.2,
-   "vs": -0.85,
-   "reason": "last close $34.20 (9:40 bar), $0.29 under the range high $34.49 (-0.85%)",
-   "t": "2026-11-06T14:45:00+00:00"
+   "vs": -1.01,
+   "reason": "last close $34.20 (9:40 bar), $0.35 under the range high $34.55 (-1.01%)",
+   "t": "2026-11-06T14:50:00+00:00"
   }
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-06T13:00:00+00:00"
+  "at": "2026-11-06T14:50:00+00:00"
  },
  "telegram_log": [
   {
@@ -3074,6 +4616,10 @@
   {
    "sent_ok": 1,
    "at": "2026-11-06T13:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-06T14:50:00+00:00"
   }
  ],
  "news": {

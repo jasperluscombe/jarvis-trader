@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-06T21:00:00+00:00",
- "updated_local": "Sat 7 Nov 7:30 AM",
+ "updated_utc": "2026-11-06T21:05:00+00:00",
+ "updated_local": "Sat 7 Nov 7:35 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -666,7 +666,7 @@
  },
  "charts": {
   "date": "2026-11-06",
-  "updated": "2026-11-06T21:00:00+00:00",
+  "updated": "2026-11-06T21:05:00+00:00",
   "symbols": {
    "RUN": {
     "bars": [
@@ -1214,6 +1214,13 @@
       10.1,
       10.1,
       9.97,
+      9.97
+     ],
+     [
+      1793998800,
+      9.98,
+      9.98,
+      9.98,
       9.98
      ]
     ],
@@ -2337,8 +2344,8 @@
      ],
      [
       1793997900,
-      737.18,
-      737.59,
+      737.19,
+      737.6,
       736.8,
       736.94
      ],
@@ -2352,9 +2359,16 @@
      [
       1793998500,
       735.33,
-      736.02,
+      736.07,
       735.07,
-      735.74
+      735.44
+     ],
+     [
+      1793998800,
+      735.36,
+      735.36,
+      735.36,
+      735.36
      ]
     ],
     "or_high": 738.99,
@@ -2908,7 +2922,7 @@
       358.65,
       358.72,
       357.89,
-      358.16
+      358.2
      ],
      [
       1793998800,
@@ -5170,7 +5184,7 @@
       33.75,
       33.76,
       33.72,
-      33.72
+      33.75
      ]
     ],
     "or_high": 33.78,
@@ -5246,7 +5260,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-06T21:05:00+00:00",
+ "next_checkin_utc": "2026-11-06T21:10:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5269,7 +5283,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T21:00:00+00:00"
+   "t": "2026-11-06T21:05:00+00:00"
   },
   {
    "id": "scanner",
@@ -5293,7 +5307,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-06T21:00:00+00:00"
+   "t": "2026-11-06T21:05:00+00:00"
   },
   {
    "id": "oracle",

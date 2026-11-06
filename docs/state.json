@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-06T14:55:00+00:00",
- "updated_local": "Sat 7 Nov 1:25 AM",
+ "updated_utc": "2026-11-06T15:00:00+00:00",
+ "updated_local": "Sat 7 Nov 1:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 51.93,
-  "cash": 21.85,
-  "day_pl": 2.93,
+  "equity": 51.86,
+  "cash": 4.91,
+  "day_pl": 2.86,
   "start": 50.0
  },
  "limits": {
@@ -26,11 +26,11 @@
   "risk_used": 0.91
  },
  "goals": {
-  "day_pl": 2.93,
-  "week_pl": 1.93,
+  "day_pl": 2.86,
+  "week_pl": 1.86,
   "daily_goal": 0.98,
   "weekly_goal": 4.0,
-  "day_hit": true,
+  "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
@@ -429,6 +429,10 @@
   {
    "t": "2026-11-06T14:55:00+00:00",
    "eq": 51.93
+  },
+  {
+   "t": "2026-11-06T15:00:00+00:00",
+   "eq": 51.86
   }
  ],
  "stats": {
@@ -446,7 +450,7 @@
  },
  "charts": {
   "date": "2026-11-06",
-  "updated": "2026-11-06T14:55:00+00:00",
+  "updated": "2026-11-06T15:00:00+00:00",
   "symbols": {
    "RUN": {
     "bars": [
@@ -486,7 +490,14 @@
       10.02
      ],
      [
-      1793976914,
+      1793976900,
+      10.03,
+      10.05,
+      9.91,
+      10.0
+     ],
+     [
+      1793977202,
       10.02,
       10.02,
       10.02,
@@ -553,11 +564,18 @@
       662.61
      ],
      [
-      1793976915,
-      662.28,
-      662.28,
-      662.28,
-      662.28
+      1793976900,
+      661.96,
+      662.8,
+      660.89,
+      662.61
+     ],
+     [
+      1793977205,
+      662.79,
+      662.79,
+      662.79,
+      662.79
      ]
     ],
     "or_high": 661.73,
@@ -584,8 +602,8 @@
      [
       1793976000,
       737.79,
-      738.98,
-      737.16,
+      738.99,
+      737.14,
       738.79
      ],
      [
@@ -603,14 +621,21 @@
       740.84
      ],
      [
-      1793976914,
-      740.54,
-      740.54,
-      740.54,
+      1793976900,
+      740.97,
+      741.0,
+      739.62,
       740.54
+     ],
+     [
+      1793977203,
+      740.68,
+      740.68,
+      740.68,
+      740.68
      ]
     ],
-    "or_high": 738.98,
+    "or_high": 738.99,
     "or_low": 734.58,
     "plans": [],
     "fills": []
@@ -653,11 +678,18 @@
       354.39
      ],
      [
-      1793976914,
-      354.58,
-      354.58,
-      354.58,
-      354.58
+      1793976900,
+      354.24,
+      356.5,
+      353.8,
+      356.49
+     ],
+     [
+      1793977205,
+      356.63,
+      356.63,
+      356.63,
+      356.63
      ]
     ],
     "or_high": 354.8,
@@ -703,11 +735,18 @@
       193.07
      ],
      [
-      1793976914,
-      192.89,
-      192.89,
-      192.89,
-      192.89
+      1793976900,
+      193.07,
+      193.41,
+      192.15,
+      193.41
+     ],
+     [
+      1793977205,
+      193.37,
+      193.37,
+      193.37,
+      193.37
      ]
     ],
     "or_high": 194.53,
@@ -753,11 +792,18 @@
       343.3
      ],
      [
-      1793976915,
-      342.99,
-      342.99,
-      342.99,
-      342.99
+      1793976900,
+      343.33,
+      343.6,
+      342.43,
+      342.85
+     ],
+     [
+      1793977205,
+      343.31,
+      343.31,
+      343.31,
+      343.31
      ]
     ],
     "or_high": 341.68,
@@ -800,8 +846,8 @@
      ],
      [
       1793976000,
-      27.79,
-      27.8,
+      27.78,
+      27.81,
       27.7,
       27.74
      ],
@@ -820,11 +866,18 @@
       27.66
      ],
      [
-      1793976910,
-      27.68,
-      27.68,
-      27.68,
-      27.68
+      1793976900,
+      27.66,
+      27.73,
+      27.66,
+      27.67
+     ],
+     [
+      1793977206,
+      27.74,
+      27.74,
+      27.74,
+      27.74
      ]
     ],
     "or_high": 27.97,
@@ -870,7 +923,14 @@
       33.47
      ],
      [
-      1793976913,
+      1793976900,
+      33.51,
+      33.54,
+      33.49,
+      33.52
+     ],
+     [
+      1793977182,
       33.51,
       33.51,
       33.51,
@@ -905,21 +965,21 @@
   },
   {
    "symbol": "TSLA",
-   "status": "waiting",
+   "status": "triggered",
    "level": 354.8,
-   "last": 354.39,
-   "vs": -0.12,
-   "reason": "last close $354.39 (9:50 bar), $0.41 under the range high $354.80 (-0.12%)",
-   "t": "2026-11-06T14:55:00+00:00"
+   "last": 356.49,
+   "vs": 0.48,
+   "reason": "the 9:55 bar closed above the range high",
+   "t": "2026-11-06T15:00:00+00:00"
   },
   {
    "symbol": "NVDA",
    "status": "waiting",
    "level": 194.53,
-   "last": 193.07,
-   "vs": -0.75,
-   "reason": "last close $193.07 (9:50 bar), $1.46 under the range high $194.53 (-0.75%)",
-   "t": "2026-11-06T14:55:00+00:00"
+   "last": 193.41,
+   "vs": -0.57,
+   "reason": "last close $193.41 (9:55 bar), $1.12 under the range high $194.53 (-0.57%)",
+   "t": "2026-11-06T15:00:00+00:00"
   },
   {
    "symbol": "AAPL",
@@ -934,23 +994,23 @@
    "symbol": "PSQ",
    "status": "waiting",
    "level": 27.97,
-   "last": 27.66,
-   "vs": -1.12,
-   "reason": "last close $27.66 (9:50 bar), $0.31 under the range high $27.97 (-1.12%)",
-   "t": "2026-11-06T14:55:00+00:00"
+   "last": 27.67,
+   "vs": -1.08,
+   "reason": "last close $27.67 (9:55 bar), $0.30 under the range high $27.97 (-1.08%)",
+   "t": "2026-11-06T15:00:00+00:00"
   },
   {
    "symbol": "SH",
    "status": "waiting",
    "level": 33.78,
-   "last": 33.51,
-   "vs": -0.81,
-   "reason": "last close $33.51 (9:45 bar), $0.27 under the range high $33.78 (-0.81%)",
-   "t": "2026-11-06T14:55:00+00:00"
+   "last": 33.47,
+   "vs": -0.92,
+   "reason": "last close $33.47 (9:50 bar), $0.31 under the range high $33.78 (-0.92%)",
+   "t": "2026-11-06T15:00:00+00:00"
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-06T15:00:00+00:00",
+ "next_checkin_utc": "2026-11-06T15:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -967,10 +1027,17 @@
  },
  "positions": [
   {
+   "symbol": "AAPL",
+   "qty": 0.04933741,
+   "value": 16.915824,
+   "pl": -0.024176,
+   "entry": 343.35
+  },
+  {
    "symbol": "RUN",
    "qty": 3.0,
-   "value": 30.075,
-   "pl": 0.204999,
+   "value": 30.015,
+   "pl": 0.144999,
    "entry": 9.956667
   }
  ],
@@ -981,7 +1048,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T14:55:00+00:00"
+   "t": "2026-11-06T15:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -1004,30 +1071,30 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 31 charts at 9:55 AM New York: 10 breakouts.",
-   "t": "2026-11-06T14:55:00+00:00"
+   "text": "Checked 21 charts at 10:00 AM New York: 1 breakouts.",
+   "t": "2026-11-06T15:00:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "EGO: target first 14%, stop first 40%, neither 46% (5000 replays). History: 25 fired, 5 won, 9 lost.",
-   "t": "2026-11-06T14:55:00+00:00"
+   "text": "TSLA: target first 8%, stop first 32%, neither 60% (5000 replays). History: 34 fired, 3 won, 17 lost.",
+   "t": "2026-11-06T15:00:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped EGO: one share of EGO costs $34.62, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 34.62). No order.",
-   "t": "2026-11-06T14:55:00+00:00"
+   "text": "Skipped TSLA: only $0.00 fits your limits, under the $5.00 minimum order",
+   "t": "2026-11-06T15:00:00+00:00"
   },
   {
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Bought $16.95 of AAPL (\u22480.0494 shares) (auto: medium confidence).",
    "t": "2026-11-06T14:55:00+00:00"
   }
@@ -1565,6 +1632,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-06T15:00:00+00:00",
+   "bot": "risk",
+   "text": "Skipped TSLA: only $0.00 fits your limits, under the $5.00 minimum order"
+  },
+  {
+   "t": "2026-11-06T15:00:00+00:00",
+   "bot": "oracle",
+   "text": "TSLA: target first 8%, stop first 32%, neither 60% (5000 replays). History: 34 fired, 3 won, 17 lost."
+  },
+  {
+   "t": "2026-11-06T15:00:00+00:00",
+   "bot": "entry",
+   "text": "TSLA broke out at $356.49 (10:00 AM)."
+  },
+  {
    "t": "2026-11-06T14:55:00+00:00",
    "bot": "risk",
    "text": "Skipped EGO: one share of EGO costs $34.62, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 34.62). No order."
@@ -1748,21 +1830,6 @@
    "t": "2026-11-06T14:50:00+00:00",
    "bot": "jarvis",
    "text": "Passed on MGNI: the odds are no better than a coin flip (avg -0.03R)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "MGNI: target first 7%, stop first 34%, neither 58% (5000 replays). History: 31 fired, 5 won, 15 lost."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "entry",
-   "text": "MGNI broke out at $27.67 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "broker",
-   "text": "Bought 3 RUN (auto: medium confidence)."
   }
  ],
  "errors": []

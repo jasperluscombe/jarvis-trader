@@ -1596,6 +1596,11 @@
    "t": "2026-11-06T08:30:00+00:00",
    "bot": "jarvis",
    "text": "\ud83c\udfaf Daily goal reached: +$1.06 today."
+  },
+  {
+   "t": "2026-11-06T12:55:00+00:00",
+   "bot": "risk",
+   "text": "Still holding 2 RIOT with the market closed."
   }
  ],
  "trades": [
@@ -1633,7 +1638,8 @@
  "done": {
   "daily_goal": "2026-11-06",
   "recap": "2026-11-05",
-  "brief": "2026-11-05"
+  "brief": "2026-11-05",
+  "overnight_warning": "2026-11-06"
  },
  "candidates": [
   {
@@ -1946,7 +1952,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T12:50:00+00:00"
+   "t": "2026-11-06T12:55:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -1956,7 +1962,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-06T12:50:00+00:00"
+   "t": "2026-11-06T12:55:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -1975,8 +1981,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Limits resized to your $49.00 account: $0.98 a trade, $4.90 a day, orders up to $44.10.",
-   "t": "2026-11-06T08:30:00+00:00"
+   "text": "Still holding 2 RIOT with the market closed.",
+   "t": "2026-11-06T12:55:00+00:00"
   }
  },
  "seen_day": "2026-11-06",
@@ -2329,6 +2335,10 @@
   {
    "t": "2026-11-06T12:50:00+00:00",
    "eq": 50.74
+  },
+  {
+   "t": "2026-11-06T12:55:00+00:00",
+   "eq": 50.68
   }
  ],
  "charts": {
@@ -7153,9 +7163,8 @@
   }
  },
  "telegram_health": {
-  "handled": 1,
   "sent_ok": 1,
-  "at": "2026-11-06T12:35:01+00:00"
+  "at": "2026-11-06T12:55:00+00:00"
  },
  "telegram_log": [
   {
@@ -7230,6 +7239,10 @@
    "handled": 1,
    "sent_ok": 1,
    "at": "2026-11-06T12:35:01+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-06T12:55:00+00:00"
   }
  ],
  "news": {

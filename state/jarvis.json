@@ -1,5 +1,5 @@
 {
- "tg_offset": 615089768,
+ "tg_offset": 615089769,
  "paused": false,
  "proposals": [
   {
@@ -1946,7 +1946,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T12:30:00+00:00"
+   "t": "2026-11-06T12:35:01+00:00"
   },
   "scanner": {
    "status": "working",
@@ -1956,7 +1956,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-06T12:30:00+00:00"
+   "t": "2026-11-06T12:35:01+00:00"
   },
   "oracle": {
    "status": "working",
@@ -2313,6 +2313,10 @@
   {
    "t": "2026-11-06T12:30:00+00:00",
    "eq": 50.94
+  },
+  {
+   "t": "2026-11-06T12:35:01+00:00",
+   "eq": 50.54
   }
  ],
  "charts": {
@@ -7137,8 +7141,9 @@
   }
  },
  "telegram_health": {
+  "handled": 1,
   "sent_ok": 1,
-  "at": "2026-11-06T08:30:00+00:00"
+  "at": "2026-11-06T12:35:01+00:00"
  },
  "telegram_log": [
   {
@@ -7208,6 +7213,11 @@
   {
    "sent_ok": 1,
    "at": "2026-11-06T08:30:00+00:00"
+  },
+  {
+   "handled": 1,
+   "sent_ok": 1,
+   "at": "2026-11-06T12:35:01+00:00"
   }
  ],
  "news": {

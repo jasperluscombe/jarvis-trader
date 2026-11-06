@@ -719,6 +719,29 @@ class Jarvis:
             m["stop_order_id"] = "self-watch"
         return True
 
+    def close_position(self, sym):
+        """Sell everything held in sym at market. A bracket's stop and target legs hold the shares, so Alpaca
+        refuses the sell (HTTP 403 "insufficient qty available") until they are cancelled: cancel this symbol's
+        open orders, wait until Alpaca confirms they're gone, then sell and wait briefly for the fill.
+        Returns (filled, order)."""
+        q = urllib.parse.quote(sym)
+        for o in self.alpaca.get("/v2/orders?status=open&nested=true&symbols=%s" % q) or []:
+            try:
+                self.alpaca.call("DELETE", "/v2/orders/%s" % o["id"])
+            except Exception as e:
+                print("cancel failed for", sym, o.get("id"), e, file=sys.stderr)
+        for _ in range(15):
+            if not self.alpaca.get("/v2/orders?status=open&nested=true&symbols=%s" % q):
+                break
+            time.sleep(1)
+        order = self.alpaca.call("DELETE", "/v2/positions/%s" % q) or {}
+        for _ in range(10):
+            if order.get("status") == "filled" or not order.get("id"):
+                break
+            time.sleep(1)
+            order = self.alpaca.get("/v2/orders/%s" % order["id"]) or order
+        return order.get("status") == "filled", order
+
     def manage_open(self):
         """Each check-in during the session: look after part-share trades (stop parked? target reached?)."""
         held = {p["symbol"]: p for p in self.positions}
@@ -739,10 +762,7 @@ class Jarvis:
             if not (hit_target or hit_self_stop) or self.args.dry_run:
                 continue
             try:
-                if m.get("stop_order_id") not in (None, "self-watch"):
-                    self.alpaca.call("DELETE", "/v2/orders/%s" % m["stop_order_id"])
-                    time.sleep(1)
-                self.alpaca.call("DELETE", "/v2/positions/%s" % urllib.parse.quote(m["symbol"]))
+                self.close_position(m["symbol"])
                 m["done"] = True
                 pl = float(pos.get("unrealized_pl") or 0)
                 self.log_order({"date": self.today, "at": self.now_utc.isoformat(timespec="seconds"),
@@ -880,8 +900,12 @@ class Jarvis:
         wstart = float(w.get("start") or last or 0)
         wg = (round(wstart * float(S["weekly_goal_pct"]) / 100, 2) if S.get("weekly_goal_pct") and wstart
               else float(S.get("weekly_goal_usd") or 0))
+        # A goal only counts once today's session has opened and a trade has actually closed today. Before
+        # that, any change in equity is a position left over from an earlier day drifting in after-hours
+        # trading, not profit Jarvis made today.
+        counts = self.session_started() and self.closed_trade_today()
         g = {"day_pl": day_pl, "week_pl": week_pl, "daily_goal": dg, "weekly_goal": wg,
-             "day_hit": bool(dg) and day_pl >= dg, "week_hit": bool(wg) and week_pl >= wg}
+             "day_hit": counts and bool(dg) and day_pl >= dg, "week_hit": counts and bool(wg) and week_pl >= wg}
         stop = self.settings.get("stop_when_goal_hit", True)
         if g["day_hit"] and self.once("daily_goal"):
             self.event("jarvis", "🎯 Daily goal reached: %s today." % money(day_pl, sign=True))
@@ -893,6 +917,15 @@ class Jarvis:
             self.tg.send("🏆 <b>Weekly goal reached!</b> %s this week (goal %s).%s" % (
                 money(week_pl, sign=True), money(wg), " Taking the rest of the week off to protect it." if stop else ""))
         return g
+
+    def session_started(self):
+        """True once today's US session has opened (and stays true after the close)."""
+        return bool(self.cal) and self.ny.time() >= self.cal[0]
+
+    def closed_trade_today(self):
+        """True if a trade opened today is no longer held (stopped, target hit or flattened)."""
+        held = {p["symbol"] for p in self.positions}
+        return any(t["date"] == self.today and t["symbol"] not in held for t in self.st["trades"])
 
     def record_equity(self):
         a = self.account
@@ -1071,46 +1104,79 @@ class Jarvis:
         if self.args.dry_run:
             self.event("broker", "Would close %s now (dry run)." % ", ".join(p["symbol"] for p in self.positions))
             return
-        try:
-            self.alpaca.call("DELETE", "/v2/orders")
-        except Exception as e:
-            self.event("broker", "Couldn't cancel open orders: %s" % e)
         for m in self.st.get("managed", []):
             if m.get("date") == self.today:
                 m["done"] = True
         for pos in self.positions:
             sym = pos["symbol"]
             try:
-                self.alpaca.call("DELETE", "/v2/positions/%s" % urllib.parse.quote(sym))
+                filled, order = self.close_position(sym)
                 self.log_order({"date": self.today, "at": self.now_utc.isoformat(timespec="seconds"), "symbol": sym,
-                                "side": "sell", "kind": "exit", "qty": pos["qty"], "status": "placed", "source": "flat by close"})
-                self.event("broker", "Closed %s %s before the bell (%s)." % (
-                    pos["qty"], sym, money(float(pos.get("unrealized_pl") or 0), sign=True)))
-                self.tg.send("🔔 Closing <b>%s %s</b> before the bell: about %s on it." % (
-                    pos["qty"], sym, money(float(pos.get("unrealized_pl") or 0), sign=True)))
+                                "side": "sell", "kind": "exit", "qty": pos["qty"], "status": "filled" if filled else "placed",
+                                "broker_id": order.get("id"), "source": "flat by close"})
+                pl = money(float(pos.get("unrealized_pl") or 0), sign=True)
+                if filled:
+                    self.event("broker", "Closed %s %s before the bell (%s)." % (pos["qty"], sym, pl))
+                    self.tg.send("🔔 Closed <b>%s %s</b> before the bell: about %s on it." % (pos["qty"], sym, pl))
+                else:
+                    self.event("broker", "Sell order for %s %s sent but not filled yet (status %s). I'll check again."
+                               % (pos["qty"], sym, order.get("status")))
             except Exception as e:
                 self.event("broker", "Couldn't close %s: %s" % (sym, e))
                 self.tg.send("⚠️ I couldn't close %s: %s. Please check Alpaca." % (sym, esc(e)))
+
+    def settle_results(self):
+        """Fill in each open trade's result from Alpaca's fills, but only once the round trip is complete
+        (as many shares sold as bought). A trade whose sell hasn't filled stays "result pending"; before this
+        check the bare cost of the buy was recorded as the loss (RIOT, 5 Nov: -$30.32 on a $0.88 risk)."""
+        held = {p["symbol"] for p in self.positions}
+        for t in self.st["trades"]:
+            # undo results recorded the old way: a loss as big as the whole buy means the sell never filled
+            r, cost = t.get("result"), float(t.get("qty") or 0) * float(t.get("entry") or 0)
+            if r is not None and cost and r <= -0.9 * cost:
+                t["result"] = None
+        oldest = (self.ny.date() - dt.timedelta(days=7)).isoformat()
+        pending = [t for t in self.st["trades"] if t.get("result") is None and t["date"] >= oldest
+                   and t["symbol"] not in held]
+        if not pending or not self.alpaca.ok or self.args.dry_run:
+            return
+        start = dt.date.fromisoformat(min(t["date"] for t in pending))
+        after = ny_to_utc(dt.datetime.combine(start, dt.time(0, 0))).isoformat().replace("+00:00", "Z")
+        try:
+            orders = self.alpaca.get("/v2/orders?status=closed&nested=true&limit=500&direction=asc&after=%s" % after) or []
+        except Exception as e:
+            self.errors.append(str(e))
+            return
+        legs = []
+        for o in orders:
+            for x in [o] + (o.get("legs") or []):
+                if x.get("filled_at") and float(x.get("filled_qty") or 0) > 0:
+                    legs.append(x)
+        legs.sort(key=lambda x: x["filled_at"])
+        for sym in {t["symbol"] for t in pending}:
+            # walk the fills in time order; each time the position goes flat, one round trip is done
+            trips, qty, cash = [], 0.0, 0.0
+            for x in legs:
+                if x["symbol"] != sym:
+                    continue
+                q, px = float(x["filled_qty"]), float(x["filled_avg_price"])
+                qty += q if x["side"] == "buy" else -q
+                cash += q * px if x["side"] == "sell" else -q * px
+                if abs(qty) < 1e-6:
+                    trips.append(round(cash, 2))
+                    qty = cash = 0.0
+            # line the round trips up with every trade in sym since `start`, settled or not
+            mine = sorted((t for t in self.st["trades"] if t["symbol"] == sym and t["date"] >= start.isoformat()),
+                          key=lambda t: t["t"])
+            for t, res in zip(mine, trips):
+                if t.get("result") is None:
+                    t["result"] = res
 
     def recap(self):
         a = self.account or {}
         eq, last = float(a.get("equity") or 0), self.last_close()
         trades = [t for t in self.st["trades"] if t["date"] == self.today]
-        fills = {}
-        if self.alpaca.ok and not self.args.dry_run:
-            try:
-                after = ny_to_utc(dt.datetime.combine(self.ny.date(), dt.time(0, 0))).isoformat().replace("+00:00", "Z")
-                for o in self.alpaca.get("/v2/orders?status=closed&nested=true&limit=200&after=%s" % after) or []:
-                    for x in [o] + (o.get("legs") or []):
-                        if x.get("filled_qty") and float(x["filled_qty"]) > 0:
-                            q, px = float(x["filled_qty"]), float(x["filled_avg_price"])
-                            f = fills.setdefault(x["symbol"], 0.0)
-                            fills[x["symbol"]] = f + (q * px if x["side"] == "sell" else -q * px)
-            except Exception as e:
-                self.errors.append(str(e))
-        for t in trades:
-            if t["symbol"] in fills and t.get("result") is None:
-                t["result"] = round(fills[t["symbol"]], 2)
+        self.settle_results()
         lines = ["🌙 <b>Day recap</b> · %s (%s)" % (day_str(self.local()), self.mode()),
                  "Account: <b>%s</b> · today <b>%s</b>" % (money(eq), money(eq - last, sign=True)), ""]
         if trades:
@@ -1134,6 +1200,16 @@ class Jarvis:
             lines.append("\nNext open: <b>%s %s</b> your time." % (day_str(self.local(o_utc)), clock_str(self.local(o_utc))))
         self.tg.send("\n".join(lines))
         self.event("jarvis", "Sent the day's recap.")
+
+    def warn_overnight(self):
+        """Jarvis day-trades: anything held while the market is shut is a close that didn't go through."""
+        in_session = bool(self.cal) and self.cal[0] <= self.ny.time() < self.cal[1]
+        if not self.positions or in_session or not self.once("overnight_warning"):
+            return
+        held = ", ".join("%s %s" % (p["qty"], p["symbol"]) for p in self.positions)
+        self.event("risk", "Still holding %s with the market closed." % held)
+        self.tg.send("⚠️ <b>Still holding %s</b> with the market closed. A day trade should be flat by now: "
+                     "please check Alpaca (open orders and positions)." % esc(held))
 
     # ---- the tick
     def expire(self):
@@ -1177,7 +1253,7 @@ class Jarvis:
                 self.hunt()
             elif stop <= t < flat:
                 self.bot("entry", "idle", "No new entries this late. Watching open trades.")
-            elif flat <= t < (dt.datetime.combine(self.ny.date(), close_t) + dt.timedelta(minutes=5)).time():
+            elif flat <= t < close_t:
                 self.flatten()
                 self.bot("broker", "working", "Closing anything still open before the bell.")
             elif t >= close_t:
@@ -1189,6 +1265,7 @@ class Jarvis:
                 self.update_charts()
         else:
             self.bot("entry", "idle", "No US market today. Resting.")
+        self.warn_overnight()
         self.expire()
         self.bot("jarvis", "idle", "All good. Next check-in in about 5 minutes.")
         if self.tg.health:

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-06T15:00:00+00:00",
- "updated_local": "Sat 7 Nov 1:30 AM",
+ "updated_utc": "2026-11-06T15:05:01+00:00",
+ "updated_local": "Sat 7 Nov 1:35 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 51.86,
+  "equity": 51.6,
   "cash": 4.91,
-  "day_pl": 2.86,
+  "day_pl": 2.6,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.91
  },
  "goals": {
-  "day_pl": 2.86,
-  "week_pl": 1.86,
+  "day_pl": 2.6,
+  "week_pl": 1.6,
   "daily_goal": 0.98,
   "weekly_goal": 4.0,
   "day_hit": false,
@@ -433,6 +433,10 @@
   {
    "t": "2026-11-06T15:00:00+00:00",
    "eq": 51.86
+  },
+  {
+   "t": "2026-11-06T15:05:01+00:00",
+   "eq": 51.6
   }
  ],
  "stats": {
@@ -450,7 +454,7 @@
  },
  "charts": {
   "date": "2026-11-06",
-  "updated": "2026-11-06T15:00:00+00:00",
+  "updated": "2026-11-06T15:05:01+00:00",
   "symbols": {
    "RUN": {
     "bars": [
@@ -497,11 +501,18 @@
       10.0
      ],
      [
-      1793977202,
+      1793977200,
+      10.01,
       10.02,
-      10.02,
-      10.02,
-      10.02
+      9.84,
+      9.94
+     ],
+     [
+      1793977505,
+      9.95,
+      9.95,
+      9.95,
+      9.95
      ]
     ],
     "or_high": 9.91,
@@ -571,11 +582,18 @@
       662.61
      ],
      [
-      1793977205,
-      662.79,
-      662.79,
-      662.79,
-      662.79
+      1793977200,
+      662.7,
+      663.49,
+      660.59,
+      660.74
+     ],
+     [
+      1793977505,
+      660.67,
+      660.67,
+      660.67,
+      660.67
      ]
     ],
     "or_high": 661.73,
@@ -610,7 +628,7 @@
       1793976300,
       738.79,
       741.01,
-      735.62,
+      738.67,
       740.55
      ],
      [
@@ -628,11 +646,18 @@
       740.54
      ],
      [
-      1793977203,
-      740.68,
-      740.68,
-      740.68,
-      740.68
+      1793977200,
+      740.62,
+      741.41,
+      738.93,
+      739.14
+     ],
+     [
+      1793977505,
+      739.04,
+      739.04,
+      739.04,
+      739.04
      ]
     ],
     "or_high": 738.99,
@@ -685,11 +710,18 @@
       356.49
      ],
      [
-      1793977205,
-      356.63,
-      356.63,
-      356.63,
-      356.63
+      1793977200,
+      356.5,
+      357.77,
+      355.6,
+      356.1
+     ],
+     [
+      1793977504,
+      356.29,
+      356.29,
+      356.29,
+      356.29
      ]
     ],
     "or_high": 354.8,
@@ -742,11 +774,18 @@
       193.41
      ],
      [
-      1793977205,
-      193.37,
-      193.37,
-      193.37,
-      193.37
+      1793977200,
+      193.41,
+      193.67,
+      192.58,
+      192.86
+     ],
+     [
+      1793977505,
+      192.79,
+      192.79,
+      192.79,
+      192.79
      ]
     ],
     "or_high": 194.53,
@@ -799,11 +838,18 @@
       342.85
      ],
      [
-      1793977205,
-      343.31,
-      343.31,
-      343.31,
-      343.31
+      1793977200,
+      343.0,
+      343.45,
+      341.71,
+      341.86
+     ],
+     [
+      1793977505,
+      341.75,
+      341.75,
+      341.75,
+      341.75
      ]
     ],
     "or_high": 341.68,
@@ -853,8 +899,8 @@
      ],
      [
       1793976300,
-      27.73,
-      27.86,
+      27.74,
+      27.74,
       27.62,
       27.65
      ],
@@ -873,7 +919,14 @@
       27.67
      ],
      [
-      1793977206,
+      1793977200,
+      27.64,
+      27.75,
+      27.63,
+      27.75
+     ],
+     [
+      1793977500,
       27.74,
       27.74,
       27.74,
@@ -911,7 +964,7 @@
      [
       1793976300,
       33.59,
-      33.74,
+      33.59,
       33.49,
       33.51
      ],
@@ -927,14 +980,21 @@
       33.51,
       33.54,
       33.49,
-      33.52
+      33.51
      ],
      [
-      1793977182,
-      33.51,
-      33.51,
-      33.51,
-      33.51
+      1793977200,
+      33.58,
+      33.58,
+      33.47,
+      33.56
+     ],
+     [
+      1793977469,
+      33.56,
+      33.56,
+      33.56,
+      33.56
      ]
     ],
     "or_high": 33.78,
@@ -976,10 +1036,10 @@
    "symbol": "NVDA",
    "status": "waiting",
    "level": 194.53,
-   "last": 193.41,
-   "vs": -0.57,
-   "reason": "last close $193.41 (9:55 bar), $1.12 under the range high $194.53 (-0.57%)",
-   "t": "2026-11-06T15:00:00+00:00"
+   "last": 192.86,
+   "vs": -0.86,
+   "reason": "last close $192.86 (10:00 bar), $1.67 under the range high $194.53 (-0.86%)",
+   "t": "2026-11-06T15:05:01+00:00"
   },
   {
    "symbol": "AAPL",
@@ -994,23 +1054,23 @@
    "symbol": "PSQ",
    "status": "waiting",
    "level": 27.97,
-   "last": 27.67,
-   "vs": -1.08,
-   "reason": "last close $27.67 (9:55 bar), $0.30 under the range high $27.97 (-1.08%)",
-   "t": "2026-11-06T15:00:00+00:00"
+   "last": 27.75,
+   "vs": -0.79,
+   "reason": "last close $27.75 (10:00 bar), $0.22 under the range high $27.97 (-0.79%)",
+   "t": "2026-11-06T15:05:01+00:00"
   },
   {
    "symbol": "SH",
    "status": "waiting",
    "level": 33.78,
-   "last": 33.47,
-   "vs": -0.92,
-   "reason": "last close $33.47 (9:50 bar), $0.31 under the range high $33.78 (-0.92%)",
-   "t": "2026-11-06T15:00:00+00:00"
+   "last": 33.51,
+   "vs": -0.78,
+   "reason": "last close $33.51 (9:55 bar), $0.26 under the range high $33.78 (-0.78%)",
+   "t": "2026-11-06T15:05:01+00:00"
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-06T15:05:00+00:00",
+ "next_checkin_utc": "2026-11-06T15:10:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -1029,15 +1089,15 @@
   {
    "symbol": "AAPL",
    "qty": 0.04933741,
-   "value": 16.915824,
-   "pl": -0.024176,
+   "value": 16.86476,
+   "pl": -0.07524,
    "entry": 343.35
   },
   {
    "symbol": "RUN",
    "qty": 3.0,
-   "value": 30.015,
-   "pl": 0.144999,
+   "value": 29.8254,
+   "pl": -0.044601,
    "entry": 9.956667
   }
  ],
@@ -1048,7 +1108,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T15:00:00+00:00"
+   "t": "2026-11-06T15:05:01+00:00"
   },
   {
    "id": "scanner",
@@ -1071,24 +1131,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 21 charts at 10:00 AM New York: 1 breakouts.",
-   "t": "2026-11-06T15:00:00+00:00"
+   "text": "Checked 20 charts at 10:05 AM New York: 1 breakouts.",
+   "t": "2026-11-06T15:05:01+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "TSLA: target first 8%, stop first 32%, neither 60% (5000 replays). History: 34 fired, 3 won, 17 lost.",
-   "t": "2026-11-06T15:00:00+00:00"
+   "text": "BEKE: target first 3%, stop first 28%, neither 70% (5000 replays). History: 28 fired, 2 won, 11 lost.",
+   "t": "2026-11-06T15:05:01+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped TSLA: only $0.00 fits your limits, under the $5.00 minimum order",
-   "t": "2026-11-06T15:00:00+00:00"
+   "text": "Skipped BEKE: one share of BEKE costs $19, more than your cash limit (cash $4.91 in trader/portfolio.json minus the $4.90 buffer = $0.01 / 19.00). No order.",
+   "t": "2026-11-06T15:05:01+00:00"
   },
   {
    "id": "broker",
@@ -1632,6 +1692,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-06T15:05:01+00:00",
+   "bot": "risk",
+   "text": "Skipped BEKE: one share of BEKE costs $19, more than your cash limit (cash $4.91 in trader/portfolio.json minus the $4.90 buffer = $0.01 / 19.00). No order."
+  },
+  {
+   "t": "2026-11-06T15:05:01+00:00",
+   "bot": "oracle",
+   "text": "BEKE: target first 3%, stop first 28%, neither 70% (5000 replays). History: 28 fired, 2 won, 11 lost."
+  },
+  {
+   "t": "2026-11-06T15:05:01+00:00",
+   "bot": "entry",
+   "text": "BEKE broke out at $19.00 (10:05 AM)."
+  },
+  {
    "t": "2026-11-06T15:00:00+00:00",
    "bot": "risk",
    "text": "Skipped TSLA: only $0.00 fits your limits, under the $5.00 minimum order"
@@ -1815,21 +1890,6 @@
    "t": "2026-11-06T14:50:00+00:00",
    "bot": "jarvis",
    "text": "Passed on GFI: the odds are no better than a coin flip (avg -0.08R)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "GFI: target first 18%, stop first 57%, neither 25% (5000 replays). History: 29 fired, 5 won, 15 lost."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "entry",
-   "text": "GFI broke out at $38.01 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on MGNI: the odds are no better than a coin flip (avg -0.03R)."
   }
  ],
  "errors": []

@@ -1,20 +1,20 @@
 {
- "updated_utc": "2026-11-06T08:00:00+00:00",
- "updated_local": "Fri 6 Nov 6:30 PM",
+ "updated_utc": "2026-11-06T08:30:00+00:00",
+ "updated_local": "Fri 6 Nov 7:00 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 50.08,
-  "cash": 19.5,
-  "day_pl": 0.08,
+  "equity": 50.06,
+  "cash": 19.48,
+  "day_pl": 1.06,
   "start": 50.0
  },
  "limits": {
-  "max_loss_per_trade_usd": 1.0,
-  "max_daily_loss_usd": 5.0,
+  "max_loss_per_trade_usd": 0.98,
+  "max_daily_loss_usd": 4.9,
   "max_trades_per_day": 10,
   "min_reward_risk": 1.5,
   "no_entries_before": "09:45",
@@ -26,11 +26,11 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": 0.08,
-  "week_pl": 0.08,
-  "daily_goal": 1.0,
+  "day_pl": 1.06,
+  "week_pl": 0.06,
+  "daily_goal": 0.98,
   "weekly_goal": 4.0,
-  "day_hit": false,
+  "day_hit": true,
   "week_hit": false
  },
  "equity_history": [
@@ -273,6 +273,10 @@
   {
    "t": "2026-11-06T08:00:00+00:00",
    "eq": 50.08
+  },
+  {
+   "t": "2026-11-06T08:30:00+00:00",
+   "eq": 50.06
   }
  ],
  "stats": {
@@ -4876,7 +4880,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-06T08:30:00+00:00",
+ "next_checkin_utc": "2026-11-06T09:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4907,7 +4911,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T08:00:00+00:00"
+   "t": "2026-11-06T08:30:00+00:00"
   },
   {
    "id": "scanner",
@@ -4931,7 +4935,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-06T08:00:00+00:00"
+   "t": "2026-11-06T08:30:00+00:00"
   },
   {
    "id": "oracle",
@@ -4945,9 +4949,9 @@
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped DKNG: one share of DKNG costs $23.52, more than your cash limit (cash $18.71 in trader/portfolio.json minus the $5 buffer = $13.71 / 23.52). No order.",
-   "t": "2026-11-05T15:35:00+00:00"
+   "status": "working",
+   "text": "Limits resized to your $49.00 account: $0.98 a trade, $4.90 a day, orders up to $44.10.",
+   "t": "2026-11-06T08:30:00+00:00"
   },
   {
    "id": "broker",
@@ -5377,6 +5381,16 @@
  ],
  "events": [
   {
+   "t": "2026-11-06T08:30:00+00:00",
+   "bot": "jarvis",
+   "text": "\ud83c\udfaf Daily goal reached: +$1.06 today."
+  },
+  {
+   "t": "2026-11-06T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $49.00 account: $0.98 a trade, $4.90 a day, orders up to $44.10."
+  },
+  {
    "t": "2026-11-05T21:05:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
@@ -5565,16 +5579,6 @@
    "t": "2026-11-04T15:50:00+00:00",
    "bot": "entry",
    "text": "MGM broke out 45 min ago: too late to chase."
-  },
-  {
-   "t": "2026-11-04T15:50:00+00:00",
-   "bot": "entry",
-   "text": "PURR broke out 60 min ago: too late to chase."
-  },
-  {
-   "t": "2026-11-04T15:50:00+00:00",
-   "bot": "entry",
-   "text": "JD broke out 45 min ago: too late to chase."
   }
  ],
  "errors": []

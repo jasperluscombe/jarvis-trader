@@ -1586,6 +1586,16 @@
    "t": "2026-11-05T21:05:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-06T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $49.00 account: $0.98 a trade, $4.90 a day, orders up to $44.10."
+  },
+  {
+   "t": "2026-11-06T08:30:00+00:00",
+   "bot": "jarvis",
+   "text": "\ud83c\udfaf Daily goal reached: +$1.06 today."
   }
  ],
  "trades": [
@@ -1621,7 +1631,7 @@
   }
  ],
  "done": {
-  "daily_goal": "2026-11-04",
+  "daily_goal": "2026-11-06",
   "recap": "2026-11-05",
   "brief": "2026-11-05"
  },
@@ -1936,7 +1946,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T08:00:00+00:00"
+   "t": "2026-11-06T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -1946,7 +1956,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-06T08:00:00+00:00"
+   "t": "2026-11-06T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -1965,8 +1975,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped DKNG: one share of DKNG costs $23.52, more than your cash limit (cash $18.71 in trader/portfolio.json minus the $5 buffer = $13.71 / 23.52). No order.",
-   "t": "2026-11-05T15:35:00+00:00"
+   "text": "Limits resized to your $49.00 account: $0.98 a trade, $4.90 a day, orders up to $44.10.",
+   "t": "2026-11-06T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-06",
@@ -2247,6 +2257,10 @@
   {
    "t": "2026-11-06T08:00:00+00:00",
    "eq": 50.08
+  },
+  {
+   "t": "2026-11-06T08:30:00+00:00",
+   "eq": 50.06
   }
  ],
  "charts": {
@@ -7072,7 +7086,7 @@
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-05T21:05:00+00:00"
+  "at": "2026-11-06T08:30:00+00:00"
  },
  "telegram_log": [
   {
@@ -7138,6 +7152,10 @@
   {
    "sent_ok": 1,
    "at": "2026-11-05T21:05:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-06T08:30:00+00:00"
   }
  ],
  "news": {

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-06T14:50:00+00:00",
- "updated_local": "Sat 7 Nov 1:20 AM",
+ "updated_utc": "2026-11-06T14:55:00+00:00",
+ "updated_local": "Sat 7 Nov 1:25 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 51.72,
-  "cash": 51.72,
-  "day_pl": 2.72,
+  "equity": 51.93,
+  "cash": 21.85,
+  "day_pl": 2.93,
   "start": 50.0
  },
  "limits": {
@@ -22,12 +22,12 @@
   "flat_by": "15:55"
  },
  "today": {
-  "trades": 1,
-  "risk_used": 0.75
+  "trades": 2,
+  "risk_used": 0.91
  },
  "goals": {
-  "day_pl": 2.72,
-  "week_pl": 1.72,
+  "day_pl": 2.93,
+  "week_pl": 1.93,
   "daily_goal": 0.98,
   "weekly_goal": 4.0,
   "day_hit": true,
@@ -425,6 +425,10 @@
   {
    "t": "2026-11-06T14:35:00+00:00",
    "eq": 51.72
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "eq": 51.93
   }
  ],
  "stats": {
@@ -436,13 +440,13 @@
   "avg_loss": -15.25,
   "best": -0.18,
   "worst": -30.32,
-  "auto": 3,
-  "ideas": 12,
-  "passed": 7
+  "auto": 4,
+  "ideas": 14,
+  "passed": 8
  },
  "charts": {
   "date": "2026-11-06",
-  "updated": "2026-11-06T14:50:00+00:00",
+  "updated": "2026-11-06T14:55:00+00:00",
   "symbols": {
    "RUN": {
     "bars": [
@@ -475,11 +479,18 @@
       9.98
      ],
      [
-      1793976612,
-      9.95,
-      9.95,
-      9.95,
-      9.95
+      1793976600,
+      9.97,
+      10.08,
+      9.93,
+      10.02
+     ],
+     [
+      1793976914,
+      10.02,
+      10.02,
+      10.02,
+      10.02
      ]
     ],
     "or_high": 9.91,
@@ -497,9 +508,9 @@
      {
       "symbol": "RUN",
       "side": "buy",
-      "price": 9.96,
-      "qty": 1.0,
-      "t": "2026-11-06T14:50:10.820948Z",
+      "price": 9.956667,
+      "qty": 3.0,
+      "t": "2026-11-06T14:50:13.405534Z",
       "type": "market"
      }
     ]
@@ -535,11 +546,18 @@
       662.66
      ],
      [
-      1793976612,
-      662.59,
-      662.59,
-      662.59,
-      662.59
+      1793976600,
+      662.68,
+      664.52,
+      661.73,
+      662.61
+     ],
+     [
+      1793976915,
+      662.28,
+      662.28,
+      662.28,
+      662.28
      ]
     ],
     "or_high": 661.73,
@@ -578,11 +596,18 @@
       740.55
      ],
      [
-      1793976612,
-      740.48,
-      740.48,
-      740.48,
-      740.48
+      1793976600,
+      740.63,
+      742.21,
+      739.75,
+      740.84
+     ],
+     [
+      1793976914,
+      740.54,
+      740.54,
+      740.54,
+      740.54
      ]
     ],
     "or_high": 738.98,
@@ -621,11 +646,18 @@
       354.39
      ],
      [
-      1793976612,
-      353.89,
-      353.89,
-      353.89,
-      353.89
+      1793976600,
+      354.39,
+      357.1,
+      353.4,
+      354.39
+     ],
+     [
+      1793976914,
+      354.58,
+      354.58,
+      354.58,
+      354.58
      ]
     ],
     "or_high": 354.8,
@@ -664,11 +696,18 @@
       194.05
      ],
      [
-      1793976612,
-      193.89,
-      193.89,
-      193.89,
-      193.89
+      1793976600,
+      194.06,
+      194.9,
+      192.92,
+      193.07
+     ],
+     [
+      1793976914,
+      192.89,
+      192.89,
+      192.89,
+      192.89
      ]
     ],
     "or_high": 194.53,
@@ -707,17 +746,41 @@
       340.99
      ],
      [
-      1793976603,
-      341.16,
-      341.16,
-      341.16,
-      341.16
+      1793976600,
+      341.0,
+      343.36,
+      340.85,
+      343.3
+     ],
+     [
+      1793976915,
+      342.99,
+      342.99,
+      342.99,
+      342.99
      ]
     ],
     "or_high": 341.68,
     "or_low": 338.3,
-    "plans": [],
-    "fills": []
+    "plans": [
+     {
+      "entry": 343.3,
+      "stop": 339.99,
+      "target": 349.92,
+      "t": "2026-11-06T14:55:00+00:00",
+      "source": "auto: medium confidence"
+     }
+    ],
+    "fills": [
+     {
+      "symbol": "AAPL",
+      "side": "buy",
+      "price": 343.35,
+      "qty": 0.04933741,
+      "t": "2026-11-06T14:55:03.422750268Z",
+      "type": "market"
+     }
+    ]
    },
    "PSQ": {
     "bars": [
@@ -730,7 +793,7 @@
      ],
      [
       1793975700,
-      27.94,
+      27.93,
       27.97,
       27.77,
       27.77
@@ -750,11 +813,18 @@
       27.65
      ],
      [
-      1793976605,
-      27.66,
-      27.66,
-      27.66,
+      1793976600,
+      27.63,
+      27.69,
+      27.58,
       27.66
+     ],
+     [
+      1793976910,
+      27.68,
+      27.68,
+      27.68,
+      27.68
      ]
     ],
     "or_high": 27.97,
@@ -775,7 +845,7 @@
       1793975700,
       33.74,
       33.77,
-      33.65,
+      33.64,
       33.65
      ],
      [
@@ -793,11 +863,18 @@
       33.51
      ],
      [
-      1793976604,
-      33.5,
-      33.5,
-      33.5,
-      33.5
+      1793976600,
+      33.51,
+      33.54,
+      33.44,
+      33.47
+     ],
+     [
+      1793976913,
+      33.51,
+      33.51,
+      33.51,
+      33.51
      ]
     ],
     "or_high": 33.78,
@@ -832,35 +909,35 @@
    "level": 354.8,
    "last": 354.39,
    "vs": -0.12,
-   "reason": "last close $354.39 (9:45 bar), $0.41 under the range high $354.80 (-0.12%)",
-   "t": "2026-11-06T14:50:00+00:00"
+   "reason": "last close $354.39 (9:50 bar), $0.41 under the range high $354.80 (-0.12%)",
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "symbol": "NVDA",
    "status": "waiting",
    "level": 194.53,
-   "last": 194.05,
-   "vs": -0.25,
-   "reason": "last close $194.05 (9:45 bar), $0.48 under the range high $194.53 (-0.25%)",
-   "t": "2026-11-06T14:50:00+00:00"
+   "last": 193.07,
+   "vs": -0.75,
+   "reason": "last close $193.07 (9:50 bar), $1.46 under the range high $194.53 (-0.75%)",
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "symbol": "AAPL",
-   "status": "waiting",
+   "status": "triggered",
    "level": 341.68,
-   "last": 340.99,
-   "vs": -0.2,
-   "reason": "last close $340.99 (9:45 bar), $0.70 under the range high $341.68 (-0.20%)",
-   "t": "2026-11-06T14:50:00+00:00"
+   "last": 343.3,
+   "vs": 0.47,
+   "reason": "the 9:50 bar closed above the range high",
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "symbol": "PSQ",
    "status": "waiting",
    "level": 27.97,
-   "last": 27.65,
-   "vs": -1.15,
-   "reason": "last close $27.65 (9:45 bar), $0.32 under the range high $27.97 (-1.15%)",
-   "t": "2026-11-06T14:50:00+00:00"
+   "last": 27.66,
+   "vs": -1.12,
+   "reason": "last close $27.66 (9:50 bar), $0.31 under the range high $27.97 (-1.12%)",
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "symbol": "SH",
@@ -869,11 +946,11 @@
    "last": 33.51,
    "vs": -0.81,
    "reason": "last close $33.51 (9:45 bar), $0.27 under the range high $33.78 (-0.81%)",
-   "t": "2026-11-06T14:50:00+00:00"
+   "t": "2026-11-06T14:55:00+00:00"
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-06T14:55:00+00:00",
+ "next_checkin_utc": "2026-11-06T15:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -888,7 +965,15 @@
    "SH"
   ]
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "RUN",
+   "qty": 3.0,
+   "value": 30.075,
+   "pl": 0.204999,
+   "entry": 9.956667
+  }
+ ],
  "bots": [
   {
    "id": "jarvis",
@@ -896,7 +981,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T14:50:00+00:00"
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "id": "scanner",
@@ -919,32 +1004,32 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 37 charts at 9:50 AM New York: 6 breakouts.",
-   "t": "2026-11-06T14:50:00+00:00"
+   "text": "Checked 31 charts at 9:55 AM New York: 10 breakouts.",
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "COLD: target first 2%, stop first 25%, neither 73% (5000 replays). History: 34 fired, 5 won, 14 lost.",
-   "t": "2026-11-06T14:50:00+00:00"
+   "text": "EGO: target first 14%, stop first 40%, neither 46% (5000 replays). History: 25 fired, 5 won, 9 lost.",
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Still holding 2 RIOT with the market closed.",
-   "t": "2026-11-06T12:55:00+00:00"
+   "status": "working",
+   "text": "Skipped EGO: one share of EGO costs $34.62, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 34.62). No order.",
+   "t": "2026-11-06T14:55:00+00:00"
   },
   {
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
    "status": "working",
-   "text": "Bought 3 RUN (auto: medium confidence).",
-   "t": "2026-11-06T14:50:00+00:00"
+   "text": "Bought $16.95 of AAPL (\u22480.0494 shares) (auto: medium confidence).",
+   "t": "2026-11-06T14:55:00+00:00"
   }
  ],
  "watchlist": [
@@ -1220,6 +1305,28 @@
  ],
  "proposals": [
   {
+   "symbol": "CAG",
+   "status": "passed",
+   "created": "2026-11-06T14:55:00+00:00",
+   "confidence": "low",
+   "target_profit": 0.3,
+   "expected": -0.01,
+   "max_loss": 0.15,
+   "p_target": 0.174,
+   "p_stop": 0.5386
+  },
+  {
+   "symbol": "AAPL",
+   "status": "placed",
+   "created": "2026-11-06T14:55:00+00:00",
+   "confidence": "medium",
+   "target_profit": 0.33,
+   "expected": 0.01,
+   "max_loss": 0.16,
+   "p_target": 0.0822,
+   "p_stop": 0.3018
+  },
+  {
    "symbol": "COLD",
    "status": "passed",
    "created": "2026-11-06T14:50:00+00:00",
@@ -1355,6 +1462,21 @@
  "trades": [
   {
    "date": "2026-11-06",
+   "t": "2026-11-06T14:55:00+00:00",
+   "symbol": "AAPL",
+   "qty": 0.049374,
+   "entry": 343.3,
+   "stop": 339.99,
+   "target": 349.92,
+   "max_loss": 0.16,
+   "target_profit": 0.33,
+   "source": "auto: medium confidence",
+   "confidence": "medium",
+   "paper": true,
+   "result": null
+  },
+  {
+   "date": "2026-11-06",
    "t": "2026-11-06T14:50:00+00:00",
    "symbol": "RUN",
    "qty": 3,
@@ -1443,6 +1565,156 @@
  ],
  "events": [
   {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped EGO: one share of EGO costs $34.62, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 34.62). No order."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "EGO: target first 14%, stop first 40%, neither 46% (5000 replays). History: 25 fired, 5 won, 9 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "EGO broke out at $34.62 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on CAG: the odds are no better than a coin flip (avg -0.05R)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "CAG: target first 17%, stop first 54%, neither 29% (5000 replays). History: 33 fired, 3 won, 18 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "CAG broke out at $15.02 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped AGI: one share of AGI costs $30.95, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 30.95). No order."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "AGI: target first 26%, stop first 55%, neither 19% (5000 replays). History: 32 fired, 6 won, 17 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "AGI broke out at $30.95 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped TSCO: one share of TSCO costs $35.80, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 35.80). No order."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "TSCO: target first 28%, stop first 48%, neither 23% (5000 replays). History: 35 fired, 9 won, 21 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "TSCO broke out at $35.80 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped MOS: one share of MOS costs $22.19, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 22.19). No order."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "MOS: target first 27%, stop first 54%, neither 18% (5000 replays). History: 33 fired, 5 won, 17 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "MOS broke out at $22.19 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "Couldn't replay AEHL: timemachine.py: only 5 full session(s) of AEHL before 2026-11-06 in the data; the time machine needs at least 20"
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "AEHL broke out at $13.62 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped JD: one share of JD costs $29, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 29.00). No order."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "JD: target first 6%, stop first 27%, neither 68% (5000 replays). History: 30 fired, 6 won, 10 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "JD broke out at $29.00 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped KDP: one share of KDP costs $36.27, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 36.27). No order."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "KDP: target first 19%, stop first 44%, neither 37% (5000 replays). History: 35 fired, 9 won, 12 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "KDP broke out at $36.27 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped CMCSA: one share of CMCSA costs $24.47, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 24.47). No order."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "CMCSA: target first 15%, stop first 49%, neither 36% (5000 replays). History: 29 fired, 2 won, 9 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "CMCSA broke out at $24.47 (9:55 AM)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "broker",
+   "text": "Bought $16.95 of AAPL (\u22480.0494 shares) (auto: medium confidence)."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "broker",
+   "text": "Stop-loss for AAPL parked at Alpaca at $339.99."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "oracle",
+   "text": "AAPL: target first 8%, stop first 30%, neither 62% (5000 replays). History: 30 fired, 7 won, 10 lost."
+  },
+  {
+   "t": "2026-11-06T14:55:00+00:00",
+   "bot": "entry",
+   "text": "AAPL broke out at $343.30 (9:55 AM)."
+  },
+  {
    "t": "2026-11-06T14:50:00+00:00",
    "bot": "jarvis",
    "text": "Passed on COLD: the odds are no better than a coin flip (avg -0.04R)."
@@ -1491,156 +1763,6 @@
    "t": "2026-11-06T14:50:00+00:00",
    "bot": "broker",
    "text": "Bought 3 RUN (auto: medium confidence)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "RUN: target first 9%, stop first 36%, neither 55% (5000 replays). History: 33 fired, 8 won, 14 lost."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "entry",
-   "text": "RUN broke out at $9.98 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on SPY: the odds are no better than a coin flip (avg -0.11R)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "SPY: target first 4%, stop first 35%, neither 61% (5000 replays). History: 38 fired, 15 won, 22 lost."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "entry",
-   "text": "SPY broke out at $740.55 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on QQQ: the odds are no better than a coin flip (avg -0.12R)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "QQQ: target first 6%, stop first 43%, neither 51% (5000 replays). History: 42 fired, 10 won, 25 lost."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
-   "bot": "entry",
-   "text": "QQQ broke out at $662.66 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-06T13:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Sent the morning brief."
-  },
-  {
-   "t": "2026-11-06T13:00:00+00:00",
-   "bot": "news",
-   "text": "Read 17 headlines and filings for 8 stocks."
-  },
-  {
-   "t": "2026-11-06T13:00:00+00:00",
-   "bot": "scanner",
-   "text": "Scanned the US market: 489 charts matched a setup, 257 fit your $5-$40 price range. Watching the top 30."
-  },
-  {
-   "t": "2026-11-06T12:55:00+00:00",
-   "bot": "risk",
-   "text": "Still holding 2 RIOT with the market closed."
-  },
-  {
-   "t": "2026-11-06T08:30:00+00:00",
-   "bot": "jarvis",
-   "text": "\ud83c\udfaf Daily goal reached: +$1.06 today."
-  },
-  {
-   "t": "2026-11-06T08:30:00+00:00",
-   "bot": "risk",
-   "text": "Limits resized to your $49.00 account: $0.98 a trade, $4.90 a day, orders up to $44.10."
-  },
-  {
-   "t": "2026-11-05T21:05:00+00:00",
-   "bot": "jarvis",
-   "text": "Sent the day's recap."
-  },
-  {
-   "t": "2026-11-05T21:00:00+00:00",
-   "bot": "broker",
-   "text": "Closed 2 RIOT before the bell (-$0.79)."
-  },
-  {
-   "t": "2026-11-05T20:55:00+00:00",
-   "bot": "broker",
-   "text": "Couldn't close RIOT: Alpaca DELETE /v2/positions/RIOT: HTTP 403 {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"2\",\"held_for_orders\":\"2\",\"message\":\"insufficient qty available for order (requested: 2, available: 0)\",\"symbol\":\"RIOT\"}"
-  },
-  {
-   "t": "2026-11-05T19:45:00+00:00",
-   "bot": "broker",
-   "text": "Bought 2 RIOT (auto: medium confidence)."
-  },
-  {
-   "t": "2026-11-05T19:45:00+00:00",
-   "bot": "oracle",
-   "text": "RIOT: target first 0%, stop first 3%, neither 97% (5000 replays). History: 34 fired, 10 won, 16 lost."
-  },
-  {
-   "t": "2026-11-05T19:45:00+00:00",
-   "bot": "entry",
-   "text": "RIOT broke out at $15.14 (2:45 PM)."
-  },
-  {
-   "t": "2026-11-05T15:35:00+00:00",
-   "bot": "risk",
-   "text": "Skipped DKNG: one share of DKNG costs $23.52, more than your cash limit (cash $18.71 in trader/portfolio.json minus the $5 buffer = $13.71 / 23.52). No order."
-  },
-  {
-   "t": "2026-11-05T15:35:00+00:00",
-   "bot": "oracle",
-   "text": "DKNG: target first 18%, stop first 60%, neither 22% (5000 replays). History: 32 fired, 7 won, 16 lost."
-  },
-  {
-   "t": "2026-11-05T15:35:00+00:00",
-   "bot": "entry",
-   "text": "DKNG broke out at $23.52 (10:35 AM)."
-  },
-  {
-   "t": "2026-11-05T15:00:00+00:00",
-   "bot": "risk",
-   "text": "Skipped CMCSA: one share of CMCSA costs $25.21, more than your cash limit (cash $18.71 in trader/portfolio.json minus the $5 buffer = $13.71 / 25.21). No order."
-  },
-  {
-   "t": "2026-11-05T15:00:00+00:00",
-   "bot": "oracle",
-   "text": "CMCSA: target first 19%, stop first 49%, neither 32% (5000 replays). History: 29 fired, 3 won, 8 lost."
-  },
-  {
-   "t": "2026-11-05T15:00:00+00:00",
-   "bot": "entry",
-   "text": "CMCSA broke out at $25.21 (9:55 AM)."
-  },
-  {
-   "t": "2026-11-05T14:55:00+00:00",
-   "bot": "risk",
-   "text": "Skipped SH: one share of SH costs $32.87, more than your cash limit (cash $18.71 in trader/portfolio.json minus the $5 buffer = $13.71 / 32.87). No order."
-  },
-  {
-   "t": "2026-11-05T14:55:00+00:00",
-   "bot": "oracle",
-   "text": "SH: target first 0%, stop first 8%, neither 92% (5000 replays). History: 41 fired, 13 won, 25 lost."
-  },
-  {
-   "t": "2026-11-05T14:55:00+00:00",
-   "bot": "entry",
-   "text": "SH broke out at $32.87 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-05T14:50:01+00:00",
-   "bot": "jarvis",
-   "text": "Passed on GIS: the odds are no better than a coin flip (avg -0.11R)."
   }
  ],
  "errors": []

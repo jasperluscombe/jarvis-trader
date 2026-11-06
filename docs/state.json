@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-06T12:55:00+00:00",
- "updated_local": "Fri 6 Nov 11:25 PM",
+ "updated_utc": "2026-11-06T13:00:00+00:00",
+ "updated_local": "Fri 6 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 50.68,
+  "equity": 50.78,
   "cash": 19.48,
-  "day_pl": 1.68,
+  "day_pl": 1.78,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": 1.68,
-  "week_pl": 0.68,
+  "day_pl": 1.78,
+  "week_pl": 0.78,
   "daily_goal": 0.98,
   "weekly_goal": 4.0,
   "day_hit": false,
@@ -349,6 +349,10 @@
   {
    "t": "2026-11-06T12:55:00+00:00",
    "eq": 50.68
+  },
+  {
+   "t": "2026-11-06T13:00:00+00:00",
+   "eq": 50.78
   }
  ],
  "stats": {
@@ -4952,7 +4956,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-06T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-06T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4971,8 +4975,8 @@
   {
    "symbol": "RIOT",
    "qty": 2.0,
-   "value": 31.1998,
-   "pl": 0.8798,
+   "value": 31.3,
+   "pl": 0.98,
    "entry": 15.16
   }
  ],
@@ -4983,31 +4987,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T12:55:00+00:00"
+   "t": "2026-11-06T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks for setups before the open.",
-   "status": "idle",
-   "text": "Scanned the US market: 1080 charts matched a setup, 550 fit your $5-$40 price range. Watching the top 30.",
-   "t": "2026-11-05T13:00:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 489 charts matched a setup, 257 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-06T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "Read 28 headlines and filings for 8 stocks.",
-   "t": "2026-11-05T13:00:00+00:00"
+   "status": "working",
+   "text": "Read 17 headlines and filings for 8 stocks.",
+   "t": "2026-11-06T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-06T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-06T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -5021,7 +5025,7 @@
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "working",
+   "status": "idle",
    "text": "Still holding 2 RIOT with the market closed.",
    "t": "2026-11-06T12:55:00+00:00"
   },
@@ -5036,216 +5040,58 @@
  ],
  "watchlist": [
   {
-   "symbol": "PFE",
-   "price": 30.79,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "Is Regeneron Stock Riskier Than It Looks?",
-     "url": "https://www.trefis.com/stock/regn/articles/622879/is-regeneron-stock-riskier-than-it-looks/2026-11-05?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "OMH",
-   "price": 15.55,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "RIOT",
-   "price": 15.37,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": [
-    {
-     "title": "CleanSpark Lost 21% in a Week to a New 52-Week Low. Bernstein Still Sees 62% Upside",
-     "url": "https://www.tikr.com/blog/cleanspark-lost-21-in-a-week-to-a-new-52-week-low-bernstein-still-sees-62-upside?ref=yahoofinance&tlnk=yf-261105-p7rhc5w8&.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "AAL",
-   "price": 13.63,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "What Happens To American Airlines Stock If Fuel Stays High?",
-     "url": "https://www.trefis.com/stock/aal/articles/622616/what-happens-to-american-airlines-stock-if-fuel-stays-high/2026-11-04?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "CCL",
-   "price": 31.32,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "RKT",
-   "price": 15.01,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
    "symbol": "CMCSA",
-   "price": 24.85,
+   "price": 24.95,
    "setups": [
     "breakout_20d"
    ],
    "news": [
     {
-     "title": "State Street Comm Services SPDR (XLC) Sells $102.6 Million of Meta on Nov. 3",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-comm-services-spdr-110423766.html?.tsrc=rss",
+     "title": "What State Street Comm Services SPDR (XLC) Bought: Meta Leads on Wednesday",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-comm-services-spdr-110610762.html?.tsrc=rss",
      "tags": []
     }
    ]
   },
   {
    "symbol": "CMG",
-   "price": 35.2,
+   "price": 35.4,
    "setups": [
     "breakout_20d"
    ],
    "news": [
     {
-     "title": "McDonald\u2019s Is Rallying, but Can You Sleep at Night Owning It?",
-     "url": "https://247wallst.com/investing/2026/11/05/mcdonalds-is-rallying-but-can-you-sleep-at-night-owning-it/?.tsrc=rss",
+     "title": "Can Yum China Afford Its Spending Bill?",
+     "url": "https://www.trefis.com/stock/yumc/articles/623319/can-yum-china-afford-its-spending-bill/2026-11-06?.tsrc=rss",
      "tags": []
     }
    ]
   },
   {
-   "symbol": "TOST",
-   "price": 35.37,
+   "symbol": "KDP",
+   "price": 36.89,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "If You Invested $300,000 in Coca-Cola, PepsiCo and Keurig Dr Pepper, Here\u2019s What They\u2019d Pay",
+     "url": "https://247wallst.com/investing/2026/11/06/if-you-invested-300000-in-coca-cola-pepsico-and-keurig-dr-pepper-heres-what-theyd-pay/?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "IBN",
+   "price": 32.53,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "HL",
-   "price": 14.95,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "F",
-   "price": 12.67,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "KHC",
-   "price": 25.44,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ONON",
-   "price": 38.62,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CPNG",
-   "price": 17.05,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "NCLH",
-   "price": 18.6,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MOS",
-   "price": 21.62,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "OSCR",
-   "price": 35.19,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "GIS",
-   "price": 35.85,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "LYFT",
-   "price": 18.74,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "VALE",
-   "price": 11.43,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "TSCO",
-   "price": 36.58,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HBAN",
-   "price": 16.06,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ROIV",
-   "price": 38.23,
+   "symbol": "JAN",
+   "price": 30.75,
    "setups": [
     "breakout_20d"
    ],
@@ -5253,15 +5099,113 @@
   },
   {
    "symbol": "DKNG",
-   "price": 23.11,
+   "price": 23.52,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "DraftKings Inc. filed a 8-K: earnings results",
+     "url": "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000039/0001883685-26-000039-index.htm",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "JD",
+   "price": 28.64,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "VICI",
-   "price": 25.25,
+   "symbol": "AEHL",
+   "price": 17.44,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MOS",
+   "price": 22.33,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "TSCO",
+   "price": 36.61,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "GIS",
+   "price": 36.46,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "RUN",
+   "price": 9.87,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "SONY",
+   "price": 27.54,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HDB",
+   "price": 24.7,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ROL",
+   "price": 38.76,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "WRBY",
+   "price": 26.08,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MGNI",
+   "price": 27.52,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PRMB",
+   "price": 22.15,
    "setups": [
     "breakout_20d"
    ],
@@ -5271,40 +5215,96 @@
    "symbol": "ADT",
    "price": 9.9,
    "setups": [
-    "breakout_20d",
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "CPRT",
-   "price": 32.62,
+   "symbol": "AGI",
+   "price": 31.08,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "GFI",
+   "price": 37.83,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "KEY",
-   "price": 21.55,
+   "symbol": "BEKE",
+   "price": 18.82,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "PCG",
-   "price": 13.4,
+   "symbol": "ADMA",
+   "price": 13.21,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "EWTX",
+   "price": 38.87,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CAG",
+   "price": 15.51,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "JHX",
-   "price": 29.52,
+   "symbol": "ACHC",
+   "price": 34.79,
    "setups": [
     "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "COLD",
+   "price": 15.81,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "WU",
+   "price": 7.02,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "XERS",
+   "price": 13.08,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "EGO",
+   "price": 34.66,
+   "setups": [
+    "reclaim_ma20"
    ],
    "news": []
   }
@@ -5452,6 +5452,21 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-06T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-06T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 17 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-06T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 489 charts matched a setup, 257 fit your $5-$40 price range. Watching the top 30."
+  },
   {
    "t": "2026-11-06T12:55:00+00:00",
    "bot": "risk",
@@ -5636,21 +5651,6 @@
    "t": "2026-11-04T16:05:00+00:00",
    "bot": "entry",
    "text": "VFC broke out at $20.79 (11:00 AM)."
-  },
-  {
-   "t": "2026-11-04T15:50:00+00:00",
-   "bot": "entry",
-   "text": "FLNC broke out 35 min ago: too late to chase."
-  },
-  {
-   "t": "2026-11-04T15:50:00+00:00",
-   "bot": "entry",
-   "text": "ROL broke out 55 min ago: too late to chase."
-  },
-  {
-   "t": "2026-11-04T15:50:00+00:00",
-   "bot": "entry",
-   "text": "SIRI broke out 60 min ago: too late to chase."
   }
  ],
  "errors": []

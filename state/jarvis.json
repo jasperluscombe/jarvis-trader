@@ -1931,20 +1931,12 @@
   }
  ],
  "candidates_day": "2026-11-05",
- "seen": {
-  "PSQ": "triggered",
-  "PFE": "triggered",
-  "GIS": "triggered",
-  "SH": "triggered",
-  "CMCSA": "triggered",
-  "DKNG": "triggered",
-  "RIOT": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T04:30:00+00:00"
+   "t": "2026-11-06T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -1953,8 +1945,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-06T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-06T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -1977,13 +1969,8 @@
    "t": "2026-11-05T15:35:00+00:00"
   }
  },
- "seen_day": "2026-11-05",
+ "seen_day": "2026-11-06",
  "next_sessions": [
-  {
-   "date": "2026-11-05",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-06",
    "open": "09:30",
@@ -2006,6 +1993,11 @@
   },
   {
    "date": "2026-11-12",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-11-13",
    "open": "09:30",
    "close": "16:00"
   }
@@ -2231,6 +2223,10 @@
   {
    "t": "2026-11-06T04:00:00+00:00",
    "eq": 49.7
+  },
+  {
+   "t": "2026-11-06T05:00:00+00:00",
+   "eq": 49.76
   }
  ],
  "charts": {

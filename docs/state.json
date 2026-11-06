@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-06T14:00:00+00:00",
- "updated_local": "Sat 7 Nov 12:30 AM",
+ "updated_utc": "2026-11-06T14:05:00+00:00",
+ "updated_local": "Sat 7 Nov 12:35 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 51.02,
+  "equity": 50.93,
   "cash": 19.48,
-  "day_pl": 2.02,
+  "day_pl": 1.93,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": 2.02,
-  "week_pl": 1.02,
+  "day_pl": 1.93,
+  "week_pl": 0.93,
   "daily_goal": 0.98,
   "weekly_goal": 4.0,
   "day_hit": false,
@@ -397,6 +397,10 @@
   {
    "t": "2026-11-06T14:00:00+00:00",
    "eq": 51.02
+  },
+  {
+   "t": "2026-11-06T14:05:00+00:00",
+   "eq": 50.93
   }
  ],
  "stats": {
@@ -5000,7 +5004,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-06T14:05:00+00:00",
+ "next_checkin_utc": "2026-11-06T14:10:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5019,8 +5023,8 @@
   {
    "symbol": "RIOT",
    "qty": 2.0,
-   "value": 31.543,
-   "pl": 1.223,
+   "value": 31.4464,
+   "pl": 1.1264,
    "entry": 15.16
   }
  ],
@@ -5031,7 +5035,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-06T14:00:00+00:00"
+   "t": "2026-11-06T14:05:00+00:00"
   },
   {
    "id": "scanner",
@@ -5055,7 +5059,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Waiting for the opening bell (1:00 AM your time).",
-   "t": "2026-11-06T14:00:00+00:00"
+   "t": "2026-11-06T14:05:00+00:00"
   },
   {
    "id": "oracle",

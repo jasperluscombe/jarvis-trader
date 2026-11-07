@@ -1,14 +1,14 @@
 {
- "updated_utc": "2026-11-07T13:00:01+00:00",
- "updated_local": "Sat 7 Nov 11:30 PM",
+ "updated_utc": "2026-11-07T13:30:00+00:00",
+ "updated_local": "Sun 8 Nov 12:00 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 0.0,
-  "cash": 0.0,
+  "equity": 53.25,
+  "cash": 53.25,
   "day_pl": 0.0,
   "start": 50.0
  },
@@ -27,8 +27,8 @@
  },
  "goals": {
   "day_pl": 0.0,
-  "week_pl": 0.0,
-  "daily_goal": 1.0,
+  "week_pl": 3.25,
+  "daily_goal": 1.06,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
@@ -5268,7 +5268,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-07T13:30:00+00:00",
+ "next_checkin_utc": "2026-11-07T14:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5291,7 +5291,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-07T13:00:01+00:00"
+   "t": "2026-11-07T13:30:00+00:00"
   },
   {
    "id": "scanner",
@@ -5315,7 +5315,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-07T13:00:01+00:00"
+   "t": "2026-11-07T13:30:00+00:00"
   },
   {
    "id": "oracle",
@@ -6076,6 +6076,6 @@
   }
  ],
  "errors": [
-  "The read operation timed out"
+  "Alpaca GET /v2/positions: HTTP 500 {\"code\":50010000,\"message\":\"internal server error occurred\"}"
  ]
 }

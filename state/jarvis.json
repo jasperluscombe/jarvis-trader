@@ -3850,40 +3850,12 @@
   }
  ],
  "candidates_day": "2026-11-06",
- "seen": {
-  "QQQ": "triggered",
-  "SPY": "triggered",
-  "RUN": "triggered",
-  "MGNI": "triggered",
-  "GFI": "triggered",
-  "COLD": "triggered",
-  "AAPL": "triggered",
-  "CMCSA": "triggered",
-  "KDP": "triggered",
-  "JD": "triggered",
-  "AEHL": "triggered",
-  "MOS": "triggered",
-  "TSCO": "triggered",
-  "AGI": "triggered",
-  "CAG": "triggered",
-  "EGO": "triggered",
-  "TSLA": "triggered",
-  "BEKE": "triggered",
-  "JAN": "triggered",
-  "SONY": "triggered",
-  "CMG": "triggered",
-  "GIS": "triggered",
-  "WRBY": "triggered",
-  "EWTX": "triggered",
-  "ROL": "triggered",
-  "WU": "triggered",
-  "PRMB": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-07T04:30:00+00:00"
+   "t": "2026-11-07T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -3892,8 +3864,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-07T04:30:00+00:00"
+   "text": "No US market today. Resting.",
+   "t": "2026-11-07T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -3916,13 +3888,8 @@
    "t": "2026-11-06T15:25:00+00:00"
   }
  },
- "seen_day": "2026-11-06",
+ "seen_day": "2026-11-07",
  "next_sessions": [
-  {
-   "date": "2026-11-06",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-09",
    "open": "09:30",
@@ -3945,6 +3912,11 @@
   },
   {
    "date": "2026-11-13",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-11-16",
    "open": "09:30",
    "close": "16:00"
   }

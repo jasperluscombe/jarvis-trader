@@ -3077,11 +3077,6 @@
  "events": [
   {
    "t": "2026-11-06T14:50:00+00:00",
-   "bot": "entry",
-   "text": "SPY broke out at $740.55 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-06T14:50:00+00:00",
    "bot": "oracle",
    "text": "SPY: target first 4%, stop first 35%, neither 61% (5000 replays). History: 38 fired, 15 won, 22 lost."
   },
@@ -3474,6 +3469,11 @@
    "t": "2026-11-06T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-07T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $53.25 account: $1.06 a trade, $5.33 a day, orders up to $47.92."
   }
  ],
  "trades": [
@@ -3855,7 +3855,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-07T08:00:00+00:00"
+   "t": "2026-11-07T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -3865,7 +3865,7 @@
   "entry": {
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-07T08:00:00+00:00"
+   "t": "2026-11-07T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -3884,8 +3884,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped PRMB: one share of PRMB costs $21.92, more than your cash limit (cash $4.91 in trader/portfolio.json minus the $4.90 buffer = $0.01 / 21.92). No order.",
-   "t": "2026-11-06T15:25:00+00:00"
+   "text": "Limits resized to your $53.25 account: $1.06 a trade, $5.33 a day, orders up to $47.92.",
+   "t": "2026-11-07T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-07",
@@ -4546,6 +4546,10 @@
   {
    "t": "2026-11-07T03:00:00+00:00",
    "eq": 53.27
+  },
+  {
+   "t": "2026-11-07T08:30:00+00:00",
+   "eq": 53.25
   }
  ],
  "charts": {

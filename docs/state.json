@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-09T20:55:00+00:00",
- "updated_local": "Tue 10 Nov 7:25 AM",
+ "updated_utc": "2026-11-09T21:00:00+00:00",
+ "updated_local": "Tue 10 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -724,11 +724,11 @@
   }
  ],
  "stats": {
-  "trades": 4,
-  "wins": 2,
+  "trades": 5,
+  "wins": 3,
   "losses": 2,
-  "win_rate": 0.5,
-  "avg_win": 1.75,
+  "win_rate": 0.6,
+  "avg_win": 1.7,
   "avg_loss": -0.1,
   "best": 1.92,
   "worst": -0.18,
@@ -738,7 +738,7 @@
  },
  "charts": {
   "date": "2026-11-09",
-  "updated": "2026-11-09T20:55:00+00:00",
+  "updated": "2026-11-09T21:00:00+00:00",
   "symbols": {
    "MARA": {
     "bars": [
@@ -1277,16 +1277,16 @@
      [
       1794257400,
       6.61,
-      6.62,
+      6.64,
       6.56,
-      6.61
+      6.64
      ],
      [
-      1794257699,
+      1794257700,
       6.64,
-      6.64,
-      6.64,
-      6.64
+      6.65,
+      6.61,
+      6.63
      ]
     ],
     "or_high": 6.35,
@@ -1862,10 +1862,17 @@
      ],
      [
       1794257700,
-      679.35,
-      679.35,
-      679.35,
-      679.35
+      679.23,
+      679.64,
+      679.07,
+      679.6
+     ],
+     [
+      1794257786,
+      679.63,
+      679.63,
+      679.63,
+      679.63
      ]
     ],
     "or_high": 670.64,
@@ -2395,7 +2402,7 @@
      ],
      [
       1794256800,
-      754.48,
+      754.47,
       754.52,
       753.88,
       753.95
@@ -2416,10 +2423,10 @@
      ],
      [
       1794257700,
-      753.26,
-      753.26,
-      753.26,
-      753.26
+      753.22,
+      753.35,
+      753.07,
+      753.25
      ]
     ],
     "or_high": 746.8,
@@ -2970,10 +2977,10 @@
      ],
      [
       1794257700,
-      378.5,
-      378.5,
-      378.5,
-      378.5
+      378.23,
+      379.71,
+      378.22,
+      379.48
      ]
     ],
     "or_high": 376.29,
@@ -3524,10 +3531,10 @@
      ],
      [
       1794257700,
-      178.0,
-      178.0,
-      178.0,
-      178.0
+      177.97,
+      178.91,
+      177.86,
+      178.91
      ]
     ],
     "or_high": 176.45,
@@ -4078,10 +4085,10 @@
      ],
      [
       1794257700,
-      351.38,
-      351.38,
-      351.38,
-      351.38
+      351.27,
+      351.57,
+      351.13,
+      351.27
      ]
     ],
     "or_high": 350.33,
@@ -4634,8 +4641,8 @@
       1794257700,
       26.97,
       26.97,
-      26.97,
-      26.97
+      26.95,
+      26.95
      ]
     ],
     "or_high": 27.69,
@@ -5182,14 +5189,14 @@
       32.89,
       32.93,
       32.89,
-      32.92
+      32.93
      ],
      [
-      1794257690,
+      1794257700,
       32.93,
+      32.94,
       32.93,
-      32.93,
-      32.93
+      32.94
      ]
     ],
     "or_high": 33.49,
@@ -5264,8 +5271,8 @@
    "t": "2026-11-09T15:30:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-09T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-09T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5288,7 +5295,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-09T20:55:00+00:00"
+   "t": "2026-11-09T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -5311,8 +5318,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "No new entries this late. Watching open trades.",
-   "t": "2026-11-09T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-09T21:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -5334,7 +5341,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-09T20:55:00+00:00"
   }
@@ -5808,7 +5815,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 1.6
   },
   {
    "date": "2026-11-06",
@@ -5872,9 +5879,9 @@
   }
  ],
  "record": {
-  "trades": 4,
-  "wins": 2,
-  "total": 3.29
+  "trades": 5,
+  "wins": 3,
+  "total": 4.89
  },
  "sessions": [
   {
@@ -5914,6 +5921,11 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-09T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
   {
    "t": "2026-11-09T15:35:00+00:00",
    "bot": "jarvis",
@@ -6108,11 +6120,6 @@
    "t": "2026-11-09T14:50:00+00:00",
    "bot": "oracle",
    "text": "MARA: target first 34%, stop first 59%, neither 7% (5000 replays). History: 31 fired, 9 won, 9 lost."
-  },
-  {
-   "t": "2026-11-09T14:50:00+00:00",
-   "bot": "entry",
-   "text": "MARA broke out at $6.36 (9:50 AM)."
   }
  ],
  "errors": []

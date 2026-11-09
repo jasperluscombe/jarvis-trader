@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-09T12:55:00+00:00",
- "updated_local": "Mon 9 Nov 11:25 PM",
+ "updated_utc": "2026-11-09T13:00:00+00:00",
+ "updated_local": "Mon 9 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -5296,7 +5296,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-09T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-09T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5319,31 +5319,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-09T12:55:00+00:00"
+   "t": "2026-11-09T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks for setups before the open.",
-   "status": "idle",
-   "text": "Scanned the US market: 489 charts matched a setup, 257 fit your $5-$40 price range. Watching the top 30.",
-   "t": "2026-11-06T13:00:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 503 charts matched a setup, 292 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-09T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "Read 17 headlines and filings for 8 stocks.",
-   "t": "2026-11-06T13:00:00+00:00"
+   "status": "working",
+   "text": "Read 16 headlines and filings for 8 stocks.",
+   "t": "2026-11-09T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-09T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-09T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -5372,73 +5372,29 @@
  ],
  "watchlist": [
   {
-   "symbol": "CMCSA",
-   "price": 24.95,
+   "symbol": "IREN",
+   "price": 21.64,
    "setups": [
-    "breakout_20d"
+    "oversold_bounce"
    ],
    "news": [
     {
-     "title": "What State Street Comm Services SPDR (XLC) Bought: Meta Leads on Wednesday",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-comm-services-spdr-110610762.html?.tsrc=rss",
+     "title": "CoreWeave Borrowed at 9% Earlier This Year. Its Debt Now Yields 15% Going Into Tuesday\u2019s Report",
+     "url": "https://www.tikr.com/blog/coreweave-borrowed-at-9-earlier-this-year-its-debt-now-yields-15-going-into-tuesdays-report?ref=yahoofinancedividend&tlnk=yf-261109-463m6r78&.tsrc=rss",
      "tags": []
     }
    ]
   },
   {
-   "symbol": "CMG",
-   "price": 35.4,
+   "symbol": "IONQ",
+   "price": 32.62,
    "setups": [
-    "breakout_20d"
+    "reclaim_ma20"
    ],
    "news": [
     {
-     "title": "Can Yum China Afford Its Spending Bill?",
-     "url": "https://www.trefis.com/stock/yumc/articles/623319/can-yum-china-afford-its-spending-bill/2026-11-06?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "KDP",
-   "price": 36.89,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "If You Invested $300,000 in Coca-Cola, PepsiCo and Keurig Dr Pepper, Here\u2019s What They\u2019d Pay",
-     "url": "https://247wallst.com/investing/2026/11/06/if-you-invested-300000-in-coca-cola-pepsico-and-keurig-dr-pepper-heres-what-theyd-pay/?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "IBN",
-   "price": 32.53,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "JAN",
-   "price": 30.75,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "DKNG",
-   "price": 23.52,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "DraftKings Inc. filed a 8-K: earnings results",
-     "url": "https://www.sec.gov/Archives/edgar/data/1883685/000188368526000039/0001883685-26-000039-index.htm",
+     "title": "D-Wave Rallied 18% on IonQ\u2019s Guidance. Its Own November 10 Report Has to Earn It",
+     "url": "https://www.tikr.com/blog/d-wave-rallied-18-on-ionqs-guidance-its-own-november-10-report-has-to-earn-it?ref=yahoofinance&tlnk=yf-261109-5xm88h3x&.tsrc=rss",
      "tags": [
       "earnings"
      ]
@@ -5446,16 +5402,173 @@
    ]
   },
   {
-   "symbol": "JD",
-   "price": 28.64,
+   "symbol": "ASTS",
+   "price": 32.33,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "Rakuten and AST SpaceMobile Establish \"Rakuten AST\" Joint Venture to Build D2D Satellite Communications Network in Japan",
+     "url": "https://finance.yahoo.com/technology/articles/rakuten-ast-spacemobile-establish-rakuten-123000950.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "CDE",
+   "price": 15.47,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "OKLO",
+   "price": 23.55,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "Oklo: 3 Key Takeaways for Long-Term Investors",
+     "url": "https://www.fool.com/earnings/takeaways/2026/11/08/oklo-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "RKT",
+   "price": 15.06,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "AEHL",
-   "price": 17.44,
+   "symbol": "CIFR",
+   "price": 6.54,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "Cipher Digital (CIFR) Stock Fair Value Falls As Analysts Trim Targets On Texas Risks",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/cipher-digital-cifr-stock-fair-050939338.html?.tsrc=rss",
+     "tags": [
+      "analyst"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "ROIV",
+   "price": 38.88,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "Roivant Sciences Ltd. filed a 8-K: earnings results",
+     "url": "https://www.sec.gov/Archives/edgar/data/1635088/000163508826000130/0001635088-26-000130-index.htm",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "ASX",
+   "price": 31.63,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "IBN",
+   "price": 33.89,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HL",
+   "price": 14.74,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "RGTI",
+   "price": 11.75,
+   "setups": [
+    "reclaim_ma20",
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MP",
+   "price": 35.41,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ELAN",
+   "price": 25.74,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "VTRS",
+   "price": 19.91,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "FPS",
+   "price": 19.48,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "JD",
+   "price": 29.11,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "QBTS",
+   "price": 10.68,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "KTOS",
+   "price": 35.1,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "FLY",
+   "price": 20.76,
    "setups": [
     "breakout_20d",
     "reclaim_ma20"
@@ -5464,71 +5577,39 @@
   },
   {
    "symbol": "MOS",
-   "price": 22.33,
+   "price": 22.36,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "TSCO",
-   "price": 36.61,
+   "symbol": "CHYM",
+   "price": 31.33,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "GIS",
-   "price": 36.46,
+   "symbol": "CELH",
+   "price": 32.16,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "RUN",
-   "price": 9.87,
+   "symbol": "JAN",
+   "price": 31.99,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "SONY",
-   "price": 27.54,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HDB",
-   "price": 24.7,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ROL",
-   "price": 38.76,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "WRBY",
-   "price": 26.08,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MGNI",
-   "price": 27.52,
+   "symbol": "COMP",
+   "price": 10.21,
    "setups": [
     "breakout_20d",
     "reclaim_ma20"
@@ -5536,107 +5617,43 @@
    "news": []
   },
   {
-   "symbol": "PRMB",
-   "price": 22.15,
+   "symbol": "ONDS",
+   "price": 5.33,
    "setups": [
-    "breakout_20d"
+    "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "ADT",
-   "price": 9.9,
+   "symbol": "AMKR",
+   "price": 32.82,
    "setups": [
-    "bull_flag"
+    "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "AGI",
-   "price": 31.08,
+   "symbol": "UMC",
+   "price": 13.85,
    "setups": [
-    "reclaim_ma20"
+    "oversold",
+    "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "GFI",
-   "price": 37.83,
+   "symbol": "MARA",
+   "price": 6.35,
    "setups": [
-    "breakout_20d"
+    "oversold_bounce"
    ],
    "news": []
   },
   {
    "symbol": "BEKE",
-   "price": 18.82,
+   "price": 18.85,
    "setups": [
     "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ADMA",
-   "price": 13.21,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "EWTX",
-   "price": 38.87,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CAG",
-   "price": 15.51,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ACHC",
-   "price": 34.79,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "COLD",
-   "price": 15.81,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "WU",
-   "price": 7.02,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "XERS",
-   "price": 13.08,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "EGO",
-   "price": 34.66,
-   "setups": [
-    "reclaim_ma20"
    ],
    "news": []
   }
@@ -5903,6 +5920,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-09T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-09T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 16 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-09T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 503 charts matched a setup, 292 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-07T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $53.25 account: $1.06 a trade, $5.33 a day, orders up to $47.92."
@@ -6086,21 +6118,6 @@
    "t": "2026-11-06T14:55:00+00:00",
    "bot": "risk",
    "text": "Skipped EGO: one share of EGO costs $34.62, more than your cash limit (cash $21.85 in trader/portfolio.json minus the $4.90 buffer = $16.95 / 34.62). No order."
-  },
-  {
-   "t": "2026-11-06T14:55:00+00:00",
-   "bot": "oracle",
-   "text": "EGO: target first 14%, stop first 40%, neither 46% (5000 replays). History: 25 fired, 5 won, 9 lost."
-  },
-  {
-   "t": "2026-11-06T14:55:00+00:00",
-   "bot": "entry",
-   "text": "EGO broke out at $34.62 (9:55 AM)."
-  },
-  {
-   "t": "2026-11-06T14:55:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on CAG: the odds are no better than a coin flip (avg -0.05R)."
   }
  ],
  "errors": []

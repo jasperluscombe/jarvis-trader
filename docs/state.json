@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-09T15:20:00+00:00",
- "updated_local": "Tue 10 Nov 1:50 AM",
+ "updated_utc": "2026-11-09T15:25:00+00:00",
+ "updated_local": "Tue 10 Nov 1:55 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.54,
+  "equity": 54.08,
   "cash": 8.79,
-  "day_pl": 1.29,
+  "day_pl": 0.83,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.77
  },
  "goals": {
-  "day_pl": 1.29,
-  "week_pl": 1.29,
+  "day_pl": 0.83,
+  "week_pl": 0.83,
   "daily_goal": 1.06,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -709,6 +709,10 @@
   {
    "t": "2026-11-09T15:20:00+00:00",
    "eq": 54.54
+  },
+  {
+   "t": "2026-11-09T15:25:00+00:00",
+   "eq": 54.08
   }
  ],
  "stats": {
@@ -726,7 +730,7 @@
  },
  "charts": {
   "date": "2026-11-09",
-  "updated": "2026-11-09T15:20:00+00:00",
+  "updated": "2026-11-09T15:25:00+00:00",
   "symbols": {
    "MARA": {
     "bars": [
@@ -801,11 +805,18 @@
       6.53
      ],
      [
-      1794237601,
+      1794237600,
       6.53,
-      6.53,
-      6.53,
-      6.53
+      6.54,
+      6.45,
+      6.47
+     ],
+     [
+      1794237903,
+      6.47,
+      6.47,
+      6.47,
+      6.47
      ]
     ],
     "or_high": 6.35,
@@ -903,11 +914,18 @@
       674.68
      ],
      [
-      1794237601,
-      674.63,
-      674.63,
-      674.63,
-      674.63
+      1794237600,
+      674.68,
+      674.98,
+      673.95,
+      674.43
+     ],
+     [
+      1794237897,
+      674.09,
+      674.09,
+      674.09,
+      674.09
      ]
     ],
     "or_high": 670.64,
@@ -968,7 +986,7 @@
      ],
      [
       1794236700,
-      748.43,
+      748.45,
       748.65,
       747.45,
       748.15
@@ -988,11 +1006,18 @@
       749.09
      ],
      [
-      1794237602,
-      749.14,
-      749.14,
-      749.14,
-      749.14
+      1794237600,
+      749.1,
+      749.41,
+      748.82,
+      749.07
+     ],
+     [
+      1794237904,
+      748.94,
+      748.94,
+      748.94,
+      748.94
      ]
     ],
     "or_high": 746.8,
@@ -1073,11 +1098,18 @@
       377.73
      ],
      [
-      1794237601,
-      377.7,
-      377.7,
-      377.7,
-      377.7
+      1794237600,
+      377.71,
+      378.61,
+      376.86,
+      377.34
+     ],
+     [
+      1794237904,
+      377.25,
+      377.25,
+      377.25,
+      377.25
      ]
     ],
     "or_high": 376.29,
@@ -1158,11 +1190,18 @@
       178.77
      ],
      [
-      1794237603,
-      178.68,
-      178.68,
-      178.68,
-      178.68
+      1794237600,
+      178.78,
+      179.35,
+      177.93,
+      178.23
+     ],
+     [
+      1794237904,
+      178.1,
+      178.1,
+      178.1,
+      178.1
      ]
     ],
     "or_high": 176.45,
@@ -1243,11 +1282,18 @@
       349.83
      ],
      [
-      1794237602,
-      349.88,
-      349.88,
-      349.88,
-      349.88
+      1794237600,
+      349.73,
+      350.43,
+      349.5,
+      350.35
+     ],
+     [
+      1794237905,
+      350.33,
+      350.33,
+      350.33,
+      350.33
      ]
     ],
     "or_high": 350.33,
@@ -1308,7 +1354,7 @@
      ],
      [
       1794236700,
-      27.25,
+      27.24,
       27.31,
       27.23,
       27.25
@@ -1328,11 +1374,18 @@
       27.17
      ],
      [
-      1794237603,
+      1794237600,
       27.17,
-      27.17,
-      27.17,
-      27.17
+      27.18,
+      27.14,
+      27.18
+     ],
+     [
+      1794237901,
+      27.18,
+      27.18,
+      27.18,
+      27.18
      ]
     ],
     "or_high": 27.69,
@@ -1413,11 +1466,18 @@
       33.13
      ],
      [
-      1794237580,
-      33.13,
-      33.13,
-      33.13,
-      33.13
+      1794237600,
+      33.12,
+      33.14,
+      33.11,
+      33.14
+     ],
+     [
+      1794237868,
+      33.12,
+      33.12,
+      33.12,
+      33.12
      ]
     ],
     "or_high": 33.49,
@@ -1466,12 +1526,12 @@
   },
   {
    "symbol": "AAPL",
-   "status": "waiting",
+   "status": "triggered",
    "level": 350.33,
-   "last": 349.02,
-   "vs": -0.38,
-   "reason": "last close $349.02 (10:10 bar), $1.32 under the range high $350.33 (-0.38%)",
-   "t": "2026-11-09T15:20:00+00:00"
+   "last": 350.35,
+   "vs": 0.0,
+   "reason": "the 10:20 bar closed above the range high",
+   "t": "2026-11-09T15:25:00+00:00"
   },
   {
    "symbol": "PSQ",
@@ -1479,21 +1539,21 @@
    "level": 27.69,
    "last": 27.18,
    "vs": -1.84,
-   "reason": "last close $27.18 (10:10 bar), $0.51 under the range high $27.69 (-1.84%)",
-   "t": "2026-11-09T15:20:00+00:00"
+   "reason": "last close $27.18 (10:20 bar), $0.51 under the range high $27.69 (-1.84%)",
+   "t": "2026-11-09T15:25:00+00:00"
   },
   {
    "symbol": "SH",
    "status": "waiting",
    "level": 33.49,
-   "last": 33.14,
-   "vs": -1.03,
-   "reason": "last close $33.14 (10:10 bar), $0.35 under the range high $33.49 (-1.03%)",
-   "t": "2026-11-09T15:20:00+00:00"
+   "last": 33.13,
+   "vs": -1.06,
+   "reason": "last close $33.13 (10:15 bar), $0.35 under the range high $33.49 (-1.06%)",
+   "t": "2026-11-09T15:25:00+00:00"
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-09T15:25:00+00:00",
+ "next_checkin_utc": "2026-11-09T15:30:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -1512,8 +1572,8 @@
   {
    "symbol": "MARA",
    "qty": 7.0,
-   "value": 45.745,
-   "pl": 1.284997,
+   "value": 45.29,
+   "pl": 0.829997,
    "entry": 6.351429
   }
  ],
@@ -1524,7 +1584,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-09T15:20:00+00:00"
+   "t": "2026-11-09T15:25:00+00:00"
   },
   {
    "id": "scanner",
@@ -1547,24 +1607,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 15 charts at 10:20 AM New York: 0 breakouts.",
-   "t": "2026-11-09T15:20:00+00:00"
+   "text": "Checked 15 charts at 10:25 AM New York: 2 breakouts.",
+   "t": "2026-11-09T15:25:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "idle",
-   "text": "COMP: target first 5%, stop first 37%, neither 58% (5000 replays). History: 35 fired, 4 won, 15 lost.",
-   "t": "2026-11-09T15:05:00+00:00"
+   "status": "working",
+   "text": "IREN: target first 3%, stop first 26%, neither 71% (5000 replays). History: 32 fired, 4 won, 16 lost.",
+   "t": "2026-11-09T15:25:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped COMP: one share of COMP costs $10.69, more than your cash limit (cash $8.79 in trader/portfolio.json minus the $5.33 buffer = $3.46 / 10.69). No order.",
-   "t": "2026-11-09T15:05:00+00:00"
+   "status": "working",
+   "text": "Skipped IREN: one share of IREN costs $21.64, more than your cash limit (cash $8.79 in trader/portfolio.json minus the $5.33 buffer = $3.46 / 21.64). No order.",
+   "t": "2026-11-09T15:25:00+00:00"
   },
   {
    "id": "broker",
@@ -2151,6 +2211,36 @@
  ],
  "events": [
   {
+   "t": "2026-11-09T15:25:00+00:00",
+   "bot": "risk",
+   "text": "Skipped IREN: one share of IREN costs $21.64, more than your cash limit (cash $8.79 in trader/portfolio.json minus the $5.33 buffer = $3.46 / 21.64). No order."
+  },
+  {
+   "t": "2026-11-09T15:25:00+00:00",
+   "bot": "oracle",
+   "text": "IREN: target first 3%, stop first 26%, neither 71% (5000 replays). History: 32 fired, 4 won, 16 lost."
+  },
+  {
+   "t": "2026-11-09T15:25:00+00:00",
+   "bot": "entry",
+   "text": "IREN broke out at $21.64 (10:20 AM)."
+  },
+  {
+   "t": "2026-11-09T15:25:00+00:00",
+   "bot": "risk",
+   "text": "Skipped AAPL: only $3.46 fits your limits, under the $5.00 minimum order"
+  },
+  {
+   "t": "2026-11-09T15:25:00+00:00",
+   "bot": "oracle",
+   "text": "AAPL: target first 9%, stop first 36%, neither 55% (5000 replays). History: 31 fired, 7 won, 10 lost."
+  },
+  {
+   "t": "2026-11-09T15:25:00+00:00",
+   "bot": "entry",
+   "text": "AAPL broke out at $350.35 (10:25 AM)."
+  },
+  {
    "t": "2026-11-09T15:05:00+00:00",
    "bot": "risk",
    "text": "Skipped COMP: one share of COMP costs $10.69, more than your cash limit (cash $8.79 in trader/portfolio.json minus the $5.33 buffer = $3.46 / 10.69). No order."
@@ -2319,36 +2409,6 @@
    "t": "2026-11-09T14:50:00+00:00",
    "bot": "jarvis",
    "text": "Passed on UMC: the odds are no better than a coin flip (avg -0.07R)."
-  },
-  {
-   "t": "2026-11-09T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "UMC: target first 21%, stop first 59%, neither 20% (5000 replays). History: 29 fired, 8 won, 12 lost."
-  },
-  {
-   "t": "2026-11-09T14:50:00+00:00",
-   "bot": "entry",
-   "text": "UMC broke out at $14.65 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-09T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on AMKR: the odds are no better than a coin flip (avg -0.15R)."
-  },
-  {
-   "t": "2026-11-09T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "AMKR: target first 8%, stop first 50%, neither 42% (5000 replays). History: 28 fired, 6 won, 11 lost."
-  },
-  {
-   "t": "2026-11-09T14:50:00+00:00",
-   "bot": "entry",
-   "text": "AMKR broke out at $34.60 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-09T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on ONDS: the odds are no better than a coin flip (avg -0.12R)."
   }
  ],
  "errors": []

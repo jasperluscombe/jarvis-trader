@@ -3855,7 +3855,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-09T12:50:00+00:00"
+   "t": "2026-11-09T12:55:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -3865,7 +3865,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-09T12:50:00+00:00"
+   "t": "2026-11-09T12:55:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -9410,16 +9410,10 @@
   }
  },
  "telegram_health": {
-  "handled": 1,
-  "sent_ok": 1,
-  "at": "2026-11-07T04:30:00+00:00"
+  "updates_error": "The read operation timed out",
+  "at": "2026-11-09T12:55:00+00:00"
  },
  "telegram_log": [
-  {
-   "handled": 1,
-   "sent_ok": 1,
-   "at": "2026-11-05T12:33:08+00:00"
-  },
   {
    "handled": 1,
    "sent_ok": 1,
@@ -9498,6 +9492,10 @@
    "handled": 1,
    "sent_ok": 1,
    "at": "2026-11-07T04:30:00+00:00"
+  },
+  {
+   "updates_error": "The read operation timed out",
+   "at": "2026-11-09T12:55:00+00:00"
   }
  ],
  "news": {

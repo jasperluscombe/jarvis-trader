@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-10T16:05:00+00:00",
- "updated_local": "Wed 11 Nov 2:35 AM",
+ "updated_utc": "2026-11-10T16:10:00+00:00",
+ "updated_local": "Wed 11 Nov 2:40 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -806,7 +806,7 @@
  },
  "charts": {
   "date": "2026-11-10",
-  "updated": "2026-11-10T16:05:00+00:00",
+  "updated": "2026-11-10T16:10:00+00:00",
   "symbols": {
    "WULF": {
     "bars": [
@@ -944,11 +944,18 @@
       12.58
      ],
      [
-      1794326706,
-      12.58,
-      12.58,
-      12.58,
-      12.58
+      1794326700,
+      12.59,
+      12.6,
+      12.45,
+      12.57
+     ],
+     [
+      1794327000,
+      12.57,
+      12.57,
+      12.57,
+      12.57
      ]
     ],
     "or_high": 12.44,
@@ -1109,11 +1116,18 @@
       674.23
      ],
      [
-      1794326706,
-      674.12,
-      674.12,
-      674.12,
-      674.12
+      1794326700,
+      674.14,
+      675.21,
+      673.25,
+      674.8
+     ],
+     [
+      1794326974,
+      674.46,
+      674.46,
+      674.46,
+      674.46
      ]
     ],
     "or_high": 675.47,
@@ -1237,8 +1251,8 @@
      ],
      [
       1794325800,
-      747.29,
-      747.32,
+      747.28,
+      747.35,
       746.0,
       746.93
      ],
@@ -1257,11 +1271,18 @@
       748.03
      ],
      [
-      1794326706,
-      747.87,
-      747.87,
-      747.87,
-      747.87
+      1794326700,
+      748.0,
+      748.57,
+      747.28,
+      748.2
+     ],
+     [
+      1794326969,
+      748.08,
+      748.08,
+      748.08,
+      748.08
      ]
     ],
     "or_high": 749.61,
@@ -1405,11 +1426,18 @@
       377.3
      ],
      [
-      1794326705,
-      377.29,
-      377.29,
-      377.29,
-      377.29
+      1794326700,
+      377.44,
+      378.38,
+      376.85,
+      378.02
+     ],
+     [
+      1794327000,
+      378.0,
+      378.0,
+      378.0,
+      378.0
      ]
     ],
     "or_high": 377.53,
@@ -1553,11 +1581,18 @@
       169.68
      ],
      [
-      1794326702,
-      169.67,
-      169.67,
-      169.67,
-      169.67
+      1794326700,
+      169.69,
+      169.94,
+      169.2,
+      169.57
+     ],
+     [
+      1794327000,
+      169.54,
+      169.54,
+      169.54,
+      169.54
      ]
     ],
     "or_high": 174.65,
@@ -1701,11 +1736,18 @@
       347.74
      ],
      [
-      1794326706,
-      347.66,
-      347.66,
-      347.66,
-      347.66
+      1794326700,
+      347.74,
+      347.9,
+      347.31,
+      347.7
+     ],
+     [
+      1794326973,
+      347.48,
+      347.48,
+      347.48,
+      347.48
      ]
     ],
     "or_high": 353.87,
@@ -1829,9 +1871,9 @@
      ],
      [
       1794325800,
-      27.22,
-      27.28,
-      27.22,
+      27.21,
+      27.27,
+      27.21,
       27.25
      ],
      [
@@ -1849,7 +1891,14 @@
       27.17
      ],
      [
-      1794326694,
+      1794326700,
+      27.19,
+      27.21,
+      27.14,
+      27.15
+     ],
+     [
+      1794326968,
       27.17,
       27.17,
       27.17,
@@ -1997,7 +2046,14 @@
       33.17
      ],
      [
-      1794326692,
+      1794326700,
+      33.19,
+      33.21,
+      33.18,
+      33.19
+     ],
+     [
+      1794326968,
       33.17,
       33.17,
       33.17,
@@ -2049,21 +2105,21 @@
   },
   {
    "symbol": "TSLA",
-   "status": "waiting",
+   "status": "triggered",
    "level": 377.53,
-   "last": 377.3,
-   "vs": -0.06,
-   "reason": "last close $377.30 (11:00 bar), $0.23 under the range high $377.53 (-0.06%)",
-   "t": "2026-11-10T16:05:00+00:00"
+   "last": 378.02,
+   "vs": 0.13,
+   "reason": "the 11:05 bar closed above the range high",
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "symbol": "NVDA",
    "status": "waiting",
    "level": 174.65,
-   "last": 169.68,
-   "vs": -2.85,
-   "reason": "last close $169.68 (11:00 bar), $4.97 under the range high $174.65 (-2.85%)",
-   "t": "2026-11-10T16:05:00+00:00"
+   "last": 169.57,
+   "vs": -2.91,
+   "reason": "last close $169.57 (11:05 bar), $5.08 under the range high $174.65 (-2.91%)",
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "symbol": "AAPL",
@@ -2072,16 +2128,16 @@
    "last": 347.74,
    "vs": -1.73,
    "reason": "last close $347.74 (11:00 bar), $6.12 under the range high $353.87 (-1.73%)",
-   "t": "2026-11-10T16:05:00+00:00"
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "symbol": "PSQ",
    "status": "waiting",
    "level": 27.34,
-   "last": 27.24,
-   "vs": -0.37,
-   "reason": "last close $27.24 (10:55 bar), $0.10 under the range high $27.34 (-0.37%)",
-   "t": "2026-11-10T16:05:00+00:00"
+   "last": 27.17,
+   "vs": -0.62,
+   "reason": "last close $27.17 (11:00 bar), $0.17 under the range high $27.34 (-0.62%)",
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "symbol": "SH",
@@ -2094,7 +2150,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-10T16:10:00+00:00",
+ "next_checkin_utc": "2026-11-10T16:15:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -2113,15 +2169,15 @@
   {
    "symbol": "SH",
    "qty": 1.0,
-   "value": 33.1698,
-   "pl": -0.0602,
+   "value": 33.1701,
+   "pl": -0.0599,
    "entry": 33.23
   },
   {
    "symbol": "WULF",
    "qty": 1.0,
-   "value": 12.58,
-   "pl": -0.1,
+   "value": 12.57,
+   "pl": -0.11,
    "entry": 12.68
   }
  ],
@@ -2132,7 +2188,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-10T16:05:00+00:00"
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "id": "scanner",
@@ -2155,24 +2211,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 24 charts at 11:05 AM New York: 1 breakouts.",
-   "t": "2026-11-10T16:05:00+00:00"
+   "text": "Checked 23 charts at 11:10 AM New York: 1 breakouts.",
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "QXO: target first 26%, stop first 55%, neither 19% (5000 replays). History: 28 fired, 5 won, 9 lost.",
-   "t": "2026-11-10T16:05:00+00:00"
+   "text": "TSLA: target first 6%, stop first 44%, neither 51% (5000 replays). History: 34 fired, 3 won, 15 lost.",
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped QXO: one share of QXO costs $13.61, more than your cash limit (cash $8.92 in trader/portfolio.json minus the $5.48 buffer = $3.44 / 13.61). No order.",
-   "t": "2026-11-10T16:05:00+00:00"
+   "text": "Skipped TSLA: only $3.43 fits your limits, under the $5.00 minimum order",
+   "t": "2026-11-10T16:10:00+00:00"
   },
   {
    "id": "broker",
@@ -2774,6 +2830,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-10T16:10:00+00:00",
+   "bot": "risk",
+   "text": "Skipped TSLA: only $3.43 fits your limits, under the $5.00 minimum order"
+  },
+  {
+   "t": "2026-11-10T16:10:00+00:00",
+   "bot": "oracle",
+   "text": "TSLA: target first 6%, stop first 44%, neither 51% (5000 replays). History: 34 fired, 3 won, 15 lost."
+  },
+  {
+   "t": "2026-11-10T16:10:00+00:00",
+   "bot": "entry",
+   "text": "TSLA broke out at $378.02 (11:10 AM)."
+  },
+  {
    "t": "2026-11-10T16:05:00+00:00",
    "bot": "risk",
    "text": "Skipped QXO: one share of QXO costs $13.61, more than your cash limit (cash $8.92 in trader/portfolio.json minus the $5.48 buffer = $3.44 / 13.61). No order."
@@ -2957,21 +3028,6 @@
    "t": "2026-11-10T14:55:00+00:00",
    "bot": "oracle",
    "text": "Couldn't replay OMH: timemachine.py: only 4 full session(s) of OMH before 2026-11-10 in the data; the time machine needs at least 20"
-  },
-  {
-   "t": "2026-11-10T14:55:00+00:00",
-   "bot": "entry",
-   "text": "OMH broke out at $28.88 (9:55 AM)."
-  },
-  {
-   "t": "2026-11-10T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on IBN: the odds are no better than a coin flip (avg +0.15R)."
-  },
-  {
-   "t": "2026-11-10T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "IBN: target first 30%, stop first 54%, neither 15% (5000 replays). History: 30 fired, 2 won, 10 lost."
   }
  ],
  "errors": []

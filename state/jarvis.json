@@ -5684,11 +5684,6 @@
  ],
  "events": [
   {
-   "t": "2026-11-06T20:55:00+00:00",
-   "bot": "broker",
-   "text": "Closed 0.04933741 AAPL before the bell (-$0.02)."
-  },
-  {
    "t": "2026-11-06T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
@@ -6082,6 +6077,11 @@
    "t": "2026-11-09T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-10T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $54.83 account: $1.10 a trade, $5.48 a day, orders up to $49.35."
   }
  ],
  "trades": [
@@ -6479,7 +6479,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-10T08:00:00+00:00"
+   "t": "2026-11-10T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -6489,7 +6489,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-10T08:00:00+00:00"
+   "t": "2026-11-10T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -6508,8 +6508,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped IREN: one share of IREN costs $21.64, more than your cash limit (cash $8.79 in trader/portfolio.json minus the $5.33 buffer = $3.46 / 21.64). No order.",
-   "t": "2026-11-09T15:25:00+00:00"
+   "text": "Limits resized to your $54.83 account: $1.10 a trade, $5.48 a day, orders up to $49.35.",
+   "t": "2026-11-10T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-10",
@@ -7246,6 +7246,10 @@
   {
    "t": "2026-11-10T04:00:00+00:00",
    "eq": 54.85
+  },
+  {
+   "t": "2026-11-10T08:30:00+00:00",
+   "eq": 54.83
   }
  ],
  "charts": {

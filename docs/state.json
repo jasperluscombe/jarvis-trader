@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-10T20:55:00+00:00",
- "updated_local": "Wed 11 Nov 7:25 AM",
+ "updated_utc": "2026-11-10T21:00:00+00:00",
+ "updated_local": "Wed 11 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -912,21 +912,21 @@
   }
  ],
  "stats": {
-  "trades": 5,
-  "wins": 3,
-  "losses": 2,
-  "win_rate": 0.6,
-  "avg_win": 1.7,
-  "avg_loss": -0.1,
+  "trades": 8,
+  "wins": 4,
+  "losses": 4,
+  "win_rate": 0.5,
+  "avg_win": 1.42,
+  "avg_loss": -0.22,
   "best": 1.92,
-  "worst": -0.18,
+  "worst": -0.59,
   "auto": 8,
   "ideas": 37,
   "passed": 27
  },
  "charts": {
   "date": "2026-11-10",
-  "updated": "2026-11-10T20:55:00+00:00",
+  "updated": "2026-11-10T21:00:00+00:00",
   "symbols": {
    "MOS": {
     "bars": [
@@ -1467,14 +1467,14 @@
       22.95,
       22.98,
       22.88,
-      22.89
+      22.91
      ],
      [
-      1794344099,
-      22.91,
-      22.91,
-      22.91,
-      22.91
+      1794344100,
+      22.9,
+      23.02,
+      22.9,
+      22.99
      ]
     ],
     "or_high": 22.25,
@@ -2050,10 +2050,10 @@
      ],
      [
       1794344100,
-      12.58,
-      12.58,
-      12.58,
-      12.58
+      12.59,
+      12.6,
+      12.53,
+      12.55
      ]
     ],
     "or_high": 12.44,
@@ -2629,10 +2629,10 @@
      ],
      [
       1794344100,
-      675.33,
-      675.33,
-      675.33,
-      675.33
+      675.27,
+      675.78,
+      674.71,
+      674.8
      ]
     ],
     "or_high": 675.47,
@@ -3163,9 +3163,9 @@
      [
       1794343200,
       749.3,
-      749.51,
-      749.2,
-      749.26
+      749.52,
+      749.19,
+      749.27
      ],
      [
       1794343500,
@@ -3183,10 +3183,10 @@
      ],
      [
       1794344100,
-      750.51,
-      750.51,
-      750.51,
-      750.51
+      750.47,
+      750.77,
+      749.8,
+      749.88
      ]
     ],
     "or_high": 749.61,
@@ -3738,9 +3738,9 @@
      [
       1794344100,
       379.0,
-      379.0,
-      379.0,
-      379.0
+      379.82,
+      378.9,
+      379.41
      ]
     ],
     "or_high": 377.53,
@@ -4291,10 +4291,10 @@
      ],
      [
       1794344100,
-      169.21,
-      169.21,
-      169.21,
-      169.21
+      168.76,
+      169.54,
+      168.76,
+      168.95
      ]
     ],
     "or_high": 174.65,
@@ -4845,10 +4845,10 @@
      ],
      [
       1794344100,
-      349.25,
-      349.25,
-      349.25,
-      349.25
+      349.42,
+      349.48,
+      348.6,
+      348.65
      ]
     ],
     "or_high": 353.87,
@@ -5400,9 +5400,9 @@
      [
       1794344100,
       27.13,
-      27.13,
-      27.13,
-      27.13
+      27.16,
+      27.11,
+      27.15
      ]
     ],
     "or_high": 27.34,
@@ -5477,8 +5477,8 @@
    "t": "2026-11-10T15:55:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-10T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-10T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5501,7 +5501,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-10T20:55:00+00:00"
+   "t": "2026-11-10T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -5524,8 +5524,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "No new entries this late. Watching open trades.",
-   "t": "2026-11-10T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-10T21:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -5547,7 +5547,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-10T20:55:00+00:00"
   }
@@ -6006,7 +6006,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 0.59
   },
   {
    "date": "2026-11-10",
@@ -6021,7 +6021,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": -0.08
   },
   {
    "date": "2026-11-10",
@@ -6036,7 +6036,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": -0.59
   },
   {
    "date": "2026-11-09",
@@ -6115,9 +6115,9 @@
   }
  ],
  "record": {
-  "trades": 5,
-  "wins": 3,
-  "total": 4.89
+  "trades": 8,
+  "wins": 4,
+  "total": 4.81
  },
  "sessions": [
   {
@@ -6157,6 +6157,11 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-10T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
   {
    "t": "2026-11-10T17:55:00+00:00",
    "bot": "risk",
@@ -6351,11 +6356,6 @@
    "t": "2026-11-10T15:40:00+00:00",
    "bot": "entry",
    "text": "WRBY broke out at $30.12 (10:35 AM)."
-  },
-  {
-   "t": "2026-11-10T15:40:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on CMG: the odds are no better than a coin flip (avg -0.00R)."
   }
  ],
  "errors": []

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T15:55:00+00:00",
- "updated_local": "Thu 12 Nov 2:25 AM",
+ "updated_utc": "2026-11-11T16:00:00+00:00",
+ "updated_local": "Thu 12 Nov 2:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.63,
+  "equity": 54.74,
   "cash": 5.49,
-  "day_pl": -0.1,
+  "day_pl": 0.01,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": -0.1,
-  "week_pl": 1.38,
+  "day_pl": 0.01,
+  "week_pl": 1.49,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -969,6 +969,10 @@
   {
    "t": "2026-11-11T15:55:00+00:00",
    "eq": 54.63
+  },
+  {
+   "t": "2026-11-11T16:00:00+00:00",
+   "eq": 54.74
   }
  ],
  "stats": {
@@ -986,7 +990,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T15:55:00+00:00",
+  "updated": "2026-11-11T16:00:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1110,11 +1114,18 @@
       691.11
      ],
      [
-      1794412504,
-      691.16,
-      691.16,
-      691.16,
-      691.16
+      1794412500,
+      691.69,
+      692.01,
+      691.05,
+      692.01
+     ],
+     [
+      1794412807,
+      691.82,
+      691.82,
+      691.82,
+      691.82
      ]
     ],
     "or_high": 689.02,
@@ -1224,7 +1235,7 @@
      ],
      [
       1794411600,
-      756.98,
+      756.97,
       757.64,
       756.86,
       757.46
@@ -1244,11 +1255,18 @@
       757.98
      ],
      [
-      1794412504,
-      758.05,
-      758.05,
-      758.05,
-      758.05
+      1794412500,
+      758.01,
+      758.74,
+      757.98,
+      758.7
+     ],
+     [
+      1794412807,
+      758.62,
+      758.62,
+      758.62,
+      758.62
      ]
     ],
     "or_high": 757.95,
@@ -1378,11 +1396,18 @@
       394.9
      ],
      [
-      1794412505,
-      394.98,
-      394.98,
-      394.98,
-      394.98
+      1794412500,
+      395.0,
+      395.43,
+      394.43,
+      395.12
+     ],
+     [
+      1794412807,
+      395.15,
+      395.15,
+      395.15,
+      395.15
      ]
     ],
     "or_high": 392.67,
@@ -1512,11 +1537,18 @@
       175.61
      ],
      [
-      1794412506,
-      175.64,
-      175.64,
-      175.64,
-      175.64
+      1794412500,
+      175.62,
+      176.2,
+      175.49,
+      176.16
+     ],
+     [
+      1794412806,
+      176.1,
+      176.1,
+      176.1,
+      176.1
      ]
     ],
     "or_high": 175.13,
@@ -1646,11 +1678,18 @@
       352.95
      ],
      [
-      1794412505,
-      352.99,
-      352.99,
-      352.99,
-      352.99
+      1794412500,
+      352.95,
+      353.78,
+      352.89,
+      353.66
+     ],
+     [
+      1794412805,
+      353.68,
+      353.68,
+      353.68,
+      353.68
      ]
     ],
     "or_high": 353.43,
@@ -1797,11 +1836,18 @@
       26.5
      ],
      [
-      1794412487,
+      1794412500,
+      26.49,
       26.5,
-      26.5,
-      26.5,
-      26.5
+      26.46,
+      26.47
+     ],
+     [
+      1794412802,
+      26.47,
+      26.47,
+      26.47,
+      26.47
      ]
     ],
     "or_high": 26.75,
@@ -1931,11 +1977,18 @@
       32.74
      ],
      [
-      1794412504,
-      32.73,
-      32.73,
-      32.73,
-      32.73
+      1794412500,
+      32.74,
+      32.74,
+      32.71,
+      32.71
+     ],
+     [
+      1794412804,
+      32.71,
+      32.71,
+      32.71,
+      32.71
      ]
     ],
     "or_high": 32.83,
@@ -1975,12 +2028,12 @@
   },
   {
    "symbol": "NVDA",
-   "status": "waiting",
+   "status": "triggered",
    "level": 175.13,
-   "last": 174.87,
-   "vs": -0.15,
-   "reason": "last close $174.87 (10:45 bar), $0.26 under the range high $175.13 (-0.15%)",
-   "t": "2026-11-11T15:55:00+00:00"
+   "last": 176.16,
+   "vs": 0.59,
+   "reason": "the 10:50 bar closed above the range high",
+   "t": "2026-11-11T16:00:00+00:00"
   },
   {
    "symbol": "AAPL",
@@ -2011,7 +2064,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T16:00:00+00:00",
+ "next_checkin_utc": "2026-11-11T16:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -2030,8 +2083,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.142814,
-   "pl": -0.097186,
+   "value": 49.244455,
+   "pl": 0.004455,
    "entry": 353.648
   }
  ],
@@ -2042,7 +2095,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T15:55:00+00:00"
+   "t": "2026-11-11T16:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -2065,24 +2118,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 21 charts at 10:55 AM New York: 1 breakouts.",
-   "t": "2026-11-11T15:55:00+00:00"
+   "text": "Checked 20 charts at 11:00 AM New York: 2 breakouts.",
+   "t": "2026-11-11T16:00:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "SPY: target first 33%, stop first 65%, neither 2% (5000 replays). History: 41 fired, 16 won, 24 lost.",
-   "t": "2026-11-11T15:55:00+00:00"
+   "text": "MARA: target first 8%, stop first 45%, neither 47% (5000 replays). History: 32 fired, 9 won, 10 lost.",
+   "t": "2026-11-11T16:00:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped SPY: only $0.01 fits your limits, under the $5.00 minimum order",
-   "t": "2026-11-11T15:55:00+00:00"
+   "text": "Skipped MARA: one share of MARA costs $7.88, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 7.88). No order.",
+   "t": "2026-11-11T16:00:00+00:00"
   },
   {
    "id": "broker",
@@ -2720,6 +2773,36 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T16:00:00+00:00",
+   "bot": "risk",
+   "text": "Skipped MARA: one share of MARA costs $7.88, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 7.88). No order."
+  },
+  {
+   "t": "2026-11-11T16:00:00+00:00",
+   "bot": "oracle",
+   "text": "MARA: target first 8%, stop first 45%, neither 47% (5000 replays). History: 32 fired, 9 won, 10 lost."
+  },
+  {
+   "t": "2026-11-11T16:00:00+00:00",
+   "bot": "entry",
+   "text": "MARA broke out at $7.88 (11:00 AM)."
+  },
+  {
+   "t": "2026-11-11T16:00:00+00:00",
+   "bot": "risk",
+   "text": "Skipped NVDA: only $0.01 fits your limits, under the $5.00 minimum order"
+  },
+  {
+   "t": "2026-11-11T16:00:00+00:00",
+   "bot": "oracle",
+   "text": "NVDA: target first 4%, stop first 38%, neither 58% (5000 replays). History: 30 fired, 2 won, 15 lost."
+  },
+  {
+   "t": "2026-11-11T16:00:00+00:00",
+   "bot": "entry",
+   "text": "NVDA broke out at $175.61 (10:55 AM)."
+  },
+  {
    "t": "2026-11-11T15:55:00+00:00",
    "bot": "risk",
    "text": "Skipped SPY: only $0.01 fits your limits, under the $5.00 minimum order"
@@ -2888,36 +2971,6 @@
    "t": "2026-11-11T14:50:00+00:00",
    "bot": "broker",
    "text": "Order for VFC failed: Alpaca POST /v2/orders: HTTP 403 {\"buying_power\":\"5.49\",\"code\":40310000,\"cost_basis\":\"41.57\",\"message\":\"insufficient buying power\"}"
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "VFC: target first 22%, stop first 43%, neither 35% (5000 replays). History: 32 fired, 6 won, 9 lost."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "entry",
-   "text": "VFC broke out at $20.78 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on IBN: the odds are no better than a coin flip (avg +0.17R)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "IBN: target first 28%, stop first 51%, neither 21% (5000 replays). History: 30 fired, 2 won, 11 lost."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "entry",
-   "text": "IBN broke out at $34.41 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "broker",
-   "text": "Order for KDP failed: Alpaca POST /v2/orders: HTTP 403 {\"buying_power\":\"5.49\",\"code\":40310000,\"cost_basis\":\"37.69\",\"message\":\"insufficient buying power\"}"
   }
  ],
  "errors": []

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T18:15:00+00:00",
- "updated_local": "Thu 12 Nov 4:45 AM",
+ "updated_utc": "2026-11-11T18:20:00+00:00",
+ "updated_local": "Thu 12 Nov 4:50 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.89,
+  "equity": 54.9,
   "cash": 5.49,
-  "day_pl": 0.16,
+  "day_pl": 0.17,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": 0.16,
-  "week_pl": 1.64,
+  "day_pl": 0.17,
+  "week_pl": 1.65,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1065,6 +1065,10 @@
   {
    "t": "2026-11-11T18:10:00+00:00",
    "eq": 54.89
+  },
+  {
+   "t": "2026-11-11T18:20:00+00:00",
+   "eq": 54.9
   }
  ],
  "stats": {
@@ -1082,7 +1086,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T18:15:00+00:00",
+  "updated": "2026-11-11T18:20:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1402,11 +1406,18 @@
       694.21
      ],
      [
-      1794420903,
-      694.27,
-      694.27,
-      694.27,
-      694.27
+      1794420900,
+      694.23,
+      694.55,
+      694.2,
+      694.41
+     ],
+     [
+      1794421202,
+      694.35,
+      694.35,
+      694.35,
+      694.35
      ]
     ],
     "or_high": 689.02,
@@ -1732,11 +1743,18 @@
       761.3
      ],
      [
-      1794420903,
-      761.35,
-      761.35,
-      761.35,
-      761.35
+      1794420900,
+      761.3,
+      761.67,
+      761.3,
+      761.62
+     ],
+     [
+      1794421202,
+      761.56,
+      761.56,
+      761.56,
+      761.56
      ]
     ],
     "or_high": 757.95,
@@ -2062,11 +2080,18 @@
       393.46
      ],
      [
-      1794420902,
+      1794420900,
       393.47,
-      393.47,
-      393.47,
-      393.47
+      393.95,
+      393.26,
+      393.53
+     ],
+     [
+      1794421203,
+      393.45,
+      393.45,
+      393.45,
+      393.45
      ]
     ],
     "or_high": 392.67,
@@ -2392,11 +2417,18 @@
       176.65
      ],
      [
-      1794420901,
-      176.64,
-      176.64,
-      176.64,
-      176.64
+      1794420900,
+      176.66,
+      176.82,
+      176.57,
+      176.79
+     ],
+     [
+      1794421201,
+      176.77,
+      176.77,
+      176.77,
+      176.77
      ]
     ],
     "or_high": 175.13,
@@ -2722,11 +2754,18 @@
       354.73
      ],
      [
-      1794420904,
-      354.77,
-      354.77,
-      354.77,
-      354.77
+      1794420900,
+      354.78,
+      354.95,
+      354.75,
+      354.87
+     ],
+     [
+      1794421204,
+      354.86,
+      354.86,
+      354.86,
+      354.86
      ]
     ],
     "or_high": 353.43,
@@ -3069,11 +3108,18 @@
       26.37
      ],
      [
-      1794420904,
+      1794420900,
       26.37,
-      26.37,
-      26.37,
-      26.37
+      26.38,
+      26.36,
+      26.36
+     ],
+     [
+      1794421140,
+      26.36,
+      26.36,
+      26.36,
+      26.36
      ]
     ],
     "or_high": 26.75,
@@ -3399,11 +3445,18 @@
       32.58
      ],
      [
-      1794420901,
+      1794420900,
       32.59,
       32.59,
-      32.59,
-      32.59
+      32.58,
+      32.58
+     ],
+     [
+      1794421193,
+      32.58,
+      32.58,
+      32.58,
+      32.58
      ]
     ],
     "or_high": 32.83,
@@ -3479,7 +3532,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T18:20:00+00:00",
+ "next_checkin_utc": "2026-11-11T18:25:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -3498,8 +3551,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.394829,
-   "pl": 0.154829,
+   "value": 49.410145,
+   "pl": 0.170145,
    "entry": 353.648
   }
  ],
@@ -3510,7 +3563,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T18:15:00+00:00"
+   "t": "2026-11-11T18:20:00+00:00"
   },
   {
    "id": "scanner",
@@ -3533,24 +3586,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 16 charts at 1:15 PM New York: 0 breakouts.",
-   "t": "2026-11-11T18:15:00+00:00"
+   "text": "Checked 16 charts at 1:20 PM New York: 1 breakouts.",
+   "t": "2026-11-11T18:20:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "idle",
-   "text": "CMG: target first 16%, stop first 55%, neither 29% (5000 replays). History: 31 fired, 4 won, 9 lost.",
-   "t": "2026-11-11T18:05:00+00:00"
+   "status": "working",
+   "text": "SGRY: target first 29%, stop first 69%, neither 2% (5000 replays). History: 31 fired, 4 won, 15 lost.",
+   "t": "2026-11-11T18:20:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped CMG: one share of CMG costs $36.06, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 36.06). No order.",
-   "t": "2026-11-11T18:05:00+00:00"
+   "status": "working",
+   "text": "Skipped SGRY: one share of SGRY costs $26.61, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 26.61). No order.",
+   "t": "2026-11-11T18:20:00+00:00"
   },
   {
    "id": "broker",
@@ -4188,6 +4241,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T18:20:00+00:00",
+   "bot": "risk",
+   "text": "Skipped SGRY: one share of SGRY costs $26.61, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 26.61). No order."
+  },
+  {
+   "t": "2026-11-11T18:20:00+00:00",
+   "bot": "oracle",
+   "text": "SGRY: target first 29%, stop first 69%, neither 2% (5000 replays). History: 31 fired, 4 won, 15 lost."
+  },
+  {
+   "t": "2026-11-11T18:20:00+00:00",
+   "bot": "entry",
+   "text": "SGRY broke out at $26.61 (1:15 PM)."
+  },
+  {
    "t": "2026-11-11T18:05:00+00:00",
    "bot": "risk",
    "text": "Skipped CMG: one share of CMG costs $36.06, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 36.06). No order."
@@ -4371,21 +4439,6 @@
    "t": "2026-11-11T14:50:00+00:00",
    "bot": "jarvis",
    "text": "Passed on HDB: the odds are no better than a coin flip (avg -0.02R)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "HDB: target first 26%, stop first 61%, neither 13% (5000 replays). History: 30 fired, 2 won, 9 lost."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "entry",
-   "text": "HDB broke out at $25.89 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "broker",
-   "text": "Order for LYFT failed: Alpaca POST /v2/orders: HTTP 403 {\"buying_power\":\"5.49\",\"code\":40310000,\"cost_basis\":\"34.79\",\"message\":\"insufficient buying power\"}"
   }
  ],
  "errors": []

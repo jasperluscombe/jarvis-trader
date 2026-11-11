@@ -9199,36 +9199,12 @@
   }
  ],
  "candidates_day": "2026-11-10",
- "seen": {
-  "IBN": "triggered",
-  "OMH": "triggered",
-  "LFST": "triggered",
-  "UMC": "triggered",
-  "QQQ": "triggered",
-  "SPY": "triggered",
-  "WULF": "triggered",
-  "OKLO": "triggered",
-  "PCG": "triggered",
-  "CMG": "triggered",
-  "WRBY": "triggered",
-  "SH": "triggered",
-  "TTD": "triggered",
-  "QXO": "triggered",
-  "TSLA": "triggered",
-  "SGRY": "triggered",
-  "MOS": "triggered",
-  "HST": "triggered",
-  "VTRS": "triggered",
-  "TSCO": "triggered",
-  "CPRT": "triggered",
-  "PSQ": "triggered",
-  "KDP": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T04:30:00+00:00"
+   "t": "2026-11-11T05:00:01+00:00"
   },
   "scanner": {
    "status": "working",
@@ -9237,8 +9213,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-11T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-11T05:00:01+00:00"
   },
   "oracle": {
    "status": "working",
@@ -9261,13 +9237,8 @@
    "t": "2026-11-10T17:55:00+00:00"
   }
  },
- "seen_day": "2026-11-10",
+ "seen_day": "2026-11-11",
  "next_sessions": [
-  {
-   "date": "2026-11-10",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-11",
    "open": "09:30",
@@ -9290,6 +9261,11 @@
   },
   {
    "date": "2026-11-17",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-11-18",
    "open": "09:30",
    "close": "16:00"
   }

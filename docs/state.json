@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T15:50:00+00:00",
- "updated_local": "Thu 12 Nov 2:20 AM",
+ "updated_utc": "2026-11-11T15:55:00+00:00",
+ "updated_local": "Thu 12 Nov 2:25 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.69,
+  "equity": 54.63,
   "cash": 5.49,
-  "day_pl": -0.04,
+  "day_pl": -0.1,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": -0.04,
-  "week_pl": 1.44,
+  "day_pl": -0.1,
+  "week_pl": 1.38,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -965,6 +965,10 @@
   {
    "t": "2026-11-11T15:50:00+00:00",
    "eq": 54.69
+  },
+  {
+   "t": "2026-11-11T15:55:00+00:00",
+   "eq": 54.63
   }
  ],
  "stats": {
@@ -982,7 +986,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T15:50:00+00:00",
+  "updated": "2026-11-11T15:55:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1099,11 +1103,18 @@
       689.99
      ],
      [
-      1794412205,
-      690.16,
-      690.16,
-      690.16,
-      690.16
+      1794412200,
+      689.99,
+      691.32,
+      689.96,
+      691.11
+     ],
+     [
+      1794412504,
+      691.16,
+      691.16,
+      691.16,
+      691.16
      ]
     ],
     "or_high": 689.02,
@@ -1206,9 +1217,9 @@
      ],
      [
       1794411300,
-      756.57,
+      756.55,
       757.1,
-      756.57,
+      756.55,
       756.96
      ],
      [
@@ -1226,11 +1237,18 @@
       757.55
      ],
      [
-      1794412206,
-      757.66,
-      757.66,
-      757.66,
-      757.66
+      1794412200,
+      757.53,
+      758.23,
+      757.53,
+      757.98
+     ],
+     [
+      1794412504,
+      758.05,
+      758.05,
+      758.05,
+      758.05
      ]
     ],
     "or_high": 757.95,
@@ -1353,11 +1371,18 @@
       394.6
      ],
      [
-      1794412204,
-      394.62,
-      394.62,
-      394.62,
-      394.62
+      1794412200,
+      394.6,
+      395.18,
+      394.09,
+      394.9
+     ],
+     [
+      1794412505,
+      394.98,
+      394.98,
+      394.98,
+      394.98
      ]
     ],
     "or_high": 392.67,
@@ -1480,11 +1505,18 @@
       174.87
      ],
      [
-      1794412205,
-      174.91,
-      174.91,
-      174.91,
-      174.91
+      1794412200,
+      174.87,
+      175.68,
+      174.85,
+      175.61
+     ],
+     [
+      1794412506,
+      175.64,
+      175.64,
+      175.64,
+      175.64
      ]
     ],
     "or_high": 175.13,
@@ -1607,11 +1639,18 @@
       353.31
      ],
      [
-      1794412205,
-      353.4,
-      353.4,
-      353.4,
-      353.4
+      1794412200,
+      353.34,
+      353.47,
+      352.89,
+      352.95
+     ],
+     [
+      1794412505,
+      352.99,
+      352.99,
+      352.99,
+      352.99
      ]
     ],
     "or_high": 353.43,
@@ -1748,14 +1787,21 @@
       26.57,
       26.59,
       26.55,
-      26.56
+      26.55
      ],
      [
-      1794412199,
-      26.55,
-      26.55,
-      26.55,
-      26.55
+      1794412200,
+      26.52,
+      26.53,
+      26.49,
+      26.5
+     ],
+     [
+      1794412487,
+      26.5,
+      26.5,
+      26.5,
+      26.5
      ]
     ],
     "or_high": 26.75,
@@ -1878,11 +1924,18 @@
       32.76
      ],
      [
-      1794412198,
-      32.76,
-      32.76,
-      32.76,
-      32.76
+      1794412200,
+      32.75,
+      32.75,
+      32.72,
+      32.74
+     ],
+     [
+      1794412504,
+      32.73,
+      32.73,
+      32.73,
+      32.73
      ]
     ],
     "or_high": 32.83,
@@ -1904,12 +1957,12 @@
   },
   {
    "symbol": "SPY",
-   "status": "waiting",
+   "status": "triggered",
    "level": 757.95,
-   "last": 757.55,
-   "vs": -0.05,
-   "reason": "last close $757.55 (10:45 bar), $0.40 under the range high $757.95 (-0.05%)",
-   "t": "2026-11-11T15:50:00+00:00"
+   "last": 757.98,
+   "vs": 0.0,
+   "reason": "the 10:50 bar closed above the range high",
+   "t": "2026-11-11T15:55:00+00:00"
   },
   {
    "symbol": "TSLA",
@@ -1927,7 +1980,7 @@
    "last": 174.87,
    "vs": -0.15,
    "reason": "last close $174.87 (10:45 bar), $0.26 under the range high $175.13 (-0.15%)",
-   "t": "2026-11-11T15:50:00+00:00"
+   "t": "2026-11-11T15:55:00+00:00"
   },
   {
    "symbol": "AAPL",
@@ -1958,7 +2011,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T15:55:00+00:00",
+ "next_checkin_utc": "2026-11-11T16:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -1977,8 +2030,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.1999,
-   "pl": -0.0401,
+   "value": 49.142814,
+   "pl": -0.097186,
    "entry": 353.648
   }
  ],
@@ -1989,7 +2042,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T15:50:00+00:00"
+   "t": "2026-11-11T15:55:00+00:00"
   },
   {
    "id": "scanner",
@@ -2012,24 +2065,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 22 charts at 10:50 AM New York: 1 breakouts.",
-   "t": "2026-11-11T15:50:00+00:00"
+   "text": "Checked 21 charts at 10:55 AM New York: 1 breakouts.",
+   "t": "2026-11-11T15:55:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "QQQ: target first 26%, stop first 63%, neither 11% (5000 replays). History: 44 fired, 10 won, 26 lost.",
-   "t": "2026-11-11T15:50:00+00:00"
+   "text": "SPY: target first 33%, stop first 65%, neither 2% (5000 replays). History: 41 fired, 16 won, 24 lost.",
+   "t": "2026-11-11T15:55:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped QQQ: only $0.01 fits your limits, under the $5.00 minimum order",
-   "t": "2026-11-11T15:50:00+00:00"
+   "text": "Skipped SPY: only $0.01 fits your limits, under the $5.00 minimum order",
+   "t": "2026-11-11T15:55:00+00:00"
   },
   {
    "id": "broker",
@@ -2667,6 +2720,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T15:55:00+00:00",
+   "bot": "risk",
+   "text": "Skipped SPY: only $0.01 fits your limits, under the $5.00 minimum order"
+  },
+  {
+   "t": "2026-11-11T15:55:00+00:00",
+   "bot": "oracle",
+   "text": "SPY: target first 33%, stop first 65%, neither 2% (5000 replays). History: 41 fired, 16 won, 24 lost."
+  },
+  {
+   "t": "2026-11-11T15:55:00+00:00",
+   "bot": "entry",
+   "text": "SPY broke out at $757.98 (10:55 AM)."
+  },
+  {
    "t": "2026-11-11T15:50:00+00:00",
    "bot": "risk",
    "text": "Skipped QQQ: only $0.01 fits your limits, under the $5.00 minimum order"
@@ -2850,21 +2918,6 @@
    "t": "2026-11-11T14:50:00+00:00",
    "bot": "broker",
    "text": "Order for KDP failed: Alpaca POST /v2/orders: HTTP 403 {\"buying_power\":\"5.49\",\"code\":40310000,\"cost_basis\":\"37.69\",\"message\":\"insufficient buying power\"}"
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "KDP: target first 21%, stop first 40%, neither 39% (5000 replays). History: 37 fired, 8 won, 14 lost."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "entry",
-   "text": "KDP broke out at $37.67 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "broker",
-   "text": "Order for SH failed: Alpaca POST /v2/orders: HTTP 403 {\"buying_power\":\"5.49\",\"code\":40310000,\"cost_basis\":\"32.87\",\"message\":\"insufficient buying power\"}"
   }
  ],
  "errors": []

@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-11T20:55:00+00:00",
- "updated_local": "Thu 12 Nov 7:25 AM",
+ "updated_utc": "2026-11-11T21:00:00+00:00",
+ "updated_local": "Thu 12 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -8,7 +8,7 @@
  "auto_trade": true,
  "account": {
   "equity": 54.98,
-  "cash": 5.49,
+  "cash": 54.98,
   "day_pl": 0.25,
   "start": 50.0
  },
@@ -1172,11 +1172,11 @@
   }
  ],
  "stats": {
-  "trades": 8,
-  "wins": 4,
+  "trades": 9,
+  "wins": 5,
   "losses": 4,
-  "win_rate": 0.5,
-  "avg_win": 1.42,
+  "win_rate": 0.556,
+  "avg_win": 1.19,
   "avg_loss": -0.22,
   "best": 1.92,
   "worst": -0.59,
@@ -1186,7 +1186,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T20:55:00+00:00",
+  "updated": "2026-11-11T21:00:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1730,11 +1730,18 @@
       689.89
      ],
      [
-      1794430505,
-      689.57,
-      689.57,
-      689.57,
-      689.57
+      1794430500,
+      689.89,
+      690.5,
+      689.41,
+      690.38
+     ],
+     [
+      1794430800,
+      690.35,
+      690.35,
+      690.35,
+      690.35
      ]
     ],
     "or_high": 689.02,
@@ -2264,7 +2271,7 @@
      ],
      [
       1794429600,
-      760.4,
+      760.39,
       760.44,
       759.92,
       760.04
@@ -2284,11 +2291,11 @@
       759.46
      ],
      [
-      1794430505,
-      759.28,
-      759.28,
-      759.28,
-      759.28
+      1794430500,
+      759.44,
+      759.82,
+      759.19,
+      759.71
      ]
     ],
     "or_high": 757.95,
@@ -2838,11 +2845,18 @@
       388.93
      ],
      [
-      1794430505,
-      389.03,
-      389.03,
-      389.03,
-      389.03
+      1794430500,
+      389.02,
+      391.01,
+      388.82,
+      390.8
+     ],
+     [
+      1794430800,
+      390.85,
+      390.85,
+      390.85,
+      390.85
      ]
     ],
     "or_high": 392.67,
@@ -3392,11 +3406,18 @@
       174.02
      ],
      [
-      1794430505,
-      173.44,
-      173.44,
-      173.44,
-      173.44
+      1794430500,
+      173.42,
+      174.14,
+      173.28,
+      173.85
+     ],
+     [
+      1794430800,
+      173.88,
+      173.88,
+      173.88,
+      173.88
      ]
     ],
     "or_high": 175.13,
@@ -3946,11 +3967,18 @@
       355.4
      ],
      [
-      1794430505,
-      355.45,
-      355.45,
-      355.45,
-      355.45
+      1794430500,
+      355.4,
+      355.9,
+      355.28,
+      355.79
+     ],
+     [
+      1794430800,
+      355.79,
+      355.79,
+      355.79,
+      355.79
      ]
     ],
     "or_high": 353.43,
@@ -4525,11 +4553,11 @@
       26.55
      ],
      [
-      1794430505,
-      26.56,
-      26.56,
-      26.56,
-      26.56
+      1794430500,
+      26.54,
+      26.57,
+      26.52,
+      26.52
      ]
     ],
     "or_high": 26.75,
@@ -5079,11 +5107,11 @@
       32.68
      ],
      [
-      1794430505,
-      32.68,
-      32.68,
-      32.68,
-      32.68
+      1794430500,
+      32.67,
+      32.69,
+      32.65,
+      32.67
      ]
     ],
     "or_high": 32.83,
@@ -5158,8 +5186,8 @@
    "t": "2026-11-11T14:50:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-11T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-11T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5174,15 +5202,7 @@
    "SH"
   ]
  },
- "positions": [
-  {
-   "symbol": "AAPL",
-   "qty": 0.139234493,
-   "value": 49.489508,
-   "pl": 0.249508,
-   "entry": 353.648
-  }
- ],
+ "positions": [],
  "bots": [
   {
    "id": "jarvis",
@@ -5190,7 +5210,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T20:55:00+00:00"
+   "t": "2026-11-11T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -5213,8 +5233,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "No new entries this late. Watching open trades.",
-   "t": "2026-11-11T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-11T21:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -5236,7 +5256,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-11T20:55:00+00:00"
   }
@@ -5701,7 +5721,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 0.25
   },
   {
    "date": "2026-11-10",
@@ -5825,9 +5845,9 @@
   }
  ],
  "record": {
-  "trades": 8,
-  "wins": 4,
-  "total": 4.81
+  "trades": 9,
+  "wins": 5,
+  "total": 5.06
  },
  "sessions": [
   {
@@ -5867,6 +5887,11 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-11T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
   {
    "t": "2026-11-11T20:55:00+00:00",
    "bot": "broker",
@@ -6061,11 +6086,6 @@
    "t": "2026-11-11T15:55:00+00:00",
    "bot": "oracle",
    "text": "SPY: target first 33%, stop first 65%, neither 2% (5000 replays). History: 41 fired, 16 won, 24 lost."
-  },
-  {
-   "t": "2026-11-11T15:55:00+00:00",
-   "bot": "entry",
-   "text": "SPY broke out at $757.98 (10:55 AM)."
   }
  ],
  "errors": []

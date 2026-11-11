@@ -1,20 +1,20 @@
 {
- "updated_utc": "2026-11-11T08:00:00+00:00",
- "updated_local": "Wed 11 Nov 6:30 PM",
+ "updated_utc": "2026-11-11T08:30:00+00:00",
+ "updated_local": "Wed 11 Nov 7:00 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.75,
-  "cash": 54.75,
-  "day_pl": -0.08,
+  "equity": 54.73,
+  "cash": 54.73,
+  "day_pl": 0.0,
   "start": 50.0
  },
  "limits": {
-  "max_loss_per_trade_usd": 1.1,
-  "max_daily_loss_usd": 5.48,
+  "max_loss_per_trade_usd": 1.09,
+  "max_daily_loss_usd": 5.47,
   "max_trades_per_day": 10,
   "min_reward_risk": 1.5,
   "no_entries_before": "09:45",
@@ -26,9 +26,9 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": -0.08,
-  "week_pl": 1.5,
-  "daily_goal": 1.1,
+  "day_pl": 0.0,
+  "week_pl": 1.48,
+  "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
   "week_hit": false
@@ -917,6 +917,10 @@
   {
    "t": "2026-11-11T07:00:00+00:00",
    "eq": 54.75
+  },
+  {
+   "t": "2026-11-11T08:30:00+00:00",
+   "eq": 54.73
   }
  ],
  "stats": {
@@ -5528,7 +5532,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-11T08:30:00+00:00",
+ "next_checkin_utc": "2026-11-11T09:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5551,7 +5555,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T08:00:00+00:00"
+   "t": "2026-11-11T08:30:00+00:00"
   },
   {
    "id": "scanner",
@@ -5575,7 +5579,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-11T08:00:00+00:00"
+   "t": "2026-11-11T08:30:00+00:00"
   },
   {
    "id": "oracle",
@@ -5589,9 +5593,9 @@
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped KDP: one share of KDP costs $37.39, more than your cash limit (cash $31.89 in trader/portfolio.json minus the $5.48 buffer = $26.41 / 37.39). No order.",
-   "t": "2026-11-10T17:55:00+00:00"
+   "status": "working",
+   "text": "Limits resized to your $54.73 account: $1.09 a trade, $5.47 a day, orders up to $49.26.",
+   "t": "2026-11-11T08:30:00+00:00"
   },
   {
    "id": "broker",
@@ -6208,6 +6212,11 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $54.73 account: $1.09 a trade, $5.47 a day, orders up to $49.26."
+  },
+  {
    "t": "2026-11-10T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
@@ -6401,11 +6410,6 @@
    "t": "2026-11-10T15:40:00+00:00",
    "bot": "oracle",
    "text": "WRBY: target first 31%, stop first 63%, neither 5% (5000 replays). History: 36 fired, 3 won, 24 lost."
-  },
-  {
-   "t": "2026-11-10T15:40:00+00:00",
-   "bot": "entry",
-   "text": "WRBY broke out at $30.12 (10:35 AM)."
   }
  ],
  "errors": []

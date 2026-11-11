@@ -8368,11 +8368,6 @@
  "events": [
   {
    "t": "2026-11-09T15:25:00+00:00",
-   "bot": "oracle",
-   "text": "AAPL: target first 9%, stop first 36%, neither 55% (5000 replays). History: 31 fired, 7 won, 10 lost."
-  },
-  {
-   "t": "2026-11-09T15:25:00+00:00",
    "bot": "risk",
    "text": "Skipped AAPL: only $3.46 fits your limits, under the $5.00 minimum order"
   },
@@ -8765,6 +8760,11 @@
    "t": "2026-11-10T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-11T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $54.73 account: $1.09 a trade, $5.47 a day, orders up to $49.26."
   }
  ],
  "trades": [
@@ -9204,7 +9204,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T08:00:00+00:00"
+   "t": "2026-11-11T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -9214,7 +9214,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-11T08:00:00+00:00"
+   "t": "2026-11-11T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -9233,8 +9233,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped KDP: one share of KDP costs $37.39, more than your cash limit (cash $31.89 in trader/portfolio.json minus the $5.48 buffer = $26.41 / 37.39). No order.",
-   "t": "2026-11-10T17:55:00+00:00"
+   "text": "Limits resized to your $54.73 account: $1.09 a trade, $5.47 a day, orders up to $49.26.",
+   "t": "2026-11-11T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-11",
@@ -10159,6 +10159,10 @@
   {
    "t": "2026-11-11T07:00:00+00:00",
    "eq": 54.75
+  },
+  {
+   "t": "2026-11-11T08:30:00+00:00",
+   "eq": 54.73
   }
  ],
  "charts": {

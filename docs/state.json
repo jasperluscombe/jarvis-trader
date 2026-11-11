@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T17:30:00+00:00",
- "updated_local": "Thu 12 Nov 4:00 AM",
+ "updated_utc": "2026-11-11T17:35:00+00:00",
+ "updated_local": "Thu 12 Nov 4:05 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.83,
+  "equity": 54.82,
   "cash": 5.49,
-  "day_pl": 0.1,
+  "day_pl": 0.09,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": 0.1,
-  "week_pl": 1.58,
+  "day_pl": 0.09,
+  "week_pl": 1.57,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1033,6 +1033,10 @@
   {
    "t": "2026-11-11T17:30:00+00:00",
    "eq": 54.83
+  },
+  {
+   "t": "2026-11-11T17:35:00+00:00",
+   "eq": 54.82
   }
  ],
  "stats": {
@@ -1050,7 +1054,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T17:30:00+00:00",
+  "updated": "2026-11-11T17:35:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1307,11 +1311,18 @@
       694.01
      ],
      [
-      1794418203,
-      694.07,
-      694.07,
-      694.07,
-      694.07
+      1794418200,
+      694.04,
+      694.53,
+      693.97,
+      694.47
+     ],
+     [
+      1794418503,
+      694.54,
+      694.54,
+      694.54,
+      694.54
      ]
     ],
     "or_high": 689.02,
@@ -1574,11 +1585,18 @@
       760.7
      ],
      [
-      1794418203,
-      760.74,
-      760.74,
-      760.74,
-      760.74
+      1794418200,
+      760.73,
+      761.1,
+      760.54,
+      761.03
+     ],
+     [
+      1794418504,
+      761.09,
+      761.09,
+      761.09,
+      761.09
      ]
     ],
     "or_high": 757.95,
@@ -1841,11 +1859,18 @@
       393.12
      ],
      [
-      1794418205,
-      393.21,
-      393.21,
-      393.21,
-      393.21
+      1794418200,
+      393.12,
+      393.41,
+      392.91,
+      393.3
+     ],
+     [
+      1794418504,
+      393.2,
+      393.2,
+      393.2,
+      393.2
      ]
     ],
     "or_high": 392.67,
@@ -2108,11 +2133,18 @@
       176.29
      ],
      [
-      1794418204,
-      176.3,
-      176.3,
-      176.3,
-      176.3
+      1794418200,
+      176.29,
+      176.74,
+      176.21,
+      176.74
+     ],
+     [
+      1794418501,
+      176.82,
+      176.82,
+      176.82,
+      176.82
      ]
     ],
     "or_high": 175.13,
@@ -2375,11 +2407,18 @@
       354.33
      ],
      [
-      1794418204,
-      354.34,
-      354.34,
-      354.34,
-      354.34
+      1794418200,
+      354.35,
+      354.41,
+      354.11,
+      354.33
+     ],
+     [
+      1794418503,
+      354.32,
+      354.32,
+      354.32,
+      354.32
      ]
     ],
     "or_high": 353.43,
@@ -2656,14 +2695,21 @@
       26.37,
       26.39,
       26.36,
-      26.39
+      26.38
      ],
      [
-      1794418179,
+      1794418200,
+      26.37,
       26.38,
-      26.38,
-      26.38,
-      26.38
+      26.36,
+      26.37
+     ],
+     [
+      1794418497,
+      26.36,
+      26.36,
+      26.36,
+      26.36
      ]
     ],
     "or_high": 26.75,
@@ -2929,8 +2975,15 @@
       1794418200,
       32.62,
       32.62,
-      32.62,
-      32.62
+      32.6,
+      32.6
+     ],
+     [
+      1794418502,
+      32.6,
+      32.6,
+      32.6,
+      32.6
      ]
     ],
     "or_high": 32.83,
@@ -3006,7 +3059,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T17:35:00+00:00",
+ "next_checkin_utc": "2026-11-11T17:40:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -3025,8 +3078,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.337743,
-   "pl": 0.097743,
+   "value": 49.332452,
+   "pl": 0.092452,
    "entry": 353.648
   }
  ],
@@ -3037,7 +3090,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T17:30:00+00:00"
+   "t": "2026-11-11T17:35:00+00:00"
   },
   {
    "id": "scanner",
@@ -3060,14 +3113,14 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 18 charts at 12:30 PM New York: 1 breakouts.",
-   "t": "2026-11-11T17:30:00+00:00"
+   "text": "Checked 17 charts at 12:35 PM New York: 0 breakouts.",
+   "t": "2026-11-11T17:35:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "working",
+   "status": "idle",
    "text": "NCLH: target first 10%, stop first 50%, neither 41% (5000 replays). History: 32 fired, 3 won, 19 lost.",
    "t": "2026-11-11T17:30:00+00:00"
   },
@@ -3075,7 +3128,7 @@
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "working",
+   "status": "idle",
    "text": "Skipped NCLH: one share of NCLH costs $18.67, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 18.67). No order.",
    "t": "2026-11-11T17:30:00+00:00"
   },

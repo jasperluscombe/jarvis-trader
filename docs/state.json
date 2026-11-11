@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T19:10:00+00:00",
- "updated_local": "Thu 12 Nov 5:40 AM",
+ "updated_utc": "2026-11-11T19:15:00+00:00",
+ "updated_local": "Thu 12 Nov 5:45 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.88,
+  "equity": 54.89,
   "cash": 5.49,
-  "day_pl": 0.15,
+  "day_pl": 0.16,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": 0.15,
-  "week_pl": 1.63,
+  "day_pl": 0.16,
+  "week_pl": 1.64,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1101,6 +1101,10 @@
   {
    "t": "2026-11-11T19:10:00+00:00",
    "eq": 54.88
+  },
+  {
+   "t": "2026-11-11T19:15:00+00:00",
+   "eq": 54.89
   }
  ],
  "stats": {
@@ -1118,7 +1122,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T19:10:00+00:00",
+  "updated": "2026-11-11T19:15:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1515,11 +1519,18 @@
       692.7
      ],
      [
-      1794424204,
-      692.72,
-      692.72,
-      692.72,
-      692.72
+      1794424200,
+      692.65,
+      692.93,
+      692.34,
+      692.81
+     ],
+     [
+      1794424503,
+      692.75,
+      692.75,
+      692.75,
+      692.75
      ]
     ],
     "or_high": 689.02,
@@ -1903,7 +1914,7 @@
      [
       1794423300,
       762.25,
-      762.25,
+      762.26,
       761.95,
       762.05
      ],
@@ -1922,11 +1933,18 @@
       760.36
      ],
      [
-      1794424203,
-      760.37,
-      760.37,
-      760.37,
-      760.37
+      1794424200,
+      760.35,
+      760.66,
+      760.13,
+      760.51
+     ],
+     [
+      1794424504,
+      760.45,
+      760.45,
+      760.45,
+      760.45
      ]
     ],
     "or_high": 757.95,
@@ -2329,11 +2347,18 @@
       392.89
      ],
      [
-      1794424204,
-      392.92,
-      392.92,
-      392.92,
-      392.92
+      1794424200,
+      392.85,
+      393.09,
+      392.16,
+      392.3
+     ],
+     [
+      1794424506,
+      392.15,
+      392.15,
+      392.15,
+      392.15
      ]
     ],
     "or_high": 392.67,
@@ -2736,11 +2761,18 @@
       176.07
      ],
      [
-      1794424204,
-      176.12,
-      176.12,
-      176.12,
-      176.12
+      1794424200,
+      176.07,
+      176.19,
+      175.75,
+      176.03
+     ],
+     [
+      1794424504,
+      175.96,
+      175.96,
+      175.96,
+      175.96
      ]
     ],
     "or_high": 175.13,
@@ -3143,11 +3175,18 @@
       354.69
      ],
      [
-      1794424203,
-      354.68,
-      354.68,
-      354.68,
-      354.68
+      1794424200,
+      354.7,
+      354.86,
+      354.64,
+      354.76
+     ],
+     [
+      1794424502,
+      354.78,
+      354.78,
+      354.78,
+      354.78
      ]
     ],
     "or_high": 353.43,
@@ -3567,7 +3606,14 @@
       26.43
      ],
      [
-      1794424203,
+      1794424200,
+      26.43,
+      26.45,
+      26.42,
+      26.42
+     ],
+     [
+      1794424504,
       26.43,
       26.43,
       26.43,
@@ -3954,7 +4000,7 @@
      ],
      [
       1794423300,
-      32.56,
+      32.55,
       32.56,
       32.55,
       32.56
@@ -3974,7 +4020,14 @@
       32.62
      ],
      [
-      1794424185,
+      1794424200,
+      32.63,
+      32.64,
+      32.62,
+      32.62
+     ],
+     [
+      1794424425,
       32.62,
       32.62,
       32.62,
@@ -4054,7 +4107,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T19:15:00+00:00",
+ "next_checkin_utc": "2026-11-11T19:20:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4073,8 +4126,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.385082,
-   "pl": 0.145082,
+   "value": 49.396221,
+   "pl": 0.156221,
    "entry": 353.648
   }
  ],
@@ -4085,7 +4138,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T19:10:00+00:00"
+   "t": "2026-11-11T19:15:00+00:00"
   },
   {
    "id": "scanner",
@@ -4108,24 +4161,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 12 charts at 2:10 PM New York: 0 breakouts.",
-   "t": "2026-11-11T19:10:00+00:00"
+   "text": "Checked 12 charts at 2:15 PM New York: 2 breakouts.",
+   "t": "2026-11-11T19:15:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "idle",
-   "text": "GEN: target first 14%, stop first 41%, neither 45% (5000 replays). History: 36 fired, 6 won, 13 lost.",
-   "t": "2026-11-11T18:50:00+00:00"
+   "status": "working",
+   "text": "ACHC: target first 24%, stop first 63%, neither 13% (5000 replays). History: 27 fired, 5 won, 12 lost.",
+   "t": "2026-11-11T19:15:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped GEN: one share of GEN costs $30.27, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 30.27). No order.",
-   "t": "2026-11-11T18:50:00+00:00"
+   "status": "working",
+   "text": "Skipped ACHC: one share of ACHC costs $38.89, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 38.89). No order.",
+   "t": "2026-11-11T19:15:00+00:00"
   },
   {
    "id": "broker",
@@ -4763,6 +4816,36 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T19:15:00+00:00",
+   "bot": "risk",
+   "text": "Skipped ACHC: one share of ACHC costs $38.89, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 38.89). No order."
+  },
+  {
+   "t": "2026-11-11T19:15:00+00:00",
+   "bot": "oracle",
+   "text": "ACHC: target first 24%, stop first 63%, neither 13% (5000 replays). History: 27 fired, 5 won, 12 lost."
+  },
+  {
+   "t": "2026-11-11T19:15:00+00:00",
+   "bot": "entry",
+   "text": "ACHC broke out at $38.89 (2:10 PM)."
+  },
+  {
+   "t": "2026-11-11T19:15:00+00:00",
+   "bot": "risk",
+   "text": "Skipped ADT: one share of ADT costs $9.91, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 9.91). No order."
+  },
+  {
+   "t": "2026-11-11T19:15:00+00:00",
+   "bot": "oracle",
+   "text": "ADT: target first 28%, stop first 72%, neither 0% (5000 replays). History: 33 fired, 7 won, 15 lost."
+  },
+  {
+   "t": "2026-11-11T19:15:00+00:00",
+   "bot": "entry",
+   "text": "ADT broke out at $9.91 (2:15 PM)."
+  },
+  {
    "t": "2026-11-11T18:50:00+00:00",
    "bot": "risk",
    "text": "Skipped GEN: one share of GEN costs $30.27, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 30.27). No order."
@@ -4931,36 +5014,6 @@
    "t": "2026-11-11T15:15:00+00:00",
    "bot": "risk",
    "text": "Skipped TSLA: only $0.01 fits your limits, under the $5.00 minimum order"
-  },
-  {
-   "t": "2026-11-11T15:15:00+00:00",
-   "bot": "oracle",
-   "text": "TSLA: target first 22%, stop first 50%, neither 28% (5000 replays). History: 35 fired, 3 won, 16 lost."
-  },
-  {
-   "t": "2026-11-11T15:15:00+00:00",
-   "bot": "entry",
-   "text": "TSLA broke out at $393.08 (10:15 AM)."
-  },
-  {
-   "t": "2026-11-11T15:00:00+00:00",
-   "bot": "risk",
-   "text": "Skipped COLD: one share of COLD costs $16.15, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 16.15). No order."
-  },
-  {
-   "t": "2026-11-11T15:00:00+00:00",
-   "bot": "oracle",
-   "text": "COLD: target first 19%, stop first 47%, neither 34% (5000 replays). History: 36 fired, 6 won, 15 lost."
-  },
-  {
-   "t": "2026-11-11T15:00:00+00:00",
-   "bot": "entry",
-   "text": "COLD broke out at $16.15 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-11T14:55:00+00:00",
-   "bot": "risk",
-   "text": "Skipped ACAD: one share of ACAD costs $18.20, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 18.20). No order."
   }
  ],
  "errors": []

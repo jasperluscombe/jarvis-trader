@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T14:55:00+00:00",
- "updated_local": "Thu 12 Nov 1:25 AM",
+ "updated_utc": "2026-11-11T15:00:00+00:00",
+ "updated_local": "Thu 12 Nov 1:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.73,
+  "equity": 54.72,
   "cash": 5.49,
-  "day_pl": 0.0,
+  "day_pl": -0.01,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": 0.0,
-  "week_pl": 1.48,
+  "day_pl": -0.01,
+  "week_pl": 1.47,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -925,6 +925,10 @@
   {
    "t": "2026-11-11T14:30:00+00:00",
    "eq": 54.73
+  },
+  {
+   "t": "2026-11-11T15:00:00+00:00",
+   "eq": 54.72
   }
  ],
  "stats": {
@@ -942,7 +946,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T14:55:00+00:00",
+  "updated": "2026-11-11T15:00:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -982,11 +986,18 @@
       684.7
      ],
      [
-      1794408909,
-      684.85,
-      684.85,
-      684.85,
-      684.85
+      1794408900,
+      684.73,
+      686.14,
+      684.52,
+      685.82
+     ],
+     [
+      1794409206,
+      685.59,
+      685.59,
+      685.59,
+      685.59
      ]
     ],
     "or_high": 689.02,
@@ -1012,9 +1023,9 @@
      ],
      [
       1794408000,
-      756.81,
+      756.8,
       756.87,
-      755.67,
+      755.66,
       756.11
      ],
      [
@@ -1032,15 +1043,22 @@
       755.89
      ],
      [
-      1794408908,
-      755.99,
-      755.99,
-      755.99,
-      755.99
+      1794408900,
+      755.91,
+      756.78,
+      755.78,
+      756.35
+     ],
+     [
+      1794409206,
+      756.23,
+      756.23,
+      756.23,
+      756.23
      ]
     ],
     "or_high": 757.95,
-    "or_low": 755.67,
+    "or_low": 755.66,
     "plans": [],
     "fills": []
    },
@@ -1082,11 +1100,18 @@
       387.24
      ],
      [
-      1794408909,
-      387.35,
-      387.35,
-      387.35,
-      387.35
+      1794408900,
+      387.17,
+      389.83,
+      387.0,
+      389.81
+     ],
+     [
+      1794409206,
+      389.87,
+      389.87,
+      389.87,
+      389.87
      ]
     ],
     "or_high": 392.67,
@@ -1132,11 +1157,18 @@
       172.91
      ],
      [
-      1794408909,
-      172.93,
-      172.93,
-      172.93,
-      172.93
+      1794408900,
+      172.92,
+      173.4,
+      172.73,
+      173.01
+     ],
+     [
+      1794409207,
+      172.9,
+      172.9,
+      172.9,
+      172.9
      ]
     ],
     "or_high": 175.13,
@@ -1182,11 +1214,18 @@
       353.65
      ],
      [
-      1794408909,
-      353.57,
-      353.57,
-      353.57,
-      353.57
+      1794408900,
+      353.65,
+      354.41,
+      353.24,
+      353.6
+     ],
+     [
+      1794409206,
+      353.59,
+      353.59,
+      353.59,
+      353.59
      ]
     ],
     "or_high": 353.43,
@@ -1232,7 +1271,7 @@
       26.65,
       26.75,
       26.65,
-      26.72
+      26.71
      ],
      [
       1794408300,
@@ -1246,14 +1285,21 @@
       26.76,
       26.8,
       26.72,
-      26.74
+      26.75
      ],
      [
-      1794408893,
+      1794408900,
       26.75,
-      26.75,
-      26.75,
-      26.75
+      26.76,
+      26.69,
+      26.72
+     ],
+     [
+      1794409205,
+      26.71,
+      26.71,
+      26.71,
+      26.71
      ]
     ],
     "or_high": 26.75,
@@ -1296,14 +1342,21 @@
       32.84,
       32.85,
       32.81,
-      32.82
+      32.83
      ],
      [
-      1794408894,
+      1794408900,
       32.83,
       32.83,
-      32.83,
-      32.83
+      32.79,
+      32.81
+     ],
+     [
+      1794409205,
+      32.82,
+      32.82,
+      32.82,
+      32.82
      ]
     ],
     "or_high": 32.83,
@@ -1318,37 +1371,37 @@
    "symbol": "QQQ",
    "status": "waiting",
    "level": 689.02,
-   "last": 684.7,
-   "vs": -0.63,
-   "reason": "last close $684.70 (9:50 bar), $4.32 under the range high $689.02 (-0.63%)",
-   "t": "2026-11-11T14:55:00+00:00"
+   "last": 685.82,
+   "vs": -0.46,
+   "reason": "last close $685.82 (9:55 bar), $3.20 under the range high $689.02 (-0.46%)",
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "symbol": "SPY",
    "status": "waiting",
    "level": 757.95,
-   "last": 755.89,
-   "vs": -0.27,
-   "reason": "last close $755.89 (9:50 bar), $2.06 under the range high $757.95 (-0.27%)",
-   "t": "2026-11-11T14:55:00+00:00"
+   "last": 756.35,
+   "vs": -0.21,
+   "reason": "last close $756.35 (9:55 bar), $1.60 under the range high $757.95 (-0.21%)",
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "symbol": "TSLA",
    "status": "waiting",
    "level": 392.67,
-   "last": 387.24,
-   "vs": -1.38,
-   "reason": "last close $387.24 (9:50 bar), $5.43 under the range high $392.67 (-1.38%)",
-   "t": "2026-11-11T14:55:00+00:00"
+   "last": 389.81,
+   "vs": -0.73,
+   "reason": "last close $389.81 (9:55 bar), $2.86 under the range high $392.67 (-0.73%)",
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "symbol": "NVDA",
    "status": "waiting",
    "level": 175.13,
-   "last": 172.91,
-   "vs": -1.26,
-   "reason": "last close $172.91 (9:50 bar), $2.22 under the range high $175.13 (-1.26%)",
-   "t": "2026-11-11T14:55:00+00:00"
+   "last": 173.01,
+   "vs": -1.21,
+   "reason": "last close $173.01 (9:55 bar), $2.12 under the range high $175.13 (-1.21%)",
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "symbol": "AAPL",
@@ -1379,7 +1432,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T15:00:00+00:00",
+ "next_checkin_utc": "2026-11-11T15:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -1398,8 +1451,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.240975,
-   "pl": 0.000975,
+   "value": 49.234709,
+   "pl": -0.005291,
    "entry": 353.648
   }
  ],
@@ -1410,7 +1463,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T14:55:00+00:00"
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -1433,24 +1486,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 28 charts at 9:55 AM New York: 3 breakouts.",
-   "t": "2026-11-11T14:55:00+00:00"
+   "text": "Checked 25 charts at 10:00 AM New York: 1 breakouts.",
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "ACAD: target first 26%, stop first 64%, neither 10% (5000 replays). History: 33 fired, 3 won, 16 lost.",
-   "t": "2026-11-11T14:55:00+00:00"
+   "text": "COLD: target first 19%, stop first 47%, neither 34% (5000 replays). History: 36 fired, 6 won, 15 lost.",
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped ACAD: one share of ACAD costs $18.20, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 18.20). No order.",
-   "t": "2026-11-11T14:55:00+00:00"
+   "text": "Skipped COLD: one share of COLD costs $16.15, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 16.15). No order.",
+   "t": "2026-11-11T15:00:00+00:00"
   },
   {
    "id": "broker",
@@ -2088,6 +2141,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T15:00:00+00:00",
+   "bot": "risk",
+   "text": "Skipped COLD: one share of COLD costs $16.15, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 16.15). No order."
+  },
+  {
+   "t": "2026-11-11T15:00:00+00:00",
+   "bot": "oracle",
+   "text": "COLD: target first 19%, stop first 47%, neither 34% (5000 replays). History: 36 fired, 6 won, 15 lost."
+  },
+  {
+   "t": "2026-11-11T15:00:00+00:00",
+   "bot": "entry",
+   "text": "COLD broke out at $16.15 (10:00 AM)."
+  },
+  {
    "t": "2026-11-11T14:55:00+00:00",
    "bot": "risk",
    "text": "Skipped ACAD: one share of ACAD costs $18.20, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 18.20). No order."
@@ -2271,21 +2339,6 @@
    "t": "2026-11-11T14:50:00+00:00",
    "bot": "entry",
    "text": "AAPL broke out at $353.68 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-11T13:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Sent the morning brief."
-  },
-  {
-   "t": "2026-11-11T13:00:00+00:00",
-   "bot": "news",
-   "text": "Read 17 headlines and filings for 8 stocks."
-  },
-  {
-   "t": "2026-11-11T13:00:00+00:00",
-   "bot": "scanner",
-   "text": "Scanned the US market: 331 charts matched a setup, 173 fit your $5-$40 price range. Watching the top 30."
   }
  ],
  "errors": []

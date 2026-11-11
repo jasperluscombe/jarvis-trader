@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T20:05:00+00:00",
- "updated_local": "Thu 12 Nov 6:35 AM",
+ "updated_utc": "2026-11-11T20:10:00+00:00",
+ "updated_local": "Thu 12 Nov 6:40 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.87,
+  "equity": 54.91,
   "cash": 5.49,
-  "day_pl": 0.14,
+  "day_pl": 0.18,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": 0.14,
-  "week_pl": 1.62,
+  "day_pl": 0.18,
+  "week_pl": 1.66,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1137,6 +1137,10 @@
   {
    "t": "2026-11-11T20:05:00+00:00",
    "eq": 54.87
+  },
+  {
+   "t": "2026-11-11T20:10:00+00:00",
+   "eq": 54.91
   }
  ],
  "stats": {
@@ -1154,7 +1158,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T20:05:00+00:00",
+  "updated": "2026-11-11T20:10:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1628,11 +1632,18 @@
       691.9
      ],
      [
-      1794427502,
-      691.92,
-      691.92,
-      691.92,
-      691.92
+      1794427500,
+      691.91,
+      691.96,
+      691.28,
+      691.4
+     ],
+     [
+      1794427803,
+      691.4,
+      691.4,
+      691.4,
+      691.4
      ]
     ],
     "or_high": 689.02,
@@ -2092,7 +2103,7 @@
      ],
      [
       1794426600,
-      760.64,
+      760.68,
       760.91,
       760.56,
       760.79
@@ -2112,11 +2123,18 @@
       760.42
      ],
      [
-      1794427501,
-      760.43,
-      760.43,
-      760.43,
-      760.43
+      1794427500,
+      760.42,
+      760.49,
+      760.16,
+      760.22
+     ],
+     [
+      1794427803,
+      760.21,
+      760.21,
+      760.21,
+      760.21
      ]
     ],
     "or_high": 757.95,
@@ -2596,11 +2614,18 @@
       391.36
      ],
      [
-      1794427503,
-      391.42,
-      391.42,
-      391.42,
-      391.42
+      1794427500,
+      391.36,
+      391.62,
+      390.89,
+      390.97
+     ],
+     [
+      1794427802,
+      390.99,
+      390.99,
+      390.99,
+      390.99
      ]
     ],
     "or_high": 392.67,
@@ -3080,11 +3105,18 @@
       175.42
      ],
      [
-      1794427503,
-      175.41,
-      175.41,
-      175.41,
-      175.41
+      1794427500,
+      175.42,
+      175.49,
+      174.75,
+      174.83
+     ],
+     [
+      1794427805,
+      174.81,
+      174.81,
+      174.81,
+      174.81
      ]
     ],
     "or_high": 175.13,
@@ -3564,11 +3596,18 @@
       354.62
      ],
      [
-      1794427504,
+      1794427500,
       354.62,
-      354.62,
-      354.62,
-      354.62
+      354.92,
+      354.59,
+      354.92
+     ],
+     [
+      1794427802,
+      354.91,
+      354.91,
+      354.91,
+      354.91
      ]
     ],
     "or_high": 353.43,
@@ -4047,7 +4086,7 @@
       1794426600,
       26.44,
       26.44,
-      26.43,
+      26.42,
       26.43
      ],
      [
@@ -4062,14 +4101,21 @@
       26.46,
       26.47,
       26.44,
-      26.45
+      26.46
      ],
      [
-      1794427468,
+      1794427500,
+      26.47,
+      26.49,
       26.46,
-      26.46,
-      26.46,
-      26.46
+      26.48
+     ],
+     [
+      1794427740,
+      26.48,
+      26.48,
+      26.48,
+      26.48
      ]
     ],
     "or_high": 26.75,
@@ -4549,11 +4595,18 @@
       32.62
      ],
      [
-      1794427457,
+      1794427500,
       32.62,
+      32.64,
       32.62,
-      32.62,
-      32.62
+      32.64
+     ],
+     [
+      1794427717,
+      32.63,
+      32.63,
+      32.63,
+      32.63
      ]
     ],
     "or_high": 32.83,
@@ -4629,7 +4682,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T20:10:00+00:00",
+ "next_checkin_utc": "2026-11-11T20:15:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -4648,8 +4701,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.375336,
-   "pl": 0.135336,
+   "value": 49.415714,
+   "pl": 0.175714,
    "entry": 353.648
   }
  ],
@@ -4660,7 +4713,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T20:05:00+00:00"
+   "t": "2026-11-11T20:10:00+00:00"
   },
   {
    "id": "scanner",
@@ -4683,24 +4736,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 9 charts at 3:05 PM New York: 0 breakouts.",
-   "t": "2026-11-11T20:05:00+00:00"
+   "text": "Checked 9 charts at 3:10 PM New York: 1 breakouts.",
+   "t": "2026-11-11T20:10:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "idle",
-   "text": "CPRT: target first 15%, stop first 46%, neither 39% (5000 replays). History: 32 fired, 5 won, 14 lost.",
-   "t": "2026-11-11T19:45:01+00:00"
+   "status": "working",
+   "text": "ROL: target first 0%, stop first 11%, neither 89% (5000 replays). History: 35 fired, 7 won, 16 lost.",
+   "t": "2026-11-11T20:10:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped CPRT: one share of CPRT costs $32.04, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 32.04). No order.",
-   "t": "2026-11-11T19:45:01+00:00"
+   "status": "working",
+   "text": "Skipped ROL: one share of ROL costs $38.33, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 38.33). No order.",
+   "t": "2026-11-11T20:10:00+00:00"
   },
   {
    "id": "broker",
@@ -5338,6 +5391,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T20:10:00+00:00",
+   "bot": "risk",
+   "text": "Skipped ROL: one share of ROL costs $38.33, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 38.33). No order."
+  },
+  {
+   "t": "2026-11-11T20:10:00+00:00",
+   "bot": "oracle",
+   "text": "ROL: target first 0%, stop first 11%, neither 89% (5000 replays). History: 35 fired, 7 won, 16 lost."
+  },
+  {
+   "t": "2026-11-11T20:10:00+00:00",
+   "bot": "entry",
+   "text": "ROL broke out at $38.33 (3:10 PM)."
+  },
+  {
    "t": "2026-11-11T19:45:01+00:00",
    "bot": "risk",
    "text": "Skipped CPRT: one share of CPRT costs $32.04, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 32.04). No order."
@@ -5521,21 +5589,6 @@
    "t": "2026-11-11T15:50:00+00:00",
    "bot": "risk",
    "text": "Skipped QQQ: only $0.01 fits your limits, under the $5.00 minimum order"
-  },
-  {
-   "t": "2026-11-11T15:50:00+00:00",
-   "bot": "oracle",
-   "text": "QQQ: target first 26%, stop first 63%, neither 11% (5000 replays). History: 44 fired, 10 won, 26 lost."
-  },
-  {
-   "t": "2026-11-11T15:50:00+00:00",
-   "bot": "entry",
-   "text": "QQQ broke out at $689.12 (10:45 AM)."
-  },
-  {
-   "t": "2026-11-11T15:35:00+00:00",
-   "bot": "risk",
-   "text": "Skipped ZETA: one share of ZETA costs $37.81, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 37.81). No order."
   }
  ],
  "errors": []

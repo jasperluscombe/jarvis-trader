@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-11T12:55:00+00:00",
- "updated_local": "Wed 11 Nov 11:25 PM",
+ "updated_utc": "2026-11-11T13:00:00+00:00",
+ "updated_local": "Wed 11 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -5532,7 +5532,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-11T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-11T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5555,31 +5555,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T12:55:00+00:00"
+   "t": "2026-11-11T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks for setups before the open.",
-   "status": "idle",
-   "text": "Scanned the US market: 733 charts matched a setup, 401 fit your $5-$40 price range. Watching the top 30.",
-   "t": "2026-11-10T13:00:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 331 charts matched a setup, 173 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-11T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "Read 23 headlines and filings for 8 stocks.",
-   "t": "2026-11-10T13:00:00+00:00"
+   "status": "working",
+   "text": "Read 17 headlines and filings for 8 stocks.",
+   "t": "2026-11-11T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-11T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-11T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -5609,189 +5609,99 @@
  "watchlist": [
   {
    "symbol": "TTD",
-   "price": 14.93,
+   "price": 15.42,
    "setups": [
     "breakout_20d"
    ],
    "news": [
     {
-     "title": "Trade Desk\u2019s Earnings Beat Defies Analysts\u2019 \u2018Lost Year\u2019 Projections",
-     "url": "https://finance.yahoo.com/m/0aae3af7-cc7f-3af0-af9a-6d803d85246a/trade-desk%E2%80%99s-earnings-beat.html?.tsrc=rss",
+     "title": "3 Great Founder Led Stocks To Own In November 2026",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/3-great-founder-led-stocks-121211987.html?.tsrc=rss",
      "tags": [
-      "earnings"
-     ]
-    }
-   ]
-  },
-  {
-   "symbol": "JHX",
-   "price": 29.94,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "AAL",
-   "price": 14.16,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "OMH",
-   "price": 25.84,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "WULF",
-   "price": 12.38,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": [
-    {
-     "title": "WULF, HUT, CIFR Stocks Get Price Target Cuts From Jefferies: Here\u2019s Why The Analyst Is Still Bullish On These AI Infra Firms",
-     "url": "https://stocktwits.com/news-articles/markets/equity/wulf-hut-cifr-stocks-get-price-target-cuts-from-jefferies-here-s-why-the-analyst-is-still-bullish-on-these-ai-infra-firms/cNGuIUkR97m?.tsrc=rss",
-     "tags": [
-      "analyst"
-     ]
-    }
-   ]
-  },
-  {
-   "symbol": "QXO",
-   "price": 13.78,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "QXO Inc. (QXO) is Skyrocketing by Double Digits \u2014 Here\u2019s What\u2019s Next",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/qxo-inc-qxo-skyrocketing-double-033917798.html?.tsrc=rss",
-     "tags": [
-      "earnings"
+      "macro"
      ]
     }
    ]
   },
   {
    "symbol": "KDP",
-   "price": 36.94,
+   "price": 37.59,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "CMG",
-   "price": 35.74,
+   "symbol": "SMX",
+   "price": 19.25,
    "setups": [
     "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "Cava vs. Chipotle Mexican Grill: Which Stock Is a Better Buy?",
-     "url": "https://www.fool.com/coverage/better-buy/2026/11/09/cava-vs-chipotle-mexican-grill-which-stock-is-a-better-buy/?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "OKLO",
-   "price": 26.84,
-   "setups": [
-    "reclaim_ma20"
    ],
    "news": []
   },
   {
    "symbol": "RIOT",
-   "price": 17.66,
+   "price": 18.08,
    "setups": [
     "breakout_20d"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "Riot Platforms (RIOT) Stock May Be Overvalued Despite Its Huge AI Lease Deal",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/riot-platforms-riot-stock-may-051830099.html?.tsrc=rss",
+     "tags": [
+      "deal"
+     ]
+    }
+   ]
   },
   {
-   "symbol": "RKT",
-   "price": 15.19,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "SGRY",
-   "price": 26.45,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "LFST",
-   "price": 14.6,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PCG",
-   "price": 13.14,
+   "symbol": "MARA",
+   "price": 7.34,
    "setups": [
     "reclaim_ma20"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "MARA Sinks 18% to a 52-Week Low, Then Rebounds 25%. Is the Selling Over?",
+     "url": "https://www.tikr.com/blog/mara-sinks-18-to-a-52-week-low-then-rebounds-25-is-the-selling-over?ref=yahoofinance&tlnk=yf-261111-3cgccfrc&.tsrc=rss",
+     "tags": []
+    }
+   ]
   },
   {
-   "symbol": "WRBY",
-   "price": 30.21,
+   "symbol": "CMG",
+   "price": 35.92,
    "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CNH",
-   "price": 12.82,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "UMC",
-   "price": 14.89,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ROL",
-   "price": 38.74,
-   "setups": [
+    "breakout_20d",
     "bull_flag"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "Chipotle (CMG) Stock Could Be 19% Overvalued Following Q3 Expansion News",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-cmg-stock-could-19-081020567.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "ZETA",
+   "price": 35.07,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": [
+    {
+     "title": "Zeta Global: 3 Key Takeaways for Long-Term Investors",
+     "url": "https://www.fool.com/earnings/takeaways/2026/11/10/zeta-global-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+     "tags": []
+    }
+   ]
   },
   {
    "symbol": "TSCO",
-   "price": 37.4,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "IBN",
-   "price": 34.45,
+   "price": 37.5,
    "setups": [
     "breakout_20d"
    ],
@@ -5799,47 +5709,47 @@
   },
   {
    "symbol": "CPRT",
-   "price": 32.45,
+   "price": 32.3,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "HBAN",
-   "price": 15.92,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "FRVO",
-   "price": 11.38,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "BROS",
-   "price": 36.01,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
    "symbol": "VTRS",
-   "price": 20.49,
+   "price": 20.85,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "COMP",
-   "price": 10.79,
+   "symbol": "IBN",
+   "price": 34.88,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MOS",
+   "price": 22.99,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "NCLH",
+   "price": 18.51,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "SGRY",
+   "price": 26.73,
    "setups": [
     "breakout_20d"
    ],
@@ -5847,7 +5757,23 @@
   },
   {
    "symbol": "CHYM",
-   "price": 32.53,
+   "price": 32.54,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "VFC",
+   "price": 20.74,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MGM",
+   "price": 33.06,
    "setups": [
     "breakout_20d"
    ],
@@ -5855,26 +5781,106 @@
   },
   {
    "symbol": "ADT",
-   "price": 9.93,
+   "price": 9.9,
    "setups": [
-    "breakout_20d",
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "HST",
-   "price": 25.28,
+   "symbol": "LYFT",
+   "price": 17.02,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "MOS",
-   "price": 22.77,
+   "symbol": "ROL",
+   "price": 38.42,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "GEN",
+   "price": 30.01,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HDB",
+   "price": 25.98,
    "setups": [
     "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "OSCR",
+   "price": 33.47,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "COLD",
+   "price": 16.14,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BEN",
+   "price": 36.29,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ACHC",
+   "price": 38.64,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "SIRI",
+   "price": 32.24,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PXLW",
+   "price": 7.29,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "JAN",
+   "price": 32.88,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ACAD",
+   "price": 18.28,
+   "setups": [
+    "oversold_bounce"
    ],
    "news": []
   }
@@ -6212,6 +6218,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-11T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 17 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-11T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 331 charts matched a setup, 173 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-11T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $54.73 account: $1.09 a trade, $5.47 a day, orders up to $49.26."
@@ -6395,21 +6416,6 @@
    "t": "2026-11-10T15:55:00+00:00",
    "bot": "oracle",
    "text": "SH: target first 34%, stop first 60%, neither 6% (5000 replays). History: 40 fired, 12 won, 25 lost."
-  },
-  {
-   "t": "2026-11-10T15:55:00+00:00",
-   "bot": "entry",
-   "text": "SH broke out at $33.22 (10:55 AM)."
-  },
-  {
-   "t": "2026-11-10T15:40:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on WRBY: the odds are no better than a coin flip (avg +0.01R)."
-  },
-  {
-   "t": "2026-11-10T15:40:00+00:00",
-   "bot": "oracle",
-   "text": "WRBY: target first 31%, stop first 63%, neither 5% (5000 replays). History: 36 fired, 3 won, 24 lost."
   }
  ],
  "errors": []

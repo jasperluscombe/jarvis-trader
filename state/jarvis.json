@@ -8369,21 +8369,6 @@
   {
    "t": "2026-11-09T15:25:00+00:00",
    "bot": "risk",
-   "text": "Skipped AAPL: only $3.46 fits your limits, under the $5.00 minimum order"
-  },
-  {
-   "t": "2026-11-09T15:25:00+00:00",
-   "bot": "entry",
-   "text": "IREN broke out at $21.64 (10:20 AM)."
-  },
-  {
-   "t": "2026-11-09T15:25:00+00:00",
-   "bot": "oracle",
-   "text": "IREN: target first 3%, stop first 26%, neither 71% (5000 replays). History: 32 fired, 4 won, 16 lost."
-  },
-  {
-   "t": "2026-11-09T15:25:00+00:00",
-   "bot": "risk",
    "text": "Skipped IREN: one share of IREN costs $21.64, more than your cash limit (cash $8.79 in trader/portfolio.json minus the $5.33 buffer = $3.46 / 21.64). No order."
   },
   {
@@ -8765,6 +8750,21 @@
    "t": "2026-11-11T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $54.73 account: $1.09 a trade, $5.47 a day, orders up to $49.26."
+  },
+  {
+   "t": "2026-11-11T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 331 charts matched a setup, 173 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
+   "t": "2026-11-11T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 17 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-11T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
   }
  ],
  "trades": [
@@ -8892,7 +8892,7 @@
  "done": {
   "daily_goal": "2026-11-09",
   "recap": "2026-11-10",
-  "brief": "2026-11-10",
+  "brief": "2026-11-11",
   "overnight_warning": "2026-11-06"
  },
  "candidates": [
@@ -8901,320 +8901,322 @@
    "setups": [
     "breakout_20d"
    ],
-   "price": 14.93,
-   "close_date": "2026-11-09",
-   "rsi": 68.6,
-   "volume": 86907651
-  },
-  {
-   "symbol": "JHX",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 29.94,
-   "close_date": "2026-11-09",
-   "rsi": 65.2,
-   "volume": 35199822
-  },
-  {
-   "symbol": "AAL",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 14.16,
-   "close_date": "2026-11-09",
-   "rsi": 62.9,
-   "volume": 74181168
-  },
-  {
-   "symbol": "OMH",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 25.84,
-   "close_date": "2026-11-09",
-   "rsi": 78.3,
-   "volume": 30638581
-  },
-  {
-   "symbol": "WULF",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 12.38,
-   "close_date": "2026-11-09",
-   "rsi": 48.7,
-   "volume": 57090530
-  },
-  {
-   "symbol": "QXO",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 13.78,
-   "close_date": "2026-11-09",
-   "rsi": 65.2,
-   "volume": 42132309
+   "price": 15.42,
+   "close_date": "2026-11-10",
+   "rsi": 71.1,
+   "volume": 64919399
   },
   {
    "symbol": "KDP",
    "setups": [
     "breakout_20d"
    ],
-   "price": 36.94,
-   "close_date": "2026-11-09",
-   "rsi": 65.4,
-   "volume": 15372523
+   "price": 37.59,
+   "close_date": "2026-11-10",
+   "rsi": 68.2,
+   "volume": 16963527
   },
   {
-   "symbol": "CMG",
+   "symbol": "SMX",
    "setups": [
     "breakout_20d"
    ],
-   "price": 35.74,
-   "close_date": "2026-11-09",
-   "rsi": 67.9,
-   "volume": 15615742
-  },
-  {
-   "symbol": "OKLO",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 26.84,
-   "close_date": "2026-11-09",
-   "rsi": 46.6,
-   "volume": 19899417
+   "price": 19.25,
+   "close_date": "2026-11-10",
+   "rsi": 69.0,
+   "volume": 30539263
   },
   {
    "symbol": "RIOT",
    "setups": [
     "breakout_20d"
    ],
-   "price": 17.66,
-   "close_date": "2026-11-09",
-   "rsi": 57.9,
-   "volume": 28596703
+   "price": 18.08,
+   "close_date": "2026-11-10",
+   "rsi": 59.2,
+   "volume": 27244885
   },
   {
-   "symbol": "RKT",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 15.19,
-   "close_date": "2026-11-09",
-   "rsi": 74.5,
-   "volume": 29737788
-  },
-  {
-   "symbol": "SGRY",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 26.45,
-   "close_date": "2026-11-09",
-   "rsi": 90.5,
-   "volume": 17048983
-  },
-  {
-   "symbol": "LFST",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 14.6,
-   "close_date": "2026-11-09",
-   "rsi": 68.5,
-   "volume": 29533920
-  },
-  {
-   "symbol": "PCG",
+   "symbol": "MARA",
    "setups": [
     "reclaim_ma20"
    ],
-   "price": 13.14,
-   "close_date": "2026-11-09",
-   "rsi": 49.4,
-   "volume": 29695460
+   "price": 7.34,
+   "close_date": "2026-11-10",
+   "rsi": 45.1,
+   "volume": 65975648
   },
   {
-   "symbol": "WRBY",
+   "symbol": "CMG",
    "setups": [
-    "breakout_20d"
-   ],
-   "price": 30.21,
-   "close_date": "2026-11-09",
-   "rsi": 65.8,
-   "volume": 11377189
-  },
-  {
-   "symbol": "CNH",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 12.82,
-   "close_date": "2026-11-09",
-   "rsi": 61.6,
-   "volume": 25430220
-  },
-  {
-   "symbol": "UMC",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 14.89,
-   "close_date": "2026-11-09",
-   "rsi": 30.1,
-   "volume": 21892453
-  },
-  {
-   "symbol": "ROL",
-   "setups": [
+    "breakout_20d",
     "bull_flag"
    ],
-   "price": 38.74,
-   "close_date": "2026-11-09",
-   "rsi": 70.3,
-   "volume": 8329368
+   "price": 35.92,
+   "close_date": "2026-11-10",
+   "rsi": 68.5,
+   "volume": 13469689
+  },
+  {
+   "symbol": "ZETA",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "price": 35.07,
+   "close_date": "2026-11-10",
+   "rsi": 60.9,
+   "volume": 11435430
   },
   {
    "symbol": "TSCO",
    "setups": [
     "breakout_20d"
    ],
-   "price": 37.4,
-   "close_date": "2026-11-09",
-   "rsi": 67.9,
-   "volume": 8600672
-  },
-  {
-   "symbol": "IBN",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 34.45,
-   "close_date": "2026-11-09",
-   "rsi": 81.9,
-   "volume": 8489891
+   "price": 37.5,
+   "close_date": "2026-11-10",
+   "rsi": 68.1,
+   "volume": 7973419
   },
   {
    "symbol": "CPRT",
    "setups": [
     "bull_flag"
    ],
-   "price": 32.45,
-   "close_date": "2026-11-09",
-   "rsi": 67.2,
-   "volume": 8520135
-  },
-  {
-   "symbol": "HBAN",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 15.92,
-   "close_date": "2026-11-09",
-   "rsi": 53.9,
-   "volume": 17345338
-  },
-  {
-   "symbol": "FRVO",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 11.38,
-   "close_date": "2026-11-09",
-   "rsi": 54.0,
-   "volume": 23954835
-  },
-  {
-   "symbol": "BROS",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 36.01,
-   "close_date": "2026-11-09",
-   "rsi": 37.7,
-   "volume": 7411636
+   "price": 32.3,
+   "close_date": "2026-11-10",
+   "rsi": 66.0,
+   "volume": 9255237
   },
   {
    "symbol": "VTRS",
    "setups": [
     "breakout_20d"
    ],
-   "price": 20.49,
-   "close_date": "2026-11-09",
-   "rsi": 72.3,
-   "volume": 12634234
+   "price": 20.85,
+   "close_date": "2026-11-10",
+   "rsi": 74.4,
+   "volume": 11179721
   },
   {
-   "symbol": "COMP",
+   "symbol": "IBN",
    "setups": [
     "breakout_20d"
    ],
-   "price": 10.79,
-   "close_date": "2026-11-09",
-   "rsi": 60.9,
-   "volume": 23947057
-  },
-  {
-   "symbol": "CHYM",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 32.53,
-   "close_date": "2026-11-09",
-   "rsi": 66.7,
-   "volume": 7852063
-  },
-  {
-   "symbol": "ADT",
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "price": 9.93,
-   "close_date": "2026-11-09",
-   "rsi": 86.8,
-   "volume": 24673854
-  },
-  {
-   "symbol": "HST",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 25.28,
-   "close_date": "2026-11-09",
-   "rsi": 59.4,
-   "volume": 9506796
+   "price": 34.88,
+   "close_date": "2026-11-10",
+   "rsi": 83.0,
+   "volume": 6329326
   },
   {
    "symbol": "MOS",
    "setups": [
     "breakout_20d"
    ],
-   "price": 22.77,
-   "close_date": "2026-11-09",
-   "rsi": 66.7,
-   "volume": 9968135
+   "price": 22.99,
+   "close_date": "2026-11-10",
+   "rsi": 67.7,
+   "volume": 9517354
+  },
+  {
+   "symbol": "NCLH",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 18.51,
+   "close_date": "2026-11-10",
+   "rsi": 65.0,
+   "volume": 11328172
+  },
+  {
+   "symbol": "SGRY",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 26.73,
+   "close_date": "2026-11-10",
+   "rsi": 91.0,
+   "volume": 7306324
+  },
+  {
+   "symbol": "CHYM",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 32.54,
+   "close_date": "2026-11-10",
+   "rsi": 66.6,
+   "volume": 5961483
+  },
+  {
+   "symbol": "VFC",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 20.74,
+   "close_date": "2026-11-10",
+   "rsi": 77.4,
+   "volume": 8526033
+  },
+  {
+   "symbol": "MGM",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 33.06,
+   "close_date": "2026-11-10",
+   "rsi": 60.6,
+   "volume": 5050653
+  },
+  {
+   "symbol": "ADT",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 9.9,
+   "close_date": "2026-11-10",
+   "rsi": 85.7,
+   "volume": 16858344
+  },
+  {
+   "symbol": "LYFT",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 17.02,
+   "close_date": "2026-11-10",
+   "rsi": 52.4,
+   "volume": 9744582
+  },
+  {
+   "symbol": "ROL",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 38.42,
+   "close_date": "2026-11-10",
+   "rsi": 67.9,
+   "volume": 4033446
+  },
+  {
+   "symbol": "GEN",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 30.01,
+   "close_date": "2026-11-10",
+   "rsi": 67.7,
+   "volume": 5116757
+  },
+  {
+   "symbol": "HDB",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 25.98,
+   "close_date": "2026-11-10",
+   "rsi": 74.5,
+   "volume": 5842517
+  },
+  {
+   "symbol": "OSCR",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 33.47,
+   "close_date": "2026-11-10",
+   "rsi": 54.9,
+   "volume": 4244916
+  },
+  {
+   "symbol": "COLD",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 16.14,
+   "close_date": "2026-11-10",
+   "rsi": 73.0,
+   "volume": 8743873
+  },
+  {
+   "symbol": "BEN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 36.29,
+   "close_date": "2026-11-10",
+   "rsi": 69.2,
+   "volume": 3868543
+  },
+  {
+   "symbol": "ACHC",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 38.64,
+   "close_date": "2026-11-10",
+   "rsi": 79.1,
+   "volume": 3630637
+  },
+  {
+   "symbol": "SIRI",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 32.24,
+   "close_date": "2026-11-10",
+   "rsi": 71.2,
+   "volume": 4121840
+  },
+  {
+   "symbol": "PXLW",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "price": 7.29,
+   "close_date": "2026-11-10",
+   "rsi": 71.8,
+   "volume": 17858931
+  },
+  {
+   "symbol": "JAN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 32.88,
+   "close_date": "2026-11-10",
+   "rsi": 73.7,
+   "volume": 3941812
+  },
+  {
+   "symbol": "ACAD",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "price": 18.28,
+   "close_date": "2026-11-10",
+   "rsi": 38.2,
+   "volume": 6354150
   }
  ],
- "candidates_day": "2026-11-10",
+ "candidates_day": "2026-11-11",
  "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T12:55:00+00:00"
+   "t": "2026-11-11T13:00:00+00:00"
   },
   "scanner": {
    "status": "working",
-   "text": "Scanned the US market: 733 charts matched a setup, 401 fit your $5-$40 price range. Watching the top 30.",
-   "t": "2026-11-10T13:00:00+00:00"
+   "text": "Scanned the US market: 331 charts matched a setup, 173 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-11T13:00:00+00:00"
   },
   "entry": {
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-11T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-11T13:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -9228,8 +9230,8 @@
   },
   "news": {
    "status": "working",
-   "text": "Read 23 headlines and filings for 8 stocks.",
-   "t": "2026-11-10T13:00:00+00:00"
+   "text": "Read 17 headlines and filings for 8 stocks.",
+   "t": "2026-11-11T13:00:00+00:00"
   },
   "risk": {
    "status": "working",
@@ -14996,13 +14998,9 @@
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-10T21:00:00+00:00"
+  "at": "2026-11-11T13:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 1,
-   "at": "2026-11-05T21:05:00+00:00"
-  },
   {
    "sent_ok": 1,
    "at": "2026-11-06T08:30:00+00:00"
@@ -15080,97 +15078,123 @@
   {
    "sent_ok": 1,
    "at": "2026-11-10T21:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-11T13:00:00+00:00"
   }
  ],
  "news": {
-  "AAL": {
-   "headlines": []
-  },
   "CMG": {
    "headlines": [
     {
-     "title": "Cava vs. Chipotle Mexican Grill: Which Stock Is a Better Buy?",
-     "url": "https://www.fool.com/coverage/better-buy/2026/11/09/cava-vs-chipotle-mexican-grill-which-stock-is-a-better-buy/?.tsrc=rss",
+     "title": "Chipotle (CMG) Stock Could Be 19% Overvalued Following Q3 Expansion News",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-cmg-stock-could-19-081020567.html?.tsrc=rss",
      "tags": []
     },
     {
-     "title": "Chart of the Day: Yum China Offers Fresh Evidence to Stay Bullish on Region",
-     "url": "https://finance.yahoo.com/m/fbfba7ca-6deb-3c8e-9008-8ba21aeb03a8/chart-of-the-day%3A-yum-china.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  "JHX": {
-   "headlines": []
-  },
-  "KDP": {
-   "headlines": []
-  },
-  "OMH": {
-   "headlines": []
-  },
-  "QXO": {
-   "headlines": [
-    {
-     "title": "QXO Inc. (QXO) is Skyrocketing by Double Digits \u2014 Here\u2019s What\u2019s Next",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/qxo-inc-qxo-skyrocketing-double-033917798.html?.tsrc=rss",
+     "title": "Chipotle Mexican Grill (CMG) Could Be 29% Overvalued After Earnings Profit Slipped",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-mexican-grill-cmg-could-043336119.html?.tsrc=rss",
      "tags": [
       "earnings"
      ]
     },
     {
-     "title": "QXO (QXO) Stock May Still Look Like A Bargain After $1 Billion Platform Launch",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/qxo-qxo-stock-may-still-221000147.html?.tsrc=rss",
+     "title": "Chipotle (CMG) Targets Up To 385 New Restaurants In 2027",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-cmg-targets-385-restaurants-021341068.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  "KDP": {
+   "headlines": []
+  },
+  "MARA": {
+   "headlines": [
+    {
+     "title": "MARA Sinks 18% to a 52-Week Low, Then Rebounds 25%. Is the Selling Over?",
+     "url": "https://www.tikr.com/blog/mara-sinks-18-to-a-52-week-low-then-rebounds-25-is-the-selling-over?ref=yahoofinance&tlnk=yf-261111-3cgccfrc&.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "Compass Point\u2019s New $20 Target Says MARA\u2019s Selloff Went Too Far",
+     "url": "https://www.tikr.com/blog/compass-points-new-20-target-says-maras-selloff-went-too-far?ref=yahoofinance&tlnk=yf-261111-fvq386m2&.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "Anthropic IPO Pricing, Ben Gagnon on KEEL\u2019s Q3 Earnings, MARA\u2019s Earnings, and Goldman Sachs on IREN",
+     "url": "https://blockspace.media/podcast/anthropic-ipo-pricing-ben-gagnon-on-keels-q3-earnings-maras-earnings-and-goldman-sachs-on-iren/?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ]
+  },
+  "RIOT": {
+   "headlines": [
+    {
+     "title": "Riot Platforms (RIOT) Stock May Be Overvalued Despite Its Huge AI Lease Deal",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/riot-platforms-riot-stock-may-051830099.html?.tsrc=rss",
      "tags": [
       "deal"
      ]
     },
     {
-     "title": "QXO, Inc. filed a 8-K: Regulation FD disclosure",
-     "url": "https://www.sec.gov/Archives/edgar/data/1236275/000095014226002986/0000950142-26-002986-index.htm",
+     "title": "Compass Point\u2019s New $20 Target Says MARA\u2019s Selloff Went Too Far",
+     "url": "https://www.tikr.com/blog/compass-points-new-20-target-says-maras-selloff-went-too-far?ref=yahoofinance&tlnk=yf-261111-fvq386m2&.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "What Riot Platforms Doubters Got Wrong",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/riot-platforms-doubters-got-wrong-021645466.html?.tsrc=rss",
      "tags": []
     }
    ]
   },
+  "SMX": {
+   "headlines": []
+  },
+  "TSCO": {
+   "headlines": []
+  },
   "TTD": {
    "headlines": [
     {
-     "title": "Trade Desk\u2019s Earnings Beat Defies Analysts\u2019 \u2018Lost Year\u2019 Projections",
-     "url": "https://finance.yahoo.com/m/0aae3af7-cc7f-3af0-af9a-6d803d85246a/trade-desk%E2%80%99s-earnings-beat.html?.tsrc=rss",
+     "title": "3 Great Founder Led Stocks To Own In November 2026",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/3-great-founder-led-stocks-121211987.html?.tsrc=rss",
+     "tags": [
+      "macro"
+     ]
+    },
+    {
+     "title": "Trade Desk (TTD) Stock Rallies While Q3 Results Reveal Margin Strain",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/trade-desk-ttd-stock-rallies-010849155.html?.tsrc=rss",
      "tags": [
       "earnings"
      ]
     },
     {
-     "title": "The Trade Desk (TTD) Q3 2026 Earnings Call Transcript",
-     "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/the-trade-desk-ttd-q3-2026-earnings-call-transcript/?.tsrc=rss",
+     "title": "Stock Market Today, Nov. 10: Trade Desk Jumps After Q3 Results Show Revenue Topped Estimates",
+     "url": "https://www.fool.com/coverage/stock-market-today/2026/11/10/stock-market-today-nov-10-trade-desk-jumps-after-q3-results-show-revenue-topped-estimates/?.tsrc=rss",
      "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "Trade Desk (TTD) Stock May Be 21% Undervalued On Q3 Earnings Beat",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/trade-desk-ttd-stock-may-051824619.html?.tsrc=rss",
-     "tags": [
-      "earnings"
+      "earnings",
+      "capital"
      ]
     }
    ]
   },
-  "WULF": {
+  "ZETA": {
    "headlines": [
     {
-     "title": "WULF, HUT, CIFR Stocks Get Price Target Cuts From Jefferies: Here\u2019s Why The Analyst Is Still Bullish On These AI Infra Firms",
-     "url": "https://stocktwits.com/news-articles/markets/equity/wulf-hut-cifr-stocks-get-price-target-cuts-from-jefferies-here-s-why-the-analyst-is-still-bullish-on-these-ai-infra-firms/cNGuIUkR97m?.tsrc=rss",
-     "tags": [
-      "analyst"
-     ]
+     "title": "Zeta Global: 3 Key Takeaways for Long-Term Investors",
+     "url": "https://www.fool.com/earnings/takeaways/2026/11/10/zeta-global-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+     "tags": []
     },
     {
-     "title": "Cipher Digital Rises 4%, Riot Up 6% as Morgan Stanley Calls Powered Shell Stocks a Buying Opportunity",
-     "url": "https://www.tikr.com/blog/cipher-digital-rises-4-riot-up-6-as-morgan-stanley-calls-powered-shell-stocks-a-buying-opportunity?ref=yahoofinance&tlnk=yf-261109-998ccc76&.tsrc=rss",
+     "title": "Zeta Global (ZETA) Stock Jumps On Q3 Earnings And Profit Turn",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/zeta-global-zeta-stock-jumps-002024575.html?.tsrc=rss",
      "tags": [
-      "analyst"
+      "earnings"
      ]
     }
    ]

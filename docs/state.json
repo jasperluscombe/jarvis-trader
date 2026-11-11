@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-11T18:30:00+00:00",
- "updated_local": "Thu 12 Nov 5:00 AM",
+ "updated_utc": "2026-11-11T18:35:01+00:00",
+ "updated_local": "Thu 12 Nov 5:05 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.93,
+  "equity": 54.94,
   "cash": 5.49,
-  "day_pl": 0.2,
+  "day_pl": 0.21,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.32
  },
  "goals": {
-  "day_pl": 0.2,
-  "week_pl": 1.68,
+  "day_pl": 0.21,
+  "week_pl": 1.69,
   "daily_goal": 1.09,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1073,6 +1073,10 @@
   {
    "t": "2026-11-11T18:25:00+00:00",
    "eq": 54.93
+  },
+  {
+   "t": "2026-11-11T18:35:01+00:00",
+   "eq": 54.94
   }
  ],
  "stats": {
@@ -1090,7 +1094,7 @@
  },
  "charts": {
   "date": "2026-11-11",
-  "updated": "2026-11-11T18:30:00+00:00",
+  "updated": "2026-11-11T18:35:01+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1431,11 +1435,18 @@
       695.14
      ],
      [
-      1794421802,
-      695.1,
-      695.1,
-      695.1,
-      695.1
+      1794421800,
+      695.15,
+      695.33,
+      694.9,
+      695.02
+     ],
+     [
+      1794422104,
+      694.85,
+      694.85,
+      694.85,
+      694.85
      ]
     ],
     "or_high": 689.02,
@@ -1765,7 +1776,7 @@
       761.3,
       761.67,
       761.3,
-      761.62
+      761.61
      ],
      [
       1794421200,
@@ -1782,11 +1793,18 @@
       762.1
      ],
      [
-      1794421802,
-      762.07,
-      762.07,
-      762.07,
-      762.07
+      1794421800,
+      762.11,
+      762.27,
+      762.01,
+      762.08
+     ],
+     [
+      1794422105,
+      762.03,
+      762.03,
+      762.03,
+      762.03
      ]
     ],
     "or_high": 757.95,
@@ -2133,11 +2151,18 @@
       393.49
      ],
      [
-      1794421804,
+      1794421800,
       393.45,
-      393.45,
-      393.45,
-      393.45
+      393.83,
+      393.27,
+      393.62
+     ],
+     [
+      1794422104,
+      393.58,
+      393.58,
+      393.58,
+      393.58
      ]
     ],
     "or_high": 392.67,
@@ -2484,11 +2509,18 @@
       177.18
      ],
      [
-      1794421803,
-      177.15,
-      177.15,
-      177.15,
-      177.15
+      1794421800,
+      177.19,
+      177.54,
+      177.09,
+      177.14
+     ],
+     [
+      1794422104,
+      177.03,
+      177.03,
+      177.03,
+      177.03
      ]
     ],
     "or_high": 175.13,
@@ -2835,11 +2867,18 @@
       355.05
      ],
      [
-      1794421803,
-      355.07,
-      355.07,
-      355.07,
-      355.07
+      1794421800,
+      355.06,
+      355.25,
+      355.0,
+      355.15
+     ],
+     [
+      1794422104,
+      355.13,
+      355.13,
+      355.13,
+      355.13
      ]
     ],
     "or_high": 353.43,
@@ -3203,11 +3242,18 @@
       26.33
      ],
      [
-      1794421789,
+      1794421800,
       26.33,
+      26.34,
       26.33,
-      26.33,
-      26.33
+      26.34
+     ],
+     [
+      1794422093,
+      26.34,
+      26.34,
+      26.34,
+      26.34
      ]
     ],
     "or_high": 26.75,
@@ -3550,15 +3596,22 @@
       1794421500,
       32.56,
       32.56,
+      32.54,
+      32.55
+     ],
+     [
+      1794421800,
+      32.55,
+      32.56,
       32.55,
       32.55
      ],
      [
-      1794421785,
-      32.55,
-      32.55,
-      32.55,
-      32.55
+      1794422101,
+      32.56,
+      32.56,
+      32.56,
+      32.56
      ]
     ],
     "or_high": 32.83,
@@ -3634,7 +3687,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-11T18:35:00+00:00",
+ "next_checkin_utc": "2026-11-11T18:40:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -3653,8 +3706,8 @@
   {
    "symbol": "AAPL",
    "qty": 0.139234493,
-   "value": 49.436599,
-   "pl": 0.196599,
+   "value": 49.447738,
+   "pl": 0.207738,
    "entry": 353.648
   }
  ],
@@ -3665,7 +3718,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-11T18:30:00+00:00"
+   "t": "2026-11-11T18:35:01+00:00"
   },
   {
    "id": "scanner",
@@ -3688,24 +3741,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 15 charts at 1:30 PM New York: 0 breakouts.",
-   "t": "2026-11-11T18:30:00+00:00"
+   "text": "Checked 15 charts at 1:35 PM New York: 2 breakouts.",
+   "t": "2026-11-11T18:35:01+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "idle",
-   "text": "SGRY: target first 29%, stop first 69%, neither 2% (5000 replays). History: 31 fired, 4 won, 15 lost.",
-   "t": "2026-11-11T18:20:00+00:00"
+   "status": "working",
+   "text": "BEN: target first 5%, stop first 27%, neither 68% (5000 replays). History: 37 fired, 5 won, 21 lost.",
+   "t": "2026-11-11T18:35:01+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped SGRY: one share of SGRY costs $26.61, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 26.61). No order.",
-   "t": "2026-11-11T18:20:00+00:00"
+   "status": "working",
+   "text": "Skipped BEN: one share of BEN costs $36.51, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 36.51). No order.",
+   "t": "2026-11-11T18:35:01+00:00"
   },
   {
    "id": "broker",
@@ -4343,6 +4396,36 @@
  ],
  "events": [
   {
+   "t": "2026-11-11T18:35:01+00:00",
+   "bot": "risk",
+   "text": "Skipped BEN: one share of BEN costs $36.51, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 36.51). No order."
+  },
+  {
+   "t": "2026-11-11T18:35:01+00:00",
+   "bot": "oracle",
+   "text": "BEN: target first 5%, stop first 27%, neither 68% (5000 replays). History: 37 fired, 5 won, 21 lost."
+  },
+  {
+   "t": "2026-11-11T18:35:01+00:00",
+   "bot": "entry",
+   "text": "BEN broke out at $36.51 (1:30 PM)."
+  },
+  {
+   "t": "2026-11-11T18:35:01+00:00",
+   "bot": "risk",
+   "text": "Skipped VTRS: one share of VTRS costs $21.05, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 21.05). No order."
+  },
+  {
+   "t": "2026-11-11T18:35:01+00:00",
+   "bot": "oracle",
+   "text": "VTRS: target first 8%, stop first 24%, neither 67% (5000 replays). History: 37 fired, 10 won, 18 lost."
+  },
+  {
+   "t": "2026-11-11T18:35:01+00:00",
+   "bot": "entry",
+   "text": "VTRS broke out at $21.05 (1:30 PM)."
+  },
+  {
    "t": "2026-11-11T18:20:00+00:00",
    "bot": "risk",
    "text": "Skipped SGRY: one share of SGRY costs $26.61, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 26.61). No order."
@@ -4511,36 +4594,6 @@
    "t": "2026-11-11T14:55:00+00:00",
    "bot": "risk",
    "text": "Skipped CHYM: one share of CHYM costs $32.97, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 32.97). No order."
-  },
-  {
-   "t": "2026-11-11T14:55:00+00:00",
-   "bot": "oracle",
-   "text": "CHYM: target first 28%, stop first 62%, neither 10% (5000 replays). History: 30 fired, 3 won, 8 lost."
-  },
-  {
-   "t": "2026-11-11T14:55:00+00:00",
-   "bot": "entry",
-   "text": "CHYM broke out at $32.97 (9:55 AM)."
-  },
-  {
-   "t": "2026-11-11T14:55:00+00:00",
-   "bot": "risk",
-   "text": "Skipped TTD: one share of TTD costs $16.39, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 16.39). No order."
-  },
-  {
-   "t": "2026-11-11T14:55:00+00:00",
-   "bot": "oracle",
-   "text": "TTD: target first 0%, stop first 3%, neither 97% (5000 replays). History: 34 fired, 4 won, 14 lost."
-  },
-  {
-   "t": "2026-11-11T14:55:00+00:00",
-   "bot": "entry",
-   "text": "TTD broke out at $16.39 (9:55 AM)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on HDB: the odds are no better than a coin flip (avg -0.02R)."
   }
  ],
  "errors": []

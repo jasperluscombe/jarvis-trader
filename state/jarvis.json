@@ -11299,42 +11299,12 @@
   }
  ],
  "candidates_day": "2026-11-11",
- "seen": {
-  "AAPL": "triggered",
-  "PSQ": "triggered",
-  "SH": "triggered",
-  "KDP": "triggered",
-  "IBN": "triggered",
-  "VFC": "triggered",
-  "MGM": "triggered",
-  "LYFT": "triggered",
-  "HDB": "triggered",
-  "TTD": "triggered",
-  "CHYM": "triggered",
-  "ACAD": "triggered",
-  "COLD": "triggered",
-  "TSLA": "triggered",
-  "ZETA": "triggered",
-  "QQQ": "triggered",
-  "SPY": "triggered",
-  "NVDA": "triggered",
-  "MARA": "triggered",
-  "NCLH": "triggered",
-  "CMG": "triggered",
-  "SGRY": "triggered",
-  "VTRS": "triggered",
-  "BEN": "triggered",
-  "GEN": "triggered",
-  "ADT": "triggered",
-  "ACHC": "triggered",
-  "CPRT": "triggered",
-  "ROL": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-12T04:30:00+00:00"
+   "t": "2026-11-12T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -11343,8 +11313,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-12T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-12T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -11367,13 +11337,8 @@
    "t": "2026-11-11T20:10:00+00:00"
   }
  },
- "seen_day": "2026-11-11",
+ "seen_day": "2026-11-12",
  "next_sessions": [
-  {
-   "date": "2026-11-11",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-12",
    "open": "09:30",
@@ -11396,6 +11361,11 @@
   },
   {
    "date": "2026-11-18",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-11-19",
    "open": "09:30",
    "close": "16:00"
   }

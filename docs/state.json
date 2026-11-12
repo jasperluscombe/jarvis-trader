@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-12T16:05:00+00:00",
- "updated_local": "Fri 13 Nov 2:35 AM",
+ "updated_utc": "2026-11-12T16:10:00+00:00",
+ "updated_local": "Fri 13 Nov 2:40 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.21,
+  "equity": 54.23,
   "cash": 12.01,
-  "day_pl": -0.75,
+  "day_pl": -0.73,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.96
  },
  "goals": {
-  "day_pl": -0.75,
-  "week_pl": 0.96,
+  "day_pl": -0.73,
+  "week_pl": 0.98,
   "daily_goal": 1.1,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1197,6 +1197,10 @@
   {
    "t": "2026-11-12T16:00:00+00:00",
    "eq": 54.21
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "eq": 54.23
   }
  ],
  "stats": {
@@ -1214,7 +1218,7 @@
  },
  "charts": {
   "date": "2026-11-12",
-  "updated": "2026-11-12T16:05:00+00:00",
+  "updated": "2026-11-12T16:10:00+00:00",
   "symbols": {
    "VTRS": {
     "bars": [
@@ -1352,11 +1356,18 @@
       21.1
      ],
      [
-      1794499506,
+      1794499500,
       21.1,
-      21.1,
-      21.1,
-      21.1
+      21.11,
+      21.08,
+      21.11
+     ],
+     [
+      1794499807,
+      21.11,
+      21.11,
+      21.11,
+      21.11
      ]
     ],
     "or_high": 21.18,
@@ -1517,11 +1528,18 @@
       18.4
      ],
      [
-      1794499508,
-      18.41,
-      18.41,
-      18.41,
-      18.41
+      1794499500,
+      18.4,
+      18.77,
+      18.39,
+      18.74
+     ],
+     [
+      1794499810,
+      18.75,
+      18.75,
+      18.75,
+      18.75
      ]
     ],
     "or_high": 18.51,
@@ -1690,11 +1708,18 @@
       690.29
      ],
      [
-      1794499508,
-      690.34,
-      690.34,
-      690.34,
-      690.34
+      1794499500,
+      690.29,
+      693.48,
+      690.17,
+      693.41
+     ],
+     [
+      1794499811,
+      693.08,
+      693.08,
+      693.08,
+      693.08
      ]
     ],
     "or_high": 688.22,
@@ -1818,7 +1843,7 @@
      ],
      [
       1794498600,
-      758.22,
+      758.21,
       759.44,
       757.83,
       759.37
@@ -1838,11 +1863,18 @@
       760.16
      ],
      [
-      1794499508,
-      760.22,
-      760.22,
-      760.22,
-      760.22
+      1794499500,
+      760.16,
+      762.14,
+      760.08,
+      762.07
+     ],
+     [
+      1794499802,
+      762.04,
+      762.04,
+      762.04,
+      762.04
      ]
     ],
     "or_high": 757.88,
@@ -1986,11 +2018,18 @@
       390.27
      ],
      [
-      1794499508,
-      390.15,
-      390.15,
-      390.15,
-      390.15
+      1794499500,
+      390.2,
+      392.3,
+      390.08,
+      391.92
+     ],
+     [
+      1794499810,
+      391.8,
+      391.8,
+      391.8,
+      391.8
      ]
     ],
     "or_high": 396.2,
@@ -2134,11 +2173,18 @@
       164.99
      ],
      [
-      1794499508,
-      164.96,
-      164.96,
-      164.96,
-      164.96
+      1794499500,
+      165.47,
+      167.08,
+      164.75,
+      166.85
+     ],
+     [
+      1794499811,
+      166.73,
+      166.73,
+      166.73,
+      166.73
      ]
     ],
     "or_high": 162.33,
@@ -2282,11 +2328,18 @@
       358.17
      ],
      [
-      1794499509,
-      358.18,
-      358.18,
-      358.18,
-      358.18
+      1794499500,
+      358.14,
+      358.36,
+      357.84,
+      358.05
+     ],
+     [
+      1794499810,
+      358.0,
+      358.0,
+      358.0,
+      358.0
      ]
     ],
     "or_high": 359.02,
@@ -2425,16 +2478,23 @@
      [
       1794499200,
       26.48,
-      26.54,
+      26.55,
       26.47,
-      26.54
+      26.53
      ],
      [
-      1794499496,
+      1794499500,
       26.53,
       26.53,
-      26.53,
-      26.53
+      26.41,
+      26.41
+     ],
+     [
+      1794499808,
+      26.42,
+      26.42,
+      26.42,
+      26.42
      ]
     ],
     "or_high": 26.93,
@@ -2467,10 +2527,10 @@
    "symbol": "TSLA",
    "status": "waiting",
    "level": 396.2,
-   "last": 391.76,
-   "vs": -1.12,
-   "reason": "last close $391.76 (10:55 bar), $4.44 under the range high $396.20 (-1.12%)",
-   "t": "2026-11-12T16:05:00+00:00"
+   "last": 391.92,
+   "vs": -1.08,
+   "reason": "last close $391.92 (11:05 bar), $4.28 under the range high $396.20 (-1.08%)",
+   "t": "2026-11-12T16:10:00+00:00"
   },
   {
    "symbol": "NVDA",
@@ -2485,32 +2545,32 @@
    "symbol": "AAPL",
    "status": "waiting",
    "level": 359.02,
-   "last": 358.17,
-   "vs": -0.24,
-   "reason": "last close $358.17 (11:00 bar), $0.85 under the range high $359.02 (-0.24%)",
-   "t": "2026-11-12T16:05:00+00:00"
+   "last": 358.05,
+   "vs": -0.27,
+   "reason": "last close $358.05 (11:05 bar), $0.97 under the range high $359.02 (-0.27%)",
+   "t": "2026-11-12T16:10:00+00:00"
   },
   {
    "symbol": "PSQ",
    "status": "waiting",
    "level": 26.93,
-   "last": 26.48,
-   "vs": -1.67,
-   "reason": "last close $26.48 (10:55 bar), $0.45 under the range high $26.93 (-1.67%)",
-   "t": "2026-11-12T16:05:00+00:00"
+   "last": 26.53,
+   "vs": -1.47,
+   "reason": "last close $26.53 (11:00 bar), $0.40 under the range high $26.93 (-1.47%)",
+   "t": "2026-11-12T16:10:00+00:00"
   },
   {
    "symbol": "SH",
    "status": "waiting",
    "level": 32.92,
-   "last": 32.62,
-   "vs": -0.91,
-   "reason": "last close $32.62 (10:55 bar), $0.30 under the range high $32.92 (-0.91%)",
-   "t": "2026-11-12T16:05:00+00:00"
+   "last": 32.65,
+   "vs": -0.82,
+   "reason": "last close $32.65 (11:00 bar), $0.27 under the range high $32.92 (-0.82%)",
+   "t": "2026-11-12T16:10:00+00:00"
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-12T16:10:00+00:00",
+ "next_checkin_utc": "2026-11-12T16:15:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -2529,8 +2589,8 @@
   {
    "symbol": "VTRS",
    "qty": 2.0,
-   "value": 42.2,
-   "pl": -0.08,
+   "value": 42.22,
+   "pl": -0.06,
    "entry": 21.14
   }
  ],
@@ -2541,7 +2601,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-12T16:05:00+00:00"
+   "t": "2026-11-12T16:10:00+00:00"
   },
   {
    "id": "scanner",
@@ -2564,24 +2624,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 28 charts at 11:05 AM New York: 0 breakouts.",
-   "t": "2026-11-12T16:05:00+00:00"
+   "text": "Checked 28 charts at 11:10 AM New York: 3 breakouts.",
+   "t": "2026-11-12T16:10:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "idle",
-   "text": "GLXY: target first 6%, stop first 43%, neither 51% (5000 replays). History: 32 fired, 8 won, 12 lost.",
-   "t": "2026-11-12T16:00:00+00:00"
+   "status": "working",
+   "text": "ADT: target first 36%, stop first 64%, neither 0% (5000 replays). History: 33 fired, 8 won, 15 lost.",
+   "t": "2026-11-12T16:10:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped GLXY: one share of GLXY costs $15.28, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 15.28). No order.",
-   "t": "2026-11-12T16:00:00+00:00"
+   "status": "working",
+   "text": "Skipped ADT: one share of ADT costs $9.93, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 9.93). No order.",
+   "t": "2026-11-12T16:10:00+00:00"
   },
   {
    "id": "broker",
@@ -3258,6 +3318,51 @@
  ],
  "events": [
   {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "risk",
+   "text": "Skipped ADT: one share of ADT costs $9.93, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 9.93). No order."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "oracle",
+   "text": "ADT: target first 36%, stop first 64%, neither 0% (5000 replays). History: 33 fired, 8 won, 15 lost."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "entry",
+   "text": "ADT broke out at $9.93 (11:10 AM)."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "risk",
+   "text": "Skipped OKLO: one share of OKLO costs $25.35, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 25.35). No order."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "oracle",
+   "text": "OKLO: target first 3%, stop first 33%, neither 64% (5000 replays). History: 25 fired, 8 won, 9 lost."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "entry",
+   "text": "OKLO broke out at $25.35 (11:10 AM)."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "risk",
+   "text": "Skipped ZETA: one share of ZETA costs $37.65, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 37.65). No order."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "oracle",
+   "text": "ZETA: target first 7%, stop first 30%, neither 63% (5000 replays). History: 35 fired, 5 won, 13 lost."
+  },
+  {
+   "t": "2026-11-12T16:10:00+00:00",
+   "bot": "entry",
+   "text": "ZETA broke out at $37.65 (11:10 AM)."
+  },
+  {
    "t": "2026-11-12T16:00:00+00:00",
    "bot": "risk",
    "text": "Skipped GLXY: one share of GLXY costs $15.28, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 15.28). No order."
@@ -3411,51 +3516,6 @@
    "t": "2026-11-12T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $54.96 account: $1.10 a trade, $5.50 a day, orders up to $49.46."
-  },
-  {
-   "t": "2026-11-11T21:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Sent the day's recap."
-  },
-  {
-   "t": "2026-11-11T20:55:00+00:00",
-   "bot": "broker",
-   "text": "Closed 0.139234493 AAPL before the bell (+$0.25)."
-  },
-  {
-   "t": "2026-11-11T20:10:00+00:00",
-   "bot": "risk",
-   "text": "Skipped ROL: one share of ROL costs $38.33, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 38.33). No order."
-  },
-  {
-   "t": "2026-11-11T20:10:00+00:00",
-   "bot": "oracle",
-   "text": "ROL: target first 0%, stop first 11%, neither 89% (5000 replays). History: 35 fired, 7 won, 16 lost."
-  },
-  {
-   "t": "2026-11-11T20:10:00+00:00",
-   "bot": "entry",
-   "text": "ROL broke out at $38.33 (3:10 PM)."
-  },
-  {
-   "t": "2026-11-11T19:45:01+00:00",
-   "bot": "risk",
-   "text": "Skipped CPRT: one share of CPRT costs $32.04, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 32.04). No order."
-  },
-  {
-   "t": "2026-11-11T19:45:01+00:00",
-   "bot": "oracle",
-   "text": "CPRT: target first 15%, stop first 46%, neither 39% (5000 replays). History: 32 fired, 5 won, 14 lost."
-  },
-  {
-   "t": "2026-11-11T19:45:01+00:00",
-   "bot": "entry",
-   "text": "CPRT broke out at $32.04 (2:40 PM)."
-  },
-  {
-   "t": "2026-11-11T19:15:00+00:00",
-   "bot": "risk",
-   "text": "Skipped ACHC: one share of ACHC costs $38.89, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 38.89). No order."
   }
  ],
  "errors": []

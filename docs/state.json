@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-12T16:10:00+00:00",
- "updated_local": "Fri 13 Nov 2:40 AM",
+ "updated_utc": "2026-11-12T16:15:00+00:00",
+ "updated_local": "Fri 13 Nov 2:45 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.23,
+  "equity": 54.25,
   "cash": 12.01,
-  "day_pl": -0.73,
+  "day_pl": -0.71,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.96
  },
  "goals": {
-  "day_pl": -0.73,
-  "week_pl": 0.98,
+  "day_pl": -0.71,
+  "week_pl": 1.0,
   "daily_goal": 1.1,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1201,6 +1201,10 @@
   {
    "t": "2026-11-12T16:10:00+00:00",
    "eq": 54.23
+  },
+  {
+   "t": "2026-11-12T16:15:00+00:00",
+   "eq": 54.25
   }
  ],
  "stats": {
@@ -1218,7 +1222,7 @@
  },
  "charts": {
   "date": "2026-11-12",
-  "updated": "2026-11-12T16:10:00+00:00",
+  "updated": "2026-11-12T16:15:00+00:00",
   "symbols": {
    "VTRS": {
     "bars": [
@@ -1363,11 +1367,18 @@
       21.11
      ],
      [
-      1794499807,
-      21.11,
-      21.11,
-      21.11,
-      21.11
+      1794499800,
+      21.1,
+      21.14,
+      21.09,
+      21.12
+     ],
+     [
+      1794500108,
+      21.13,
+      21.13,
+      21.13,
+      21.13
      ]
     ],
     "or_high": 21.18,
@@ -1535,11 +1546,18 @@
       18.74
      ],
      [
-      1794499810,
+      1794499800,
       18.75,
-      18.75,
-      18.75,
-      18.75
+      18.78,
+      18.7,
+      18.7
+     ],
+     [
+      1794500108,
+      18.68,
+      18.68,
+      18.68,
+      18.68
      ]
     ],
     "or_high": 18.51,
@@ -1715,11 +1733,18 @@
       693.41
      ],
      [
-      1794499811,
-      693.08,
-      693.08,
-      693.08,
-      693.08
+      1794499800,
+      693.57,
+      694.01,
+      692.87,
+      692.98
+     ],
+     [
+      1794500107,
+      692.72,
+      692.72,
+      692.72,
+      692.72
      ]
     ],
     "or_high": 688.22,
@@ -1850,9 +1875,9 @@
      ],
      [
       1794498900,
-      759.37,
+      759.39,
       760.83,
-      759.26,
+      759.25,
       760.78
      ],
      [
@@ -1870,11 +1895,18 @@
       762.07
      ],
      [
-      1794499802,
+      1794499800,
       762.04,
-      762.04,
-      762.04,
-      762.04
+      762.78,
+      761.79,
+      762.05
+     ],
+     [
+      1794500108,
+      761.94,
+      761.94,
+      761.94,
+      761.94
      ]
     ],
     "or_high": 757.88,
@@ -2025,11 +2057,18 @@
       391.92
      ],
      [
-      1794499810,
-      391.8,
-      391.8,
-      391.8,
-      391.8
+      1794499800,
+      392.0,
+      392.68,
+      391.5,
+      391.64
+     ],
+     [
+      1794500108,
+      391.29,
+      391.29,
+      391.29,
+      391.29
      ]
     ],
     "or_high": 396.2,
@@ -2180,11 +2219,18 @@
       166.85
      ],
      [
-      1794499811,
-      166.73,
-      166.73,
-      166.73,
-      166.73
+      1794499800,
+      166.99,
+      167.14,
+      166.03,
+      166.05
+     ],
+     [
+      1794500105,
+      165.86,
+      165.86,
+      165.86,
+      165.86
      ]
     ],
     "or_high": 162.33,
@@ -2335,11 +2381,18 @@
       358.05
      ],
      [
-      1794499810,
-      358.0,
-      358.0,
-      358.0,
-      358.0
+      1794499800,
+      358.05,
+      358.38,
+      357.99,
+      358.07
+     ],
+     [
+      1794500109,
+      358.07,
+      358.07,
+      358.07,
+      358.07
      ]
     ],
     "or_high": 359.02,
@@ -2490,11 +2543,18 @@
       26.41
      ],
      [
-      1794499808,
+      1794499800,
       26.42,
-      26.42,
-      26.42,
-      26.42
+      26.43,
+      26.4,
+      26.43
+     ],
+     [
+      1794500106,
+      26.44,
+      26.44,
+      26.44,
+      26.44
      ]
     ],
     "or_high": 26.93,
@@ -2527,10 +2587,10 @@
    "symbol": "TSLA",
    "status": "waiting",
    "level": 396.2,
-   "last": 391.92,
-   "vs": -1.08,
-   "reason": "last close $391.92 (11:05 bar), $4.28 under the range high $396.20 (-1.08%)",
-   "t": "2026-11-12T16:10:00+00:00"
+   "last": 391.64,
+   "vs": -1.15,
+   "reason": "last close $391.64 (11:10 bar), $4.56 under the range high $396.20 (-1.15%)",
+   "t": "2026-11-12T16:15:00+00:00"
   },
   {
    "symbol": "NVDA",
@@ -2548,29 +2608,29 @@
    "last": 358.05,
    "vs": -0.27,
    "reason": "last close $358.05 (11:05 bar), $0.97 under the range high $359.02 (-0.27%)",
-   "t": "2026-11-12T16:10:00+00:00"
+   "t": "2026-11-12T16:15:00+00:00"
   },
   {
    "symbol": "PSQ",
    "status": "waiting",
    "level": 26.93,
-   "last": 26.53,
-   "vs": -1.47,
-   "reason": "last close $26.53 (11:00 bar), $0.40 under the range high $26.93 (-1.47%)",
-   "t": "2026-11-12T16:10:00+00:00"
+   "last": 26.41,
+   "vs": -1.93,
+   "reason": "last close $26.41 (11:05 bar), $0.52 under the range high $26.93 (-1.93%)",
+   "t": "2026-11-12T16:15:00+00:00"
   },
   {
    "symbol": "SH",
    "status": "waiting",
    "level": 32.92,
-   "last": 32.65,
-   "vs": -0.82,
-   "reason": "last close $32.65 (11:00 bar), $0.27 under the range high $32.92 (-0.82%)",
-   "t": "2026-11-12T16:10:00+00:00"
+   "last": 32.56,
+   "vs": -1.09,
+   "reason": "last close $32.56 (11:05 bar), $0.36 under the range high $32.92 (-1.09%)",
+   "t": "2026-11-12T16:15:00+00:00"
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-12T16:15:00+00:00",
+ "next_checkin_utc": "2026-11-12T16:20:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -2589,8 +2649,8 @@
   {
    "symbol": "VTRS",
    "qty": 2.0,
-   "value": 42.22,
-   "pl": -0.06,
+   "value": 42.24,
+   "pl": -0.04,
    "entry": 21.14
   }
  ],
@@ -2601,7 +2661,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-12T16:10:00+00:00"
+   "t": "2026-11-12T16:15:00+00:00"
   },
   {
    "id": "scanner",
@@ -2624,24 +2684,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 28 charts at 11:10 AM New York: 3 breakouts.",
-   "t": "2026-11-12T16:10:00+00:00"
+   "text": "Checked 25 charts at 11:15 AM New York: 1 breakouts.",
+   "t": "2026-11-12T16:15:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "ADT: target first 36%, stop first 64%, neither 0% (5000 replays). History: 33 fired, 8 won, 15 lost.",
-   "t": "2026-11-12T16:10:00+00:00"
+   "text": "SOFI: target first 13%, stop first 52%, neither 35% (5000 replays). History: 28 fired, 6 won, 9 lost.",
+   "t": "2026-11-12T16:15:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped ADT: one share of ADT costs $9.93, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 9.93). No order.",
-   "t": "2026-11-12T16:10:00+00:00"
+   "text": "Skipped SOFI: one share of SOFI costs $16.13, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 16.13). No order.",
+   "t": "2026-11-12T16:15:00+00:00"
   },
   {
    "id": "broker",
@@ -3318,6 +3378,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-12T16:15:00+00:00",
+   "bot": "risk",
+   "text": "Skipped SOFI: one share of SOFI costs $16.13, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 16.13). No order."
+  },
+  {
+   "t": "2026-11-12T16:15:00+00:00",
+   "bot": "oracle",
+   "text": "SOFI: target first 13%, stop first 52%, neither 35% (5000 replays). History: 28 fired, 6 won, 9 lost."
+  },
+  {
+   "t": "2026-11-12T16:15:00+00:00",
+   "bot": "entry",
+   "text": "SOFI broke out at $16.13 (11:15 AM)."
+  },
+  {
    "t": "2026-11-12T16:10:00+00:00",
    "bot": "risk",
    "text": "Skipped ADT: one share of ADT costs $9.93, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 9.93). No order."
@@ -3501,21 +3576,6 @@
    "t": "2026-11-12T13:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the morning brief."
-  },
-  {
-   "t": "2026-11-12T13:00:00+00:00",
-   "bot": "news",
-   "text": "Read 27 headlines and filings for 8 stocks."
-  },
-  {
-   "t": "2026-11-12T13:00:00+00:00",
-   "bot": "scanner",
-   "text": "Scanned the US market: 453 charts matched a setup, 237 fit your $5-$40 price range. Watching the top 30."
-  },
-  {
-   "t": "2026-11-12T08:30:00+00:00",
-   "bot": "risk",
-   "text": "Limits resized to your $54.96 account: $1.10 a trade, $5.50 a day, orders up to $49.46."
   }
  ],
  "errors": []

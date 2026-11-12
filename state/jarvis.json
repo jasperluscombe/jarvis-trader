@@ -10451,11 +10451,6 @@
  "events": [
   {
    "t": "2026-11-11T14:50:00+00:00",
-   "bot": "entry",
-   "text": "KDP broke out at $37.67 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-11T14:50:00+00:00",
    "bot": "oracle",
    "text": "KDP: target first 21%, stop first 40%, neither 39% (5000 replays). History: 37 fired, 8 won, 14 lost."
   },
@@ -10848,6 +10843,11 @@
    "t": "2026-11-11T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-12T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $54.96 account: $1.10 a trade, $5.50 a day, orders up to $49.46."
   }
  ],
  "trades": [
@@ -11304,7 +11304,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-12T08:00:00+00:00"
+   "t": "2026-11-12T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -11314,7 +11314,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-12T08:00:00+00:00"
+   "t": "2026-11-12T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -11333,8 +11333,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped ROL: one share of ROL costs $38.33, more than your cash limit (cash $5.49 in trader/portfolio.json minus the $5.47 buffer = $0.02 / 38.33). No order.",
-   "t": "2026-11-11T20:10:00+00:00"
+   "text": "Limits resized to your $54.96 account: $1.10 a trade, $5.50 a day, orders up to $49.46.",
+   "t": "2026-11-12T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-12",
@@ -12515,6 +12515,10 @@
   {
    "t": "2026-11-12T03:00:00+00:00",
    "eq": 54.98
+  },
+  {
+   "t": "2026-11-12T08:30:00+00:00",
+   "eq": 54.96
   }
  ],
  "charts": {

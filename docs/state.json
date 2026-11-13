@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-13T04:30:00+00:00",
- "updated_local": "Fri 13 Nov 3:00 PM",
+ "updated_utc": "2026-11-13T05:00:00+00:00",
+ "updated_local": "Fri 13 Nov 3:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -22,8 +22,8 @@
   "flat_by": "15:55"
  },
  "today": {
-  "trades": 3,
-  "risk_used": 1.24
+  "trades": 0,
+  "risk_used": 0
  },
  "goals": {
   "day_pl": -0.8,
@@ -6012,7 +6012,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-13T05:00:00+00:00",
+ "next_checkin_utc": "2026-11-13T05:30:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6035,7 +6035,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-13T04:30:00+00:00"
+   "t": "2026-11-13T05:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -6058,8 +6058,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-13T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-13T05:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -6730,13 +6730,6 @@
  },
  "sessions": [
   {
-   "date": "2026-11-12",
-   "open_utc": "2026-11-12T14:30:00+00:00",
-   "close_utc": "2026-11-12T21:00:00+00:00",
-   "open_local": "Fri 13 Nov 1:00 AM",
-   "close_local": "7:30 AM"
-  },
-  {
    "date": "2026-11-13",
    "open_utc": "2026-11-13T14:30:00+00:00",
    "close_utc": "2026-11-13T21:00:00+00:00",
@@ -6762,6 +6755,13 @@
    "open_utc": "2026-11-18T14:30:00+00:00",
    "close_utc": "2026-11-18T21:00:00+00:00",
    "open_local": "Thu 19 Nov 1:00 AM",
+   "close_local": "7:30 AM"
+  },
+  {
+   "date": "2026-11-19",
+   "open_utc": "2026-11-19T14:30:00+00:00",
+   "close_utc": "2026-11-19T21:00:00+00:00",
+   "open_local": "Fri 20 Nov 1:00 AM",
    "close_local": "7:30 AM"
   }
  ],

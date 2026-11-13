@@ -12911,29 +12911,12 @@
   }
  ],
  "candidates_day": "2026-11-12",
- "seen": {
-  "RIOT": "triggered",
-  "SPY": "triggered",
-  "NVDA": "triggered",
-  "HIMS": "triggered",
-  "QQQ": "triggered",
-  "VTRS": "triggered",
-  "TTD": "triggered",
-  "CORZ": "triggered",
-  "GLXY": "triggered",
-  "ZETA": "triggered",
-  "OKLO": "triggered",
-  "ADT": "triggered",
-  "SOFI": "triggered",
-  "DOW": "triggered",
-  "NCLH": "triggered",
-  "TSLA": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-13T04:30:00+00:00"
+   "t": "2026-11-13T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -12942,8 +12925,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-13T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-13T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -12966,13 +12949,8 @@
    "t": "2026-11-12T18:00:00+00:00"
   }
  },
- "seen_day": "2026-11-12",
+ "seen_day": "2026-11-13",
  "next_sessions": [
-  {
-   "date": "2026-11-12",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-13",
    "open": "09:30",
@@ -12995,6 +12973,11 @@
   },
   {
    "date": "2026-11-19",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-11-20",
    "open": "09:30",
    "close": "16:00"
   }

@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-13T20:55:00+00:00",
- "updated_local": "Sat 14 Nov 7:25 AM",
+ "updated_utc": "2026-11-13T21:00:00+00:00",
+ "updated_local": "Sat 14 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -1564,11 +1564,11 @@
   }
  ],
  "stats": {
-  "trades": 12,
-  "wins": 6,
+  "trades": 14,
+  "wins": 8,
   "losses": 6,
-  "win_rate": 0.5,
-  "avg_win": 0.99,
+  "win_rate": 0.571,
+  "avg_win": 0.86,
   "avg_loss": -0.28,
   "best": 1.92,
   "worst": -0.67,
@@ -1578,7 +1578,7 @@
  },
  "charts": {
   "date": "2026-11-13",
-  "updated": "2026-11-13T20:55:00+00:00",
+  "updated": "2026-11-13T21:00:00+00:00",
   "symbols": {
    "COLD": {
     "bars": [
@@ -2124,9 +2124,9 @@
      [
       1794603300,
       16.67,
+      16.76,
       16.67,
-      16.67,
-      16.67
+      16.73
      ]
     ],
     "or_high": 16.3,
@@ -2702,10 +2702,10 @@
      ],
      [
       1794603300,
-      680.74,
-      680.74,
-      680.74,
-      680.74
+      681.33,
+      681.33,
+      679.19,
+      679.63
      ]
     ],
     "or_high": 688.75,
@@ -3235,10 +3235,10 @@
      ],
      [
       1794602400,
-      752.64,
+      752.63,
       752.75,
-      752.35,
-      752.66
+      752.34,
+      752.64
      ],
      [
       1794602700,
@@ -3256,10 +3256,10 @@
      ],
      [
       1794603300,
-      754.16,
-      754.16,
-      754.16,
-      754.16
+      754.55,
+      754.58,
+      753.42,
+      753.84
      ]
     ],
     "or_high": 760.12,
@@ -3810,10 +3810,10 @@
      ],
      [
       1794603300,
-      392.14,
-      392.14,
-      392.14,
-      392.14
+      392.51,
+      392.51,
+      389.33,
+      389.39
      ]
     ],
     "or_high": 404.4,
@@ -4364,10 +4364,10 @@
      ],
      [
       1794603300,
-      163.05,
-      163.05,
-      163.05,
-      163.05
+      163.11,
+      163.21,
+      162.64,
+      163.01
      ]
     ],
     "or_high": 170.0,
@@ -4918,10 +4918,10 @@
      ],
      [
       1794603300,
-      356.05,
-      356.05,
-      356.05,
-      356.05
+      356.36,
+      356.46,
+      356.0,
+      356.19
      ]
     ],
     "or_high": 360.83,
@@ -5473,9 +5473,9 @@
      [
       1794603300,
       26.9,
+      26.98,
       26.9,
-      26.9,
-      26.9
+      26.97
      ]
     ],
     "or_high": 26.8,
@@ -6025,11 +6025,11 @@
       32.92
      ],
      [
-      1794603270,
+      1794603300,
+      32.94,
+      32.96,
       32.92,
-      32.92,
-      32.92,
-      32.92
+      32.94
      ]
     ],
     "or_high": 32.84,
@@ -6129,8 +6129,8 @@
    "t": "2026-11-13T14:50:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-13T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-13T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6153,7 +6153,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-13T20:55:00+00:00"
+   "t": "2026-11-13T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -6176,8 +6176,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "No new entries this late. Watching open trades.",
-   "t": "2026-11-13T20:50:17+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-13T21:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -6199,7 +6199,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-13T20:55:00+00:00"
   }
@@ -6660,7 +6660,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 0.68
   },
   {
    "date": "2026-11-13",
@@ -6675,7 +6675,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 0.23
   },
   {
    "date": "2026-11-12",
@@ -6859,9 +6859,9 @@
   }
  ],
  "record": {
-  "trades": 12,
-  "wins": 6,
-  "total": 4.26
+  "trades": 14,
+  "wins": 8,
+  "total": 5.17
  },
  "sessions": [
   {
@@ -6901,6 +6901,11 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-13T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
   {
    "t": "2026-11-13T18:25:00+00:00",
    "bot": "risk",
@@ -7095,11 +7100,6 @@
    "t": "2026-11-13T15:00:00+00:00",
    "bot": "risk",
    "text": "Skipped KHC: one share of KHC costs $24.88, more than your cash limit (cash $21.26 in trader/portfolio.json minus the $5.41 buffer = $15.85 / 24.88). No order."
-  },
-  {
-   "t": "2026-11-13T15:00:00+00:00",
-   "bot": "oracle",
-   "text": "KHC: target first 25%, stop first 55%, neither 20% (5000 replays). History: 33 fired, 3 won, 19 lost."
   }
  ],
  "errors": []

@@ -12019,11 +12019,6 @@
  "events": [
   {
    "t": "2026-11-11T18:20:00+00:00",
-   "bot": "entry",
-   "text": "SGRY broke out at $26.61 (1:15 PM)."
-  },
-  {
-   "t": "2026-11-11T18:20:00+00:00",
    "bot": "oracle",
    "text": "SGRY: target first 29%, stop first 69%, neither 2% (5000 replays). History: 31 fired, 4 won, 15 lost."
   },
@@ -12416,6 +12411,11 @@
    "t": "2026-11-12T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-13T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $54.14 account: $1.08 a trade, $5.41 a day, orders up to $48.73."
   }
  ],
  "trades": [
@@ -12916,7 +12916,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-13T08:00:00+00:00"
+   "t": "2026-11-13T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -12926,7 +12926,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-13T08:00:00+00:00"
+   "t": "2026-11-13T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -12945,8 +12945,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped NCLH: one share of NCLH costs $18.64, more than your cash limit (cash $21.06 in trader/portfolio.json minus the $5.50 buffer = $15.56 / 18.64). No order.",
-   "t": "2026-11-12T18:00:00+00:00"
+   "text": "Limits resized to your $54.14 account: $1.08 a trade, $5.41 a day, orders up to $48.73.",
+   "t": "2026-11-13T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-13",
@@ -14323,6 +14323,10 @@
   {
    "t": "2026-11-13T03:00:00+00:00",
    "eq": 54.16
+  },
+  {
+   "t": "2026-11-13T08:30:00+00:00",
+   "eq": 54.14
   }
  ],
  "charts": {

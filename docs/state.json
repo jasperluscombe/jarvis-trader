@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-13T16:15:00+00:00",
- "updated_local": "Sat 14 Nov 2:45 AM",
+ "updated_utc": "2026-11-13T16:20:00+00:00",
+ "updated_local": "Sat 14 Nov 2:50 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -22,8 +22,8 @@
   "flat_by": "15:55"
  },
  "today": {
-  "trades": 1,
-  "risk_used": 0.12
+  "trades": 2,
+  "risk_used": 0.46
  },
  "goals": {
   "day_pl": 0.23,
@@ -1412,14 +1412,200 @@
   "avg_loss": -0.28,
   "best": 1.92,
   "worst": -0.67,
-  "auto": 13,
+  "auto": 14,
   "ideas": 60,
   "passed": 42
  },
  "charts": {
   "date": "2026-11-13",
-  "updated": "2026-11-13T16:15:00+00:00",
+  "updated": "2026-11-13T16:20:00+00:00",
   "symbols": {
+   "COLD": {
+    "bars": [
+     [
+      1794580200,
+      16.05,
+      16.17,
+      15.99,
+      16.07
+     ],
+     [
+      1794580500,
+      16.06,
+      16.3,
+      16.06,
+      16.22
+     ],
+     [
+      1794580800,
+      16.21,
+      16.24,
+      16.15,
+      16.15
+     ],
+     [
+      1794581100,
+      16.19,
+      16.19,
+      16.11,
+      16.15
+     ],
+     [
+      1794581400,
+      16.17,
+      16.19,
+      16.13,
+      16.14
+     ],
+     [
+      1794581700,
+      16.13,
+      16.21,
+      16.1,
+      16.15
+     ],
+     [
+      1794582000,
+      16.16,
+      16.2,
+      16.16,
+      16.18
+     ],
+     [
+      1794582300,
+      16.18,
+      16.18,
+      16.14,
+      16.18
+     ],
+     [
+      1794582600,
+      16.17,
+      16.23,
+      16.17,
+      16.22
+     ],
+     [
+      1794582900,
+      16.22,
+      16.22,
+      16.14,
+      16.16
+     ],
+     [
+      1794583200,
+      16.17,
+      16.2,
+      16.16,
+      16.17
+     ],
+     [
+      1794583500,
+      16.16,
+      16.16,
+      16.13,
+      16.16
+     ],
+     [
+      1794583800,
+      16.16,
+      16.19,
+      16.16,
+      16.17
+     ],
+     [
+      1794584100,
+      16.17,
+      16.23,
+      16.16,
+      16.22
+     ],
+     [
+      1794584400,
+      16.22,
+      16.24,
+      16.21,
+      16.24
+     ],
+     [
+      1794584700,
+      16.23,
+      16.3,
+      16.23,
+      16.28
+     ],
+     [
+      1794585000,
+      16.28,
+      16.28,
+      16.24,
+      16.26
+     ],
+     [
+      1794585300,
+      16.26,
+      16.27,
+      16.19,
+      16.2
+     ],
+     [
+      1794585600,
+      16.2,
+      16.23,
+      16.18,
+      16.23
+     ],
+     [
+      1794585900,
+      16.21,
+      16.23,
+      16.2,
+      16.23
+     ],
+     [
+      1794586200,
+      16.24,
+      16.27,
+      16.23,
+      16.27
+     ],
+     [
+      1794586500,
+      16.27,
+      16.31,
+      16.26,
+      16.31
+     ],
+     [
+      1794586801,
+      16.31,
+      16.31,
+      16.31,
+      16.31
+     ]
+    ],
+    "or_high": 16.3,
+    "or_low": 15.99,
+    "plans": [
+     {
+      "entry": 16.31,
+      "stop": 16.14,
+      "target": 16.65,
+      "t": "2026-11-13T16:20:00+00:00",
+      "source": "auto: medium confidence"
+     }
+    ],
+    "fills": [
+     {
+      "symbol": "COLD",
+      "side": "buy",
+      "price": 16.31,
+      "qty": 1.0,
+      "t": "2026-11-13T16:20:08.914458032Z",
+      "type": "market"
+     }
+    ]
+   },
    "QQQ": {
     "bars": [
      [
@@ -1570,11 +1756,18 @@
       673.08
      ],
      [
-      1794586507,
-      673.2,
-      673.2,
-      673.2,
-      673.2
+      1794586500,
+      673.11,
+      673.29,
+      672.0,
+      672.94
+     ],
+     [
+      1794586806,
+      673.1,
+      673.1,
+      673.1,
+      673.1
      ]
     ],
     "or_high": 688.75,
@@ -1715,7 +1908,7 @@
       750.61,
       750.61,
       749.24,
-      749.29
+      749.31
      ],
      [
       1794585900,
@@ -1732,11 +1925,18 @@
       749.64
      ],
      [
-      1794586507,
+      1794586500,
+      749.64,
       749.73,
-      749.73,
-      749.73,
-      749.73
+      748.92,
+      749.24
+     ],
+     [
+      1794586808,
+      749.36,
+      749.36,
+      749.36,
+      749.36
      ]
     ],
     "or_high": 760.12,
@@ -1894,11 +2094,18 @@
       387.6
      ],
      [
-      1794586506,
-      387.39,
-      387.39,
-      387.39,
-      387.39
+      1794586500,
+      387.59,
+      387.8,
+      385.83,
+      387.61
+     ],
+     [
+      1794586808,
+      387.64,
+      387.64,
+      387.64,
+      387.64
      ]
     ],
     "or_high": 404.4,
@@ -2056,11 +2263,18 @@
       158.99
      ],
      [
-      1794586507,
-      158.97,
-      158.97,
-      158.97,
-      158.97
+      1794586500,
+      158.99,
+      159.22,
+      158.47,
+      159.13
+     ],
+     [
+      1794586809,
+      159.13,
+      159.13,
+      159.13,
+      159.13
      ]
     ],
     "or_high": 170.0,
@@ -2218,11 +2432,18 @@
       357.75
      ],
      [
-      1794586507,
-      357.79,
-      357.79,
-      357.79,
-      357.79
+      1794586500,
+      357.76,
+      357.97,
+      357.5,
+      357.61
+     ],
+     [
+      1794586808,
+      357.56,
+      357.56,
+      357.56,
+      357.56
      ]
     ],
     "or_high": 360.83,
@@ -2375,12 +2596,19 @@
      [
       1794586200,
       27.17,
-      27.18,
+      27.22,
       27.13,
-      27.17
+      27.22
      ],
      [
-      1794586489,
+      1794586500,
+      27.22,
+      27.25,
+      27.22,
+      27.22
+     ],
+     [
+      1794586808,
       27.22,
       27.22,
       27.22,
@@ -2542,11 +2770,18 @@
       33.12
      ],
      [
-      1794586504,
+      1794586500,
       33.12,
+      33.15,
       33.12,
-      33.12,
-      33.12
+      33.14
+     ],
+     [
+      1794586808,
+      33.13,
+      33.13,
+      33.13,
+      33.13
      ]
     ],
     "or_high": 32.84,
@@ -2586,46 +2821,46 @@
    "symbol": "QQQ",
    "status": "waiting",
    "level": 688.75,
-   "last": 673.08,
-   "vs": -2.28,
-   "reason": "last close $673.08 (11:10 bar), $15.67 under the range high $688.75 (-2.28%)",
-   "t": "2026-11-13T16:15:00+00:00"
+   "last": 672.94,
+   "vs": -2.3,
+   "reason": "last close $672.94 (11:15 bar), $15.81 under the range high $688.75 (-2.30%)",
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "symbol": "SPY",
    "status": "waiting",
    "level": 760.12,
-   "last": 749.64,
-   "vs": -1.38,
-   "reason": "last close $749.64 (11:10 bar), $10.48 under the range high $760.12 (-1.38%)",
-   "t": "2026-11-13T16:15:00+00:00"
+   "last": 749.24,
+   "vs": -1.43,
+   "reason": "last close $749.24 (11:15 bar), $10.88 under the range high $760.12 (-1.43%)",
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "symbol": "TSLA",
    "status": "waiting",
    "level": 404.4,
-   "last": 387.6,
+   "last": 387.61,
    "vs": -4.15,
-   "reason": "last close $387.60 (11:10 bar), $16.80 under the range high $404.40 (-4.15%)",
-   "t": "2026-11-13T16:15:00+00:00"
+   "reason": "last close $387.61 (11:15 bar), $16.79 under the range high $404.40 (-4.15%)",
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "symbol": "NVDA",
    "status": "waiting",
    "level": 170.0,
-   "last": 158.99,
-   "vs": -6.48,
-   "reason": "last close $158.99 (11:10 bar), $11.01 under the range high $170.00 (-6.48%)",
-   "t": "2026-11-13T16:15:00+00:00"
+   "last": 159.13,
+   "vs": -6.39,
+   "reason": "last close $159.13 (11:15 bar), $10.87 under the range high $170.00 (-6.39%)",
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "symbol": "AAPL",
    "status": "waiting",
    "level": 360.83,
-   "last": 357.75,
-   "vs": -0.85,
-   "reason": "last close $357.75 (11:10 bar), $3.08 under the range high $360.83 (-0.85%)",
-   "t": "2026-11-13T16:15:00+00:00"
+   "last": 357.61,
+   "vs": -0.89,
+   "reason": "last close $357.61 (11:15 bar), $3.22 under the range high $360.83 (-0.89%)",
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "symbol": "PSQ",
@@ -2647,7 +2882,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-13T16:20:00+00:00",
+ "next_checkin_utc": "2026-11-13T16:25:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -2670,7 +2905,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-13T16:15:00+00:00"
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "id": "scanner",
@@ -2693,16 +2928,16 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 23 charts at 11:15 AM New York: 0 breakouts.",
-   "t": "2026-11-13T16:15:00+00:00"
+   "text": "Checked 23 charts at 11:20 AM New York: 1 breakouts.",
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
-   "status": "idle",
-   "text": "FUN: target first 23%, stop first 75%, neither 2% (5000 replays). History: 31 fired, 4 won, 17 lost.",
-   "t": "2026-11-13T15:40:00+00:00"
+   "status": "working",
+   "text": "COLD: target first 15%, stop first 40%, neither 46% (5000 replays). History: 35 fired, 6 won, 14 lost.",
+   "t": "2026-11-13T16:20:00+00:00"
   },
   {
    "id": "risk",
@@ -2716,9 +2951,9 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "idle",
-   "text": "Bought 1 SH (auto: medium confidence).",
-   "t": "2026-11-13T14:50:00+00:00"
+   "status": "working",
+   "text": "Bought 2 COLD (auto: medium confidence).",
+   "t": "2026-11-13T16:20:00+00:00"
   }
  ],
  "watchlist": [
@@ -2998,6 +3233,17 @@
  ],
  "proposals": [
   {
+   "symbol": "COLD",
+   "status": "placed",
+   "created": "2026-11-13T16:20:00+00:00",
+   "confidence": "medium",
+   "target_profit": 0.68,
+   "expected": 0.03,
+   "max_loss": 0.34,
+   "p_target": 0.1478,
+   "p_stop": 0.3966
+  },
+  {
    "symbol": "FUN",
    "status": "passed",
    "created": "2026-11-13T15:40:00+00:00",
@@ -3150,20 +3396,24 @@
    "max_loss": 0.09,
    "p_target": 0.208,
    "p_stop": 0.5634
-  },
-  {
-   "symbol": "RIOT",
-   "status": "placed",
-   "created": "2026-11-12T14:50:00+00:00",
-   "confidence": "medium",
-   "target_profit": 1.4,
-   "expected": 0.08,
-   "max_loss": 0.7,
-   "p_target": 0.0672,
-   "p_stop": 0.2896
   }
  ],
  "trades": [
+  {
+   "date": "2026-11-13",
+   "t": "2026-11-13T16:20:00+00:00",
+   "symbol": "COLD",
+   "qty": 2,
+   "entry": 16.31,
+   "stop": 16.14,
+   "target": 16.65,
+   "max_loss": 0.34,
+   "target_profit": 0.68,
+   "source": "auto: medium confidence",
+   "confidence": "medium",
+   "paper": true,
+   "result": null
+  },
   {
    "date": "2026-11-13",
    "t": "2026-11-13T14:50:00+00:00",
@@ -3404,6 +3654,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-13T16:20:00+00:00",
+   "bot": "broker",
+   "text": "Bought 2 COLD (auto: medium confidence)."
+  },
+  {
+   "t": "2026-11-13T16:20:00+00:00",
+   "bot": "oracle",
+   "text": "COLD: target first 15%, stop first 40%, neither 46% (5000 replays). History: 35 fired, 6 won, 14 lost."
+  },
+  {
+   "t": "2026-11-13T16:20:00+00:00",
+   "bot": "entry",
+   "text": "COLD broke out at $16.31 (11:20 AM)."
+  },
+  {
    "t": "2026-11-13T15:40:00+00:00",
    "bot": "jarvis",
    "text": "Passed on FUN: the odds are no better than a coin flip (avg -0.28R)."
@@ -3587,21 +3852,6 @@
    "t": "2026-11-13T14:50:00+00:00",
    "bot": "oracle",
    "text": "SH: target first 18%, stop first 47%, neither 35% (5000 replays). History: 40 fired, 12 won, 25 lost."
-  },
-  {
-   "t": "2026-11-13T14:50:00+00:00",
-   "bot": "entry",
-   "text": "SH broke out at $32.87 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-13T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on PSQ: the odds are no better than a coin flip (avg +0.01R)."
-  },
-  {
-   "t": "2026-11-13T14:50:00+00:00",
-   "bot": "oracle",
-   "text": "PSQ: target first 18%, stop first 50%, neither 32% (5000 replays). History: 35 fired, 9 won, 24 lost."
   }
  ],
  "errors": []

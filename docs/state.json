@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-13T15:00:00+00:00",
- "updated_local": "Sat 14 Nov 1:30 AM",
+ "updated_utc": "2026-11-13T15:05:00+00:00",
+ "updated_local": "Sat 14 Nov 1:35 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 54.18,
+  "equity": 54.25,
   "cash": 21.26,
-  "day_pl": 0.04,
+  "day_pl": 0.11,
   "start": 50.0
  },
  "limits": {
@@ -26,8 +26,8 @@
   "risk_used": 0.12
  },
  "goals": {
-  "day_pl": 0.04,
-  "week_pl": 0.93,
+  "day_pl": 0.11,
+  "week_pl": 1.0,
   "daily_goal": 1.08,
   "weekly_goal": 4.26,
   "day_hit": false,
@@ -1385,6 +1385,10 @@
   {
    "t": "2026-11-13T15:00:00+00:00",
    "eq": 54.18
+  },
+  {
+   "t": "2026-11-13T15:05:00+00:00",
+   "eq": 54.25
   }
  ],
  "stats": {
@@ -1402,7 +1406,7 @@
  },
  "charts": {
   "date": "2026-11-13",
-  "updated": "2026-11-13T15:00:00+00:00",
+  "updated": "2026-11-13T15:05:00+00:00",
   "symbols": {
    "QQQ": {
     "bars": [
@@ -1449,11 +1453,18 @@
       681.16
      ],
      [
-      1794582013,
-      680.11,
-      680.11,
-      680.11,
-      680.11
+      1794582000,
+      681.16,
+      681.37,
+      678.05,
+      678.2
+     ],
+     [
+      1794582307,
+      678.49,
+      678.49,
+      678.49,
+      678.49
      ]
     ],
     "or_high": 688.75,
@@ -1487,7 +1498,7 @@
      [
       1794581100,
       755.96,
-      759.16,
+      757.03,
       755.4,
       755.4
      ],
@@ -1506,11 +1517,18 @@
       754.4
      ],
      [
-      1794582011,
-      753.75,
-      753.75,
-      753.75,
-      753.75
+      1794582000,
+      754.4,
+      756.06,
+      752.05,
+      752.3
+     ],
+     [
+      1794582301,
+      752.47,
+      752.47,
+      752.47,
+      752.47
      ]
     ],
     "or_high": 760.12,
@@ -1563,11 +1581,18 @@
       390.94
      ],
      [
-      1794582013,
-      390.8,
-      390.8,
-      390.8,
-      390.8
+      1794582000,
+      391.0,
+      391.16,
+      388.03,
+      388.31
+     ],
+     [
+      1794582311,
+      388.95,
+      388.95,
+      388.95,
+      388.95
      ]
     ],
     "or_high": 404.4,
@@ -1620,11 +1645,18 @@
       162.51
      ],
      [
-      1794582013,
-      161.97,
-      161.97,
-      161.97,
-      161.97
+      1794582000,
+      162.49,
+      162.54,
+      161.77,
+      162.1
+     ],
+     [
+      1794582302,
+      162.31,
+      162.31,
+      162.31,
+      162.31
      ]
     ],
     "or_high": 170.0,
@@ -1677,11 +1709,18 @@
       360.11
      ],
      [
-      1794582013,
-      359.91,
-      359.91,
-      359.91,
-      359.91
+      1794582000,
+      360.11,
+      360.42,
+      358.54,
+      358.63
+     ],
+     [
+      1794582302,
+      358.6,
+      358.6,
+      358.6,
+      358.6
      ]
     ],
     "or_high": 360.83,
@@ -1716,7 +1755,7 @@
       1794581100,
       26.8,
       26.84,
-      26.69,
+      26.72,
       26.84
      ],
      [
@@ -1734,11 +1773,18 @@
       26.9
      ],
      [
-      1794582012,
-      26.94,
-      26.94,
-      26.94,
-      26.94
+      1794582000,
+      26.91,
+      27.03,
+      26.8,
+      27.02
+     ],
+     [
+      1794582304,
+      27.0,
+      27.0,
+      27.0,
+      27.0
      ]
     ],
     "or_high": 26.8,
@@ -1773,7 +1819,7 @@
       1794581100,
       32.84,
       32.87,
-      32.71,
+      32.8,
       32.87
      ],
      [
@@ -1791,11 +1837,18 @@
       32.92
      ],
      [
-      1794582013,
-      32.95,
-      32.95,
-      32.95,
-      32.95
+      1794582000,
+      32.84,
+      33.01,
+      32.84,
+      32.99
+     ],
+     [
+      1794582309,
+      33.0,
+      33.0,
+      33.0,
+      33.0
      ]
     ],
     "or_high": 32.84,
@@ -1827,46 +1880,46 @@
    "symbol": "QQQ",
    "status": "waiting",
    "level": 688.75,
-   "last": 683.47,
-   "vs": -0.77,
-   "reason": "last close $683.47 (9:50 bar), $5.28 under the range high $688.75 (-0.77%)",
-   "t": "2026-11-13T15:00:00+00:00"
+   "last": 678.2,
+   "vs": -1.53,
+   "reason": "last close $678.20 (10:00 bar), $10.55 under the range high $688.75 (-1.53%)",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "symbol": "SPY",
    "status": "waiting",
    "level": 760.12,
-   "last": 754.4,
-   "vs": -0.75,
-   "reason": "last close $754.40 (9:55 bar), $5.72 under the range high $760.12 (-0.75%)",
-   "t": "2026-11-13T15:00:00+00:00"
+   "last": 752.3,
+   "vs": -1.03,
+   "reason": "last close $752.30 (10:00 bar), $7.82 under the range high $760.12 (-1.03%)",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "symbol": "TSLA",
    "status": "waiting",
    "level": 404.4,
-   "last": 390.94,
-   "vs": -3.33,
-   "reason": "last close $390.94 (9:55 bar), $13.46 under the range high $404.40 (-3.33%)",
-   "t": "2026-11-13T15:00:00+00:00"
+   "last": 388.31,
+   "vs": -3.98,
+   "reason": "last close $388.31 (10:00 bar), $16.09 under the range high $404.40 (-3.98%)",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "symbol": "NVDA",
    "status": "waiting",
    "level": 170.0,
-   "last": 162.51,
-   "vs": -4.41,
-   "reason": "last close $162.51 (9:55 bar), $7.49 under the range high $170.00 (-4.41%)",
-   "t": "2026-11-13T15:00:00+00:00"
+   "last": 162.1,
+   "vs": -4.65,
+   "reason": "last close $162.10 (10:00 bar), $7.90 under the range high $170.00 (-4.65%)",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "symbol": "AAPL",
    "status": "waiting",
    "level": 360.83,
-   "last": 360.11,
-   "vs": -0.2,
-   "reason": "last close $360.11 (9:55 bar), $0.71 under the range high $360.83 (-0.20%)",
-   "t": "2026-11-13T15:00:00+00:00"
+   "last": 358.63,
+   "vs": -0.61,
+   "reason": "last close $358.63 (10:00 bar), $2.20 under the range high $360.83 (-0.61%)",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "symbol": "PSQ",
@@ -1888,7 +1941,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-13T15:05:00+00:00",
+ "next_checkin_utc": "2026-11-13T15:10:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -1907,8 +1960,8 @@
   {
    "symbol": "SH",
    "qty": 1.0,
-   "value": 32.9211,
-   "pl": 0.0411,
+   "value": 32.99,
+   "pl": 0.11,
    "entry": 32.88
   }
  ],
@@ -1919,7 +1972,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-13T15:00:00+00:00"
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "id": "scanner",
@@ -1942,24 +1995,24 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "working",
-   "text": "Checked 33 charts at 10:00 AM New York: 2 breakouts.",
-   "t": "2026-11-13T15:00:00+00:00"
+   "text": "Checked 31 charts at 10:05 AM New York: 1 breakouts.",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times: the odds.",
    "status": "working",
-   "text": "HDB: target first 25%, stop first 56%, neither 19% (5000 replays). History: 29 fired, 2 won, 8 lost.",
-   "t": "2026-11-13T15:00:00+00:00"
+   "text": "PBR: target first 20%, stop first 58%, neither 23% (5000 replays). History: 45 fired, 6 won, 23 lost.",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
    "status": "working",
-   "text": "Skipped HDB: one share of HDB costs $25.97, more than your cash limit (cash $21.26 in trader/portfolio.json minus the $5.41 buffer = $15.85 / 25.97). No order.",
-   "t": "2026-11-13T15:00:00+00:00"
+   "text": "Skipped PBR: one share of PBR costs $18.38, more than your cash limit (cash $21.26 in trader/portfolio.json minus the $5.41 buffer = $15.85 / 18.38). No order.",
+   "t": "2026-11-13T15:05:00+00:00"
   },
   {
    "id": "broker",
@@ -2653,6 +2706,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-13T15:05:00+00:00",
+   "bot": "risk",
+   "text": "Skipped PBR: one share of PBR costs $18.38, more than your cash limit (cash $21.26 in trader/portfolio.json minus the $5.41 buffer = $15.85 / 18.38). No order."
+  },
+  {
+   "t": "2026-11-13T15:05:00+00:00",
+   "bot": "oracle",
+   "text": "PBR: target first 20%, stop first 58%, neither 23% (5000 replays). History: 45 fired, 6 won, 23 lost."
+  },
+  {
+   "t": "2026-11-13T15:05:00+00:00",
+   "bot": "entry",
+   "text": "PBR broke out at $18.38 (10:00 AM)."
+  },
+  {
    "t": "2026-11-13T15:00:00+00:00",
    "bot": "risk",
    "text": "Skipped HDB: one share of HDB costs $25.97, more than your cash limit (cash $21.26 in trader/portfolio.json minus the $5.41 buffer = $15.85 / 25.97). No order."
@@ -2836,21 +2904,6 @@
    "t": "2026-11-12T16:10:00+00:00",
    "bot": "risk",
    "text": "Skipped ADT: one share of ADT costs $9.93, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 9.93). No order."
-  },
-  {
-   "t": "2026-11-12T16:10:00+00:00",
-   "bot": "oracle",
-   "text": "ADT: target first 36%, stop first 64%, neither 0% (5000 replays). History: 33 fired, 8 won, 15 lost."
-  },
-  {
-   "t": "2026-11-12T16:10:00+00:00",
-   "bot": "entry",
-   "text": "ADT broke out at $9.93 (11:10 AM)."
-  },
-  {
-   "t": "2026-11-12T16:10:00+00:00",
-   "bot": "risk",
-   "text": "Skipped OKLO: one share of OKLO costs $25.35, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 25.35). No order."
   }
  ],
  "errors": []

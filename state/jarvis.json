@@ -13427,11 +13427,6 @@
  "events": [
   {
    "t": "2026-11-12T16:10:00+00:00",
-   "bot": "oracle",
-   "text": "ZETA: target first 7%, stop first 30%, neither 63% (5000 replays). History: 35 fired, 5 won, 13 lost."
-  },
-  {
-   "t": "2026-11-12T16:10:00+00:00",
    "bot": "risk",
    "text": "Skipped ZETA: one share of ZETA costs $37.65, more than your cash limit (cash $12.01 in trader/portfolio.json minus the $5.50 buffer = $6.51 / 37.65). No order."
   },
@@ -13824,6 +13819,11 @@
    "t": "2026-11-13T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-14T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $55.03 account: $1.10 a trade, $5.50 a day, orders up to $49.53."
   }
  ],
  "trades": [
@@ -14357,7 +14357,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-14T08:00:23+00:00"
+   "t": "2026-11-14T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14367,7 +14367,7 @@
   "entry": {
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-14T08:00:23+00:00"
+   "t": "2026-11-14T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14386,8 +14386,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped VFC: one share of VFC costs $20.51, more than your cash limit (cash $21.75 in trader/portfolio.json minus the $5.41 buffer = $16.34 / 20.51). No order.",
-   "t": "2026-11-13T18:25:00+00:00"
+   "text": "Limits resized to your $55.03 account: $1.10 a trade, $5.50 a day, orders up to $49.53.",
+   "t": "2026-11-14T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-14",
@@ -15964,6 +15964,10 @@
   {
    "t": "2026-11-14T08:00:00+00:00",
    "eq": 55.05
+  },
+  {
+   "t": "2026-11-14T08:30:00+00:00",
+   "eq": 55.03
   }
  ],
  "charts": {

@@ -14352,31 +14352,12 @@
   }
  ],
  "candidates_day": "2026-11-13",
- "seen": {
-  "PSQ": "triggered",
-  "SH": "triggered",
-  "MGNI": "triggered",
-  "PBR.A": "triggered",
-  "KHC": "triggered",
-  "HDB": "triggered",
-  "PBR": "triggered",
-  "MBGL": "triggered",
-  "LVS": "triggered",
-  "ADXN": "triggered",
-  "TTEK": "triggered",
-  "MGM": "triggered",
-  "CPB": "triggered",
-  "FUN": "triggered",
-  "COLD": "triggered",
-  "SIRI": "triggered",
-  "GEN": "triggered",
-  "VFC": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-14T04:30:00+00:00"
+   "t": "2026-11-14T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14385,8 +14366,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-14T04:30:00+00:00"
+   "text": "No US market today. Resting.",
+   "t": "2026-11-14T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14409,13 +14390,8 @@
    "t": "2026-11-13T18:25:00+00:00"
   }
  },
- "seen_day": "2026-11-13",
+ "seen_day": "2026-11-14",
  "next_sessions": [
-  {
-   "date": "2026-11-13",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-16",
    "open": "09:30",
@@ -14438,6 +14414,11 @@
   },
   {
    "date": "2026-11-20",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-11-23",
    "open": "09:30",
    "close": "16:00"
   }

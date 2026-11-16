@@ -125,6 +125,36 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
 @keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
 @media (max-width:980px){.bots{grid-template-columns:repeat(4,1fr)}.cols{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.bots{grid-template-columns:repeat(2,1fr)}.kpi .v{font-size:21px}}
+.nav{display:flex;gap:6px;margin:0 0 16px;position:sticky;top:8px;z-index:20;background:rgba(7,11,20,.86);backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:99px;padding:5px}
+.nav button{flex:1;font:600 13px "Space Grotesk",system-ui,sans-serif;color:var(--mute);background:transparent;border:0;border-radius:99px;padding:9px 6px;cursor:pointer}
+.nav button.on{background:var(--cyan);color:var(--bg)}
+.page{display:none}.page.on{display:block}
+.lead{color:var(--mute);font-size:14px;line-height:1.55;margin:0 0 12px}
+.lead b{color:var(--ink)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vsc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.vsc.new{border-color:rgba(62,230,255,.5);box-shadow:var(--glow)}
+.vsc .l{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
+.vsc .v{font:600 26px "JetBrains Mono",monospace;margin:6px 0 2px}
+.vsc .s{font-size:12px;color:var(--mute);line-height:1.5}
+.ladder .row{display:grid;grid-template-columns:1fr 92px;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line)}
+.ladder .row:last-child{border:0}
+.ladder .lab{font-size:13px;line-height:1.35}.ladder .lab small{display:block;color:var(--dim);font:11px "JetBrains Mono",monospace;margin-top:2px}
+.ladder .num{font:600 14px "JetBrains Mono",monospace;text-align:right}
+.ladder .track{grid-column:1/3;height:8px;background:#1a2440;border-radius:99px;position:relative;margin-top:-2px}
+.ladder .track i{position:absolute;top:0;bottom:0;border-radius:99px}
+.ladder .track b{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--mute);left:50%}
+.seg{display:flex;gap:6px;margin-bottom:10px}
+.note{background:rgba(255,194,75,.07);border:1px solid rgba(255,194,75,.35);border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.55;color:var(--ink)}
+.note b{color:var(--amber)}
+.rules{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.rule{font:600 12px "JetBrains Mono",monospace;padding:6px 10px;border-radius:99px;border:1px solid rgba(62,230,255,.35);color:var(--cyan);background:rgba(62,230,255,.06)}
+.mv{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font:13px "JetBrains Mono",monospace}
+.mv:last-child{border:0}.mv b{min-width:58px}.mv .g{margin-left:auto}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.src a{color:var(--cyan);text-decoration:none}.src li{margin:6px 0;font-size:13px;color:var(--mute);line-height:1.45}
+@media (max-width:560px){.vsc .v{font-size:22px}.wrap{padding-bottom:40px}td,th{white-space:nowrap}}
 </style>
 </head>
 <body>
@@ -141,6 +171,11 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
   </header>
   <div class="pulse-line"></div>
 
+  <nav class="nav" id="nav">
+    <button data-go="home" class="on">Home</button><button data-go="activity">Activity</button><button data-go="lab">Lab</button>
+  </nav>
+
+  <div class="page on" data-page="home">
   <div class="kpis">
     <div class="kpi"><div class="l">Account</div><div class="v" id="equity">$—</div><div class="s" id="start">started at $50.00</div></div>
     <div class="kpi"><div class="l">Today</div><div class="v" id="daypl">$—</div><div class="s" id="dayinfo">—</div></div>
@@ -170,12 +205,21 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
   <h2>Account value</h2>
   <div class="panel"><div class="chartwrap" id="chart"></div></div>
 
+  <h2>In play right now</h2>
+  <div class="panel">
+    <div class="rules" id="rules"></div>
+    <div id="movers"></div>
+  </div>
+
   <h2>Always watching</h2>
   <div class="focus" id="focus"></div>
 
   <h2>The crew</h2>
   <div class="bots" id="bots"></div>
 
+  </div>
+
+  <div class="page" data-page="activity">
   <h2>Scoreboard</h2>
   <div class="stats" id="stats"></div>
 
@@ -204,8 +248,53 @@ td{padding:8px 4px;border-bottom:1px dashed var(--line);font-family:"JetBrains M
   <h2>Your limits</h2>
   <div class="panel"><div class="chips" id="limits"></div></div>
 
+  </div>
+
+  <div class="page" data-page="lab">
+    <h2>What the tests say</h2>
+    <p class="lead" id="lab-lead">Loading the backtest…</p>
+    <div class="vs" id="lab-vs"></div>
+
+    <h2>What each rule adds</h2>
+    <div class="panel ladder" id="lab-ladder"></div>
+
+    <h2>Same account, both rule sets</h2>
+    <div class="panel">
+      <div class="seg" id="lab-acct"></div>
+      <div class="chartwrap" id="lab-curve" style="height:230px"></div>
+      <div class="legend" id="lab-curve-note"></div>
+    </div>
+
+    <h2>How much to trust it</h2>
+    <div class="note" id="lab-note"></div>
+
+    <h2>Shadow book <span class="updated" style="text-transform:none;letter-spacing:0">live test, no money</span></h2>
+    <p class="lead">After every close Jarvis scores each breakout it saw, bought or not. This is the honest test of the new rules: days the backtest has never seen.</p>
+    <div class="stats" id="lab-shadow"></div>
+    <div class="panel scroll" id="lab-signals" style="margin-top:12px"></div>
+
+    <h2>Stops and targets tried</h2>
+    <div class="panel scroll" id="lab-exits"></div>
+
+    <h2>Is it a knife-edge?</h2>
+    <p class="lead">Average result per trade for neighbouring settings. A real effect changes smoothly; a fluke shows up as one lucky cell.</p>
+    <div class="panel scroll" id="lab-grid"></div>
+
+    <h2>Next idea: holding for a few days</h2>
+    <p class="lead" id="lab-swing-lead"></p>
+    <div class="panel scroll" id="lab-swing"></div>
+
+    <h2>Where the ideas came from</h2>
+    <div class="panel"><ul class="src" style="margin:0;padding-left:18px">
+      <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4729284" target="_blank" rel="noopener">Zarattini, Barbon &amp; Aziz (2024), A Profitable Day Trading Strategy for the U.S. Equity Market</a>: opening-range breakouts only pay in "stocks in play" (heavy opening volume). The plain version barely made money.</li>
+      <li><a href="https://www.sfi.ch/fr/publications/n-24-97-beat-the-market-an-effective-intraday-momentum-strategy-for-s-p500-etf-spy" target="_blank" rel="noopener">Zarattini, Aziz &amp; Barbon (2024), Beat the Market</a>: intraday momentum on SPY. Independent re-tests found smaller returns than the paper.</li>
+      <li>Connors &amp; Alvarez (2008), Short Term Trading Strategies That Work: buying short dips in an uptrend (the "holding for a few days" test above).</li>
+      <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3423101" target="_blank" rel="noopener">Chague, De-Losso &amp; Giovannetti (2019), Day Trading for a Living?</a>: 97% of people who day traded for 300+ days lost money. The reason this page tests before it trusts.</li>
+    </ul></div>
+  </div>
+
   <div class="err" id="err"></div>
-  <div class="foot">Jarvis checks in about every 5 minutes on US trading days. Odds come from each stock's last 60 days
+  <div class="foot">Jarvis checks in about every 5 minutes on US trading days. Odds and backtests come from the last 60 days
     of price data: they are estimates, not promises. Most people who day trade lose money. Not financial advice.</div>
 </div>
 
@@ -318,7 +407,7 @@ function render(d){
 
   $("err").textContent=(d.errors||[]).length?"Heads up: "+d.errors.join(" · "):"";
   $("market").textContent=d.market_open?"MARKET OPEN":"MARKET CLOSED"; $("market").className="badge"+(d.market_open?" open":"");
-  renderGoals(d); renderChart(d); renderFocus(d); renderStats(d); renderCandles(d);
+  renderGoals(d); renderChart(d); renderFocus(d); renderStats(d); renderCandles(d); renderMovers(d); renderShadow(d);
   tick();
 }
 
@@ -412,10 +501,107 @@ function renderCandles(d){
 
 function renderStats(d){
   const s=d.stats||{};
+  // R = the result divided by what the trade risked at its stop: the fair way to compare trades of different sizes
+  const rs=(d.trades||[]).filter(t=>t.result!=null&&t.max_loss>0).map(t=>t.result/t.max_loss);
+  const avgR=rs.length?rs.reduce((a,b)=>a+b,0)/rs.length:null;
+  const won=(d.trades||[]).filter(t=>t.result>0).reduce((a,t)=>a+t.result,0), lost=-(d.trades||[]).filter(t=>t.result<0).reduce((a,t)=>a+t.result,0);
   const items=[["Win rate",s.win_rate==null?"—":Math.round(s.win_rate*100)+"%"],["Avg win",money(s.avg_win)],["Avg loss",money(s.avg_loss)],
+    ["Avg per trade",avgR==null?"—":fmtR(avgR)],["Won ÷ lost",lost>0?(won/lost).toFixed(2)+"×":"—"],
     ["Best",money(s.best,true)],["Worst",money(s.worst,true)],["Ideas / passed",`${s.ideas||0} / ${s.passed||0}`]];
   $("stats").innerHTML=items.map(([l,v])=>`<div class="stat"><div class="l">${l}</div><div class="v">${esc(v)}</div></div>`).join("");
 }
+const fmtR=x=>x==null?"—":(x>0?"+":x<0?"−":"")+Math.abs(x).toFixed(2)+"R";
+const cls=x=>x==null?"":(x>=0?"up":"down");
+
+function renderMovers(d){
+  const st=d.strategy||{}, r=st.rules||{};
+  $("rules").innerHTML=st.name==="in_play"?[`up ${r.min_gain_pct}%+ today`,`opening volume ${r.min_rvol}×+`,`stop ${r.min_stop_pct}%+ away`,`breaks out by ${r.last_entry} NY`]
+    .map(x=>`<span class="rule">${esc(x)}</span>`).join(""):`<span class="rule">classic rules</span>`;
+  const m=d.movers&&d.movers.rows||[];
+  $("movers").innerHTML=m.length?m.slice(0,12).map(x=>`<div class="mv"><b>${esc(x.symbol)}</b><span>${money(x.price)}</span>
+    <span class="g up">+${x.gain_pct.toFixed(1)}%</span></div>`).join("")+`<div class="empty">Liquid stocks up the most at ${localTime(d.movers.t)}. Jarvis buys one only if it also breaks its opening range on heavy volume.</div>`
+    :`<div class="empty">Jarvis looks for stocks in play from 15 minutes after the open (${esc((d.sessions&&d.sessions[0]||{}).open_local||"the bell")} your time). A breakout has to pass every rule above before it buys.</div>`;
+}
+
+function renderShadow(d){
+  const L=d.lab||{}, ip=L.in_play||{}, no=L.not_in_play||{};
+  $("lab-shadow").innerHTML=[["In-play signals",ip.n||0],["Their win rate",ip.win==null?"—":pct(ip.win)],["Avg per trade",fmtR(ip.avg_r)],
+    ["Total",ip.n?fmtR(ip.total_r):"—"],["Other signals",no.n||0],["Their avg (old rules)",fmtR(no.avg_r)]]
+    .map(([l,v])=>`<div class="stat"><div class="l">${l}</div><div class="v">${esc(v)}</div></div>`).join("");
+  const rows=L.recent||[];
+  $("lab-signals").innerHTML=rows.length?`<table><tr><th>Date</th><th>Stock</th><th>Up</th><th>Volume</th><th>In play</th><th>Result</th></tr>${
+    rows.map(x=>{const r=x.in_play?x.r_new:x.r_old;return `<tr><td>${esc(x.date.slice(5))}</td><td>${esc(x.symbol)}</td><td>${x.gain_pct==null?"—":x.gain_pct.toFixed(1)+"%"}</td>
+      <td>${x.rvol==null?"—":x.rvol.toFixed(1)+"×"}</td><td>${x.in_play?(x.took?"yes · bought":"yes"):"no"}</td><td class="${cls(r)}">${r==null?"pending":fmtR(r)}</td></tr>`}).join("")}</table>`
+    :`<div class="empty">Nothing scored yet. The first results appear after the next US close.</div>`;
+}
+
+let research=null, swing=null, acct=200;
+function lineChart(el,series,fmt){
+  // series: [{name,color,pts:[v...]}], all the same length
+  const W=600,H=230,padL=8,padR=64,padT=14,padB=20;
+  const all=series.flatMap(s=>s.pts), lo=Math.min(...all), hi=Math.max(...all), span=(hi-lo)||1;
+  const n=series[0].pts.length, x=i=>padL+(W-padL-padR)*i/(n-1), y=v=>padT+(H-padT-padB)*(1-(v-lo)/span);
+  const base=series[0].pts[0];
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <line x1="${padL}" x2="${W-padR}" y1="${y(base)}" y2="${y(base)}" stroke="#33415f" stroke-dasharray="4 4"/>
+    ${series.map(s=>`<polyline fill="none" stroke="${s.color}" stroke-width="${s.w||2.5}" stroke-linejoin="round" points="${s.pts.map((v,i)=>x(i).toFixed(1)+","+y(v).toFixed(1)).join(" ")}"/>
+      <text x="${W-padR+6}" y="${y(s.pts[n-1])+4}" fill="${s.color}" font-family="JetBrains Mono,monospace" font-size="13" font-weight="600">${fmt(s.pts[n-1])}</text>`).join("")}
+    <text x="${padL}" y="${H-4}" fill="#56627f" font-family="JetBrains Mono,monospace" font-size="11">start ${fmt(base)}</text></svg>`;
+}
+function renderLab(){
+  if(!research)return;
+  const R=research, st=R.steps, b=st[0], a=st[st.length-1];
+  $("lab-lead").innerHTML=`Every opening-range breakout in <b>${R.symbols} US stocks</b> over <b>${R.days} trading days</b> (${esc(R.from)} to ${esc(R.to)}), replayed bar by bar the way Jarvis trades:
+    it buys one bar late, pays ${R.slippage_pct}% slippage on every fill, and a bar that touches both stop and target counts as a loss. <b>R</b> is what a trade risks at its stop.`;
+  const card=(x,t,k)=>`<div class="vsc ${k}"><div class="l">${t}</div><div class="v ${cls(x.avg_R)}">${fmtR(x.avg_R)}</div>
+    <div class="s">average per trade<br>${pct(x.win)} win · ${x.n} trades<br>likely range ${fmtR(x.lo)} to ${fmtR(x.hi)}</div></div>`;
+  $("lab-vs").innerHTML=card(b,"Old rules","")+card(a,"New rules","new");
+  const max=Math.max(...st.map(x=>Math.abs(x.avg_R)),.2);
+  $("lab-ladder").innerHTML=st.map(x=>{const w=Math.abs(x.avg_R)/max*50;return `<div class="row"><div class="lab">${esc(x.label)}<small>${x.n.toLocaleString()} trades · ${pct(x.win)} win</small></div>
+    <div class="num ${cls(x.avg_R)}">${fmtR(x.avg_R)}</div><div class="track"><i style="${x.avg_R>=0?"left:50%":"right:50%"};width:${w}%;background:${x.avg_R>=0?"var(--green)":"var(--red)"}"></i><b></b></div></div>`}).join("");
+  const A=R.accounts||[], starts=[...new Set(A.map(x=>x.start))];
+  if(!starts.includes(acct))acct=starts[0];
+  $("lab-acct").innerHTML=starts.map(v=>`<button class="tab ${v===acct?"on":""}" onclick="acct=${v};renderLab()">$${v.toLocaleString()}</button>`).join("");
+  const bef=A.find(x=>x.start===acct&&x.rules==="before"), aft=A.find(x=>x.start===acct&&x.rules==="after");
+  if(bef&&aft){
+    const f=v=>"$"+(v>=1000?Math.round(v).toLocaleString():v.toFixed(0));
+    // the two rule sets trade on different days: line both curves up on every date, carrying the value forward
+    const dates=[...new Set([...bef.curve,...aft.curve].map(c=>c[0]))].sort();
+    const align=c=>{const m=new Map(c);let v=acct;return [acct,...dates.map(d=>(v=m.has(d)?m.get(d):v))]};
+    lineChart($("lab-curve"),[{name:"old",color:"#8a97b4",w:2,pts:align(bef.curve)},{name:"new",color:"#3ee6ff",pts:align(aft.curve)}],f);
+    $("lab-curve-note").innerHTML=`<span><i style="background:#3ee6ff"></i>New rules: ${aft.ret_pct>0?"+":""}${aft.ret_pct}%, worst dip ${aft.max_dd_pct}%, ${aft.trades} trades</span>
+      <span><i style="background:#8a97b4"></i>Old rules: ${bef.ret_pct>0?"+":""}${bef.ret_pct}%, worst dip ${bef.max_dd_pct}%, ${bef.trades} trades</span>`;
+  }
+  $("lab-note").innerHTML=`<b>Read this before trusting the chart.</b> The new rules were chosen by looking at these same ${R.days} days, so the chart flatters them: expect less from days it has never seen.
+    What the test does support: the old rules lost money after costs (${fmtR(b.lo)} to ${fmtR(b.hi)} a trade), and breakouts in stocks that are up big on heavy volume did clearly better, in both halves of the period
+    (${fmtR(a.h1)} then ${fmtR(a.h2)}). ${R.days} days is one market mood. The shadow book below is the real exam, and real money stays locked until it has a few hundred trades in it.`;
+  const tbl=(rows,extra)=>`<table><tr><th>Rule</th><th>Trades</th><th>Win</th><th>Avg</th><th>Range</th></tr>${rows.map(x=>`<tr><td style="white-space:normal;min-width:150px">${esc(x.label)}</td><td>${x.n}</td><td>${pct(x.win)}</td>
+    <td class="${cls(x.avg_R)}">${fmtR(x.avg_R)}</td><td>${fmtR(x.lo)} to ${fmtR(x.hi)}</td></tr>`).join("")}</table>`;
+  $("lab-exits").innerHTML=tbl(R.exits||[]);
+  const S=R.sensitivity||[], gains=[...new Set(S.map(x=>x.gain))], rvs=[...new Set(S.map(x=>x.rv))];
+  $("lab-grid").innerHTML=`<table><tr><th>Up on the day</th>${rvs.map(v=>`<th>volume ${v}×+</th>`).join("")}</tr>${gains.map(g=>`<tr><td>${Math.round(g*100)}%+</td>${
+    rvs.map(v=>{const x=S.find(q=>q.gain===g&&q.rv===v);return `<td class="${cls(x.avg_R)}">${fmtR(x.avg_R)}<span style="color:var(--dim);font-size:10px"> ·${x.n}</span></td>`}).join("")}</tr>`).join("")}</table>`;
+  if(swing){
+    $("lab-swing-lead").innerHTML=`Day trading with under $25,000 in a US margin account runs into the day-trade limit, so a real-money version would need to hold for days instead. A first look at published swing rules on
+      <b>${swing.stocks} stocks, ${esc(swing.from)} to ${esc(swing.to)}</b>, buying at the next open with slippage. Not built into Jarvis yet. The stock list is today's survivors, which flatters dip-buying.`;
+    $("lab-swing").innerHTML=`<table><tr><th>Rule</th><th>Trades</th><th>Win</th><th>Avg</th><th>vs market</th><th>Held</th></tr>${swing.rules.map(x=>`<tr><td style="white-space:normal;min-width:170px">${esc(x.label)}</td>
+      <td>${x.n.toLocaleString()}</td><td>${pct(x.win)}</td><td class="${cls(x.avg)}">${(x.avg*100>0?"+":"")+(x.avg*100).toFixed(2)}%</td><td class="${cls(x.vs_spy)}">${(x.vs_spy*100>0?"+":"")+(x.vs_spy*100).toFixed(2)}%</td><td>${x.days.toFixed(1)}d</td></tr>`).join("")}</table>`;
+  }
+}
+async function loadLab(){
+  try{research=await (await fetch("research.json",{cache:"no-cache"})).json();}catch(e){$("lab-lead").textContent="No backtest file yet.";}
+  try{swing=await (await fetch("swing.json",{cache:"no-cache"})).json();}catch(e){}
+  renderLab();
+}
+function go(page){
+  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("on",p.dataset.page===page));
+  document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===page));
+  try{localStorage.setItem("jarvis.page",page)}catch(e){}
+  if(state){renderChart(state);renderCandles(state)} if(page==="lab")renderLab();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll("#nav button").forEach(b=>b.onclick=()=>go(b.dataset.go));
+
 function nameOf(id){const b=(state.bots||[]).find(x=>x.id===id);return b?b.name:id}
 
 function tick(){
@@ -447,7 +633,8 @@ async function load(){
     render(await r.json());
   }catch(e){$("updated").textContent="waiting for Jarvis's first check-in…";}
 }
-load(); setInterval(load,60000); setInterval(tick,15000);
+load(); loadLab(); setInterval(load,60000); setInterval(tick,15000);
+try{const pg=localStorage.getItem("jarvis.page");if(pg&&document.querySelector('.page[data-page="'+pg+'"]'))go(pg)}catch(e){}
 </script>
 </body>
 </html>

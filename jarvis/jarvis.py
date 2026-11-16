@@ -47,15 +47,17 @@ CONFIG_PATH = P("trader", "config.json")
 PORTFOLIO_PATH = P("trader", "portfolio.json")
 BROKER_LOG = P("trader", "state", "broker.json")
 WATCHLIST = P("trader", "watchlist.json")
+LIQUID = P("trader", "liquid.json")
+SHADOW_SLIP = 0.0005  # slippage a side charged to shadow trades, the same as research/backtest.py
 WORK = P("trader", "work")
 UTC = dt.timezone.utc
 
 BOTS = {
     "jarvis":  ("Jarvis", "Your buddy. Messages you, takes your yes."),
-    "scanner": ("Scout", "Scans ~6,000 US stocks for setups before the open."),
+    "scanner": ("Scout", "Scans ~6,000 US stocks before the open, then finds the ones in play after it."),
     "news":    ("Herald", "Reads headlines and SEC filings for the watchlist."),
     "entry":   ("Spotter", "Watches each chart for a breakout above the opening range."),
-    "oracle":  ("Oracle", "Replays the rest of the day thousands of times: the odds."),
+    "oracle":  ("Oracle", "Replays the rest of the day thousands of times, and scores every signal after the close."),
     "risk":    ("Guard", "Sizes the trade to your $ limits and blocks anything over them."),
     "broker":  ("Trader", "Sends approved orders to Alpaca and closes by the bell."),
 }
@@ -786,7 +788,7 @@ class Jarvis:
                 return []
         code, out, err = run_tool("scan.py", "daily", "--min-price", self.settings.get("min_price", 5),
                                   "--min-volume", self.settings.get("min_volume", 1000000), "--quiet",
-                                  "--out", "trader/watchlist.json", timeout=900)
+                                  "--out", "trader/watchlist.json", "--liquid-out", "trader/liquid.json", timeout=900)
         if code != 0 and not os.path.exists(WATCHLIST):
             self.event("scanner", "Scan failed: %s" % (err.strip()[-200:] or code))
             return []
@@ -833,8 +835,12 @@ class Jarvis:
         lines = ["☀️ <b>Morning brief</b> · %s" % day_str(self.local()),
                  "US market opens <b>%s</b> and closes <b>%s</b> your time (%s)."
                  % (self.ny_time_local(open_t), self.ny_time_local(close_t), self.tz_label()),
-                 "Breakouts usually trigger in the first 2 hours: if you want to approve trades yourself, "
-                 "be awake about <b>%s–%s</b>." % (self.ny_time_local(dt.time(9, 45)), self.ny_time_local(dt.time(11, 30))),
+                 ("I only buy breakouts in the first hour now: if you want to approve trades yourself, be awake "
+                  "about <b>%s–%s</b>." % (self.ny_time_local(dt.time(9, 45)), self.ny_time_local(
+                      (dt.datetime.combine(self.ny.date(), self.last_entry_time()) + dt.timedelta(minutes=10)).time())))
+                 if self.in_play_on() else
+                 ("Breakouts usually trigger in the first 2 hours: if you want to approve trades yourself, "
+                  "be awake about <b>%s–%s</b>." % (self.ny_time_local(dt.time(9, 45)), self.ny_time_local(dt.time(11, 30)))),
                  "",
                  "Mode: <b>%s</b> · auto-buy: <b>%s</b>" % (self.mode(), self.auto_label()),
                  "You can sleep: I'll trade the ideas that pass your rules and tell you what I did."
@@ -850,7 +856,11 @@ class Jarvis:
                      " I stop for the day once today's goal is in." if self.settings.get("stop_when_goal_hit", True) else ""),
                  "📈 Always watching: <b>%s</b> (PSQ and SH rise when the market falls)" % ", ".join(self.settings.get("always_watch") or [])
                  if self.settings.get("always_watch") else "",
-                 "", "👀 <b>Watching today</b> (%d stocks):" % len(c)]
+                 ("🔥 New rules: I buy a breakout only in a stock that is <b>in play</b>: up %g%%+ on the day, opening "
+                  "volume %gx normal, by %s New York. I find those after the open, so the list below is background, "
+                  "not a shopping list." % (self.ip("min_gain_pct"), self.ip("min_rvol"), self.ip("last_entry")))
+                 if self.in_play_on() else "",
+                 "", "👀 <b>%s</b> (%d stocks):" % ("On the radar from last night's charts" if self.in_play_on() else "Watching today", len(c))]
         for h in c[:8]:
             n = news.get(h["symbol"], {})
             head = (n.get("headlines") or [{}])[0].get("title")
@@ -952,6 +962,66 @@ class Jarvis:
         self.bot("risk", "idle", "Real money locked: limits not reviewed yet.")
         return True
 
+    # ---- in play: the only breakouts worth buying (see research/RESULTS.md)
+    def in_play_on(self):
+        return self.settings.get("strategy", "in_play") == "in_play"
+
+    def ip(self, key):
+        d = {"min_gain_pct": 4.0, "min_rvol": 1.5, "min_stop_pct": 1.0, "last_entry": "10:30",
+             "scan_min_gain_pct": 3.0, "movers": 30, "high_rvol": 3.0}
+        return (self.settings.get("in_play") or {}).get(key, d[key])
+
+    def last_entry_time(self):
+        """Breakouts are bought only when the signal bar closes by this New York time."""
+        return hhmm(self.ip("last_entry"))
+
+    def movers(self):
+        """Liquid stocks up on the day right now (the candidates), biggest gain first."""
+        if not os.path.exists(LIQUID) or self.args.test_candidates:
+            return []
+        code, m, err = tool_json("movers.py", "scan", "--min-gain", self.ip("scan_min_gain_pct"),
+                                 "--min-price", self.settings.get("min_price", 5), "--max-price", self.settings.get("max_price", 40),
+                                 "--top", self.ip("movers"), "--json", timeout=240)
+        rows = (m or {}).get("movers") or []
+        if m is None:
+            self.event("scanner", "Movers scan failed: %s" % (err or "")[-160:])
+        self.st["movers"] = {"t": self.now_utc.isoformat(timespec="seconds"), "checked": (m or {}).get("checked"), "rows": rows}
+        self.bot("scanner", "working", "%d of %s liquid stocks are up %g%% or more right now."
+                 % (len(rows), (m or {}).get("checked", "?"), self.ip("scan_min_gain_pct")))
+        return [{"symbol": r["symbol"], "setups": ["mover"], "price": r["price"], "gain_pct": r["gain_pct"]} for r in rows]
+
+    def judge(self, sym, e):
+        """Is this breakout in a stock that is in play? Returns the signal record (kept for the shadow book)."""
+        trig, rng = e.get("trigger") or {}, e.get("opening_range") or {}
+        price, prev = float(trig.get("price") or 0), float(e.get("prev_close") or 0)
+        lo, hi = float(rng.get("low") or 0), float(rng.get("high") or 0)
+        sig = {"date": self.today, "t": self.now_utc.isoformat(timespec="seconds"), "symbol": sym, "time": trig.get("time"),
+               "price": price, "or_high": hi, "or_low": lo, "prev_close": prev,
+               "gain_pct": round(100 * (price / prev - 1), 2) if prev else None,
+               "stop_pct": round(100 * (price - lo) / price, 2) if price and lo else None, "rvol": None}
+        why = []
+        try:
+            late = dt.datetime.strptime(str(trig.get("time")), "%I:%M %p").time() > self.last_entry_time()
+        except ValueError:
+            late = False
+        if late:
+            why.append("it broke out after %s New York" % self.ip("last_entry"))
+        if sig["gain_pct"] is None or sig["gain_pct"] < self.ip("min_gain_pct"):
+            why.append("it's up %s%% on the day, I need %g%%" % ("?" if sig["gain_pct"] is None else "%.1f" % sig["gain_pct"], self.ip("min_gain_pct")))
+        if sig["stop_pct"] is None or sig["stop_pct"] < self.ip("min_stop_pct"):
+            why.append("the stop would be only %s%% away (costs eat stops under %g%%)"
+                       % ("?" if sig["stop_pct"] is None else "%.1f" % sig["stop_pct"], self.ip("min_stop_pct")))
+        code, rv, err = tool_json("movers.py", "rvol", sym, "--json", timeout=60)
+        sig["rvol"] = (rv or {}).get("rvol")
+        if sig["rvol"] is None:
+            why.append("no opening-volume history to compare with")
+        elif sig["rvol"] < self.ip("min_rvol"):
+            why.append("opening volume is %.1fx normal, I need %gx" % (sig["rvol"], self.ip("min_rvol")))
+        sig["in_play"], sig["why"], sig["took"] = not why, "; ".join(why), False
+        self.st.setdefault("signals", []).append(sig)
+        self.st["signals"] = self.st["signals"][-600:]
+        return sig
+
     def hunt(self):
         if self.st["paused"]:
             self.bot("entry", "idle", "Paused by you.")
@@ -960,19 +1030,22 @@ class Jarvis:
             return
         if self.st.get("candidates_day") != self.today or not self.st["candidates"]:
             self.scan()
+        in_play = self.in_play_on()
         g = self.goals()
+        # Reasons not to BUY today. In-play mode keeps watching anyway, so the shadow book still sees every signal.
+        blocked = None
         if self.settings.get("stop_when_goal_hit", True) and (g["day_hit"] or g["week_hit"]):
-            self.bot("entry", "idle", "%s goal reached: locking in the profit, no new trades %s." % (
-                "Weekly" if g["week_hit"] else "Daily", "until next week" if g["week_hit"] else "today"))
-            return
+            blocked = "%s goal reached: locking in the profit, no new trades %s." % (
+                "Weekly" if g["week_hit"] else "Daily", "until next week" if g["week_hit"] else "today")
         max_trades = int(self.cfg.get("max_trades_per_day") or 3)
-        if len(self.entries_today()) >= max_trades:
-            self.bot("entry", "idle", "Done for today: %d of %d trades used." % (max_trades, max_trades))
-            return
+        if not blocked and len(self.entries_today()) >= max_trades:
+            blocked = "Done for today: %d of %d trades used." % (max_trades, max_trades)
         daily = float(self.cfg.get("max_daily_loss_usd") or 0)
         per = float(self.cfg.get("max_loss_per_trade_usd") or 0)
-        if daily and self.risk_used_today() + min(per, 0.01) > daily:
-            self.bot("entry", "idle", "Daily loss limit used up. Resting until tomorrow.")
+        if not blocked and daily and self.risk_used_today() + min(per, 0.01) > daily:
+            blocked = "Daily loss limit used up. Resting until tomorrow."
+        if blocked and not in_play:
+            self.bot("entry", "idle", blocked)
             return
         held = {p["symbol"] for p in self.positions}
         pending = {p["symbol"] for p in self.st["proposals"] if p["status"] == "pending"}
@@ -984,7 +1057,11 @@ class Jarvis:
         if watch.get("_day") != self.today:
             watch.clear()
             watch["_day"] = self.today
-        for h in always + [c for c in self.st["candidates"] if c["symbol"] not in names]:
+        # In-play mode hunts today's movers; the classic mode hunts the morning watchlist.
+        pool = self.movers() if in_play else self.st["candidates"]
+        if in_play and self.args.test_candidates:
+            pool = self.st["candidates"]
+        for h in always + [c for c in pool if c["symbol"] not in names]:
             sym = h["symbol"]
             if sym in self.st["seen"] or sym in held or sym in pending:
                 continue
@@ -1009,13 +1086,19 @@ class Jarvis:
                 triggered += 1
                 self.event("entry", "%s broke out at %s (%s)." % (sym, money((e.get("trigger") or {}).get("price")),
                                                                     (e.get("trigger") or {}).get("time")))
-                self.evaluate(sym, entry_path)
-                if len(self.entries_today()) >= max_trades:
-                    break
-        self.bot("entry", "working", "Checked %d charts at %s New York: %d breakouts." % (
-            checked, clock_str(self.ny), triggered))
+                sig = self.judge(sym, e)
+                if in_play and not sig["in_play"]:
+                    self.event("jarvis", "Passed on %s: not in play (%s)." % (sym, sig["why"]))
+                    continue
+                if blocked or len(self.entries_today()) >= max_trades:
+                    sig["why"] = "qualifies, but not buying: " + (blocked or "all of today's trades are used")
+                    self.event("jarvis", "%s qualifies, but I'm not buying: %s" % (sym, blocked or "all of today's trades are used."))
+                    continue
+                self.evaluate(sym, entry_path, sig if in_play else None)
+        self.bot("entry", "working", "Checked %d charts at %s New York: %d breakouts.%s" % (
+            checked, clock_str(self.ny), triggered, (" Not buying: " + blocked) if blocked else ""))
 
-    def evaluate(self, sym, entry_path):
+    def evaluate(self, sym, entry_path, sig=None):
         S = self.settings
         plan_path = os.path.join("trader", "work", "%s-plan.json" % sym)
         orders_path = os.path.join("trader", "work", "%s-orders.json" % sym)
@@ -1030,12 +1113,15 @@ class Jarvis:
                                   "--json", *self.extra("timemachine.py"), timeout=600)
         if not tm or "mc" not in tm:
             self.event("oracle", "Couldn't replay %s: %s" % (sym, (err or "")[-160:]))
-            return
+            if not sig:
+                return
+            tm = {"mc": {}}  # in play: the rules decide, so a stock too new to replay can still be bought
         mc, hist = tm["mc"], tm.get("history") or {}
         mc.pop("bands", None)
-        self.event("oracle", "%s: target first %s, stop first %s, neither %s (%d replays). History: %s fired, %s won, %s lost."
-                   % (sym, pct(mc.get("p_target")), pct(mc.get("p_stop")), pct(mc.get("p_neither")),
-                      mc.get("replays", 0), hist.get("triggered"), hist.get("target"), hist.get("stop")))
+        if mc:
+            self.event("oracle", "%s: target first %s, stop first %s, neither %s (%d replays). History: %s fired, %s won, %s lost."
+                       % (sym, pct(mc.get("p_target")), pct(mc.get("p_stop")), pct(mc.get("p_neither")),
+                          mc.get("replays", 0), hist.get("triggered"), hist.get("target"), hist.get("stop")))
         sizing, order, why = self.size_and_check(sym)
         if why:
             self.event("risk", "Skipped %s: %s" % (sym, why))
@@ -1044,12 +1130,18 @@ class Jarvis:
         target_profit = round(qty * (sizing["target"] - sizing["entry"]), 2)
         avg_r = mc.get("avg_R") or 0.0
         exp = round(avg_r * (sizing.get("max_loss") or 0), 2)
-        conf = self.confidence(mc, hist)
+        if sig:
+            # In play: the rules were tested on thousands of real breakouts; the replays can't see that today is
+            # unusual for this stock, so they inform the message but no longer veto the trade.
+            conf = "high" if (sig.get("rvol") or 0) >= self.ip("high_rvol") else "medium"
+        else:
+            conf = self.confidence(mc, hist)
         p = {"id": uuid.uuid4().hex[:8], "symbol": sym, "created": self.now_utc.isoformat(timespec="seconds"),
              "expires": (self.now_utc + dt.timedelta(minutes=int(S.get("approval_minutes", 20)))).isoformat(timespec="seconds"),
              "status": "new", "plan": {k: plan.get(k) for k in ("entry", "stop", "target", "entry_time", "stop_label", "target_label", "flat_by")},
              "sizing": sizing, "order": order, "odds": mc, "history": {k: hist.get(k) for k in ("sessions", "triggered", "target", "stop", "close", "avg_R")},
-             "target_profit": target_profit, "expected": exp, "confidence": conf}
+             "target_profit": target_profit, "expected": exp, "confidence": conf,
+             "in_play": {k: sig.get(k) for k in ("gain_pct", "rvol", "stop_pct")} if sig else None}
         self.st["proposals"].append(p)
         self.st["proposals"] = self.st["proposals"][-60:]
         if conf == "low":
@@ -1058,6 +1150,8 @@ class Jarvis:
             return
         if self.auto_ok(conf):
             ok, msg = self.place(p, "auto: %s confidence" % conf)
+            if sig and ok:
+                sig["took"] = True
             self.tg.send(self.idea_text(p, auto=True) + "\n\n" + msg)
             return
         p["status"] = "pending"
@@ -1085,16 +1179,22 @@ class Jarvis:
                  "🎯 Target %s → <b>%s</b> if it gets there" % (money(s["target"]), money(p["target_profit"], sign=True)),
                  "🛑 Stop %s → <b>%s</b> if it drops there (a fast drop can fill worse)" % (money(s["stop"]), money(-(s.get("max_loss") or 0))),
                  "⏱ Either way I close it by %s your time." % self.ny_time_local(hhmm(self.cfg.get("flat_by", "15:55"))),
-                 "",
-                 "📊 %s replays of today: target first <b>%s</b>, stop first <b>%s</b>, neither by the close %s"
-                 % ("{:,}".format(mc.get("replays", 0)), pct(mc.get("p_target")), pct(mc.get("p_stop")), pct(mc.get("p_neither"))),
-                 "📜 Last %s days: this setup fired %s×: %s hit target, %s hit stop"
-                 % (h.get("sessions"), h.get("triggered"), h.get("target"), h.get("stop")),
-                 "💡 Average result across the replays: <b>%s</b> a trade · confidence %s"
-                 % (money(p["expected"], sign=True), badge)]
+                 *(["🔥 In play: up <b>%.1f%%</b> today on <b>%.1fx</b> its normal opening volume"
+                    % (p["in_play"].get("gain_pct") or 0, p["in_play"].get("rvol") or 0)] if p.get("in_play") else []),
+                 ""]
+        if mc.get("replays"):
+            lines += ["📊 %s replays of today: target first <b>%s</b>, stop first <b>%s</b>, neither by the close %s"
+                      % ("{:,}".format(mc.get("replays", 0)), pct(mc.get("p_target")), pct(mc.get("p_stop")), pct(mc.get("p_neither"))),
+                      "📜 Last %s days: this setup fired %s×: %s hit target, %s hit stop"
+                      % (h.get("sessions"), h.get("triggered"), h.get("target"), h.get("stop"))]
+        lines.append("💡 Confidence %s" % badge if p.get("in_play") else
+                     "💡 Average result across the replays: <b>%s</b> a trade · confidence %s" % (money(p["expected"], sign=True), badge))
         if not auto:
             lines.append("\nTap Buy or reply <b>yes</b> by %s your time, or it expires." % exp_local)
-        lines.append("<i>Odds come from this stock's last 60 days. They're an estimate, not a promise.</i>")
+        lines.append("<i>Bought on the in-play rules: in a 60-day backtest about half of these won, for a small average "
+                     "profit. The replays come from this stock's ordinary days, so they understate a day like today. "
+                     "An estimate, not a promise.</i>" if p.get("in_play") else
+                     "<i>Odds come from this stock's last 60 days. They're an estimate, not a promise.</i>")
         return "\n".join(lines)
 
     # ---- end of day
@@ -1172,11 +1272,75 @@ class Jarvis:
                 if t.get("result") is None:
                     t["result"] = res
 
+    @staticmethod
+    def shadow_r(bars, k, plan, stop, target, slip=SHADOW_SLIP):
+        """What one breakout would have paid, in R, replayed the way research/backtest.py does it: buy at bar k's
+        open, a bar that touches both stop and target counts as the stop, a gap through the stop fills at the
+        open, the rest is sold at the 15:55 bar's open. bars = [[epoch, open, high, low, close], ...]."""
+        risk = plan - stop
+        if risk <= 0 or k >= len(bars):
+            return None
+        fill = bars[k][1] * (1 + slip)
+        if fill <= stop or fill >= target:
+            return None
+        for j in range(k, len(bars)):
+            ts, o, h, l, c = bars[j][:5]
+            e = to_ny(dt.datetime.fromtimestamp(ts, UTC))
+            if (e.hour, e.minute) >= (15, 55):
+                return round((o * (1 - slip) - fill) / risk, 3)
+            if l <= stop:
+                return round((min(stop, o) * (1 - slip) - fill) / risk, 3)
+            if h >= target:
+                return round((max(target, o) - fill) / risk, 3)
+        return round((bars[-1][4] * (1 - slip) - fill) / risk, 3)
+
+    def settle_signals(self):
+        """After the close, score every breakout Jarvis saw today, bought or not, under the old rules (stop at the
+        range middle) and the new ones (stop at the range low), both with a 2R target. This is the shadow book:
+        a running, out-of-sample test of the rules that costs nothing."""
+        todo = [x for x in self.st.get("signals", []) if x["date"] == self.today and "r_new" not in x]
+        for x in todo:
+            x["r_old"] = x["r_new"] = None
+            bars = self.fetch_bars(x["symbol"])
+            try:
+                hh = dt.datetime.strptime(str(x["time"]), "%I:%M %p").time()
+            except ValueError:
+                continue
+            k = next((i for i, b in enumerate(bars) if to_ny(dt.datetime.fromtimestamp(b[0], UTC)).time() >= hh), None)
+            if k is None or not x.get("or_low") or not x.get("or_high"):
+                continue
+            plan, lo, mid = x["price"], x["or_low"], (x["or_high"] + x["or_low"]) / 2
+            x["r_old"] = self.shadow_r(bars, k, plan, mid, plan + 2 * (plan - mid))
+            x["r_new"] = self.shadow_r(bars, k, plan, lo, plan + 2 * (plan - lo))
+        if todo:
+            self.event("oracle", "Scored %d breakout signals for the shadow book." % len(todo))
+
+    def lab(self):
+        """The shadow book, summed up for the dashboard."""
+        sig = [x for x in self.st.get("signals", []) if x.get("r_new") is not None or x.get("r_old") is not None]
+
+        def summ(rows, key):
+            r = [x[key] for x in rows if x.get(key) is not None]
+            return {"n": len(r), "win": round(sum(1 for v in r if v > 0) / len(r), 3) if r else None,
+                    "avg_r": round(sum(r) / len(r), 3) if r else None, "total_r": round(sum(r), 2)}
+        ip_ = [x for x in sig if x.get("in_play")]
+        days = sorted({x["date"] for x in sig})
+        curve, tot = [], 0.0
+        for d in days:
+            tot += sum(x["r_new"] for x in ip_ if x["date"] == d and x.get("r_new") is not None)
+            curve.append([d, round(tot, 2)])
+        return {"since": days[0] if days else None, "days": len(days),
+                "in_play": summ(ip_, "r_new"), "not_in_play": summ([x for x in sig if not x.get("in_play")], "r_old"),
+                "all_old_rules": summ(sig, "r_old"), "curve": curve,
+                "recent": [{k: x.get(k) for k in ("date", "symbol", "time", "gain_pct", "rvol", "stop_pct", "in_play", "took", "why", "r_old", "r_new")}
+                           for x in self.st.get("signals", [])[-40:][::-1]]}
+
     def recap(self):
         a = self.account or {}
         eq, last = float(a.get("equity") or 0), self.last_close()
         trades = [t for t in self.st["trades"] if t["date"] == self.today]
         self.settle_results()
+        self.settle_signals()
         lines = ["🌙 <b>Day recap</b> · %s (%s)" % (day_str(self.local()), self.mode()),
                  "Account: <b>%s</b> · today <b>%s</b>" % (money(eq), money(eq - last, sign=True)), ""]
         if trades:
@@ -1189,6 +1353,13 @@ class Jarvis:
         if done:
             wins = sum(1 for t in done if t["result"] > 0)
             lines.append("\nSo far: %d trades, %d winners, total %s." % (len(done), wins, money(sum(t["result"] for t in done), sign=True)))
+        today_sigs = [x for x in self.st.get("signals", []) if x["date"] == self.today and x.get("r_new") is not None]
+        if today_sigs:
+            ip_ = [x for x in today_sigs if x.get("in_play")]
+            lines.append("\n🔬 Shadow book: %d breakouts seen today, %d in play. On paper the in-play ones made %s, "
+                         "the rest %s (R = one stop's worth)." % (
+                             len(today_sigs), len(ip_), "%+.2fR" % sum(x["r_new"] for x in ip_) if ip_ else "nothing",
+                             "%+.2fR" % sum(x["r_old"] for x in today_sigs if not x.get("in_play") and x.get("r_old") is not None)))
         g = self.goals()
         lines.append("\n🎯 Daily goal %s: %s %s · 🏆 week %s of %s %s" % (
             money(g["daily_goal"]), money(g["day_pl"], sign=True), "✅" if g["day_hit"] else "❌",
@@ -1238,6 +1409,10 @@ class Jarvis:
             start = max(hhmm(self.cfg.get("no_entries_before", "09:45")), open_t)
             stop = min(hhmm(self.cfg.get("no_entries_after", "15:30")),
                        (dt.datetime.combine(self.ny.date(), close_t) - dt.timedelta(minutes=30)).time())
+            if self.in_play_on():
+                # The signal bar must close by last_entry; Yahoo posts it a few minutes later, so keep
+                # looking for 10 more minutes (judge() still refuses anything that broke out after it).
+                stop = min(stop, (dt.datetime.combine(self.ny.date(), self.last_entry_time()) + dt.timedelta(minutes=10)).time())
             brief_t = hhmm(self.settings.get("brief_at", "08:00"))
             if t < min(brief_t, open_t):
                 self.bot("entry", "idle", "Trading day ahead: morning brief at %s, market opens %s (your time)."
@@ -1252,7 +1427,9 @@ class Jarvis:
             elif start <= t < stop:
                 self.hunt()
             elif stop <= t < flat:
-                self.bot("entry", "idle", "No new entries this late. Watching open trades.")
+                self.bot("entry", "idle", "Entry window closed (breakouts after %s New York lose more than they make). "
+                         "Watching open trades." % self.ip("last_entry") if self.in_play_on()
+                         else "No new entries this late. Watching open trades.")
             elif flat <= t < close_t:
                 self.flatten()
                 self.bot("broker", "working", "Closing anything still open before the bell.")
@@ -1403,8 +1580,12 @@ class Jarvis:
                       for s in (self.settings.get("always_watch") or [])],
             "market_open": bool(self.cal) and self.cal[0] <= self.ny.time() < self.cal[1],
             "next_checkin_utc": self.next_checkin().isoformat(timespec="seconds"),
-            "settings": {"auto": self.auto_label(), "target": self.settings.get("target"),
+            "settings": {"auto": self.auto_label(), "target": self.settings.get("target"), "stop": self.settings.get("stop"),
                          "candidates": self.settings.get("candidates"), "always_watch": self.settings.get("always_watch")},
+            "strategy": {"name": "in_play" if self.in_play_on() else "classic",
+                         "rules": {k: self.ip(k) for k in ("min_gain_pct", "min_rvol", "min_stop_pct", "last_entry")}},
+            "movers": self.st.get("movers") if (self.st.get("movers") or {}).get("t", "")[:10] == self.now_utc.date().isoformat() else None,
+            "lab": self.lab(),
             "positions": [{"symbol": p["symbol"], "qty": float(p["qty"]), "value": float(p["market_value"]),
                            "pl": float(p["unrealized_pl"]), "entry": float(p["avg_entry_price"])} for p in self.positions],
             "bots": [dict({"id": k, "name": v[0], "role": v[1]},

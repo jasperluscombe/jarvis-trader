@@ -13,8 +13,19 @@
   "ask_min_avg_r": 0.0,
   "ask_min_history_avg_r": -0.1,
 
+  "strategy": "in_play",
+  "in_play": {
+    "min_gain_pct": 4.0,
+    "min_rvol": 1.5,
+    "min_stop_pct": 1.0,
+    "last_entry": "10:30",
+    "scan_min_gain_pct": 3.0,
+    "movers": 30,
+    "high_rvol": 3.0
+  },
+
   "target": "2R",
-  "stop": "or-mid",
+  "stop": "or-low",
   "replays": 5000,
 
   "risk_per_trade_pct": 2.0,

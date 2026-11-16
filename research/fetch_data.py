@@ -3,6 +3,9 @@
 
     python3 research/fetch_data.py --out DATA_DIR            # universe -> liquid list -> 5-minute + daily bars
 
+    python3 research/fetch_data.py --out DATA_DIR --hourly   # also 2 years of 1-hour bars -> DATA_DIR/1h/
+    python3 research/fetch_data.py --out DATA_DIR --refresh  # download the 5-minute bars again (newest days)
+
 Writes DATA_DIR/liquid.json (symbols with price >= 3 and volume >= 500k today), DATA_DIR/5m/<SYM>.json.gz
 (60 days of 5-minute bars, the most Yahoo gives) and DATA_DIR/1d/<SYM>.json.gz (2 years of daily bars).
 Files already there are kept, so a stopped run can be continued.
@@ -80,8 +83,10 @@ def main():
     ap.add_argument("--min-price", type=float, default=3)
     ap.add_argument("--min-volume", type=float, default=500000)
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--hourly", action="store_true", help="also 2 years of 1-hour bars (Yahoo's limit is 730 days)")
+    ap.add_argument("--refresh", action="store_true", help="download the 5-minute bars again")
     a = ap.parse_args()
-    for d in ("5m", "1d"):
+    for d in ("5m", "1d", "1h"):
         os.makedirs(os.path.join(a.out, d), exist_ok=True)
     lp = os.path.join(a.out, "liquid.json")
     if os.path.exists(lp):
@@ -95,7 +100,14 @@ def main():
         json.dump(liq, open(lp, "w"))
     syms = sorted(liq)
     print("liquid", len(syms))
+    if a.refresh:
+        for s in syms:
+            f = os.path.join(a.out, "5m", s + ".json.gz")
+            if os.path.exists(f):
+                os.remove(f)
     jobs = [(s, "60d", "5m", os.path.join(a.out, "5m", s + ".json.gz")) for s in syms]
+    if a.hourly:
+        jobs += [(s, "730d", "1h", os.path.join(a.out, "1h", s + ".json.gz")) for s in syms]
     jobs += [(s, "2y", "1d", os.path.join(a.out, "1d", s + ".json.gz")) for s in syms]
     ok = 0
     with cf.ThreadPoolExecutor(a.workers) as ex:

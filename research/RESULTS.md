@@ -1,5 +1,11 @@
 # What the backtest found (13–16 Nov 2026)
 
+> **Update, 16 Nov 2026: read [EXPERIMENTS.md](EXPERIMENTS.md) first.** Two stricter tests have since weakened the
+> result below. A walk-forward test (settings picked only on earlier days) averaged +0.16R a trade out of sample, but
+> the range runs from −0.16R to +0.45R, so the edge can't be told apart from zero. A two-year test on hourly bars
+> found the in-play idea break-even (−0.01R a trade). It beat "no filter" in every quarter, but it never clearly
+> made money.
+
 **Short version:** Jarvis's old rules lost money once realistic fills were counted. Breakouts only paid in stocks
 that were already **in play**: up 4 %+ on the day, on 1.5× their normal opening volume, breaking out in the first
 hour. Jarvis now trades only those. The improvement is real in this data, but the rules were picked by looking at

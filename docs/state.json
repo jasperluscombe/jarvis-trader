@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-16T04:00:00+00:00",
+ "updated_utc": "2026-11-16T04:00:11+00:00",
  "updated_local": "Mon 16 Nov 2:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
@@ -6209,6 +6209,7 @@
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
+  "stop": "or-low",
   "candidates": 30,
   "always_watch": [
    "QQQ",
@@ -6220,6 +6221,40 @@
    "SH"
   ]
  },
+ "strategy": {
+  "name": "in_play",
+  "rules": {
+   "min_gain_pct": 4.0,
+   "min_rvol": 1.5,
+   "min_stop_pct": 1.0,
+   "last_entry": "10:30"
+  }
+ },
+ "movers": null,
+ "lab": {
+  "since": null,
+  "days": 0,
+  "in_play": {
+   "n": 0,
+   "win": null,
+   "avg_r": null,
+   "total_r": 0
+  },
+  "not_in_play": {
+   "n": 0,
+   "win": null,
+   "avg_r": null,
+   "total_r": 0
+  },
+  "all_old_rules": {
+   "n": 0,
+   "win": null,
+   "avg_r": null,
+   "total_r": 0
+  },
+  "curve": [],
+  "recent": []
+ },
  "positions": [],
  "bots": [
   {
@@ -6228,12 +6263,12 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-16T04:00:00+00:00"
+   "t": "2026-11-16T04:00:11+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
-   "role": "Scans ~6,000 US stocks for setups before the open.",
+   "role": "Scans ~6,000 US stocks before the open, then finds the ones in play after it.",
    "status": "idle",
    "text": "Scanned the US market: 204 charts matched a setup, 108 fit your $5-$40 price range. Watching the top 30.",
    "t": "2026-11-13T13:00:00+00:00"
@@ -6252,12 +6287,12 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-16T04:00:00+00:00"
+   "t": "2026-11-16T04:00:11+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
-   "role": "Replays the rest of the day thousands of times: the odds.",
+   "role": "Replays the rest of the day thousands of times, and scores every signal after the close.",
    "status": "idle",
    "text": "VFC: target first 4%, stop first 21%, neither 76% (5000 replays). History: 33 fired, 6 won, 9 lost.",
    "t": "2026-11-13T18:25:00+00:00"

@@ -9,16 +9,28 @@ Telegram, and shows a live dashboard of its bot crew. Your laptop can stay close
 |---|---|
 | ~12:00 AM | **Morning brief**: scans ~6,000 US stocks, reads the news, sends the watchlist and when to be awake |
 | 1:30 AM | US market opens. Jarvis waits 15 min for the opening range |
-| 1:45 AM – 7:30 AM | **Hunting**: every ~5 min it checks the watchlist for breakouts. For each one: stop, target, thousands of replays for the odds, sizing to your limits, risk check |
+| 1:45 AM – 2:10 AM | **Hunting**: every ~5 min it finds the stocks **in play** (up 4%+ today on 1.5× normal opening volume) and checks them for a breakout above the opening range. For each one: stop, target, replays, sizing to your limits, risk check |
 | | **High or medium confidence + paper account**: buys by itself and tells you |
 | | **Real money**: always asks you first: Buy / Skip (expires in 20 min) |
 | | **Low confidence (coin flip)**: passes, logs why |
+| 2:10 AM – 7:55 AM | Watches open trades. No new entries: late breakouts lost money in the backtest |
 | 7:55 AM | Closes anything still open |
-| ~8:05 AM | **Recap**: result, account, next open |
+| ~8:05 AM | **Recap**: result, account, the shadow book (every breakout scored, bought or not), next open |
 
 (April–October the times shift by 1–2 hours; Jarvis always messages in your local time.)
 
 Telegram commands: `yes` / `no` (latest idea), `/status`, `/pause`, `/resume`, `/help`.
+
+## Strategy: stocks in play (since Nov 2026)
+
+A 59-day backtest of every opening-range breakout in ~1,000 US stocks ([research/RESULTS.md](research/RESULTS.md))
+found the old rules lost about 0.16R a trade after realistic fills. Breakouts paid only in stocks that were already
+**up 4 %+ on the day on 1.5× their normal opening volume**, breaking out by **10:30 AM New York**, with the stop at
+the opening-range **low** at least 1 % away and a 2R target. Jarvis now trades only those (`"strategy": "in_play"`
+and the `in_play` block in `jarvis/settings.json`; `"strategy": "classic"` brings back the old behaviour).
+
+Those rules were chosen on the same 59 days they were tested on, so the backtest flatters them. The **shadow book**
+on the dashboard's Lab tab scores every breakout Jarvis sees from now on: that's the real test.
 
 ## Safety rails
 
@@ -50,8 +62,9 @@ Telegram commands: `yes` / `no` (latest idea), `/status`, `/pause`, `/resume`, `
 | `jarvis/jarvis.py` | the engine: one check-in per run |
 | `jarvis/settings.json` | auto-buy thresholds, watchlist size, your time zone |
 | `trader/config.json` | your money limits |
-| `tools/` | the day-trader-skill tools (MIT, Jake Schincariol) |
-| `docs/` | the dashboard (GitHub Pages) |
+| `tools/` | the day-trader-skill tools (MIT, Jake Schincariol), plus `movers.py` (stocks in play) |
+| `research/` | the backtest and its results ([RESULTS.md](research/RESULTS.md)) |
+| `docs/` | the dashboard (GitHub Pages): Home, Activity and Lab (backtest + shadow book) tabs |
 | `.github/workflows/jarvis.yml` | the 5-minute schedule |
 | `state/jarvis.json` | Jarvis's memory between check-ins |
 

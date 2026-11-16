@@ -541,7 +541,7 @@ def find_setups(closes):
 
 def scan_daily(data, symbols, now_utc, min_price, min_volume):
     """Pure. data = {SYM: series}. Returns (hits, counts, last_date)."""
-    hits, dates = [], {}
+    hits, dates, liquid = [], {}, []
     counts = {"requested": len(symbols), "fetched": 0, "illiquid": 0, "short": 0, "scanned": 0}
     for sym in symbols:
         s = data.get(sym)
@@ -557,6 +557,7 @@ def scan_daily(data, symbols, now_utc, min_price, min_volume):
         if price is None or price < min_price or (min_volume > 0 and (vol is None or vol < min_volume)):
             counts["illiquid"] += 1
             continue
+        liquid.append({"symbol": sym, "price": round(float(price), 2), "volume": int(vol) if vol is not None else None})
         if len(bars) < MIN_DAILY_BARS:
             counts["short"] += 1
             continue
@@ -572,6 +573,7 @@ def scan_daily(data, symbols, now_utc, min_price, min_volume):
     hits.sort(key=lambda h: (-(h["price"] * (h["volume"] or 0)), h["symbol"]))  # most dollars traded first
     last_date = max(dates, key=lambda d: (dates[d], d)) if dates else None
     counts["hits"] = len(hits)
+    counts["liquid"] = liquid  # every symbol over the floors, setup or not (for --liquid-out)
     return hits, counts, last_date
 
 
@@ -893,6 +895,11 @@ def cmd_daily(a):
                  % ("{:,}".format(len(symbols)), (len(symbols) + SPARK_MAX - 1) // SPARK_MAX))
         data, failed = fetch_spark(symbols, "3mo", "1d", a.pause, a)
     hits, counts, last_date = scan_daily(data, symbols, now, a.min_price, a.min_volume)
+    liquid = counts.pop("liquid")
+    if a.liquid_out and liquid:
+        write_json(a.liquid_out, {"created_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                  "as_of": ("%s close" % last_date.isoformat()) if last_date else None,
+                                  "filters": {"min_price": a.min_price, "min_volume": a.min_volume}, "symbols": liquid})
     nfailed = len(symbols) - counts["fetched"]
     as_of = ("%s close" % last_date.isoformat()) if last_date else None
     doc = {"created_by": "trader-scanner", "created_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "mode": "daily",
@@ -1057,6 +1064,7 @@ def main(argv=None):
 
     p = sub.add_parser("daily", help="pre-market setups from daily closes")
     common(p, 5.0, 1000000)
+    p.add_argument("--liquid-out", metavar="PATH", help="also write every symbol over the price and volume floors")
     p = sub.add_parser("orb", help="opening-range breakouts so far today")
     common(p, 5.0, 0)
     p.add_argument("--or-minutes", type=int, default=15)

@@ -38,9 +38,9 @@ on the dashboard's Lab tab scores every breakout Jarvis sees from now on: that's
 - Auto-buy works on paper only (`auto_trade_live: false` in `jarvis/settings.json`). On paper it buys
   medium and high confidence ideas (`auto_paper_min_confidence`); with real money it never buys below high,
   and only if you turn `auto_trade_live` on.
-- Sizing grows with the account: each trade risks 2% of yesterday's closing value (`risk_per_trade_pct`),
+- Sizing grows with the account: each trade risks 3% of yesterday's closing value (`risk_per_trade_pct`),
   the daily loss limit is 10% (`daily_loss_pct`), orders up to 90%. Jarvis rewrites those $ numbers in
-  `trader/config.json` each day. At $50 that's $1 a trade and $5 a day.
+  `trader/config.json` each day. At $55 that's about $1.65 a trade and $5.50 a day.
 - Goals: +2% a day, +8% a week (`daily_goal_pct` / `weekly_goal_pct`): +$1 / +$4 at $50. Once a goal is reached Jarvis stops
   opening trades (today / this week) to lock the profit in. Below the goal it keeps hunting, but never past the loss limits.
 - QQQ (Nasdaq-100), SPY (S&P 500), TSLA, NVDA and AAPL are always watched, on top of the ~30 stocks from
@@ -48,7 +48,7 @@ on the dashboard's Lab tab scores every breakout Jarvis sees from now on: that's
 - PSQ and SH (1x inverse Nasdaq-100 / S&P 500 funds) are always watched too: they rise when the market
   falls, so Jarvis can profit on down days by buying, never short selling. No leveraged (2x/3x) funds. Alpaca holds its stop-loss; Jarvis sells at the
   target itself on a check-in.
-- Every trade, auto or approved, goes through the risk check: $1 max loss a trade, $5 a day,
+- Every trade, auto or approved, goes through the risk check: 3% of the account max loss a trade, 10% a day,
   10 trades a day, reward:risk at least 1.5, a stop-loss on every order, no margin, no shorting, no options.
   These are **paper practice** limits (the day-trade counter is off). Real money stays locked until
   `live_limits_reviewed` is set to true in `jarvis/settings.json` after reviewing them.

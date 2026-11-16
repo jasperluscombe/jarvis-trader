@@ -38,17 +38,36 @@ def signal(b, or_bars=3, vol_x=None):
     return None, hi, lo
 
 
-def replay(b, i, stop, target, be_at=None, trail_r=None, time_stop=None, slip=SLIP):
-    """Buy at bar i+1's open. Returns (R, how, fill, exit price, exit bar) or None when there is no fill."""
+def replay(b, i, stop, target, be_at=None, trail_r=None, time_stop=None, slip=SLIP, limit=None, limit_bars=1):
+    """Buy at bar i+1's open (a market order). With limit=L, a limit order at the signal price x (1 + L) instead,
+    good for limit_bars bars: it fills at the bar's open if that's at or under the limit, at the limit if the bar
+    trades down to it, and not at all otherwise (a missed trade). Returns (R, how, fill, exit price, exit bar) or
+    None when there is no fill."""
     plan = float(b[3, i])
     risk = plan - stop
     if risk <= 0 or i + 1 > LAST or np.isnan(b[0, i + 1]):
         return None
-    fill = float(b[0, i + 1]) * (1 + slip)
+    start = i + 1
+    if limit is None:
+        fill = float(b[0, i + 1]) * (1 + slip)
+    else:
+        lim, fill = plan * (1 + limit), None
+        for k in range(i + 1, min(i + 1 + limit_bars, LAST)):
+            o, l = float(b[0, k]), float(b[2, k])
+            if np.isnan(o):
+                continue
+            if o <= lim:
+                fill, start = o, k
+                break
+            if l <= lim:
+                fill, start = lim, k
+                break
+        if fill is None:
+            return None  # the order never filled
     if fill <= stop or (target is not None and fill >= target):
         return None  # the price ran away before Jarvis could buy
     s, hi_seen = stop, fill
-    for k in range(i + 1, LAST + 1):
+    for k in range(start, LAST + 1):
         o, h, l, c = (float(x) for x in b[:4, k])
         if np.isnan(o):
             continue

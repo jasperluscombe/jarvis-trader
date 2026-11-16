@@ -667,7 +667,8 @@ class Jarvis:
                                   "symbol": p["symbol"], "qty": s.get("qty"), "entry": s.get("entry"),
                                   "stop": s.get("stop"), "target": s.get("target"), "max_loss": s.get("max_loss"),
                                   "target_profit": p.get("target_profit"), "source": source,
-                                  "confidence": p.get("confidence"), "paper": self.paper, "result": None})
+                                  "confidence": p.get("confidence"), "paper": self.paper, "result": None,
+                                  "order_id": res.get("id"), "strategy": "in_play" if p.get("in_play") else "classic"})
         self.st["trades"] = self.st["trades"][-150:]
         if s.get("fractional"):
             # Alpaca won't attach a stop/target to part-shares: put a real stop order at the broker as soon as
@@ -1255,22 +1256,31 @@ class Jarvis:
         legs.sort(key=lambda x: x["filled_at"])
         for sym in {t["symbol"] for t in pending}:
             # walk the fills in time order; each time the position goes flat, one round trip is done
-            trips, qty, cash = [], 0.0, 0.0
+            trips, qty, cash, bq, bc, sq, sc = [], 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
             for x in legs:
                 if x["symbol"] != sym:
                     continue
                 q, px = float(x["filled_qty"]), float(x["filled_avg_price"])
                 qty += q if x["side"] == "buy" else -q
                 cash += q * px if x["side"] == "sell" else -q * px
+                if x["side"] == "buy":
+                    bq, bc = bq + q, bc + q * px
+                else:
+                    sq, sc = sq + q, sc + q * px
                 if abs(qty) < 1e-6:
-                    trips.append(round(cash, 2))
-                    qty = cash = 0.0
+                    # the result, plus the average prices actually paid and received (to measure slippage)
+                    trips.append((round(cash, 2), bc / bq if bq else None, sc / sq if sq else None))
+                    qty = cash = bq = bc = sq = sc = 0.0
             # line the round trips up with every trade in sym since `start`, settled or not
             mine = sorted((t for t in self.st["trades"] if t["symbol"] == sym and t["date"] >= start.isoformat()),
                           key=lambda t: t["t"])
-            for t, res in zip(mine, trips):
+            for t, (res, buy_px, sell_px) in zip(mine, trips):
                 if t.get("result") is None:
                     t["result"] = res
+                    if buy_px and t.get("entry"):
+                        # slippage = what the fill cost against the price the plan was made at (+ = paid more)
+                        t["fill"], t["exit_fill"] = round(buy_px, 4), round(sell_px, 4) if sell_px else None
+                        t["slip_pct"] = round(100 * (buy_px / float(t["entry"]) - 1), 3)
 
     @staticmethod
     def shadow_r(bars, k, plan, stop, target, slip=SHADOW_SLIP):
@@ -1545,6 +1555,60 @@ class Jarvis:
                 "ideas": len(self.st["proposals"]),
                 "passed": sum(1 for p in self.st["proposals"] if p.get("status") == "passed")}
 
+    def perf(self, eq):
+        """The full performance report for the dashboard, from the trade record and the account's value history."""
+        start = float(self.settings.get("starting_balance", 50.0))
+        done = [t for t in self.st["trades"] if t.get("result") is not None]
+        res = [float(t["result"]) for t in done]
+        wins, losses = [r for r in res if r > 0], [r for r in res if r <= 0]
+        unreal = round(sum(float(p.get("unrealized_pl") or 0) for p in self.positions), 2)
+        # drawdown and Sharpe from the account value: one value a New York day (the last check-in's)
+        hist = self.st.get("equity_history", [])
+        daily = {}
+        for h in hist:
+            daily[to_ny(dt.datetime.fromisoformat(h["t"])).date().isoformat()] = h["eq"]
+        vals = [v for _, v in sorted(daily.items())]
+        peak, dd, dd_usd = start, 0.0, 0.0
+        for h in hist:
+            peak = max(peak, h["eq"])
+            if peak > 0 and (h["eq"] - peak) / peak < dd:
+                dd, dd_usd = (h["eq"] - peak) / peak, h["eq"] - peak
+        rets = [vals[i] / vals[i - 1] - 1 for i in range(1, len(vals)) if vals[i - 1] > 0]
+        sharpe = None
+        if len(rets) >= 10:
+            m = sum(rets) / len(rets)
+            sd = (sum((r - m) ** 2 for r in rets) / (len(rets) - 1)) ** 0.5
+            sharpe = round(m / sd * 252 ** 0.5, 2) if sd > 0 else None
+        rs = [float(t["result"]) / float(t["max_loss"]) for t in done if t.get("max_loss")]
+        slips = [t["slip_pct"] for t in done if t.get("slip_pct") is not None]
+
+        def group(key):
+            g = {}
+            for t in done:
+                g.setdefault(key(t), []).append(t)
+            rows = []
+            for k, ts in g.items():
+                r = [float(t["result"]) for t in ts]
+                rr = [float(t["result"]) / float(t["max_loss"]) for t in ts if t.get("max_loss")]
+                rows.append({"name": k, "trades": len(ts), "wins": sum(1 for x in r if x > 0), "total": round(sum(r), 2),
+                             "avg_r": round(sum(rr) / len(rr), 3) if rr else None})
+            return sorted(rows, key=lambda x: -x["total"])
+        return {"start": start, "now": round(eq, 2), "return_usd": round(eq - start, 2),
+                "return_pct": round(100 * (eq / start - 1), 2) if start else None,
+                "realised": round(sum(res), 2), "unrealised": unreal, "trades": len(done),
+                "win_rate": round(len(wins) / len(res), 3) if res else None,
+                "profit_factor": round(sum(wins) / -sum(losses), 2) if losses and sum(losses) < 0 else None,
+                "avg_win": round(sum(wins) / len(wins), 2) if wins else None,
+                "avg_loss": round(sum(losses) / len(losses), 2) if losses else None,
+                "avg_r": round(sum(rs) / len(rs), 3) if rs else None,
+                "max_dd_pct": round(100 * dd, 2), "max_dd_usd": round(dd_usd, 2),
+                "sharpe": sharpe, "sharpe_days": len(rets),
+                # Alpaca charges no commission; regulatory fees apply only to real-money sells (a cent or so here)
+                "fees": 0.0 if self.paper else None,
+                "avg_slip_pct": round(sum(slips) / len(slips), 3) if slips else None, "slip_trades": len(slips),
+                "by_strategy": group(lambda t: t.get("strategy") or "classic"),
+                "by_symbol": group(lambda t: t["symbol"])}
+
     def _bot_view(self, b):
         """A bot looks busy on the dashboard only if it did something this check-in."""
         b = dict(b)
@@ -1568,7 +1632,9 @@ class Jarvis:
             "updated_local": "%s %s" % (day_str(self.local()), clock_str(self.local())),
             "timezone": self.tz_label(), "tz": self.tz, "mode": self.mode(), "paused": self.st["paused"],
             "auto_trade": self.auto_allowed(),
-            "account": {"equity": eq, "cash": float(a.get("cash") or 0), "day_pl": round(eq - last, 2), "start": 50.0},
+            "account": {"equity": eq, "cash": float(a.get("cash") or 0), "day_pl": round(eq - last, 2),
+                        "start": float(self.settings.get("starting_balance", 50.0))},
+            "perf": self.perf(eq),
             "limits": {k: self.cfg.get(k) for k in ("max_loss_per_trade_usd", "max_daily_loss_usd", "max_trades_per_day",
                                                      "min_reward_risk", "no_entries_before", "no_entries_after", "flat_by")},
             "today": {"trades": len(self.entries_today()), "risk_used": self.risk_used_today()},

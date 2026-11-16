@@ -272,7 +272,15 @@ tr:last-child td{border:0}
 
   <!-- ================= TRADES ================= -->
   <section class="page" data-page="trades">
+    <h2 style="margin-top:6px">Performance <small id="perf-since"></small></h2>
     <div class="kgrid" id="stats"></div>
+    <div class="card" id="perf-more" style="margin-top:10px;padding-top:4px;padding-bottom:4px"></div>
+
+    <h2>By strategy</h2>
+    <div class="card list" id="by-strategy"></div>
+
+    <h2>By stock <small>best and worst</small></h2>
+    <div class="card list" id="by-symbol"></div>
 
     <h2>Trades <small id="trades-n"></small></h2>
     <div class="card" id="trades" style="padding-top:4px"></div>
@@ -540,6 +548,32 @@ function renderFocus(d){
 
 /* ---------- trades tab */
 function renderStats(d){
+  const P=d.perf;
+  if(P){
+    const pc=x=>x==null?"—":(x>0?"+":x<0?"−":"")+Math.abs(x).toFixed(1)+"%";
+    $("perf-since").textContent="since "+money(P.start);
+    $("stats").innerHTML=[
+      ["Balance",money(P.now),`<span class="${cls(P.return_usd)}">${money(P.return_usd,true)} (${pc(P.return_pct)})</span>`],
+      ["Win rate",P.win_rate==null?"—":Math.round(P.win_rate*100)+"%",`${P.trades} closed trades`],
+      ["Profit factor",P.profit_factor==null?"—":P.profit_factor.toFixed(2)+"×","won ÷ lost"],
+      ["Per trade",`<span class="${cls(P.avg_r)}">${fmtR(P.avg_r)}</span>`,"R = what a trade risks"]]
+      .map(([l,v,sub])=>`<div class="k"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${sub}</div></div>`).join("");
+    const kv=[["Realised P&amp;L",`<span class="${cls(P.realised)}">${money(P.realised,true)}</span>`],
+      ["Unrealised P&amp;L",`<span class="${cls(P.unrealised)}">${money(P.unrealised,true)}</span>`],
+      ["Average win / loss",`<span class="up">${money(P.avg_win,true)}</span> / <span class="down">${money(P.avg_loss)}</span>`],
+      ["Worst drop from a high",`<span class="down">${pc(P.max_dd_pct)}</span> <span class="dim">(${money(P.max_dd_usd)})</span>`],
+      ["Sharpe ratio",P.sharpe==null?`<span class="dim">after 10 days</span>`:`${P.sharpe.toFixed(2)}${P.sharpe_days<60?` <span class="dim">(${P.sharpe_days} days: too few)</span>`:""}`],
+      ["Slippage on buys",P.avg_slip_pct==null?`<span class="dim">from the next trade</span>`:`${P.avg_slip_pct>0?"+":""}${P.avg_slip_pct.toFixed(2)}% <span class="dim">(${P.slip_trades} trades)</span>`],
+      ["Fees paid",P.fees==null?"—":money(P.fees)+` <span class="dim">(paper: none)</span>`]];
+    $("perf-more").innerHTML=kv.map(([k,v])=>`<div class="kv"><span>${k}</span><b>${v}</b></div>`).join("");
+    const grp=(rows,el,empty)=>{$(el).innerHTML=rows.length?rows.map(x=>`<div class="it"><span class="sym" style="min-width:76px">${esc(x.name.replace("in_play","in play"))}</span>
+      <div class="mid"><div class="s1">${x.trades} trade${x.trades===1?"":"s"} · ${x.wins} won</div><div class="s2">${x.avg_r==null?"":fmtR(x.avg_r)+" a trade"}</div></div>
+      <div class="rt ${cls(x.total)}">${money(x.total,true)}</div></div>`).join(""):`<div class="empty">${empty}</div>`};
+    grp(P.by_strategy||[],"by-strategy","No closed trades yet.");
+    const bs=P.by_symbol||[];
+    grp(bs.length>8?bs.slice(0,4).concat(bs.slice(-4)):bs,"by-symbol","No closed trades yet.");
+    return;
+  }
   const s=d.stats||{}, r=d.record||{};
   const rs=(d.trades||[]).filter(t=>t.result!=null&&t.max_loss>0).map(t=>t.result/t.max_loss);
   const avgR=rs.length?rs.reduce((a,b)=>a+b,0)/rs.length:null;

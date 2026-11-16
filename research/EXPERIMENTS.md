@@ -20,6 +20,31 @@ Then it runs in the shadow book for ≥ 20 trading days before it can trade.
 
 ---
 
+## E6 · 16 Nov 2026 · Five candidate changes (`research/candidates.py`)
+
+Each candidate is ONE change to the baseline (A), fixed before running. Hourly = two years, out of sample for every
+candidate. 5-minute = the 60 days the baseline was picked on (so only the *difference* from A means anything there).
+
+| | Candidate | 5-min avg R (0.05 % / 0.2 % slippage) | Hourly avg R (0.05 % / 0.2 %) | Hourly trades |
+|---|---|---|---|---:|
+| A | baseline (live rules) | +0.150 / +0.077 | −0.009 / −0.057 | 1,866 |
+| B | limit entry at signal + 0.1 %, 1 bar | +0.158 / +0.123 | −0.001 / −0.025 | 1,858 |
+| C | same, good for 2 bars | +0.159 / +0.124 | (not run on hourly) | |
+| D | up 5 %+ instead of 4 % | +0.164 / +0.098 | +0.004 / −0.040 | 1,466 |
+| E | up 8 %+ | +0.281 / +0.234 | +0.015 / −0.019 | 720 |
+| F | only when SPY is up on the day | +0.179 / +0.105 | −0.013 / −0.063 | 1,376 |
+
+Limit orders filled 337 (B) and 340 (C) of the 343 baseline signals, so they rarely miss a trade. (Caveat: the
+backtest assumes a limit fills whenever the price touches it, which flatters limits a little.)
+
+*Against the promotion rules:* none passes. B (limit entries) cuts the cost of slippage the most (+0.03R to +0.05R
+at 0.2 %), but at normal slippage it adds under 0.01R. E (up 8 %+) is the best on both datasets, but on two years
+it improves the baseline by only +0.024R and is still negative at 0.2 % slippage. F (market mood) is worse on two
+years. *Verdict:* **no change promoted.** B and E are the two to watch: B because it's a cost saving with a clear
+mechanism, E because "already up a lot" is the one pattern that shows up in every test.
+
+---
+
 ## E5 · 16 Nov 2026 · Two-year check on hourly bars (`research/hourly.py`)
 
 *Question:* does the in-play idea hold up over two years and several market moods, not just the last 60 days?

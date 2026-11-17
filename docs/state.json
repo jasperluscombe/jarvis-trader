@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-17T12:55:00+00:00",
- "updated_local": "Tue 17 Nov 11:25 PM",
+ "updated_utc": "2026-11-17T13:00:01+00:00",
+ "updated_local": "Tue 17 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -6237,7 +6237,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-17T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-17T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6704,31 +6704,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-17T12:55:00+00:00"
+   "t": "2026-11-17T13:00:01+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks before the open, then finds the ones in play after it.",
-   "status": "idle",
-   "text": "30 of 770 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-16T15:35:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 321 charts matched a setup, 174 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-17T13:00:01+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
-   "t": "2026-11-16T13:00:00+00:00"
+   "status": "working",
+   "text": "Read 21 headlines and filings for 8 stocks.",
+   "t": "2026-11-17T13:00:01+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-17T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-17T13:00:01+00:00"
   },
   {
    "id": "oracle",
@@ -6757,33 +6757,38 @@
  ],
  "watchlist": [
   {
-   "symbol": "KDP",
-   "price": 36.34,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "NU",
-   "price": 13.22,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "FCUV",
-   "price": 7.08,
+   "symbol": "CMCSA",
+   "price": 25.6,
    "setups": [
     "breakout_20d",
-    "reclaim_ma20"
+    "bull_flag"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "Netflix Stock Down 47%: Too Early To Buy?",
+     "url": "https://www.trefis.com/stock/nflx/articles/625752/netflix-stock-down-47-too-early-to-buy/2026-11-17?.tsrc=rss",
+     "tags": []
+    }
+   ]
   },
   {
-   "symbol": "CMCSA",
-   "price": 25.16,
+   "symbol": "TSCO",
+   "price": 37.95,
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "news": [
+    {
+     "title": "Are You Overpaying For Lowe's Stock Versus Its Rivals?",
+     "url": "https://www.trefis.com/stock/low/articles/625660/are-you-overpaying-for-lowes-stock-versus-its-rivals/2026-11-17?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "CHYM",
+   "price": 34.29,
    "setups": [
     "breakout_20d"
    ],
@@ -6791,57 +6796,99 @@
   },
   {
    "symbol": "CMG",
-   "price": 35.28,
+   "price": 35.94,
    "setups": [
     "bull_flag"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "Has McDonald's Stock Become A Different Bet?",
+     "url": "https://www.trefis.com/stock/mcd/articles/625736/has-mcdonalds-stock-become-a-different-bet/2026-11-17?.tsrc=rss",
+     "tags": []
+    }
+   ]
   },
   {
-   "symbol": "RIOT",
-   "price": 17.52,
+   "symbol": "TU",
+   "price": 9.57,
    "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PBR",
-   "price": 18.34,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MP",
-   "price": 38.76,
-   "setups": [
+    "breakout_20d",
     "reclaim_ma20"
    ],
-   "news": []
-  },
-  {
-   "symbol": "CTVA",
-   "price": 9.43,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
+   "news": [
+    {
+     "title": "Nearly Half of Regular U.S. AI Users Say They Have Bent the Truth to Get Past AI Customer Service, New TELUS Digital Poll Finds",
+     "url": "https://finance.yahoo.com/technology/ai/articles/nearly-half-regular-u-ai-114500854.html?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ]
   },
   {
    "symbol": "PCG",
-   "price": 13.25,
+   "price": 13.68,
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "David Tepper\u2019s Appaloosa Goes Big on SpaceX, While Slashing Alphabet Stake",
+     "url": "https://finance.yahoo.com/m/f487537a-09c4-3b0f-beb6-14e5629c10ed/david-tepper%E2%80%99s-appaloosa-goes.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "JD",
+   "price": 27.54,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": [
+    {
+     "title": "Why Is JD.com Stock Falling Nearly 3% After Third-Quarter Earnings?",
+     "url": "https://investorshub.advfn.com/market-news/article/40192/why-is-jd-com-stock-falling-nearly-3-after-third-quarter-earnings?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "MBGL",
+   "price": 24.04,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "Top British Hedge Fund Loads Up on Martin Marietta Stock, Trims Stake in Visa",
+     "url": "https://finance.yahoo.com/m/0553937e-01ef-350a-b697-b6776a2b725f/top-british-hedge-fund-loads.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "ADT",
+   "price": 9.92,
+   "setups": [
+    "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "VKTX",
-   "price": 29.22,
+   "symbol": "HDB",
+   "price": 26.29,
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "KVYO",
+   "price": 22.89,
    "setups": [
     "breakout_20d"
    ],
@@ -6849,123 +6896,49 @@
   },
   {
    "symbol": "CPRT",
-   "price": 31.83,
+   "price": 32.08,
    "setups": [
     "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "LFTO",
-   "price": 24.44,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "GIS",
-   "price": 34.32,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "NCLH",
-   "price": 17.96,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PPL",
-   "price": 35.67,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CHYM",
-   "price": 33.55,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "VFC",
-   "price": 20.68,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "WSE",
-   "price": 11.23,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ROL",
-   "price": 38.88,
-   "setups": [
-    "breakout_20d"
    ],
    "news": []
   },
   {
    "symbol": "IBN",
-   "price": 34.52,
+   "price": 34.42,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "JD",
-   "price": 27.91,
+   "symbol": "VFC",
+   "price": 20.15,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "KLAR",
-   "price": 13.8,
+   "symbol": "MMED",
+   "price": 18.65,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "IONS",
-   "price": 29.06,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "BZ",
-   "price": 12.96,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ELAN",
-   "price": 26.78,
+   "symbol": "CELH",
+   "price": 31.57,
    "setups": [
     "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CPB",
+   "price": 23.45,
+   "setups": [
+    "breakout_20d"
    ],
    "news": []
   },
@@ -6978,26 +6951,99 @@
    "news": []
   },
   {
-   "symbol": "CELH",
-   "price": 32.42,
+   "symbol": "INVH",
+   "price": 27.1,
    "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ROL",
+   "price": 39.11,
+   "setups": [
+    "breakout_20d",
     "bull_flag"
    ],
    "news": []
   },
   {
    "symbol": "VTRS",
-   "price": 20.82,
+   "price": 20.74,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "MBGL",
-   "price": 23.28,
+   "symbol": "XPEV",
+   "price": 9.67,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "STWD",
+   "price": 11.75,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BEN",
+   "price": 35.01,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PRMB",
+   "price": 24.05,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MGM",
+   "price": 33.23,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BCE",
+   "price": 22.13,
    "setups": [
     "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "URGN",
+   "price": 28.1,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ELAN",
+   "price": 26.41,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "VVV",
+   "price": 34.25,
+   "setups": [
+    "bull_flag"
    ],
    "news": []
   }
@@ -7455,6 +7501,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-17T13:00:01+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-17T13:00:01+00:00",
+   "bot": "news",
+   "text": "Read 21 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-17T13:00:01+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 321 charts matched a setup, 174 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-17T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $53.62 account: $1.61 a trade, $5.36 a day, orders up to $48.26."
@@ -7638,21 +7699,6 @@
    "t": "2026-11-16T15:05:00+00:00",
    "bot": "entry",
    "text": "STWD broke out at $11.89 (10:05 AM)."
-  },
-  {
-   "t": "2026-11-16T15:05:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on ULCC: not in play (opening volume is 0.4x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-16T15:05:00+00:00",
-   "bot": "entry",
-   "text": "ULCC broke out at $7.97 (10:05 AM)."
-  },
-  {
-   "t": "2026-11-16T15:05:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on PSQ: not in play (it's up 2.1% on the day, I need 4%; the stop would be only 1.0% away (costs eat stops under 1%); opening volume is 1.0x normal, I need 1.5x)."
   }
  ],
  "errors": []

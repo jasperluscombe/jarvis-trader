@@ -13316,21 +13316,6 @@
  ],
  "events": [
   {
-   "t": "2026-11-16T12:05:00+00:00",
-   "bot": "risk",
-   "text": "Limits resized to your $55.03 account: $1.65 a trade, $5.50 a day, orders up to $49.53."
-  },
-  {
-   "t": "2026-11-16T13:00:00+00:00",
-   "bot": "scanner",
-   "text": "Scanned the US market: 303 charts matched a setup, 163 fit your $5-$40 price range. Watching the top 30."
-  },
-  {
-   "t": "2026-11-16T13:00:00+00:00",
-   "bot": "news",
-   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out"
-  },
-  {
    "t": "2026-11-16T13:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the morning brief."
@@ -13714,6 +13699,21 @@
    "t": "2026-11-17T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $53.62 account: $1.61 a trade, $5.36 a day, orders up to $48.26."
+  },
+  {
+   "t": "2026-11-17T13:00:01+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 321 charts matched a setup, 174 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
+   "t": "2026-11-17T13:00:01+00:00",
+   "bot": "news",
+   "text": "Read 21 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-17T13:00:01+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
   }
  ],
  "trades": [
@@ -13961,274 +13961,183 @@
  "done": {
   "daily_goal": "2026-11-09",
   "recap": "2026-11-16",
-  "brief": "2026-11-16",
+  "brief": "2026-11-17",
   "overnight_warning": "2026-11-06"
  },
  "candidates": [
   {
-   "symbol": "KDP",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 36.34,
-   "close_date": "2026-11-13",
-   "rsi": 55.8,
-   "volume": 60350188
-  },
-  {
-   "symbol": "NU",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 13.22,
-   "close_date": "2026-11-13",
-   "rsi": 51.9,
-   "volume": 152617295
-  },
-  {
-   "symbol": "FCUV",
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "price": 7.08,
-   "close_date": "2026-11-13",
-   "rsi": 77.1,
-   "volume": 117440767
-  },
-  {
    "symbol": "CMCSA",
    "setups": [
-    "breakout_20d"
-   ],
-   "price": 25.16,
-   "close_date": "2026-11-13",
-   "rsi": 66.4,
-   "volume": 18357447
-  },
-  {
-   "symbol": "CMG",
-   "setups": [
+    "breakout_20d",
     "bull_flag"
    ],
-   "price": 35.28,
-   "close_date": "2026-11-13",
-   "rsi": 61.8,
-   "volume": 11953931
+   "price": 25.6,
+   "close_date": "2026-11-16",
+   "rsi": 69.3,
+   "volume": 30391589
   },
   {
-   "symbol": "RIOT",
+   "symbol": "TSCO",
    "setups": [
+    "breakout_20d",
     "bull_flag"
    ],
-   "price": 17.52,
-   "close_date": "2026-11-13",
-   "rsi": 56.0,
-   "volume": 22418938
-  },
-  {
-   "symbol": "PBR",
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "price": 18.34,
-   "close_date": "2026-11-13",
-   "rsi": 29.0,
-   "volume": 17737410
-  },
-  {
-   "symbol": "MP",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 38.76,
-   "close_date": "2026-11-13",
-   "rsi": 46.5,
-   "volume": 7903693
-  },
-  {
-   "symbol": "CTVA",
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "price": 9.43,
-   "close_date": "2026-11-13",
-   "rsi": 27.6,
-   "volume": 28887130
-  },
-  {
-   "symbol": "PCG",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 13.25,
-   "close_date": "2026-11-13",
-   "rsi": 51.4,
-   "volume": 20067223
-  },
-  {
-   "symbol": "VKTX",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 29.22,
-   "close_date": "2026-11-13",
-   "rsi": 55.0,
-   "volume": 8870639
-  },
-  {
-   "symbol": "CPRT",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 31.83,
-   "close_date": "2026-11-13",
-   "rsi": 61.4,
-   "volume": 7625905
-  },
-  {
-   "symbol": "LFTO",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 24.44,
-   "close_date": "2026-11-13",
-   "rsi": 78.9,
-   "volume": 9561767
-  },
-  {
-   "symbol": "GIS",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 34.32,
-   "close_date": "2026-11-13",
-   "rsi": 50.2,
-   "volume": 6692615
-  },
-  {
-   "symbol": "NCLH",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 17.96,
-   "close_date": "2026-11-13",
-   "rsi": 57.9,
-   "volume": 12720295
-  },
-  {
-   "symbol": "PPL",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 35.67,
-   "close_date": "2026-11-13",
-   "rsi": 57.4,
-   "volume": 5891391
+   "price": 37.95,
+   "close_date": "2026-11-16",
+   "rsi": 67.0,
+   "volume": 15338036
   },
   {
    "symbol": "CHYM",
    "setups": [
     "breakout_20d"
    ],
-   "price": 33.55,
-   "close_date": "2026-11-13",
-   "rsi": 70.3,
-   "volume": 6168842
+   "price": 34.29,
+   "close_date": "2026-11-16",
+   "rsi": 73.1,
+   "volume": 15960188
   },
   {
-   "symbol": "VFC",
+   "symbol": "CMG",
    "setups": [
     "bull_flag"
    ],
-   "price": 20.68,
-   "close_date": "2026-11-13",
-   "rsi": 71.1,
-   "volume": 9884581
+   "price": 35.94,
+   "close_date": "2026-11-16",
+   "rsi": 64.2,
+   "volume": 12946834
   },
   {
-   "symbol": "WSE",
+   "symbol": "TU",
    "setups": [
+    "breakout_20d",
     "reclaim_ma20"
    ],
-   "price": 11.23,
-   "close_date": "2026-11-13",
-   "rsi": 49.8,
-   "volume": 17897128
+   "price": 9.57,
+   "close_date": "2026-11-16",
+   "rsi": 64.2,
+   "volume": 46345206
   },
   {
-   "symbol": "ROL",
+   "symbol": "PCG",
    "setups": [
     "breakout_20d"
    ],
-   "price": 38.88,
-   "close_date": "2026-11-13",
-   "rsi": 67.7,
-   "volume": 5064017
-  },
-  {
-   "symbol": "IBN",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 34.52,
-   "close_date": "2026-11-13",
-   "rsi": 77.5,
-   "volume": 5510704
+   "price": 13.68,
+   "close_date": "2026-11-16",
+   "rsi": 59.4,
+   "volume": 29441383
   },
   {
    "symbol": "JD",
    "setups": [
     "bull_flag"
    ],
-   "price": 27.91,
-   "close_date": "2026-11-13",
-   "rsi": 57.1,
-   "volume": 6497675
+   "price": 27.54,
+   "close_date": "2026-11-16",
+   "rsi": 53.4,
+   "volume": 9227545
   },
   {
-   "symbol": "KLAR",
+   "symbol": "MBGL",
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
-   "price": 13.8,
-   "close_date": "2026-11-13",
-   "rsi": 53.2,
-   "volume": 12529478
+   "price": 24.04,
+   "close_date": "2026-11-16",
+   "rsi": 82.8,
+   "volume": 9894927
   },
   {
-   "symbol": "IONS",
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "price": 29.06,
-   "close_date": "2026-11-13",
-   "rsi": 24.3,
-   "volume": 5948834
-  },
-  {
-   "symbol": "BZ",
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "price": 12.96,
-   "close_date": "2026-11-13",
-   "rsi": 28.6,
-   "volume": 12134512
-  },
-  {
-   "symbol": "ELAN",
+   "symbol": "ADT",
    "setups": [
     "bull_flag"
    ],
-   "price": 26.78,
-   "close_date": "2026-11-13",
-   "rsi": 68.0,
-   "volume": 5378791
+   "price": 9.92,
+   "close_date": "2026-11-16",
+   "rsi": 85.2,
+   "volume": 23760563
+  },
+  {
+   "symbol": "HDB",
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "price": 26.29,
+   "close_date": "2026-11-16",
+   "rsi": 73.6,
+   "volume": 8828259
+  },
+  {
+   "symbol": "KVYO",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 22.89,
+   "close_date": "2026-11-16",
+   "rsi": 70.4,
+   "volume": 9974289
+  },
+  {
+   "symbol": "CPRT",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 32.08,
+   "close_date": "2026-11-16",
+   "rsi": 62.9,
+   "volume": 7071544
+  },
+  {
+   "symbol": "IBN",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 34.42,
+   "close_date": "2026-11-16",
+   "rsi": 76.3,
+   "volume": 6236853
+  },
+  {
+   "symbol": "VFC",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 20.15,
+   "close_date": "2026-11-16",
+   "rsi": 64.7,
+   "volume": 9764972
+  },
+  {
+   "symbol": "MMED",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 18.65,
+   "close_date": "2026-11-16",
+   "rsi": 50.9,
+   "volume": 10535077
+  },
+  {
+   "symbol": "CELH",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 31.57,
+   "close_date": "2026-11-16",
+   "rsi": 57.5,
+   "volume": 5628626
+  },
+  {
+   "symbol": "CPB",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 23.45,
+   "close_date": "2026-11-16",
+   "rsi": 66.2,
+   "volume": 7541224
   },
   {
    "symbol": "GEN",
@@ -14236,58 +14145,149 @@
     "bull_flag"
    ],
    "price": 30.4,
-   "close_date": "2026-11-13",
-   "rsi": 65.7,
-   "volume": 4675974
+   "close_date": "2026-11-16",
+   "rsi": 65.9,
+   "volume": 5770158
   },
   {
-   "symbol": "CELH",
+   "symbol": "INVH",
    "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 27.1,
+   "close_date": "2026-11-16",
+   "rsi": 51.2,
+   "volume": 5888978
+  },
+  {
+   "symbol": "ROL",
+   "setups": [
+    "breakout_20d",
     "bull_flag"
    ],
-   "price": 32.42,
-   "close_date": "2026-11-13",
-   "rsi": 63.3,
-   "volume": 4261354
+   "price": 39.11,
+   "close_date": "2026-11-16",
+   "rsi": 68.5,
+   "volume": 3823576
   },
   {
    "symbol": "VTRS",
    "setups": [
     "bull_flag"
    ],
-   "price": 20.82,
-   "close_date": "2026-11-13",
-   "rsi": 70.3,
-   "volume": 6514717
+   "price": 20.74,
+   "close_date": "2026-11-16",
+   "rsi": 68.9,
+   "volume": 7141610
   },
   {
-   "symbol": "MBGL",
+   "symbol": "XPEV",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 9.67,
+   "close_date": "2026-11-16",
+   "rsi": 49.4,
+   "volume": 15051074
+  },
+  {
+   "symbol": "STWD",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "price": 11.75,
+   "close_date": "2026-11-16",
+   "rsi": 38.0,
+   "volume": 12213001
+  },
+  {
+   "symbol": "BEN",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 35.01,
+   "close_date": "2026-11-16",
+   "rsi": 58.9,
+   "volume": 3903763
+  },
+  {
+   "symbol": "PRMB",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 24.05,
+   "close_date": "2026-11-16",
+   "rsi": 76.5,
+   "volume": 5414548
+  },
+  {
+   "symbol": "MGM",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 33.23,
+   "close_date": "2026-11-16",
+   "rsi": 59.7,
+   "volume": 3709651
+  },
+  {
+   "symbol": "BCE",
    "setups": [
     "breakout_20d"
    ],
-   "price": 23.28,
-   "close_date": "2026-11-13",
-   "rsi": 80.4,
-   "volume": 5772116
+   "price": 22.13,
+   "close_date": "2026-11-16",
+   "rsi": 63.9,
+   "volume": 5156527
+  },
+  {
+   "symbol": "URGN",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "price": 28.1,
+   "close_date": "2026-11-16",
+   "rsi": 37.2,
+   "volume": 3964623
+  },
+  {
+   "symbol": "ELAN",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 26.41,
+   "close_date": "2026-11-16",
+   "rsi": 64.3,
+   "volume": 4084558
+  },
+  {
+   "symbol": "VVV",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 34.25,
+   "close_date": "2026-11-16",
+   "rsi": 55.2,
+   "volume": 3098710
   }
  ],
- "candidates_day": "2026-11-16",
+ "candidates_day": "2026-11-17",
  "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-17T12:55:00+00:00"
+   "t": "2026-11-17T13:00:01+00:00"
   },
   "scanner": {
    "status": "working",
-   "text": "30 of 770 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-16T15:35:00+00:00"
+   "text": "Scanned the US market: 321 charts matched a setup, 174 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-17T13:00:01+00:00"
   },
   "entry": {
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-17T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-17T13:00:01+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14301,8 +14301,8 @@
   },
   "news": {
    "status": "working",
-   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
-   "t": "2026-11-16T13:00:00+00:00"
+   "text": "Read 21 headlines and filings for 8 stocks.",
+   "t": "2026-11-17T13:00:01+00:00"
   },
   "risk": {
    "status": "working",
@@ -21134,13 +21134,9 @@
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-16T21:00:00+00:00"
+  "at": "2026-11-17T13:00:01+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 5,
-   "at": "2026-11-11T14:50:00+00:00"
-  },
   {
    "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
    "at": "2026-11-11T15:05:00+00:00"
@@ -21217,9 +21213,132 @@
   {
    "sent_ok": 1,
    "at": "2026-11-16T21:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-17T13:00:01+00:00"
   }
  ],
- "news": {},
+ "news": {
+  "CHYM": {
+   "headlines": []
+  },
+  "CMCSA": {
+   "headlines": [
+    {
+     "title": "Netflix Stock Down 47%: Too Early To Buy?",
+     "url": "https://www.trefis.com/stock/nflx/articles/625752/netflix-stock-down-47-too-early-to-buy/2026-11-17?.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "Comcast Stock Up 17%, Still Losing Internet Customers",
+     "url": "https://www.trefis.com/stock/cmcsa/articles/625659/comcast-stock-up-17-still-losing-internet-customers/2026-11-17?.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "Why Netflix Stock Is At A One-Year Low",
+     "url": "https://www.trefis.com/stock/nflx/articles/625595/why-netflix-stock-is-at-a-one-year-low/2026-11-17?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  "CMG": {
+   "headlines": [
+    {
+     "title": "Has McDonald's Stock Become A Different Bet?",
+     "url": "https://www.trefis.com/stock/mcd/articles/625736/has-mcdonalds-stock-become-a-different-bet/2026-11-17?.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "Chipotle (CMG) Unveils Sneak It In Hoodie With An Insulated Food Pocket",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-cmg-unveils-sneak-hoodie-081156464.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  "JD": {
+   "headlines": [
+    {
+     "title": "Why Is JD.com Stock Falling Nearly 3% After Third-Quarter Earnings?",
+     "url": "https://investorshub.advfn.com/market-news/article/40192/why-is-jd-com-stock-falling-nearly-3-after-third-quarter-earnings?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "JD.com beats profit expectations on cost cuts",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/jd-com-beats-profit-expectations-103744336.html?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "JD.com Announces Third Quarter 2026 Results",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/jd-com-announces-third-quarter-094500848.html?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ]
+  },
+  "MBGL": {
+   "headlines": [
+    {
+     "title": "Top British Hedge Fund Loads Up on Martin Marietta Stock, Trims Stake in Visa",
+     "url": "https://finance.yahoo.com/m/0553937e-01ef-350a-b697-b6776a2b725f/top-british-hedge-fund-loads.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  "PCG": {
+   "headlines": [
+    {
+     "title": "David Tepper\u2019s Appaloosa Goes Big on SpaceX, While Slashing Alphabet Stake",
+     "url": "https://finance.yahoo.com/m/f487537a-09c4-3b0f-beb6-14e5629c10ed/david-tepper%E2%80%99s-appaloosa-goes.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  "TSCO": {
+   "headlines": [
+    {
+     "title": "Are You Overpaying For Lowe's Stock Versus Its Rivals?",
+     "url": "https://www.trefis.com/stock/low/articles/625660/are-you-overpaying-for-lowes-stock-versus-its-rivals/2026-11-17?.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "He Starts Driving for a Delivery App at 64 amid Same-Day Delivery Frenzy, and Expects $30,000 in Payouts to Cost Him Social Security. The Earnings Test Counts Net Profit, So Mileage Deductions Drop Him Below $25,560 Limit",
+     "url": "https://247wallst.com/personal-finance/social-security/2026/11/16/he-starts-driving-for-a-delivery-app-at-64-amid-same-day-delivery-frenzy-and-expects-30000-in-payouts-to-cost-him-social-security-the-earnings-test-counts-net-profit-so-mileage-deductions-drop-hi/?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    }
+   ]
+  },
+  "TU": {
+   "headlines": [
+    {
+     "title": "Nearly Half of Regular U.S. AI Users Say They Have Bent the Truth to Get Past AI Customer Service, New TELUS Digital Poll Finds",
+     "url": "https://finance.yahoo.com/technology/ai/articles/nearly-half-regular-u-ai-114500854.html?.tsrc=rss",
+     "tags": [
+      "earnings"
+     ]
+    },
+    {
+     "title": "TELUS (TSX:T) Looks Fairly Valued Following Qu\u00e9becor Bid Interest",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/telus-tsx-t-looks-fairly-051242217.html?.tsrc=rss",
+     "tags": [
+      "deal"
+     ]
+    },
+    {
+     "title": "TELUS (TSX:T) Drops Vancouver AI Data Centre Plans And Bets On Kamloops",
+     "url": "https://finance.yahoo.com/technology/ai/articles/telus-tsx-t-drops-vancouver-031021614.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  }
+ },
  "managed": [
   {
    "symbol": "AAPL",

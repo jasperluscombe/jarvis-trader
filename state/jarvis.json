@@ -13316,11 +13316,6 @@
  ],
  "events": [
   {
-   "t": "2026-11-14T08:30:00+00:00",
-   "bot": "risk",
-   "text": "Limits resized to your $55.03 account: $1.10 a trade, $5.50 a day, orders up to $49.53."
-  },
-  {
    "t": "2026-11-16T12:05:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $55.03 account: $1.65 a trade, $5.50 a day, orders up to $49.53."
@@ -13714,6 +13709,11 @@
    "t": "2026-11-16T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-17T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $53.62 account: $1.61 a trade, $5.36 a day, orders up to $48.26."
   }
  ],
  "trades": [
@@ -14277,7 +14277,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-17T08:00:16+00:00"
+   "t": "2026-11-17T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14287,7 +14287,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-17T08:00:16+00:00"
+   "t": "2026-11-17T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14306,8 +14306,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped BXDC: one share of BXDC costs $17.91, more than your cash limit (cash $10.08 in trader/portfolio.json minus the $5.50 buffer = $4.58 / 17.91). No order.",
-   "t": "2026-11-16T15:20:00+00:00"
+   "text": "Limits resized to your $53.62 account: $1.61 a trade, $5.36 a day, orders up to $48.26.",
+   "t": "2026-11-17T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-17",
@@ -16208,6 +16208,10 @@
   {
    "t": "2026-11-17T03:00:00+00:00",
    "eq": 53.64
+  },
+  {
+   "t": "2026-11-17T08:30:00+00:00",
+   "eq": 53.62
   }
  ],
  "charts": {

@@ -1,15 +1,15 @@
 {
- "updated_utc": "2026-11-17T20:55:00+00:00",
- "updated_local": "Wed 18 Nov 7:25 AM",
+ "updated_utc": "2026-11-17T21:00:00+00:00",
+ "updated_local": "Wed 18 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 52.75,
-  "cash": 26.54,
-  "day_pl": -0.87,
+  "equity": 52.73,
+  "cash": 52.73,
+  "day_pl": -0.89,
   "start": 50.0
  },
  "limits": {
@@ -26,18 +26,14 @@
   "risk_used": 2.57
  },
  "goals": {
-  "day_pl": -0.87,
-  "week_pl": -2.28,
+  "day_pl": -0.89,
+  "week_pl": -2.3,
   "daily_goal": 1.07,
   "weekly_goal": 4.4,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-06T19:00:01+00:00",
-   "eq": 53.36
-  },
   {
    "t": "2026-11-06T19:05:00+00:00",
    "eq": 53.35
@@ -1633,24 +1629,28 @@
   {
    "t": "2026-11-17T20:55:00+00:00",
    "eq": 52.75
+  },
+  {
+   "t": "2026-11-17T21:00:00+00:00",
+   "eq": 52.73
   }
  ],
  "stats": {
-  "trades": 16,
-  "wins": 8,
-  "losses": 8,
+  "trades": 18,
+  "wins": 9,
+  "losses": 9,
   "win_rate": 0.5,
-  "avg_win": 0.86,
-  "avg_loss": -0.38,
+  "avg_win": 0.82,
+  "avg_loss": -0.5,
   "best": 1.92,
-  "worst": -1.0,
+  "worst": -1.44,
   "auto": 18,
   "ideas": 60,
   "passed": 39
  },
  "charts": {
   "date": "2026-11-17",
-  "updated": "2026-11-17T20:55:00+00:00",
+  "updated": "2026-11-17T21:00:00+00:00",
   "symbols": {
    "FUBO": {
     "bars": [
@@ -2194,11 +2194,11 @@
       7.0
      ],
      [
-      1794948904,
-      7.0,
-      7.0,
-      7.0,
-      7.0
+      1794948900,
+      7.01,
+      7.01,
+      6.91,
+      6.95
      ]
     ],
     "or_high": 8.18,
@@ -2773,11 +2773,11 @@
       26.23
      ],
      [
-      1794948907,
-      26.2,
-      26.2,
-      26.2,
-      26.2
+      1794948900,
+      26.21,
+      26.37,
+      26.17,
+      26.32
      ]
     ],
     "or_high": 25.29,
@@ -2792,6 +2792,14 @@
      }
     ],
     "fills": [
+     {
+      "symbol": "SA",
+      "side": "sell",
+      "price": 26.19,
+      "qty": 1.0,
+      "t": "2026-11-17T20:55:20.472538Z",
+      "type": "market"
+     },
      {
       "symbol": "SA",
       "side": "buy",
@@ -3344,11 +3352,18 @@
       653.7
      ],
      [
-      1794948916,
-      654.13,
-      654.13,
-      654.13,
-      654.13
+      1794948900,
+      653.71,
+      657.15,
+      653.71,
+      657.0
+     ],
+     [
+      1794949200,
+      656.95,
+      656.95,
+      656.95,
+      656.95
      ]
     ],
     "or_high": 663.36,
@@ -3898,11 +3913,11 @@
       730.05
      ],
      [
-      1794948916,
-      730.23,
-      730.23,
-      730.23,
-      730.23
+      1794948900,
+      730.55,
+      731.19,
+      730.02,
+      731.13
      ]
     ],
     "or_high": 739.69,
@@ -4452,11 +4467,18 @@
       379.07
      ],
      [
-      1794948916,
-      379.5,
-      379.5,
-      379.5,
-      379.5
+      1794948900,
+      378.99,
+      380.25,
+      378.99,
+      380.06
+     ],
+     [
+      1794949200,
+      380.11,
+      380.11,
+      380.11,
+      380.11
      ]
     ],
     "or_high": 382.5,
@@ -5006,11 +5028,11 @@
       153.93
      ],
      [
-      1794948916,
-      154.36,
-      154.36,
-      154.36,
-      154.36
+      1794948900,
+      153.94,
+      155.06,
+      153.34,
+      154.9
      ]
     ],
     "or_high": 157.46,
@@ -5560,11 +5582,18 @@
       351.48
      ],
      [
-      1794948915,
-      351.33,
-      351.33,
-      351.33,
-      351.33
+      1794948900,
+      351.55,
+      352.05,
+      351.07,
+      351.9
+     ],
+     [
+      1794949200,
+      351.91,
+      351.91,
+      351.91,
+      351.91
      ]
     ],
     "or_high": 353.55,
@@ -6094,7 +6123,7 @@
      ],
      [
       1794948000,
-      27.98,
+      27.99,
       28.01,
       27.98,
       27.98
@@ -6114,11 +6143,11 @@
       28.01
      ],
      [
-      1794948915,
-      28.0,
-      28.0,
-      28.0,
-      28.0
+      1794948900,
+      28.01,
+      28.01,
+      27.93,
+      27.93
      ]
     ],
     "or_high": 27.75,
@@ -6193,8 +6222,8 @@
    "t": "2026-11-17T15:10:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-17T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-17T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6437,29 +6466,33 @@
  },
  "lab": {
   "since": "2026-11-16",
-  "days": 1,
+  "days": 2,
   "in_play": {
-   "n": 5,
-   "win": 0.0,
-   "avg_r": -0.597,
-   "total_r": -2.98
+   "n": 10,
+   "win": 0.2,
+   "avg_r": -0.421,
+   "total_r": -4.21
   },
   "not_in_play": {
-   "n": 25,
-   "win": 0.24,
-   "avg_r": -0.309,
-   "total_r": -7.72
+   "n": 48,
+   "win": 0.229,
+   "avg_r": -0.382,
+   "total_r": -18.33
   },
   "all_old_rules": {
-   "n": 30,
-   "win": 0.2,
-   "avg_r": -0.415,
-   "total_r": -12.46
+   "n": 58,
+   "win": 0.224,
+   "avg_r": -0.42,
+   "total_r": -24.36
   },
   "curve": [
    [
     "2026-11-16",
     -2.98
+   ],
+   [
+    "2026-11-17",
+    -4.21
    ]
   ],
   "recent": [
@@ -6473,8 +6506,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.213,
+    "r_new": -0.108
    },
    {
     "date": "2026-11-17",
@@ -6486,8 +6519,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.219,
+    "r_new": 0.121
    },
    {
     "date": "2026-11-17",
@@ -6499,8 +6532,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.2% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.284,
+    "r_new": 0.869
    },
    {
     "date": "2026-11-17",
@@ -6512,8 +6545,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.1% on the day, I need 4%; opening volume is 0.4x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.001,
+    "r_new": -1.0
    },
    {
     "date": "2026-11-17",
@@ -6525,8 +6558,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.5% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.87,
+    "r_new": 0.238
    },
    {
     "date": "2026-11-17",
@@ -6538,8 +6571,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 0.5% on the day, I need 4%; the stop would be only 0.4% away (costs eat stops under 1%); opening volume is 0.8x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.789,
+    "r_new": 1.86
    },
    {
     "date": "2026-11-17",
@@ -6551,8 +6584,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 0.4% on the day, I need 4%; the stop would be only 0.7% away (costs eat stops under 1%); opening volume is 0.6x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.783,
+    "r_new": 1.867
    },
    {
     "date": "2026-11-17",
@@ -6564,8 +6597,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.4% on the day, I need 4%; opening volume is 1.1x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.005,
+    "r_new": -0.756
    },
    {
     "date": "2026-11-17",
@@ -6577,8 +6610,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.5% on the day, I need 4%; opening volume is 0.4x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.173,
+    "r_new": -0.071
    },
    {
     "date": "2026-11-17",
@@ -6590,8 +6623,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.01,
+    "r_new": -0.679
    },
    {
     "date": "2026-11-17",
@@ -6603,8 +6636,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.1% on the day, I need 4%; no opening-volume history to compare with",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.241,
+    "r_new": -0.254
    },
    {
     "date": "2026-11-17",
@@ -6616,8 +6649,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.9% on the day, I need 4%; opening volume is 0.1x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.26,
+    "r_new": -1.133
    },
    {
     "date": "2026-11-17",
@@ -6629,8 +6662,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.8% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.101,
+    "r_new": -1.056
    },
    {
     "date": "2026-11-17",
@@ -6642,8 +6675,8 @@
     "in_play": true,
     "took": true,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.048,
+    "r_new": -1.026
    },
    {
     "date": "2026-11-17",
@@ -6655,8 +6688,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.0% on the day, I need 4%; opening volume is 0.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.125,
+    "r_new": -0.083
    },
    {
     "date": "2026-11-17",
@@ -6668,8 +6701,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.0% on the day, I need 4%; opening volume is 0.8x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.064,
+    "r_new": -1.032
    },
    {
     "date": "2026-11-17",
@@ -6681,8 +6714,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.4% on the day, I need 4%; opening volume is 0.6x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.053,
+    "r_new": -0.751
    },
    {
     "date": "2026-11-17",
@@ -6694,8 +6727,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.967,
+    "r_new": -0.981
    },
    {
     "date": "2026-11-17",
@@ -6707,8 +6740,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 0.5% on the day, I need 4%; the stop would be only 0.8% away (costs eat stops under 1%); opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.177,
+    "r_new": -1.123
    },
    {
     "date": "2026-11-17",
@@ -6720,8 +6753,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.8x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.022,
+    "r_new": -1.012
    },
    {
     "date": "2026-11-17",
@@ -6733,8 +6766,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.014,
+    "r_new": -1.008
    },
    {
     "date": "2026-11-17",
@@ -6746,8 +6779,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.017,
+    "r_new": -1.01
    },
    {
     "date": "2026-11-17",
@@ -6759,8 +6792,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.7% on the day, I need 4%; opening volume is 0.5x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.788,
+    "r_new": -0.893
    },
    {
     "date": "2026-11-17",
@@ -6772,8 +6805,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.9x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.054,
+    "r_new": -0.84
    },
    {
     "date": "2026-11-17",
@@ -6785,8 +6818,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 1.0x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.952,
+    "r_new": -0.974
    },
    {
     "date": "2026-11-17",
@@ -6798,8 +6831,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.6x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.045,
+    "r_new": -1.024
    },
    {
     "date": "2026-11-17",
@@ -6811,8 +6844,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 1.1x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.721,
+    "r_new": 0.361
    },
    {
     "date": "2026-11-17",
@@ -6824,8 +6857,8 @@
     "in_play": true,
     "took": true,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.756,
+    "r_new": 0.465
    },
    {
     "date": "2026-11-16",
@@ -6985,15 +7018,7 @@
    }
   ]
  },
- "positions": [
-  {
-   "symbol": "SA",
-   "qty": 1.0,
-   "value": 26.21,
-   "pl": 0.57,
-   "entry": 25.64
-  }
- ],
+ "positions": [],
  "bots": [
   {
    "id": "jarvis",
@@ -7001,7 +7026,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-17T20:55:00+00:00"
+   "t": "2026-11-17T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -7024,16 +7049,16 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Entry window closed (breakouts after 10:30 New York lose more than they make). Watching open trades.",
-   "t": "2026-11-17T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-17T21:00:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times, and scores every signal after the close.",
-   "status": "idle",
-   "text": "Couldn't replay RMIX: timemachine.py: only 7 full session(s) of RMIX before 2026-11-17 in the data; the time machine needs at least 20",
-   "t": "2026-11-17T15:30:00+00:00"
+   "status": "working",
+   "text": "Scored 28 breakout signals for the shadow book.",
+   "t": "2026-11-17T21:00:00+00:00"
   },
   {
    "id": "risk",
@@ -7047,7 +7072,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-17T20:55:00+00:00"
   }
@@ -7526,7 +7551,7 @@
    "source": "auto: high confidence",
    "confidence": "high",
    "paper": true,
-   "result": null
+   "result": -1.44
   },
   {
    "date": "2026-11-17",
@@ -7541,7 +7566,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 0.55
   },
   {
    "date": "2026-11-16",
@@ -7785,9 +7810,9 @@
   }
  ],
  "record": {
-  "trades": 16,
-  "wins": 8,
-  "total": 3.78
+  "trades": 18,
+  "wins": 9,
+  "total": 2.89
  },
  "sessions": [
   {
@@ -7827,6 +7852,16 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-17T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-17T21:00:00+00:00",
+   "bot": "oracle",
+   "text": "Scored 28 breakout signals for the shadow book."
+  },
   {
    "t": "2026-11-17T20:55:00+00:00",
    "bot": "broker",
@@ -8016,16 +8051,6 @@
    "t": "2026-11-17T15:00:00+00:00",
    "bot": "entry",
    "text": "OCUL broke out at $6.24 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-17T15:00:00+00:00",
-   "bot": "broker",
-   "text": "Bought 2 FUBO (auto: high confidence)."
-  },
-  {
-   "t": "2026-11-17T15:00:00+00:00",
-   "bot": "oracle",
-   "text": "FUBO: target first 0%, stop first 1%, neither 99% (5000 replays). History: 30 fired, 3 won, 8 lost."
   }
  ],
  "errors": []

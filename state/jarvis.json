@@ -13435,16 +13435,6 @@
  ],
  "events": [
   {
-   "t": "2026-11-16T15:35:00+00:00",
-   "bot": "entry",
-   "text": "GMRS broke out at $11.93 (10:30 AM)."
-  },
-  {
-   "t": "2026-11-16T15:35:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on GMRS: not in play (it's up 3.4% on the day, I need 4%; opening volume is 0.9x normal, I need 1.5x)."
-  },
-  {
    "t": "2026-11-16T20:55:00+00:00",
    "bot": "broker",
    "text": "Sell order for 3 QVCG sent but not filled yet (status pending_new). I'll check again."
@@ -13833,6 +13823,16 @@
    "t": "2026-11-17T20:55:00+00:00",
    "bot": "broker",
    "text": "Sell order for 1 SA sent but not filled yet (status pending_new). I'll check again."
+  },
+  {
+   "t": "2026-11-17T21:00:00+00:00",
+   "bot": "oracle",
+   "text": "Scored 28 breakout signals for the shadow book."
+  },
+  {
+   "t": "2026-11-17T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
   }
  ],
  "trades": [
@@ -14089,7 +14089,7 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null
+   "result": 0.55
   },
   {
    "date": "2026-11-17",
@@ -14104,12 +14104,12 @@
    "source": "auto: high confidence",
    "confidence": "high",
    "paper": true,
-   "result": null
+   "result": -1.44
   }
  ],
  "done": {
   "daily_goal": "2026-11-09",
-  "recap": "2026-11-16",
+  "recap": "2026-11-17",
   "brief": "2026-11-17",
   "overnight_warning": "2026-11-06"
  },
@@ -14463,7 +14463,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-17T20:55:00+00:00"
+   "t": "2026-11-17T21:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14472,13 +14472,13 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Entry window closed (breakouts after 10:30 New York lose more than they make). Watching open trades.",
-   "t": "2026-11-17T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-17T21:00:00+00:00"
   },
   "oracle": {
    "status": "working",
-   "text": "Couldn't replay RMIX: timemachine.py: only 7 full session(s) of RMIX before 2026-11-17 in the data; the time machine needs at least 20",
-   "t": "2026-11-17T15:30:00+00:00"
+   "text": "Scored 28 breakout signals for the shadow book.",
+   "t": "2026-11-17T21:00:00+00:00"
   },
   "broker": {
    "status": "working",
@@ -16690,11 +16690,15 @@
   {
    "t": "2026-11-17T20:55:00+00:00",
    "eq": 52.75
+  },
+  {
+   "t": "2026-11-17T21:00:00+00:00",
+   "eq": 52.73
   }
  ],
  "charts": {
   "date": "2026-11-17",
-  "updated": "2026-11-17T20:55:00+00:00",
+  "updated": "2026-11-17T21:00:00+00:00",
   "symbols": {
    "FUBO": {
     "bars": [
@@ -17238,11 +17242,11 @@
       7.0
      ],
      [
-      1794948904,
-      7.0,
-      7.0,
-      7.0,
-      7.0
+      1794948900,
+      7.01,
+      7.01,
+      6.91,
+      6.95
      ]
     ],
     "or_high": 8.18,
@@ -17817,11 +17821,11 @@
       26.23
      ],
      [
-      1794948907,
-      26.2,
-      26.2,
-      26.2,
-      26.2
+      1794948900,
+      26.21,
+      26.37,
+      26.17,
+      26.32
      ]
     ],
     "or_high": 25.29,
@@ -17836,6 +17840,14 @@
      }
     ],
     "fills": [
+     {
+      "symbol": "SA",
+      "side": "sell",
+      "price": 26.19,
+      "qty": 1.0,
+      "t": "2026-11-17T20:55:20.472538Z",
+      "type": "market"
+     },
      {
       "symbol": "SA",
       "side": "buy",
@@ -18388,11 +18400,18 @@
       653.7
      ],
      [
-      1794948916,
-      654.13,
-      654.13,
-      654.13,
-      654.13
+      1794948900,
+      653.71,
+      657.15,
+      653.71,
+      657.0
+     ],
+     [
+      1794949200,
+      656.95,
+      656.95,
+      656.95,
+      656.95
      ]
     ],
     "or_high": 663.36,
@@ -18942,11 +18961,11 @@
       730.05
      ],
      [
-      1794948916,
-      730.23,
-      730.23,
-      730.23,
-      730.23
+      1794948900,
+      730.55,
+      731.19,
+      730.02,
+      731.13
      ]
     ],
     "or_high": 739.69,
@@ -19496,11 +19515,18 @@
       379.07
      ],
      [
-      1794948916,
-      379.5,
-      379.5,
-      379.5,
-      379.5
+      1794948900,
+      378.99,
+      380.25,
+      378.99,
+      380.06
+     ],
+     [
+      1794949200,
+      380.11,
+      380.11,
+      380.11,
+      380.11
      ]
     ],
     "or_high": 382.5,
@@ -20050,11 +20076,11 @@
       153.93
      ],
      [
-      1794948916,
-      154.36,
-      154.36,
-      154.36,
-      154.36
+      1794948900,
+      153.94,
+      155.06,
+      153.34,
+      154.9
      ]
     ],
     "or_high": 157.46,
@@ -20604,11 +20630,18 @@
       351.48
      ],
      [
-      1794948915,
-      351.33,
-      351.33,
-      351.33,
-      351.33
+      1794948900,
+      351.55,
+      352.05,
+      351.07,
+      351.9
+     ],
+     [
+      1794949200,
+      351.91,
+      351.91,
+      351.91,
+      351.91
      ]
     ],
     "or_high": 353.55,
@@ -21138,7 +21171,7 @@
      ],
      [
       1794948000,
-      27.98,
+      27.99,
       28.01,
       27.98,
       27.98
@@ -21158,11 +21191,11 @@
       28.01
      ],
      [
-      1794948915,
-      28.0,
-      28.0,
-      28.0,
-      28.0
+      1794948900,
+      28.01,
+      28.01,
+      27.93,
+      27.93
      ]
     ],
     "or_high": 27.75,
@@ -21720,15 +21753,10 @@
   }
  },
  "telegram_health": {
-  "handled": 1,
   "sent_ok": 1,
-  "at": "2026-11-17T15:50:00+00:00"
+  "at": "2026-11-17T21:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 1,
-   "at": "2026-11-11T20:55:00+00:00"
-  },
   {
    "sent_ok": 1,
    "at": "2026-11-11T21:00:00+00:00"
@@ -21805,6 +21833,10 @@
    "handled": 1,
    "sent_ok": 1,
    "at": "2026-11-17T15:50:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-17T21:00:00+00:00"
   }
  ],
  "news": {
@@ -22740,7 +22772,9 @@
    "rvol": 1.98,
    "in_play": true,
    "why": "",
-   "took": true
+   "took": true,
+   "r_old": 0.756,
+   "r_new": 0.465
   },
   {
    "date": "2026-11-17",
@@ -22756,7 +22790,9 @@
    "rvol": 1.07,
    "in_play": false,
    "why": "opening volume is 1.1x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": 0.721,
+   "r_new": 0.361
   },
   {
    "date": "2026-11-17",
@@ -22772,7 +22808,9 @@
    "rvol": 0.56,
    "in_play": false,
    "why": "opening volume is 0.6x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.045,
+   "r_new": -1.024
   },
   {
    "date": "2026-11-17",
@@ -22788,7 +22826,9 @@
    "rvol": 1.02,
    "in_play": false,
    "why": "opening volume is 1.0x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -0.952,
+   "r_new": -0.974
   },
   {
    "date": "2026-11-17",
@@ -22804,7 +22844,9 @@
    "rvol": 0.95,
    "in_play": false,
    "why": "opening volume is 0.9x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.054,
+   "r_new": -0.84
   },
   {
    "date": "2026-11-17",
@@ -22820,7 +22862,9 @@
    "rvol": 0.49,
    "in_play": false,
    "why": "it's up 3.7% on the day, I need 4%; opening volume is 0.5x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -0.788,
+   "r_new": -0.893
   },
   {
    "date": "2026-11-17",
@@ -22836,7 +22880,9 @@
    "rvol": 1.29,
    "in_play": false,
    "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.017,
+   "r_new": -1.01
   },
   {
    "date": "2026-11-17",
@@ -22852,7 +22898,9 @@
    "rvol": 1.22,
    "in_play": false,
    "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.014,
+   "r_new": -1.008
   },
   {
    "date": "2026-11-17",
@@ -22868,7 +22916,9 @@
    "rvol": 0.76,
    "in_play": false,
    "why": "opening volume is 0.8x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.022,
+   "r_new": -1.012
   },
   {
    "date": "2026-11-17",
@@ -22884,7 +22934,9 @@
    "rvol": 1.17,
    "in_play": false,
    "why": "it's up 0.5% on the day, I need 4%; the stop would be only 0.8% away (costs eat stops under 1%); opening volume is 1.2x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.177,
+   "r_new": -1.123
   },
   {
    "date": "2026-11-17",
@@ -22900,7 +22952,9 @@
    "rvol": 1.28,
    "in_play": false,
    "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -0.967,
+   "r_new": -0.981
   },
   {
    "date": "2026-11-17",
@@ -22916,7 +22970,9 @@
    "rvol": 0.62,
    "in_play": false,
    "why": "it's up 3.4% on the day, I need 4%; opening volume is 0.6x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.053,
+   "r_new": -0.751
   },
   {
    "date": "2026-11-17",
@@ -22932,7 +22988,9 @@
    "rvol": 0.8,
    "in_play": false,
    "why": "it's up 3.0% on the day, I need 4%; opening volume is 0.8x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.064,
+   "r_new": -1.032
   },
   {
    "date": "2026-11-17",
@@ -22948,7 +23006,9 @@
    "rvol": 0.22,
    "in_play": false,
    "why": "it's up 3.0% on the day, I need 4%; opening volume is 0.2x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -0.125,
+   "r_new": -0.083
   },
   {
    "date": "2026-11-17",
@@ -22964,7 +23024,9 @@
    "rvol": 4.77,
    "in_play": true,
    "why": "",
-   "took": true
+   "took": true,
+   "r_old": -1.048,
+   "r_new": -1.026
   },
   {
    "date": "2026-11-17",
@@ -22980,7 +23042,9 @@
    "rvol": 1.26,
    "in_play": false,
    "why": "it's up 3.8% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.101,
+   "r_new": -1.056
   },
   {
    "date": "2026-11-17",
@@ -22996,7 +23060,9 @@
    "rvol": 0.14,
    "in_play": false,
    "why": "it's up 2.9% on the day, I need 4%; opening volume is 0.1x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.26,
+   "r_new": -1.133
   },
   {
    "date": "2026-11-17",
@@ -23012,7 +23078,9 @@
    "rvol": null,
    "in_play": false,
    "why": "it's up 2.1% on the day, I need 4%; no opening-volume history to compare with",
-   "took": false
+   "took": false,
+   "r_old": -1.241,
+   "r_new": -0.254
   },
   {
    "date": "2026-11-17",
@@ -23028,7 +23096,9 @@
    "rvol": 16.32,
    "in_play": true,
    "why": "",
-   "took": false
+   "took": false,
+   "r_old": -1.01,
+   "r_new": -0.679
   },
   {
    "date": "2026-11-17",
@@ -23044,7 +23114,9 @@
    "rvol": 0.4,
    "in_play": false,
    "why": "it's up 2.5% on the day, I need 4%; opening volume is 0.4x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.173,
+   "r_new": -0.071
   },
   {
    "date": "2026-11-17",
@@ -23060,7 +23132,9 @@
    "rvol": 1.12,
    "in_play": false,
    "why": "it's up 3.4% on the day, I need 4%; opening volume is 1.1x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.005,
+   "r_new": -0.756
   },
   {
    "date": "2026-11-17",
@@ -23076,7 +23150,9 @@
    "rvol": 0.64,
    "in_play": false,
    "why": "it's up 0.4% on the day, I need 4%; the stop would be only 0.7% away (costs eat stops under 1%); opening volume is 0.6x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": 1.783,
+   "r_new": 1.867
   },
   {
    "date": "2026-11-17",
@@ -23092,7 +23168,9 @@
    "rvol": 0.75,
    "in_play": false,
    "why": "it's up 0.5% on the day, I need 4%; the stop would be only 0.4% away (costs eat stops under 1%); opening volume is 0.8x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": 1.789,
+   "r_new": 1.86
   },
   {
    "date": "2026-11-17",
@@ -23108,7 +23186,9 @@
    "rvol": 1.63,
    "in_play": false,
    "why": "it's up 2.5% on the day, I need 4%",
-   "took": false
+   "took": false,
+   "r_old": 1.87,
+   "r_new": 0.238
   },
   {
    "date": "2026-11-17",
@@ -23124,7 +23204,9 @@
    "rvol": 0.42,
    "in_play": false,
    "why": "it's up 3.1% on the day, I need 4%; opening volume is 0.4x normal, I need 1.5x",
-   "took": false
+   "took": false,
+   "r_old": -1.001,
+   "r_new": -1.0
   },
   {
    "date": "2026-11-17",
@@ -23140,7 +23222,9 @@
    "rvol": 1.55,
    "in_play": false,
    "why": "it's up 3.2% on the day, I need 4%",
-   "took": false
+   "took": false,
+   "r_old": 1.284,
+   "r_new": 0.869
   },
   {
    "date": "2026-11-17",
@@ -23156,7 +23240,9 @@
    "rvol": 4.11,
    "in_play": true,
    "why": "",
-   "took": false
+   "took": false,
+   "r_old": 0.219,
+   "r_new": 0.121
   },
   {
    "date": "2026-11-17",
@@ -23172,7 +23258,9 @@
    "rvol": 1.92,
    "in_play": true,
    "why": "",
-   "took": false
+   "took": false,
+   "r_old": -0.213,
+   "r_new": -0.108
   }
  ]
 }

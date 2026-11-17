@@ -14463,7 +14463,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-17T22:30:00+00:00"
+   "t": "2026-11-17T23:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14473,7 +14473,7 @@
   "entry": {
    "status": "idle",
    "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-17T22:30:00+00:00"
+   "t": "2026-11-17T23:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -21767,14 +21767,10 @@
   }
  },
  "telegram_health": {
-  "updates_error": "HTTP Error 502: Bad Gateway",
-  "at": "2026-11-17T22:30:00+00:00"
+  "updates_error": "The read operation timed out",
+  "at": "2026-11-17T23:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 1,
-   "at": "2026-11-12T13:00:00+00:00"
-  },
   {
    "sent_ok": 1,
    "at": "2026-11-12T14:50:00+00:00"
@@ -21851,6 +21847,10 @@
   {
    "updates_error": "HTTP Error 502: Bad Gateway",
    "at": "2026-11-17T22:30:00+00:00"
+  },
+  {
+   "updates_error": "The read operation timed out",
+   "at": "2026-11-17T23:00:00+00:00"
   }
  ],
  "news": {

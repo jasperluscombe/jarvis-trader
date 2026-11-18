@@ -13437,11 +13437,6 @@
   {
    "t": "2026-11-16T20:55:00+00:00",
    "bot": "broker",
-   "text": "Sell order for 3 QVCG sent but not filled yet (status pending_new). I'll check again."
-  },
-  {
-   "t": "2026-11-16T20:55:00+00:00",
-   "bot": "broker",
    "text": "Sell order for 2 ZVRA sent but not filled yet (status new). I'll check again."
   },
   {
@@ -13833,6 +13828,11 @@
    "t": "2026-11-17T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-18T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $52.71 account: $1.58 a trade, $5.27 a day, orders up to $47.44."
   }
  ],
  "trades": [
@@ -14426,7 +14426,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-18T08:00:00+00:00"
+   "t": "2026-11-18T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14436,7 +14436,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-18T08:00:00+00:00"
+   "t": "2026-11-18T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14455,8 +14455,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped RMIX: one share of RMIX costs $6.13, more than your cash limit (cash $11.48 in trader/portfolio.json minus the $5.36 buffer = $6.12 / 6.13). No order.",
-   "t": "2026-11-17T15:30:00+00:00"
+   "text": "Limits resized to your $52.71 account: $1.58 a trade, $5.27 a day, orders up to $47.44.",
+   "t": "2026-11-18T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-18",
@@ -16661,6 +16661,10 @@
   {
    "t": "2026-11-18T06:30:11+00:00",
    "eq": 52.73
+  },
+  {
+   "t": "2026-11-18T08:30:00+00:00",
+   "eq": 52.71
   }
  ],
  "charts": {

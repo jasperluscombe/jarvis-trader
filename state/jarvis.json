@@ -13435,21 +13435,6 @@
  ],
  "events": [
   {
-   "t": "2026-11-16T20:55:00+00:00",
-   "bot": "broker",
-   "text": "Sell order for 2 ZVRA sent but not filled yet (status new). I'll check again."
-  },
-  {
-   "t": "2026-11-16T21:00:00+00:00",
-   "bot": "oracle",
-   "text": "Scored 31 breakout signals for the shadow book."
-  },
-  {
-   "t": "2026-11-16T21:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Sent the day's recap."
-  },
-  {
    "t": "2026-11-17T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $53.62 account: $1.61 a trade, $5.36 a day, orders up to $48.26."
@@ -13833,6 +13818,21 @@
    "t": "2026-11-18T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $52.71 account: $1.58 a trade, $5.27 a day, orders up to $47.44."
+  },
+  {
+   "t": "2026-11-18T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 262 charts matched a setup, 151 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
+   "t": "2026-11-18T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 22 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-18T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
   }
  ],
  "trades": [
@@ -14110,333 +14110,330 @@
  "done": {
   "daily_goal": "2026-11-09",
   "recap": "2026-11-17",
-  "brief": "2026-11-17",
+  "brief": "2026-11-18",
   "overnight_warning": "2026-11-06"
  },
  "candidates": [
   {
-   "symbol": "CMCSA",
+   "symbol": "SLS",
    "setups": [
     "breakout_20d",
-    "bull_flag"
+    "reclaim_ma20"
    ],
-   "price": 25.6,
-   "close_date": "2026-11-16",
-   "rsi": 69.3,
-   "volume": 30391589
-  },
-  {
-   "symbol": "TSCO",
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "price": 37.95,
-   "close_date": "2026-11-16",
-   "rsi": 67.0,
-   "volume": 15338036
+   "price": 19.15,
+   "close_date": "2026-11-17",
+   "rsi": 76.5,
+   "volume": 119486326
   },
   {
    "symbol": "CHYM",
    "setups": [
+    "bull_flag"
+   ],
+   "price": 32.97,
+   "close_date": "2026-11-17",
+   "rsi": 62.2,
+   "volume": 40264466
+  },
+  {
+   "symbol": "CMCSA",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 25.31,
+   "close_date": "2026-11-17",
+   "rsi": 65.4,
+   "volume": 30947530
+  },
+  {
+   "symbol": "TSCO",
+   "setups": [
     "breakout_20d"
    ],
-   "price": 34.29,
-   "close_date": "2026-11-16",
-   "rsi": 73.1,
-   "volume": 15960188
+   "price": 38.49,
+   "close_date": "2026-11-17",
+   "rsi": 69.0,
+   "volume": 17021534
   },
   {
    "symbol": "CMG",
    "setups": [
     "bull_flag"
    ],
-   "price": 35.94,
-   "close_date": "2026-11-16",
-   "rsi": 64.2,
-   "volume": 12946834
+   "price": 35.83,
+   "close_date": "2026-11-17",
+   "rsi": 63.5,
+   "volume": 14630329
   },
   {
-   "symbol": "TU",
+   "symbol": "AS",
    "setups": [
-    "breakout_20d",
     "reclaim_ma20"
    ],
-   "price": 9.57,
-   "close_date": "2026-11-16",
-   "rsi": 64.2,
-   "volume": 46345206
-  },
-  {
-   "symbol": "PCG",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 13.68,
-   "close_date": "2026-11-16",
-   "rsi": 59.4,
-   "volume": 29441383
-  },
-  {
-   "symbol": "JD",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 27.54,
-   "close_date": "2026-11-16",
-   "rsi": 53.4,
-   "volume": 9227545
-  },
-  {
-   "symbol": "MBGL",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 24.04,
-   "close_date": "2026-11-16",
-   "rsi": 82.8,
-   "volume": 9894927
-  },
-  {
-   "symbol": "ADT",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 9.92,
-   "close_date": "2026-11-16",
-   "rsi": 85.2,
-   "volume": 23760563
-  },
-  {
-   "symbol": "HDB",
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "price": 26.29,
-   "close_date": "2026-11-16",
-   "rsi": 73.6,
-   "volume": 8828259
-  },
-  {
-   "symbol": "KVYO",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 22.89,
-   "close_date": "2026-11-16",
-   "rsi": 70.4,
-   "volume": 9974289
+   "price": 30.24,
+   "close_date": "2026-11-17",
+   "rsi": 51.5,
+   "volume": 17232350
   },
   {
    "symbol": "CPRT",
    "setups": [
     "bull_flag"
    ],
-   "price": 32.08,
-   "close_date": "2026-11-16",
-   "rsi": 62.9,
-   "volume": 7071544
+   "price": 31.45,
+   "close_date": "2026-11-17",
+   "rsi": 57.0,
+   "volume": 10697626
   },
   {
-   "symbol": "IBN",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 34.42,
-   "close_date": "2026-11-16",
-   "rsi": 76.3,
-   "volume": 6236853
-  },
-  {
-   "symbol": "VFC",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 20.15,
-   "close_date": "2026-11-16",
-   "rsi": 64.7,
-   "volume": 9764972
-  },
-  {
-   "symbol": "MMED",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 18.65,
-   "close_date": "2026-11-16",
-   "rsi": 50.9,
-   "volume": 10535077
-  },
-  {
-   "symbol": "CELH",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 31.57,
-   "close_date": "2026-11-16",
-   "rsi": 57.5,
-   "volume": 5628626
-  },
-  {
-   "symbol": "CPB",
+   "symbol": "KLAR",
    "setups": [
     "breakout_20d"
    ],
-   "price": 23.45,
-   "close_date": "2026-11-16",
-   "rsi": 66.2,
-   "volume": 7541224
+   "price": 14.27,
+   "close_date": "2026-11-17",
+   "rsi": 58.8,
+   "volume": 19463917
+  },
+  {
+   "symbol": "LVS",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 39.32,
+   "close_date": "2026-11-17",
+   "rsi": 51.7,
+   "volume": 7006270
+  },
+  {
+   "symbol": "AES",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 14.97,
+   "close_date": "2026-11-17",
+   "rsi": 56.7,
+   "volume": 17621359
   },
   {
    "symbol": "GEN",
    "setups": [
     "bull_flag"
    ],
-   "price": 30.4,
-   "close_date": "2026-11-16",
-   "rsi": 65.9,
-   "volume": 5770158
+   "price": 29.52,
+   "close_date": "2026-11-17",
+   "rsi": 59.2,
+   "volume": 8733123
   },
   {
-   "symbol": "INVH",
+   "symbol": "PBR",
    "setups": [
-    "reclaim_ma20"
+    "oversold",
+    "oversold_bounce"
    ],
-   "price": 27.1,
-   "close_date": "2026-11-16",
-   "rsi": 51.2,
-   "volume": 5888978
+   "price": 17.41,
+   "close_date": "2026-11-17",
+   "rsi": 26.0,
+   "volume": 14640864
   },
   {
-   "symbol": "ROL",
+   "symbol": "HDB",
    "setups": [
-    "breakout_20d",
     "bull_flag"
    ],
-   "price": 39.11,
-   "close_date": "2026-11-16",
-   "rsi": 68.5,
-   "volume": 3823576
+   "price": 26.26,
+   "close_date": "2026-11-17",
+   "rsi": 73.1,
+   "volume": 9284192
+  },
+  {
+   "symbol": "VFC",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 20.34,
+   "close_date": "2026-11-17",
+   "rsi": 65.9,
+   "volume": 11607262
   },
   {
    "symbol": "VTRS",
    "setups": [
     "bull_flag"
    ],
-   "price": 20.74,
-   "close_date": "2026-11-16",
-   "rsi": 68.9,
-   "volume": 7141610
+   "price": 20.45,
+   "close_date": "2026-11-17",
+   "rsi": 64.2,
+   "volume": 10383866
   },
   {
-   "symbol": "XPEV",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 9.67,
-   "close_date": "2026-11-16",
-   "rsi": 49.4,
-   "volume": 15051074
-  },
-  {
-   "symbol": "STWD",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 11.75,
-   "close_date": "2026-11-16",
-   "rsi": 38.0,
-   "volume": 12213001
-  },
-  {
-   "symbol": "BEN",
+   "symbol": "ADT",
    "setups": [
     "bull_flag"
    ],
-   "price": 35.01,
-   "close_date": "2026-11-16",
-   "rsi": 58.9,
-   "volume": 3903763
+   "price": 9.88,
+   "close_date": "2026-11-17",
+   "rsi": 83.3,
+   "volume": 18435521
   },
   {
-   "symbol": "PRMB",
+   "symbol": "IBN",
    "setups": [
     "bull_flag"
    ],
-   "price": 24.05,
-   "close_date": "2026-11-16",
-   "rsi": 76.5,
-   "volume": 5414548
+   "price": 34.8,
+   "close_date": "2026-11-17",
+   "rsi": 77.8,
+   "volume": 5104517
   },
   {
    "symbol": "MGM",
    "setups": [
     "bull_flag"
    ],
-   "price": 33.23,
-   "close_date": "2026-11-16",
-   "rsi": 59.7,
-   "volume": 3709651
+   "price": 33.35,
+   "close_date": "2026-11-17",
+   "rsi": 60.5,
+   "volume": 4935335
   },
   {
-   "symbol": "BCE",
+   "symbol": "ROL",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 38.11,
+   "close_date": "2026-11-17",
+   "rsi": 60.9,
+   "volume": 4260859
+  },
+  {
+   "symbol": "CPB",
    "setups": [
     "breakout_20d"
    ],
-   "price": 22.13,
-   "close_date": "2026-11-16",
-   "rsi": 63.9,
-   "volume": 5156527
+   "price": 23.58,
+   "close_date": "2026-11-17",
+   "rsi": 66.9,
+   "volume": 6241418
   },
   {
-   "symbol": "URGN",
+   "symbol": "APTV",
    "setups": [
     "oversold_bounce"
    ],
-   "price": 28.1,
-   "close_date": "2026-11-16",
-   "rsi": 37.2,
-   "volume": 3964623
+   "price": 37.88,
+   "close_date": "2026-11-17",
+   "rsi": 30.4,
+   "volume": 3686471
+  },
+  {
+   "symbol": "TME",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 9.47,
+   "close_date": "2026-11-17",
+   "rsi": 63.5,
+   "volume": 13307781
+  },
+  {
+   "symbol": "TTEK",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 38.4,
+   "close_date": "2026-11-17",
+   "rsi": 52.6,
+   "volume": 3016922
+  },
+  {
+   "symbol": "BZ",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "price": 13.09,
+   "close_date": "2026-11-17",
+   "rsi": 31.7,
+   "volume": 8503166
   },
   {
    "symbol": "ELAN",
    "setups": [
     "bull_flag"
    ],
-   "price": 26.41,
-   "close_date": "2026-11-16",
-   "rsi": 64.3,
-   "volume": 4084558
+   "price": 25.85,
+   "close_date": "2026-11-17",
+   "rsi": 59.2,
+   "volume": 3844376
   },
   {
-   "symbol": "VVV",
+   "symbol": "HOG",
    "setups": [
     "bull_flag"
    ],
-   "price": 34.25,
-   "close_date": "2026-11-16",
-   "rsi": 55.2,
-   "volume": 3098710
+   "price": 33.27,
+   "close_date": "2026-11-17",
+   "rsi": 63.3,
+   "volume": 2929078
+  },
+  {
+   "symbol": "RARE",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 16.7,
+   "close_date": "2026-11-17",
+   "rsi": 53.7,
+   "volume": 5591896
+  },
+  {
+   "symbol": "SARO",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 27.38,
+   "close_date": "2026-11-17",
+   "rsi": 65.6,
+   "volume": 3369006
+  },
+  {
+   "symbol": "ENR",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 27.4,
+   "close_date": "2026-11-17",
+   "rsi": 72.3,
+   "volume": 3352484
+  },
+  {
+   "symbol": "LFST",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 14.17,
+   "close_date": "2026-11-17",
+   "rsi": 59.1,
+   "volume": 6322937
   }
  ],
- "candidates_day": "2026-11-17",
+ "candidates_day": "2026-11-18",
  "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-18T12:55:00+00:00"
+   "t": "2026-11-18T13:00:00+00:00"
   },
   "scanner": {
    "status": "working",
-   "text": "30 of 814 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-17T15:35:01+00:00"
+   "text": "Scanned the US market: 262 charts matched a setup, 151 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-18T13:00:00+00:00"
   },
   "entry": {
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-18T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-18T13:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14450,8 +14447,8 @@
   },
   "news": {
    "status": "working",
-   "text": "Read 21 headlines and filings for 8 stocks.",
-   "t": "2026-11-17T13:00:01+00:00"
+   "text": "Read 22 headlines and filings for 8 stocks.",
+   "t": "2026-11-18T13:00:00+00:00"
   },
   "risk": {
    "status": "working",
@@ -21738,14 +21735,10 @@
   }
  },
  "telegram_health": {
-  "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
-  "at": "2026-11-18T12:55:00+00:00"
+  "sent_ok": 1,
+  "at": "2026-11-18T13:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 1,
-   "at": "2026-11-12T15:55:00+00:00"
-  },
   {
    "sent_ok": 1,
    "at": "2026-11-12T17:25:00+00:00"
@@ -21822,27 +21815,50 @@
   {
    "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
    "at": "2026-11-18T12:55:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-18T13:00:00+00:00"
   }
  ],
  "news": {
+  "AS": {
+   "headlines": [
+    {
+     "title": "Amer Sports: 3 Key Takeaways for Long-Term Investors",
+     "url": "https://www.fool.com/earnings/takeaways/2026/11/17/amer-sports-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "Learn Why The Bull Case For Amer Sports Stock Could Change Following Raised 2026 Guidance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/learn-why-bull-case-amer-232452604.html?.tsrc=rss",
+     "tags": [
+      "earnings",
+      "analyst",
+      "capital"
+     ]
+    },
+    {
+     "title": "Alpine Sports Gear Maker Lifts Outlook. Ski Vacations Are in Hot Demand.",
+     "url": "https://finance.yahoo.com/m/62125f61-0b52-366e-b9d6-4e5475f8ce8f/alpine-sports-gear-maker.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
   "CHYM": {
-   "headlines": []
+   "headlines": [
+    {
+     "title": "Chime Financial, Stock Of The Day, Eyes A Buy Point As Growth Ramps, Big Debut Looms",
+     "url": "https://finance.yahoo.com/m/17dca0b9-abeb-3c4b-820e-e165d5a02385/chime-financial%2C-stock-of-the.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
   },
   "CMCSA": {
    "headlines": [
     {
-     "title": "Netflix Stock Down 47%: Too Early To Buy?",
-     "url": "https://www.trefis.com/stock/nflx/articles/625752/netflix-stock-down-47-too-early-to-buy/2026-11-17?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Comcast Stock Up 17%, Still Losing Internet Customers",
-     "url": "https://www.trefis.com/stock/cmcsa/articles/625659/comcast-stock-up-17-still-losing-internet-customers/2026-11-17?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Why Netflix Stock Is At A One-Year Low",
-     "url": "https://www.trefis.com/stock/nflx/articles/625595/why-netflix-stock-is-at-a-one-year-low/2026-11-17?.tsrc=rss",
+     "title": "A $1,500,000 Portfolio in Realty Income, Comcast and Hormel Pays $79,746 a Year in Dividends. Here\u2019s What Happens if One Cuts",
+     "url": "https://www.tikr.com/blog/a-1500000-portfolio-in-realty-income-comcast-and-hormel-pays-79377-a-year-in-dividends-heres-what-happens-if-one-cuts?ref=yahoofinancedividend&tlnk=yf-261117-jm7q8jc7&.tsrc=rss",
      "tags": []
     }
    ]
@@ -21850,98 +21866,62 @@
   "CMG": {
    "headlines": [
     {
-     "title": "Has McDonald's Stock Become A Different Bet?",
-     "url": "https://www.trefis.com/stock/mcd/articles/625736/has-mcdonalds-stock-become-a-different-bet/2026-11-17?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Chipotle (CMG) Unveils Sneak It In Hoodie With An Insulated Food Pocket",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/chipotle-cmg-unveils-sneak-hoodie-081156464.html?.tsrc=rss",
+     "title": "SMOOTHIE KING DELIVERS 8.7% Q3 SAME-STORE SALES GROWTH, OUTPACING STARBUCKS, CHIPOTLE AND CAVA AS DEMAND FOR HEALTH AND WELLNESS KEEPS GROWING",
+     "url": "https://finance.yahoo.com/small-business/articles/smoothie-king-delivers-8-7-110000105.html?.tsrc=rss",
      "tags": []
     }
    ]
   },
-  "JD": {
+  "CPRT": {
+   "headlines": []
+  },
+  "KLAR": {
    "headlines": [
     {
-     "title": "Why Is JD.com Stock Falling Nearly 3% After Third-Quarter Earnings?",
-     "url": "https://investorshub.advfn.com/market-news/article/40192/why-is-jd-com-stock-falling-nearly-3-after-third-quarter-earnings?.tsrc=rss",
+     "title": "KLAR Vs AFRM: Which Fintech Is A Better Bet Now?",
+     "url": "https://stocktwits.com/news-articles/markets/equity/klar-vs-afrm-which-fintech-is-a-better-bet-now/cNbXqSUR9ht?.tsrc=rss",
      "tags": [
       "earnings"
      ]
     },
     {
-     "title": "JD.com beats profit expectations on cost cuts",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/jd-com-beats-profit-expectations-103744336.html?.tsrc=rss",
+     "title": "Klarna: 3 Key Takeaways for Long-Term Investors",
+     "url": "https://www.fool.com/earnings/takeaways/2026/11/17/klarna-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+     "tags": []
+    },
+    {
+     "title": "Klarna (KLAR) Q3 2026 Earnings Call Transcript",
+     "url": "https://www.fool.com/earnings/call-transcripts/2026/11/17/klarna-klar-q3-2026-earnings-call-transcript/?.tsrc=rss",
      "tags": [
-      "earnings"
+      "earnings",
+      "people"
+     ]
+    }
+   ]
+  },
+  "SLS": {
+   "headlines": [
+    {
+     "title": "CAPR Stock Has Retail\u2019s Attention After SLS Rally \u2014 Here Are 2 Drugs With Better FDA Approval Odds This Month",
+     "url": "https://stocktwits.com/news-articles/markets/equity/capr-stock-retail-sls-rally-2-drugs-better-fda-approval-odds-this-month/cNbXuncR9LG?.tsrc=rss",
+     "tags": [
+      "regulatory"
      ]
     },
     {
-     "title": "JD.com Announces Third Quarter 2026 Results",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/jd-com-announces-third-quarter-094500848.html?.tsrc=rss",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ]
-  },
-  "MBGL": {
-   "headlines": [
-    {
-     "title": "Top British Hedge Fund Loads Up on Martin Marietta Stock, Trims Stake in Visa",
-     "url": "https://finance.yahoo.com/m/0553937e-01ef-350a-b697-b6776a2b725f/top-british-hedge-fund-loads.html?.tsrc=rss",
+     "title": "SLS Joins MRNA And ANL In Biotech\u2019s Top 3 This Year \u2014 Here\u2019s How A Late-2025 Bet Could Grow 10x From Here",
+     "url": "https://stocktwits.com/news-articles/markets/equity/sls-mrna-anl-biotech-top-3-this-year-how-late-2025-bet-grow-10x/cNbXVXXR9hm?.tsrc=rss",
      "tags": []
-    }
-   ]
-  },
-  "PCG": {
-   "headlines": [
+    },
     {
-     "title": "David Tepper\u2019s Appaloosa Goes Big on SpaceX, While Slashing Alphabet Stake",
-     "url": "https://finance.yahoo.com/m/f487537a-09c4-3b0f-beb6-14e5629c10ed/david-tepper%E2%80%99s-appaloosa-goes.html?.tsrc=rss",
+     "title": "SELLAS Stock In Focus After Phase 3 AML Trial Win",
+     "url": "https://finance.yahoo.com/healthcare/articles/sellas-stock-focus-phase-3-001833461.html?.tsrc=rss",
      "tags": []
     }
    ]
   },
   "TSCO": {
-   "headlines": [
-    {
-     "title": "Are You Overpaying For Lowe's Stock Versus Its Rivals?",
-     "url": "https://www.trefis.com/stock/low/articles/625660/are-you-overpaying-for-lowes-stock-versus-its-rivals/2026-11-17?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "He Starts Driving for a Delivery App at 64 amid Same-Day Delivery Frenzy, and Expects $30,000 in Payouts to Cost Him Social Security. The Earnings Test Counts Net Profit, So Mileage Deductions Drop Him Below $25,560 Limit",
-     "url": "https://247wallst.com/personal-finance/social-security/2026/11/16/he-starts-driving-for-a-delivery-app-at-64-amid-same-day-delivery-frenzy-and-expects-30000-in-payouts-to-cost-him-social-security-the-earnings-test-counts-net-profit-so-mileage-deductions-drop-hi/?.tsrc=rss",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ]
-  },
-  "TU": {
-   "headlines": [
-    {
-     "title": "Nearly Half of Regular U.S. AI Users Say They Have Bent the Truth to Get Past AI Customer Service, New TELUS Digital Poll Finds",
-     "url": "https://finance.yahoo.com/technology/ai/articles/nearly-half-regular-u-ai-114500854.html?.tsrc=rss",
-     "tags": [
-      "earnings"
-     ]
-    },
-    {
-     "title": "TELUS (TSX:T) Looks Fairly Valued Following Qu\u00e9becor Bid Interest",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/telus-tsx-t-looks-fairly-051242217.html?.tsrc=rss",
-     "tags": [
-      "deal"
-     ]
-    },
-    {
-     "title": "TELUS (TSX:T) Drops Vancouver AI Data Centre Plans And Bets On Kamloops",
-     "url": "https://finance.yahoo.com/technology/ai/articles/telus-tsx-t-drops-vancouver-031021614.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
+   "headlines": []
   }
  },
  "managed": [

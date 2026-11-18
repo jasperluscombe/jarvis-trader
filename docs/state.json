@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-18T12:55:00+00:00",
- "updated_local": "Wed 18 Nov 11:25 PM",
+ "updated_utc": "2026-11-18T13:00:00+00:00",
+ "updated_local": "Wed 18 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -6237,7 +6237,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-18T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-18T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6825,31 +6825,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-18T12:55:00+00:00"
+   "t": "2026-11-18T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks before the open, then finds the ones in play after it.",
-   "status": "idle",
-   "text": "30 of 814 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-17T15:35:01+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 262 charts matched a setup, 151 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-18T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "Read 21 headlines and filings for 8 stocks.",
-   "t": "2026-11-17T13:00:01+00:00"
+   "status": "working",
+   "text": "Read 22 headlines and filings for 8 stocks.",
+   "t": "2026-11-18T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-18T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-18T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -6878,38 +6878,53 @@
  ],
  "watchlist": [
   {
-   "symbol": "CMCSA",
-   "price": 25.6,
+   "symbol": "SLS",
+   "price": 19.15,
    "setups": [
     "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": [
+    {
+     "title": "CAPR Stock Has Retail\u2019s Attention After SLS Rally \u2014 Here Are 2 Drugs With Better FDA Approval Odds This Month",
+     "url": "https://stocktwits.com/news-articles/markets/equity/capr-stock-retail-sls-rally-2-drugs-better-fda-approval-odds-this-month/cNbXuncR9LG?.tsrc=rss",
+     "tags": [
+      "regulatory"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "CHYM",
+   "price": 32.97,
+   "setups": [
     "bull_flag"
    ],
    "news": [
     {
-     "title": "Netflix Stock Down 47%: Too Early To Buy?",
-     "url": "https://www.trefis.com/stock/nflx/articles/625752/netflix-stock-down-47-too-early-to-buy/2026-11-17?.tsrc=rss",
+     "title": "Chime Financial, Stock Of The Day, Eyes A Buy Point As Growth Ramps, Big Debut Looms",
+     "url": "https://finance.yahoo.com/m/17dca0b9-abeb-3c4b-820e-e165d5a02385/chime-financial%2C-stock-of-the.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "CMCSA",
+   "price": 25.31,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": [
+    {
+     "title": "A $1,500,000 Portfolio in Realty Income, Comcast and Hormel Pays $79,746 a Year in Dividends. Here\u2019s What Happens if One Cuts",
+     "url": "https://www.tikr.com/blog/a-1500000-portfolio-in-realty-income-comcast-and-hormel-pays-79377-a-year-in-dividends-heres-what-happens-if-one-cuts?ref=yahoofinancedividend&tlnk=yf-261117-jm7q8jc7&.tsrc=rss",
      "tags": []
     }
    ]
   },
   {
    "symbol": "TSCO",
-   "price": 37.95,
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "news": [
-    {
-     "title": "Are You Overpaying For Lowe's Stock Versus Its Rivals?",
-     "url": "https://www.trefis.com/stock/low/articles/625660/are-you-overpaying-for-lowes-stock-versus-its-rivals/2026-11-17?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "CHYM",
-   "price": 34.29,
+   "price": 38.49,
    "setups": [
     "breakout_20d"
    ],
@@ -6917,29 +6932,50 @@
   },
   {
    "symbol": "CMG",
-   "price": 35.94,
+   "price": 35.83,
    "setups": [
     "bull_flag"
    ],
    "news": [
     {
-     "title": "Has McDonald's Stock Become A Different Bet?",
-     "url": "https://www.trefis.com/stock/mcd/articles/625736/has-mcdonalds-stock-become-a-different-bet/2026-11-17?.tsrc=rss",
+     "title": "SMOOTHIE KING DELIVERS 8.7% Q3 SAME-STORE SALES GROWTH, OUTPACING STARBUCKS, CHIPOTLE AND CAVA AS DEMAND FOR HEALTH AND WELLNESS KEEPS GROWING",
+     "url": "https://finance.yahoo.com/small-business/articles/smoothie-king-delivers-8-7-110000105.html?.tsrc=rss",
      "tags": []
     }
    ]
   },
   {
-   "symbol": "TU",
-   "price": 9.57,
+   "symbol": "AS",
+   "price": 30.24,
    "setups": [
-    "breakout_20d",
     "reclaim_ma20"
    ],
    "news": [
     {
-     "title": "Nearly Half of Regular U.S. AI Users Say They Have Bent the Truth to Get Past AI Customer Service, New TELUS Digital Poll Finds",
-     "url": "https://finance.yahoo.com/technology/ai/articles/nearly-half-regular-u-ai-114500854.html?.tsrc=rss",
+     "title": "Amer Sports: 3 Key Takeaways for Long-Term Investors",
+     "url": "https://www.fool.com/earnings/takeaways/2026/11/17/amer-sports-3-key-takeaways-for-long-term-investors/?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "CPRT",
+   "price": 31.45,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "KLAR",
+   "price": 14.27,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "KLAR Vs AFRM: Which Fintech Is A Better Bet Now?",
+     "url": "https://stocktwits.com/news-articles/markets/equity/klar-vs-afrm-which-fintech-is-a-better-bet-now/cNbXqSUR9ht?.tsrc=rss",
      "tags": [
       "earnings"
      ]
@@ -6947,85 +6983,41 @@
    ]
   },
   {
-   "symbol": "PCG",
-   "price": 13.68,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "David Tepper\u2019s Appaloosa Goes Big on SpaceX, While Slashing Alphabet Stake",
-     "url": "https://finance.yahoo.com/m/f487537a-09c4-3b0f-beb6-14e5629c10ed/david-tepper%E2%80%99s-appaloosa-goes.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "JD",
-   "price": 27.54,
+   "symbol": "LVS",
+   "price": 39.32,
    "setups": [
     "bull_flag"
    ],
-   "news": [
-    {
-     "title": "Why Is JD.com Stock Falling Nearly 3% After Third-Quarter Earnings?",
-     "url": "https://investorshub.advfn.com/market-news/article/40192/why-is-jd-com-stock-falling-nearly-3-after-third-quarter-earnings?.tsrc=rss",
-     "tags": [
-      "earnings"
-     ]
-    }
-   ]
+   "news": []
   },
   {
-   "symbol": "MBGL",
-   "price": 24.04,
+   "symbol": "AES",
+   "price": 14.97,
    "setups": [
-    "breakout_20d"
+    "reclaim_ma20"
    ],
-   "news": [
-    {
-     "title": "Top British Hedge Fund Loads Up on Martin Marietta Stock, Trims Stake in Visa",
-     "url": "https://finance.yahoo.com/m/0553937e-01ef-350a-b697-b6776a2b725f/top-british-hedge-fund-loads.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
+   "news": []
   },
   {
-   "symbol": "ADT",
-   "price": 9.92,
+   "symbol": "GEN",
+   "price": 29.52,
    "setups": [
     "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PBR",
+   "price": 17.41,
+   "setups": [
+    "oversold",
+    "oversold_bounce"
    ],
    "news": []
   },
   {
    "symbol": "HDB",
-   "price": 26.29,
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "KVYO",
-   "price": 22.89,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CPRT",
-   "price": 32.08,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "IBN",
-   "price": 34.42,
+   "price": 26.26,
    "setups": [
     "bull_flag"
    ],
@@ -7033,96 +7025,31 @@
   },
   {
    "symbol": "VFC",
-   "price": 20.15,
+   "price": 20.34,
    "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MMED",
-   "price": 18.65,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CELH",
-   "price": 31.57,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CPB",
-   "price": 23.45,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "GEN",
-   "price": 30.4,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "INVH",
-   "price": 27.1,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ROL",
-   "price": 39.11,
-   "setups": [
-    "breakout_20d",
     "bull_flag"
    ],
    "news": []
   },
   {
    "symbol": "VTRS",
-   "price": 20.74,
+   "price": 20.45,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "XPEV",
-   "price": 9.67,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "STWD",
-   "price": 11.75,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "BEN",
-   "price": 35.01,
+   "symbol": "ADT",
+   "price": 9.88,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "PRMB",
-   "price": 24.05,
+   "symbol": "IBN",
+   "price": 34.8,
    "setups": [
     "bull_flag"
    ],
@@ -7130,23 +7057,55 @@
   },
   {
    "symbol": "MGM",
-   "price": 33.23,
+   "price": 33.35,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "BCE",
-   "price": 22.13,
+   "symbol": "ROL",
+   "price": 38.11,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CPB",
+   "price": 23.58,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "URGN",
-   "price": 28.1,
+   "symbol": "APTV",
+   "price": 37.88,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "TME",
+   "price": 9.47,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "TTEK",
+   "price": 38.4,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BZ",
+   "price": 13.09,
    "setups": [
     "oversold_bounce"
    ],
@@ -7154,15 +7113,47 @@
   },
   {
    "symbol": "ELAN",
-   "price": 26.41,
+   "price": 25.85,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "VVV",
-   "price": 34.25,
+   "symbol": "HOG",
+   "price": 33.27,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "RARE",
+   "price": 16.7,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "SARO",
+   "price": 27.38,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ENR",
+   "price": 27.4,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "LFST",
+   "price": 14.17,
    "setups": [
     "bull_flag"
    ],
@@ -7652,6 +7643,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-18T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-18T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 22 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-18T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 262 charts matched a setup, 151 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-18T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $52.71 account: $1.58 a trade, $5.27 a day, orders up to $47.44."
@@ -7835,21 +7841,6 @@
    "t": "2026-11-17T15:00:00+00:00",
    "bot": "entry",
    "text": "BGIN broke out at $5.35 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-17T15:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on GRPN: not in play (it's up 2.9% on the day, I need 4%; opening volume is 0.1x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-17T15:00:00+00:00",
-   "bot": "entry",
-   "text": "GRPN broke out at $12.13 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-17T15:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on OCUL: not in play (it's up 3.8% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x)."
   }
  ],
  "errors": []

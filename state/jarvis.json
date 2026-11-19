@@ -13377,11 +13377,6 @@
  "events": [
   {
    "t": "2026-11-18T14:55:00+00:00",
-   "bot": "entry",
-   "text": "SH broke out at $34.04 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-18T14:55:00+00:00",
    "bot": "jarvis",
    "text": "Passed on SH: not in play (it's up 0.4% on the day, I need 4%; the stop would be only 0.7% away (costs eat stops under 1%); opening volume is 1.3x normal, I need 1.5x)."
   },
@@ -13774,6 +13769,11 @@
    "t": "2026-11-18T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-19T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $51.66 account: $1.55 a trade, $5.17 a day, orders up to $46.49."
   }
  ],
  "trades": [
@@ -14409,7 +14409,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-19T08:00:00+00:00"
+   "t": "2026-11-19T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14419,7 +14419,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-19T08:00:00+00:00"
+   "t": "2026-11-19T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14438,8 +14438,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped GLSI: one share risks $2.36 (entry 20.60 minus stop 18.24), more than your $1.58 max loss per trade. No order. Skip this trade, or plan a closer stop with trader-exit.",
-   "t": "2026-11-18T15:15:00+00:00"
+   "text": "Limits resized to your $51.66 account: $1.55 a trade, $5.17 a day, orders up to $46.49.",
+   "t": "2026-11-19T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-19",
@@ -16940,6 +16940,10 @@
   {
    "t": "2026-11-19T03:00:00+00:00",
    "eq": 51.68
+  },
+  {
+   "t": "2026-11-19T08:30:00+00:00",
+   "eq": 51.66
   }
  ],
  "charts": {

@@ -409,10 +409,30 @@ class Jarvis:
             print("sync failed:", e, file=sys.stderr)
             return
         save_json(PORTFOLIO_PATH, {
-            "cash": float(self.account.get("cash") or 0),
+            "cash": self.spendable(),
             "positions": [{"symbol": p["symbol"], "qty": float(p["qty"])} for p in self.positions],
             "synced_from": "alpaca", "at": self.now_utc.isoformat(timespec="seconds")})
         self.scale_limits()
+
+    def spendable(self):
+        """Cash Jarvis may spend: the smallest of cash and Alpaca's buying power, since open orders hold some
+        back (on 19 Nov an AI buy was refused: "insufficient buying power", $20.48 against a $21.57 order)."""
+        a = self.account or {}
+        vals = [float(a[k]) for k in ("cash", "buying_power", "non_marginable_buying_power") if a.get(k) not in (None, "")]
+        return round(max(0.0, min(vals)), 2) if vals else 0.0
+
+    def spent(self, usd):
+        """A buy just went in: take its cost off the cash, so the next trade in this check-in is sized on what's left."""
+        if not usd or not self.account:
+            return
+        left = round(max(0.0, self.spendable() - float(usd)), 2)
+        for k in ("cash", "buying_power", "non_marginable_buying_power"):
+            if self.account.get(k) not in (None, ""):
+                self.account[k] = str(min(float(self.account[k]), left))
+        pf = load_json(PORTFOLIO_PATH, {}) or {}
+        if pf:
+            pf["cash"] = left
+            save_json(PORTFOLIO_PATH, pf)
 
     def size_base(self):
         """The account value sizing is measured from: yesterday's closing value, so it holds still all day."""
@@ -580,7 +600,7 @@ class Jarvis:
         if rps <= 0:
             return None, None, "the stop isn't below the entry"
         budget = float(c.get("budget") or 0)
-        cash = float((self.account or {}).get("cash") or (load_json(self.portfolio_path(), {}) or {}).get("cash") or budget)
+        cash = self.spendable() if self.account else float((load_json(self.portfolio_path(), {}) or {}).get("cash") or budget)
         cap = min(float(c.get("max_order_usd") or budget), budget * float(c.get("max_position_pct") or 100) / 100,
                   cash - budget * float(c.get("cash_buffer_pct") or 0) / 100)
         by_loss = float(c.get("max_loss_per_trade_usd") or 0) / rps * entry
@@ -659,6 +679,8 @@ class Jarvis:
                 return False, "⚠️ Alpaca refused the %s order: %s" % (p["symbol"], e)
         p["status"] = "placed"
         p["broker_id"] = res.get("id")
+        if not self.args.dry_run:
+            self.spent(s.get("cost") or float(o.get("notional") or 0) or (s.get("qty") or 0) * (s.get("entry") or 0))
         self.log_order({"date": self.today, "at": self.now_utc.isoformat(timespec="seconds"),
                         "symbol": p["symbol"], "side": "buy", "kind": "entry", "qty": o.get("qty") or s.get("qty"),
                         "notional": o.get("notional"), "max_loss": s.get("max_loss"), "status": "placed",

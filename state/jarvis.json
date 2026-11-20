@@ -13444,21 +13444,6 @@
  ],
  "events": [
   {
-   "t": "2026-11-18T20:55:00+00:00",
-   "bot": "broker",
-   "text": "Sell order for 1 RMIX sent but not filled yet (status pending_new). I'll check again."
-  },
-  {
-   "t": "2026-11-18T21:00:00+00:00",
-   "bot": "oracle",
-   "text": "Scored 40 breakout signals for the shadow book."
-  },
-  {
-   "t": "2026-11-18T21:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Sent the day's recap."
-  },
-  {
    "t": "2026-11-19T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $51.66 account: $1.55 a trade, $5.17 a day, orders up to $46.49."
@@ -13842,6 +13827,21 @@
    "t": "2026-11-20T09:00:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $51.82 account: $1.55 a trade, $5.18 a day, orders up to $46.64."
+  },
+  {
+   "t": "2026-11-20T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 259 charts matched a setup, 174 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
+   "t": "2026-11-20T13:00:00+00:00",
+   "bot": "news",
+   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out"
+  },
+  {
+   "t": "2026-11-20T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
   }
  ],
  "trades": [
@@ -14194,110 +14194,111 @@
  "done": {
   "daily_goal": "2026-11-09",
   "recap": "2026-11-19",
-  "brief": "2026-11-19",
+  "brief": "2026-11-20",
   "overnight_warning": "2026-11-06"
  },
  "candidates": [
-  {
-   "symbol": "AAL",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 13.01,
-   "close_date": "2026-11-18",
-   "rsi": 49.1,
-   "volume": 47896123
-  },
-  {
-   "symbol": "TSCO",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 39.01,
-   "close_date": "2026-11-18",
-   "rsi": 70.7,
-   "volume": 14721114
-  },
-  {
-   "symbol": "CMG",
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "price": 36.95,
-   "close_date": "2026-11-18",
-   "rsi": 67.4,
-   "volume": 13481204
-  },
   {
    "symbol": "CMCSA",
    "setups": [
     "bull_flag"
    ],
-   "price": 25.24,
-   "close_date": "2026-11-18",
-   "rsi": 64.3,
-   "volume": 19080619
+   "price": 24.86,
+   "close_date": "2026-11-19",
+   "rsi": 59.4,
+   "volume": 27240361
   },
   {
-   "symbol": "CPRT",
+   "symbol": "GME",
    "setups": [
-    "bull_flag"
+    "breakout_20d"
    ],
-   "price": 31.46,
-   "close_date": "2026-11-18",
-   "rsi": 56.6,
-   "volume": 10963955
+   "price": 26.93,
+   "close_date": "2026-11-19",
+   "rsi": 64.5,
+   "volume": 18127266
   },
   {
-   "symbol": "RKT",
+   "symbol": "ASTS",
    "setups": [
-    "bull_flag"
+    "oversold",
+    "oversold_bounce"
    ],
-   "price": 13.49,
-   "close_date": "2026-11-18",
-   "rsi": 53.0,
-   "volume": 24084018
+   "price": 25.55,
+   "close_date": "2026-11-19",
+   "rsi": 29.8,
+   "volume": 17369982
   },
   {
    "symbol": "PCG",
    "setups": [
     "breakout_20d"
    ],
-   "price": 13.71,
-   "close_date": "2026-11-18",
-   "rsi": 58.7,
-   "volume": 22930260
+   "price": 13.94,
+   "close_date": "2026-11-19",
+   "rsi": 62.0,
+   "volume": 28898512
   },
   {
-   "symbol": "NCLH",
+   "symbol": "MDLN",
    "setups": [
     "bull_flag"
    ],
-   "price": 17.99,
-   "close_date": "2026-11-18",
-   "rsi": 57.7,
-   "volume": 15172206
+   "price": 37.84,
+   "close_date": "2026-11-19",
+   "rsi": 52.1,
+   "volume": 10342553
   },
   {
-   "symbol": "LYFT",
+   "symbol": "RKT",
    "setups": [
+    "bull_flag"
+   ],
+   "price": 13.19,
+   "close_date": "2026-11-19",
+   "rsi": 49.8,
+   "volume": 29572639
+  },
+  {
+   "symbol": "CMG",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 36.3,
+   "close_date": "2026-11-19",
+   "rsi": 63.0,
+   "volume": 10691666
+  },
+  {
+   "symbol": "HDB",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 26.24,
+   "close_date": "2026-11-19",
+   "rsi": 72.4,
+   "volume": 13255537
+  },
+  {
+   "symbol": "VVV",
+   "setups": [
+    "breakout_20d",
     "reclaim_ma20"
    ],
-   "price": 17.6,
-   "close_date": "2026-11-18",
-   "rsi": 56.7,
-   "volume": 15296695
+   "price": 36.84,
+   "close_date": "2026-11-19",
+   "rsi": 64.4,
+   "volume": 8923180
   },
   {
-   "symbol": "VTRS",
+   "symbol": "TU",
    "setups": [
-    "bull_flag"
+    "breakout_20d"
    ],
-   "price": 20.28,
-   "close_date": "2026-11-18",
-   "rsi": 61.5,
-   "volume": 13210534
+   "price": 10.78,
+   "close_date": "2026-11-19",
+   "rsi": 72.9,
+   "volume": 28223340
   },
   {
    "symbol": "IBN",
@@ -14305,220 +14306,222 @@
     "breakout_20d",
     "bull_flag"
    ],
-   "price": 34.89,
-   "close_date": "2026-11-18",
-   "rsi": 78.2,
-   "volume": 6966338
+   "price": 34.9,
+   "close_date": "2026-11-19",
+   "rsi": 78.1,
+   "volume": 8446658
   },
   {
-   "symbol": "CELH",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 32.75,
-   "close_date": "2026-11-18",
-   "rsi": 61.8,
-   "volume": 7031046
-  },
-  {
-   "symbol": "HDB",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 26.22,
-   "close_date": "2026-11-18",
-   "rsi": 72.4,
-   "volume": 8477710
-  },
-  {
-   "symbol": "LVS",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 39.27,
-   "close_date": "2026-11-18",
-   "rsi": 51.2,
-   "volume": 5543606
-  },
-  {
-   "symbol": "BRBR",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 13.66,
-   "close_date": "2026-11-18",
-   "rsi": 80.7,
-   "volume": 15207435
-  },
-  {
-   "symbol": "GME",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 26.53,
-   "close_date": "2026-11-18",
-   "rsi": 62.2,
-   "volume": 7680043
-  },
-  {
-   "symbol": "M",
+   "symbol": "S",
    "setups": [
     "reclaim_ma20"
    ],
-   "price": 24.88,
-   "close_date": "2026-11-18",
-   "rsi": 54.9,
-   "volume": 7870924
+   "price": 24.01,
+   "close_date": "2026-11-19",
+   "rsi": 54.0,
+   "volume": 11534520
   },
   {
-   "symbol": "CLRO",
+   "symbol": "NLY",
    "setups": [
-    "breakout_20d"
+    "oversold",
+    "oversold_bounce"
    ],
-   "price": 6.9,
-   "close_date": "2026-11-18",
-   "rsi": 63.8,
-   "volume": 28119990
-  },
-  {
-   "symbol": "GEN",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 30.47,
-   "close_date": "2026-11-18",
-   "rsi": 63.5,
-   "volume": 6306220
-  },
-  {
-   "symbol": "CPB",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 24.37,
-   "close_date": "2026-11-18",
-   "rsi": 71.1,
-   "volume": 7748246
-  },
-  {
-   "symbol": "VFC",
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "price": 20.96,
-   "close_date": "2026-11-18",
-   "rsi": 69.5,
-   "volume": 8621908
-  },
-  {
-   "symbol": "KLAR",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 14.45,
-   "close_date": "2026-11-18",
-   "rsi": 60.4,
-   "volume": 12301403
-  },
-  {
-   "symbol": "WMG",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 32.96,
-   "close_date": "2026-11-18",
-   "rsi": 68.0,
-   "volume": 4819229
-  },
-  {
-   "symbol": "CAG",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 14.83,
-   "close_date": "2026-11-18",
-   "rsi": 51.6,
-   "volume": 10525702
+   "price": 16.96,
+   "close_date": "2026-11-19",
+   "rsi": 29.5,
+   "volume": 14533045
   },
   {
    "symbol": "ELAN",
    "setups": [
     "bull_flag"
    ],
-   "price": 26.7,
-   "close_date": "2026-11-18",
-   "rsi": 63.8,
-   "volume": 5777027
+   "price": 26.29,
+   "close_date": "2026-11-19",
+   "rsi": 60.3,
+   "volume": 7049932
   },
   {
-   "symbol": "NTSK",
+   "symbol": "USAR",
    "setups": [
-    "reclaim_ma20"
+    "oversold_bounce"
    ],
-   "price": 23.5,
-   "close_date": "2026-11-18",
-   "rsi": 57.3,
-   "volume": 6551838
+   "price": 6.87,
+   "close_date": "2026-11-19",
+   "rsi": 32.0,
+   "volume": 26599235
   },
   {
-   "symbol": "ROL",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 37.7,
-   "close_date": "2026-11-18",
-   "rsi": 58.1,
-   "volume": 4001396
-  },
-  {
-   "symbol": "BRX",
+   "symbol": "BRBR",
    "setups": [
     "breakout_20d"
    ],
-   "price": 30.68,
-   "close_date": "2026-11-18",
-   "rsi": 69.6,
-   "volume": 4720822
+   "price": 15.11,
+   "close_date": "2026-11-19",
+   "rsi": 84.4,
+   "volume": 11853373
   },
   {
-   "symbol": "ROIV",
+   "symbol": "AGNC",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "price": 7.86,
+   "close_date": "2026-11-19",
+   "rsi": 28.8,
+   "volume": 22635572
+  },
+  {
+   "symbol": "ADT",
    "setups": [
     "bull_flag"
    ],
-   "price": 38.73,
-   "close_date": "2026-11-18",
-   "rsi": 53.4,
-   "volume": 3724434
+   "price": 9.88,
+   "close_date": "2026-11-19",
+   "rsi": 83.2,
+   "volume": 15314716
   },
   {
-   "symbol": "CTRE",
+   "symbol": "SIRI",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 31.98,
+   "close_date": "2026-11-19",
+   "rsi": 64.7,
+   "volume": 4255380
+  },
+  {
+   "symbol": "VRDN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 31.44,
+   "close_date": "2026-11-19",
+   "rsi": 74.1,
+   "volume": 4018084
+  },
+  {
+   "symbol": "MGM",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 33.41,
+   "close_date": "2026-11-19",
+   "rsi": 59.6,
+   "volume": 3658684
+  },
+  {
+   "symbol": "SARO",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 26.96,
+   "close_date": "2026-11-19",
+   "rsi": 62.0,
+   "volume": 3866319
+  },
+  {
+   "symbol": "YMM",
    "setups": [
     "reclaim_ma20"
    ],
-   "price": 37.95,
-   "close_date": "2026-11-18",
-   "rsi": 54.4,
-   "volume": 3660041
+   "price": 9.06,
+   "close_date": "2026-11-19",
+   "rsi": 59.1,
+   "volume": 11215877
+  },
+  {
+   "symbol": "VSNT",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 35.6,
+   "close_date": "2026-11-19",
+   "rsi": 60.1,
+   "volume": 2459911
+  },
+  {
+   "symbol": "FRVO",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 11.14,
+   "close_date": "2026-11-19",
+   "rsi": 51.5,
+   "volume": 7321964
+  },
+  {
+   "symbol": "FLYW",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 21.4,
+   "close_date": "2026-11-19",
+   "rsi": 57.1,
+   "volume": 3748518
+  },
+  {
+   "symbol": "INGM",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 27.47,
+   "close_date": "2026-11-19",
+   "rsi": 50.9,
+   "volume": 2907131
+  },
+  {
+   "symbol": "DX",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "price": 9.85,
+   "close_date": "2026-11-19",
+   "rsi": 33.1,
+   "volume": 8102747
+  },
+  {
+   "symbol": "CVI",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "price": 33.9,
+   "close_date": "2026-11-19",
+   "rsi": 24.8,
+   "volume": 2232404
+  },
+  {
+   "symbol": "SGRY",
+   "setups": [
+    "bull_flag"
+   ],
+   "price": 26.69,
+   "close_date": "2026-11-19",
+   "rsi": 84.3,
+   "volume": 2731496
   }
  ],
- "candidates_day": "2026-11-19",
+ "candidates_day": "2026-11-20",
  "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-20T12:55:00+00:00"
+   "t": "2026-11-20T13:00:00+00:00"
   },
   "scanner": {
    "status": "working",
-   "text": "30 of 833 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-19T15:35:00+00:00"
+   "text": "Scanned the US market: 259 charts matched a setup, 174 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-20T13:00:00+00:00"
   },
   "entry": {
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-20T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-20T13:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14533,7 +14536,7 @@
   "news": {
    "status": "working",
    "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
-   "t": "2026-11-19T13:00:00+00:00"
+   "t": "2026-11-20T13:00:00+00:00"
   },
   "risk": {
    "status": "working",
@@ -22395,13 +22398,9 @@
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-19T21:00:00+00:00"
+  "at": "2026-11-20T13:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
-   "at": "2026-11-18T12:55:00+00:00"
-  },
   {
    "sent_ok": 1,
    "at": "2026-11-18T13:00:00+00:00"
@@ -22479,6 +22478,10 @@
   {
    "sent_ok": 1,
    "at": "2026-11-19T21:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-20T13:00:00+00:00"
   }
  ],
  "news": {},

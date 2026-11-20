@@ -1,37 +1,37 @@
 {
- "updated_utc": "2026-11-20T20:55:00+00:00",
- "updated_local": "Sat 21 Nov 7:25 AM",
+ "updated_utc": "2026-11-20T21:00:00+00:00",
+ "updated_local": "Sat 21 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 50.12,
-  "cash": 27.19,
-  "day_pl": -1.7,
+  "equity": 50.02,
+  "cash": 50.02,
+  "day_pl": -1.8,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 50.12,
-  "return_usd": 0.12,
-  "return_pct": 0.24,
-  "realised": 2.04,
-  "unrealised": -0.3,
-  "trades": 23,
-  "win_rate": 0.478,
-  "profit_factor": 1.28,
+  "now": 50.02,
+  "return_usd": 0.02,
+  "return_pct": 0.04,
+  "realised": 0.24,
+  "unrealised": 0,
+  "trades": 26,
+  "win_rate": 0.423,
+  "profit_factor": 1.03,
   "avg_win": 0.85,
   "avg_loss": -0.61,
-  "avg_r": 0.269,
-  "max_dd_pct": -9.08,
-  "max_dd_usd": -5.0,
-  "sharpe": 0.28,
+  "avg_r": 0.178,
+  "max_dd_pct": -9.14,
+  "max_dd_usd": -5.03,
+  "sharpe": 0.2,
   "sharpe_days": 16,
   "fees": 0.0,
-  "avg_slip_pct": null,
-  "slip_trades": 0,
+  "avg_slip_pct": 0.253,
+  "slip_trades": 3,
   "by_strategy": [
    {
     "name": "classic",
@@ -39,6 +39,13 @@
     "wins": 11,
     "total": 2.04,
     "avg_r": 0.269
+   },
+   {
+    "name": "in_play",
+    "trades": 3,
+    "wins": 0,
+    "total": -1.8,
+    "avg_r": -0.518
    }
   ],
   "by_symbol": [
@@ -134,11 +141,25 @@
     "avg_r": -0.127
    },
    {
+    "name": "MAGN",
+    "trades": 1,
+    "wins": 0,
+    "total": -0.16,
+    "avg_r": -0.232
+   },
+   {
     "name": "PFE",
     "trades": 1,
     "wins": 0,
     "total": -0.18,
     "avg_r": -0.947
+   },
+   {
+    "name": "NTLA",
+    "trades": 1,
+    "wins": 0,
+    "total": -0.24,
+    "avg_r": -0.293
    },
    {
     "name": "QVCG",
@@ -167,6 +188,13 @@
     "wins": 0,
     "total": -1.2,
     "avg_r": -1.0
+   },
+   {
+    "name": "PTON",
+    "trades": 1,
+    "wins": 0,
+    "total": -1.4,
+    "avg_r": -1.029
    },
    {
     "name": "FUBO",
@@ -198,18 +226,14 @@
   "risk_used": 2.87
  },
  "goals": {
-  "day_pl": -1.7,
-  "week_pl": -4.91,
+  "day_pl": -1.8,
+  "week_pl": -5.01,
   "daily_goal": 1.04,
   "weekly_goal": 4.4,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-13T18:20:00+00:00",
-   "eq": 54.51
-  },
   {
    "t": "2026-11-13T18:25:00+00:00",
    "eq": 54.48
@@ -1805,13 +1829,17 @@
   {
    "t": "2026-11-20T20:55:00+00:00",
    "eq": 50.12
+  },
+  {
+   "t": "2026-11-20T21:00:00+00:00",
+   "eq": 50.02
   }
  ],
  "stats": {
-  "trades": 23,
+  "trades": 26,
   "wins": 11,
-  "losses": 12,
-  "win_rate": 0.478,
+  "losses": 15,
+  "win_rate": 0.423,
   "avg_win": 0.85,
   "avg_loss": -0.61,
   "best": 1.92,
@@ -1822,7 +1850,7 @@
  },
  "charts": {
   "date": "2026-11-20",
-  "updated": "2026-11-20T20:55:00+00:00",
+  "updated": "2026-11-20T21:00:00+00:00",
   "symbols": {
    "MAGN": {
     "bars": [
@@ -2363,14 +2391,14 @@
       13.0,
       13.01,
       12.92,
-      12.94
+      12.95
      ],
      [
-      1795208090,
-      12.95,
-      12.95,
-      12.95,
-      12.95
+      1795208100,
+      12.94,
+      12.94,
+      12.9,
+      12.9
      ]
     ],
     "or_high": 12.82,
@@ -2945,11 +2973,11 @@
       4.99
      ],
      [
-      1795208118,
-      4.95,
-      4.95,
-      4.95,
-      4.95
+      1795208100,
+      4.99,
+      4.99,
+      4.91,
+      4.91
      ]
     ],
     "or_high": 5.32,
@@ -3524,11 +3552,11 @@
       10.02
      ],
      [
-      1795208118,
-      9.94,
-      9.94,
-      9.94,
-      9.94
+      1795208100,
+      10.02,
+      10.02,
+      9.9,
+      9.99
      ]
     ],
     "or_high": 10.1,
@@ -3543,6 +3571,14 @@
      }
     ],
     "fills": [
+     {
+      "symbol": "NTLA",
+      "side": "sell",
+      "price": 9.93,
+      "qty": 1.0,
+      "t": "2026-11-20T20:55:48.258677Z",
+      "type": "market"
+     },
      {
       "symbol": "NTLA",
       "side": "buy",
@@ -4095,11 +4131,11 @@
       609.94
      ],
      [
-      1795208119,
-      607.15,
-      607.15,
-      607.15,
-      607.15
+      1795208100,
+      609.94,
+      609.97,
+      606.23,
+      607.92
      ]
     ],
     "or_high": 638.81,
@@ -4650,10 +4686,10 @@
      ],
      [
       1795208100,
-      689.41,
-      689.41,
-      689.41,
-      689.41
+      689.98,
+      690.02,
+      686.75,
+      687.58
      ]
     ],
     "or_high": 714.16,
@@ -5203,11 +5239,11 @@
       346.53
      ],
      [
-      1795208119,
-      344.93,
-      344.93,
-      344.93,
-      344.93
+      1795208100,
+      346.4,
+      346.4,
+      344.59,
+      345.32
      ]
     ],
     "or_high": 370.34,
@@ -5757,11 +5793,11 @@
       127.24
      ],
      [
-      1795208118,
-      125.5,
-      125.5,
-      125.5,
-      125.5
+      1795208100,
+      127.24,
+      127.24,
+      124.5,
+      125.63
      ]
     ],
     "or_high": 143.73,
@@ -6311,11 +6347,11 @@
       342.96
      ],
      [
-      1795208119,
-      341.6,
-      341.6,
-      341.6,
-      341.6
+      1795208100,
+      342.8,
+      342.8,
+      340.56,
+      341.49
      ]
     ],
     "or_high": 354.3,
@@ -6390,8 +6426,8 @@
    "t": "2026-11-20T15:20:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-20T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-20T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6634,24 +6670,24 @@
  },
  "lab": {
   "since": "2026-11-16",
-  "days": 4,
+  "days": 5,
   "in_play": {
-   "n": 23,
-   "win": 0.217,
-   "avg_r": -0.366,
-   "total_r": -8.41
+   "n": 32,
+   "win": 0.156,
+   "avg_r": -0.43,
+   "total_r": -13.76
   },
   "not_in_play": {
-   "n": 104,
-   "win": 0.288,
-   "avg_r": -0.268,
-   "total_r": -27.84
+   "n": 140,
+   "win": 0.25,
+   "avg_r": -0.374,
+   "total_r": -52.38
   },
   "all_old_rules": {
-   "n": 127,
-   "win": 0.276,
-   "avg_r": -0.286,
-   "total_r": -36.33
+   "n": 172,
+   "win": 0.233,
+   "avg_r": -0.393,
+   "total_r": -67.62
   },
   "curve": [
    [
@@ -6669,6 +6705,10 @@
    [
     "2026-11-19",
     -8.41
+   ],
+   [
+    "2026-11-20",
+    -13.76
    ]
   ],
   "recent": [
@@ -6682,8 +6722,8 @@
     "in_play": false,
     "took": false,
     "why": "it broke out after 10:30 New York; it's up 3.8% on the day, I need 4%; opening volume is 0.6x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.086,
+    "r_new": -1.045
    },
    {
     "date": "2026-11-20",
@@ -6695,8 +6735,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.9% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.074,
+    "r_new": -0.515
    },
    {
     "date": "2026-11-20",
@@ -6708,8 +6748,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.089,
+    "r_new": -0.75
    },
    {
     "date": "2026-11-20",
@@ -6721,8 +6761,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.5% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.06,
+    "r_new": -1.037
    },
    {
     "date": "2026-11-20",
@@ -6734,8 +6774,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.4,
+    "r_new": -0.212
    },
    {
     "date": "2026-11-20",
@@ -6747,8 +6787,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.991,
+    "r_new": -0.852
    },
    {
     "date": "2026-11-20",
@@ -6760,8 +6800,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 0.7% on the day, I need 4%; the stop would be only 0.4% away (costs eat stops under 1%)",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.677,
+    "r_new": 1.804
    },
    {
     "date": "2026-11-20",
@@ -6773,8 +6813,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.0% on the day, I need 4%; the stop would be only 0.9% away (costs eat stops under 1%); opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.847,
+    "r_new": 1.909
    },
    {
     "date": "2026-11-20",
@@ -6786,8 +6826,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.4% on the day, I need 4%; opening volume is 0.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.978,
+    "r_new": -0.988
    },
    {
     "date": "2026-11-20",
@@ -6799,8 +6839,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.7x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.092,
+    "r_new": -0.056
    },
    {
     "date": "2026-11-20",
@@ -6812,8 +6852,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.3% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.641,
+    "r_new": -0.417
    },
    {
     "date": "2026-11-20",
@@ -6825,8 +6865,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.423,
+    "r_new": -0.231
    },
    {
     "date": "2026-11-20",
@@ -6838,8 +6878,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.8% on the day, I need 4%; opening volume is 0.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.077,
+    "r_new": 0.046
    },
    {
     "date": "2026-11-20",
@@ -6851,8 +6891,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 1.1x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.034,
+    "r_new": -0.214
    },
    {
     "date": "2026-11-20",
@@ -6864,8 +6904,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.7% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.028,
+    "r_new": -0.651
    },
    {
     "date": "2026-11-20",
@@ -6877,8 +6917,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 0.3% on the day, I need 4%; opening volume is 0.5x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.226,
+    "r_new": -1.129
    },
    {
     "date": "2026-11-20",
@@ -6890,8 +6930,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.8% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.511,
+    "r_new": -0.305
    },
    {
     "date": "2026-11-20",
@@ -6903,8 +6943,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 4.0% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.66,
+    "r_new": -0.414
    },
    {
     "date": "2026-11-20",
@@ -6916,8 +6956,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.8% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.099,
+    "r_new": -1.061
    },
    {
     "date": "2026-11-20",
@@ -6929,8 +6969,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.7x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.121,
+    "r_new": 0.067
    },
    {
     "date": "2026-11-20",
@@ -6942,8 +6982,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.2% on the day, I need 4%; opening volume is 1.0x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.096,
+    "r_new": -1.049
    },
    {
     "date": "2026-11-20",
@@ -6955,8 +6995,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.1% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.318,
+    "r_new": -0.196
    },
    {
     "date": "2026-11-20",
@@ -6968,8 +7008,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.7% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.026,
+    "r_new": -1.016
    },
    {
     "date": "2026-11-20",
@@ -6981,8 +7021,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.7% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.095,
+    "r_new": -1.052
    },
    {
     "date": "2026-11-20",
@@ -6994,8 +7034,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.155,
+    "r_new": -1.092
    },
    {
     "date": "2026-11-20",
@@ -7007,8 +7047,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.5x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.074,
+    "r_new": -1.048
    },
    {
     "date": "2026-11-20",
@@ -7020,8 +7060,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.119,
+    "r_new": -1.07
    },
    {
     "date": "2026-11-20",
@@ -7033,8 +7073,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.7x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.129,
+    "r_new": -1.072
    },
    {
     "date": "2026-11-20",
@@ -7046,8 +7086,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.4x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.276,
+    "r_new": -0.286
    },
    {
     "date": "2026-11-20",
@@ -7059,8 +7099,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 0.8x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.029,
+    "r_new": -1.017
    },
    {
     "date": "2026-11-20",
@@ -7072,8 +7112,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.023,
+    "r_new": -0.529
    },
    {
     "date": "2026-11-20",
@@ -7085,8 +7125,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.9% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.113,
+    "r_new": -1.059
    },
    {
     "date": "2026-11-20",
@@ -7098,8 +7138,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.4% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.868,
+    "r_new": -1.113
    },
    {
     "date": "2026-11-20",
@@ -7111,8 +7151,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.9% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.02,
+    "r_new": -1.01
    },
    {
     "date": "2026-11-20",
@@ -7124,8 +7164,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.7% on the day, I need 4%; opening volume is 0.6x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.012,
+    "r_new": -1.006
    },
    {
     "date": "2026-11-20",
@@ -7137,8 +7177,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 1.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.828,
+    "r_new": -0.419
    },
    {
     "date": "2026-11-20",
@@ -7150,8 +7190,8 @@
     "in_play": true,
     "took": true,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.329,
+    "r_new": -0.207
    },
    {
     "date": "2026-11-20",
@@ -7163,8 +7203,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up -0.8% on the day, I need 4%; opening volume is 0.8x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.116,
+    "r_new": -1.067
    },
    {
     "date": "2026-11-20",
@@ -7176,8 +7216,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up -0.1% on the day, I need 4%; the stop would be only 0.5% away (costs eat stops under 1%)",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.329,
+    "r_new": -1.218
    },
    {
     "date": "2026-11-20",
@@ -7189,27 +7229,12 @@
     "in_play": false,
     "took": false,
     "why": "it's up -0.8% on the day, I need 4%; the stop would be only 0.9% away (costs eat stops under 1%)",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.162,
+    "r_new": -1.095
    }
   ]
  },
- "positions": [
-  {
-   "symbol": "MAGN",
-   "qty": 1.0,
-   "value": 12.94,
-   "pl": -0.12,
-   "entry": 13.06
-  },
-  {
-   "symbol": "NTLA",
-   "qty": 1.0,
-   "value": 9.99,
-   "pl": -0.18,
-   "entry": 10.17
-  }
- ],
+ "positions": [],
  "bots": [
   {
    "id": "jarvis",
@@ -7217,7 +7242,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-20T20:55:00+00:00"
+   "t": "2026-11-20T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -7240,16 +7265,16 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Entry window closed (breakouts after 10:30 New York lose more than they make). Watching open trades.",
-   "t": "2026-11-20T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-20T21:00:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times, and scores every signal after the close.",
-   "status": "idle",
-   "text": "Couldn't replay YSWY: timemachine.py: only 4 full session(s) of YSWY before 2026-11-20 in the data; the time machine needs at least 20",
-   "t": "2026-11-20T15:20:00+00:00"
+   "status": "working",
+   "text": "Scored 45 breakout signals for the shadow book.",
+   "t": "2026-11-20T21:00:00+00:00"
   },
   {
    "id": "risk",
@@ -7263,7 +7288,7 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-20T20:55:00+00:00"
   }
@@ -7697,9 +7722,12 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null,
+   "result": -0.16,
    "order_id": "19d4c924-5929-4484-966f-c8d18f70057d",
-   "strategy": "in_play"
+   "strategy": "in_play",
+   "fill": 13.06,
+   "exit_fill": 12.9,
+   "slip_pct": 0.462
   },
   {
    "date": "2026-11-20",
@@ -7714,9 +7742,12 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null,
+   "result": -1.4,
    "order_id": "1f305be4-dabc-4389-adcb-53061e60e542",
-   "strategy": "in_play"
+   "strategy": "in_play",
+   "fill": 5.32,
+   "exit_fill": 4.97,
+   "slip_pct": 0.0
   },
   {
    "date": "2026-11-20",
@@ -7731,9 +7762,12 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null,
+   "result": -0.24,
    "order_id": "a0b1582a-75ba-4f2e-8bef-27a31b4953a3",
-   "strategy": "in_play"
+   "strategy": "in_play",
+   "fill": 10.17,
+   "exit_fill": 9.93,
+   "slip_pct": 0.296
   },
   {
    "date": "2026-11-19",
@@ -8082,9 +8116,9 @@
   }
  ],
  "record": {
-  "trades": 23,
+  "trades": 26,
   "wins": 11,
-  "total": 2.04
+  "total": 0.24
  },
  "sessions": [
   {
@@ -8124,6 +8158,16 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-20T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-20T21:00:00+00:00",
+   "bot": "oracle",
+   "text": "Scored 45 breakout signals for the shadow book."
+  },
   {
    "t": "2026-11-20T20:55:00+00:00",
    "bot": "broker",
@@ -8313,16 +8357,6 @@
    "t": "2026-11-20T15:10:00+00:00",
    "bot": "entry",
    "text": "TNDM broke out at $17.43 (10:05 AM)."
-  },
-  {
-   "t": "2026-11-20T15:10:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on RKT: not in play (opening volume is 1.1x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-20T15:10:00+00:00",
-   "bot": "entry",
-   "text": "RKT broke out at $13.84 (10:10 AM)."
   }
  ],
  "errors": []

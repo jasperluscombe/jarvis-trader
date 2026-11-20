@@ -14503,44 +14503,12 @@
   }
  ],
  "candidates_day": "2026-11-19",
- "seen": {
-  "PURR": "triggered",
-  "AESI": "triggered",
-  "NTSK": "triggered",
-  "TU": "triggered",
-  "NVTS": "triggered",
-  "WOLF": "triggered",
-  "AI": "triggered",
-  "FSLY": "triggered",
-  "FIGR": "triggered",
-  "RPD": "triggered",
-  "CORZ": "triggered",
-  "LBRT": "triggered",
-  "MLTX": "triggered",
-  "TTI": "triggered",
-  "CAPR": "triggered",
-  "VIAV": "triggered",
-  "BHVN": "triggered",
-  "CLMT": "triggered",
-  "VVV": "triggered",
-  "TNGX": "triggered",
-  "SNDX": "triggered",
-  "PSQ": "triggered",
-  "SH": "triggered",
-  "FRNM": "triggered",
-  "DYN": "triggered",
-  "MLYS": "triggered",
-  "BRBR": "triggered",
-  "CTKB": "triggered",
-  "BEAM": "triggered",
-  "AVBP": "triggered",
-  "URGN": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-20T04:30:00+00:00"
+   "t": "2026-11-20T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14549,8 +14517,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-20T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-20T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14573,13 +14541,8 @@
    "t": "2026-11-19T15:20:00+00:00"
   }
  },
- "seen_day": "2026-11-19",
+ "seen_day": "2026-11-20",
  "next_sessions": [
-  {
-   "date": "2026-11-19",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-20",
    "open": "09:30",
@@ -14604,6 +14567,11 @@
    "date": "2026-11-27",
    "open": "09:30",
    "close": "13:00"
+  },
+  {
+   "date": "2026-11-30",
+   "open": "09:30",
+   "close": "16:00"
   }
  ],
  "welcomed": "2026-11-04",

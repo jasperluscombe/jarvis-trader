@@ -13339,31 +13339,6 @@
   {
    "t": "2026-11-20T14:55:00+00:00",
    "bot": "jarvis",
-   "text": "Passed on TSLA: not in play (it's up -0.8% on the day, I need 4%; opening volume is 0.8x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-20T14:55:00+00:00",
-   "bot": "entry",
-   "text": "MAGN broke out at $13.00 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-20T14:55:00+00:00",
-   "bot": "oracle",
-   "text": "Couldn't replay MAGN: timemachine.py: only 2 full session(s) of MAGN before 2026-11-20 in the data; the time machine needs at least 20"
-  },
-  {
-   "t": "2026-11-20T14:55:00+00:00",
-   "bot": "broker",
-   "text": "Bought 1 MAGN (auto: medium confidence)."
-  },
-  {
-   "t": "2026-11-20T14:55:00+00:00",
-   "bot": "entry",
-   "text": "CPNG broke out at $14.67 (9:55 AM)."
-  },
-  {
-   "t": "2026-11-20T14:55:00+00:00",
-   "bot": "jarvis",
    "text": "Passed on CPNG: not in play (opening volume is 1.2x normal, I need 1.5x)."
   },
   {
@@ -13735,6 +13710,31 @@
    "t": "2026-11-20T15:20:00+00:00",
    "bot": "entry",
    "text": "OTEX broke out 30 min ago: too late to chase."
+  },
+  {
+   "t": "2026-11-20T15:25:00+00:00",
+   "bot": "entry",
+   "text": "CAG broke out at $15.19 (10:15 AM)."
+  },
+  {
+   "t": "2026-11-20T15:25:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on CAG: not in play (it's up 3.5% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x)."
+  },
+  {
+   "t": "2026-11-20T15:25:00+00:00",
+   "bot": "entry",
+   "text": "CXM broke out 20 min ago: too late to chase."
+  },
+  {
+   "t": "2026-11-20T15:25:00+00:00",
+   "bot": "entry",
+   "text": "KHC broke out at $25.63 (10:10 AM)."
+  },
+  {
+   "t": "2026-11-20T15:25:00+00:00",
+   "bot": "jarvis",
+   "text": "Passed on KHC: not in play (it's up 2.9% on the day, I need 4%)."
   }
  ],
  "trades": [
@@ -14496,23 +14496,26 @@
   "BRVE": "triggered",
   "BKD": "triggered",
   "WHR": "triggered",
-  "OTEX": "triggered"
+  "OTEX": "triggered",
+  "CAG": "triggered",
+  "CXM": "triggered",
+  "KHC": "triggered"
  },
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-20T15:20:00+00:00"
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "scanner": {
    "status": "working",
    "text": "30 of 843 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-20T15:20:00+00:00"
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "entry": {
    "status": "working",
-   "text": "Checked 14 charts at 10:20 AM New York: 5 breakouts.",
-   "t": "2026-11-20T15:20:00+00:00"
+   "text": "Checked 7 charts at 10:25 AM New York: 2 breakouts.",
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -17357,11 +17360,15 @@
   {
    "t": "2026-11-20T15:20:00+00:00",
    "eq": 51.18
+  },
+  {
+   "t": "2026-11-20T15:25:00+00:00",
+   "eq": 51.0
   }
  ],
  "charts": {
   "date": "2026-11-20",
-  "updated": "2026-11-20T15:20:00+00:00",
+  "updated": "2026-11-20T15:25:00+00:00",
   "symbols": {
    "MAGN": {
     "bars": [
@@ -17432,15 +17439,22 @@
       1795187700,
       13.17,
       13.18,
-      13.17,
-      13.18
-     ],
-     [
-      1795187997,
-      13.07,
-      13.07,
       13.07,
       13.07
+     ],
+     [
+      1795188000,
+      13.03,
+      13.03,
+      12.94,
+      12.94
+     ],
+     [
+      1795188246,
+      12.95,
+      12.95,
+      12.95,
+      12.95
      ]
     ],
     "or_high": 12.82,
@@ -17538,11 +17552,18 @@
       5.19
      ],
      [
-      1795188014,
+      1795188000,
       5.19,
-      5.19,
-      5.19,
-      5.19
+      5.22,
+      5.17,
+      5.18
+     ],
+     [
+      1795188314,
+      5.18,
+      5.18,
+      5.18,
+      5.18
      ]
     ],
     "or_high": 5.32,
@@ -17640,11 +17661,18 @@
       10.03
      ],
      [
-      1795188018,
+      1795188000,
       10.04,
-      10.04,
-      10.04,
-      10.04
+      10.13,
+      10.0,
+      10.0
+     ],
+     [
+      1795188309,
+      9.98,
+      9.98,
+      9.98,
+      9.98
      ]
     ],
     "or_high": 10.1,
@@ -17742,11 +17770,18 @@
       632.57
      ],
      [
-      1795188020,
-      632.57,
-      632.57,
-      632.57,
-      632.57
+      1795188000,
+      632.53,
+      634.68,
+      630.89,
+      630.92
+     ],
+     [
+      1795188315,
+      630.77,
+      630.77,
+      630.77,
+      630.77
      ]
     ],
     "or_high": 638.81,
@@ -17807,9 +17842,9 @@
      ],
      [
       1795187100,
+      716.7,
       716.74,
-      716.74,
-      714.93,
+      714.91,
       715.21
      ],
      [
@@ -17827,11 +17862,18 @@
       711.24
      ],
      [
-      1795188020,
-      711.19,
-      711.19,
-      711.19,
-      711.19
+      1795188000,
+      711.21,
+      712.69,
+      709.66,
+      709.66
+     ],
+     [
+      1795188315,
+      709.39,
+      709.39,
+      709.39,
+      709.39
      ]
     ],
     "or_high": 714.16,
@@ -17912,11 +17954,18 @@
       364.37
      ],
      [
-      1795188013,
-      363.8,
-      363.8,
-      363.8,
-      363.8
+      1795188000,
+      364.45,
+      365.18,
+      361.5,
+      361.52
+     ],
+     [
+      1795188315,
+      361.53,
+      361.53,
+      361.53,
+      361.53
      ]
     ],
     "or_high": 370.34,
@@ -17997,11 +18046,18 @@
       139.13
      ],
      [
-      1795188021,
-      138.93,
-      138.93,
-      138.93,
-      138.93
+      1795188000,
+      139.12,
+      139.65,
+      138.26,
+      138.38
+     ],
+     [
+      1795188315,
+      138.34,
+      138.34,
+      138.34,
+      138.34
      ]
     ],
     "or_high": 143.73,
@@ -18082,11 +18138,18 @@
       349.12
      ],
      [
-      1795188021,
-      349.19,
-      349.19,
-      349.19,
-      349.19
+      1795188000,
+      349.11,
+      349.66,
+      348.58,
+      348.59
+     ],
+     [
+      1795188315,
+      348.61,
+      348.61,
+      348.61,
+      348.61
      ]
     ],
     "or_high": 354.3,
@@ -18125,18 +18188,18 @@
   "NVDA": {
    "status": "waiting",
    "level": 143.73,
-   "last": 139.13,
-   "vs": -3.2,
-   "reason": "last close $139.13 (10:15 bar), $4.60 under the range high $143.73 (-3.20%)",
-   "t": "2026-11-20T15:20:00+00:00"
+   "last": 138.38,
+   "vs": -3.72,
+   "reason": "last close $138.38 (10:20 bar), $5.34 under the range high $143.73 (-3.72%)",
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "AAPL": {
    "status": "waiting",
    "level": 354.3,
-   "last": 349.12,
-   "vs": -1.46,
-   "reason": "last close $349.12 (10:15 bar), $5.18 under the range high $354.30 (-1.46%)",
-   "t": "2026-11-20T15:20:00+00:00"
+   "last": 348.59,
+   "vs": -1.61,
+   "reason": "last close $348.59 (10:20 bar), $5.71 under the range high $354.30 (-1.61%)",
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "PSQ": {
    "status": "triggered",
@@ -18181,10 +18244,10 @@
   "HDB": {
    "status": "waiting",
    "level": 27.81,
-   "last": 27.55,
-   "vs": -0.95,
-   "reason": "last close $27.55 (10:15 bar), $0.26 under the range high $27.81 (-0.95%)",
-   "t": "2026-11-20T15:20:00+00:00"
+   "last": 27.49,
+   "vs": -1.17,
+   "reason": "last close $27.49 (10:20 bar), $0.32 under the range high $27.81 (-1.17%)",
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "OFRM": {
    "status": "waiting",
@@ -18331,12 +18394,12 @@
    "t": "2026-11-20T14:45:00+00:00"
   },
   "CAG": {
-   "status": "waiting",
+   "status": "triggered",
    "level": 15.19,
-   "last": 15.16,
-   "vs": -0.16,
-   "reason": "last close $15.16 (9:40 bar), $0.02 under the range high $15.19 (-0.16%)",
-   "t": "2026-11-20T14:45:00+00:00"
+   "last": 15.19,
+   "vs": -0.03,
+   "reason": "the 10:10 bar closed above the range high",
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "KEP": {
    "status": "triggered",
@@ -18437,10 +18500,10 @@
   "UPWK": {
    "status": "waiting",
    "level": 9.12,
-   "last": 9.06,
-   "vs": -0.64,
-   "reason": "last close $9.06 (10:15 bar), $0.06 under the range high $9.12 (-0.64%)",
-   "t": "2026-11-20T15:20:00+00:00"
+   "last": 9.07,
+   "vs": -0.53,
+   "reason": "last close $9.07 (10:20 bar), $0.05 under the range high $9.12 (-0.53%)",
+   "t": "2026-11-20T15:25:00+00:00"
   },
   "KRNT": {
    "status": "triggered",
@@ -18625,6 +18688,22 @@
    "vs": 1.36,
    "reason": "the 9:45 bar closed above the range high",
    "t": "2026-11-20T15:20:00+00:00"
+  },
+  "CXM": {
+   "status": "triggered",
+   "level": 6.68,
+   "last": 6.74,
+   "vs": 0.97,
+   "reason": "the 10:00 bar closed above the range high",
+   "t": "2026-11-20T15:25:00+00:00"
+  },
+  "KHC": {
+   "status": "triggered",
+   "level": 25.59,
+   "last": 25.71,
+   "vs": 0.45,
+   "reason": "the 10:05 bar closed above the range high",
+   "t": "2026-11-20T15:25:00+00:00"
   }
  },
  "telegram_health": {
@@ -18741,218 +18820,218 @@
   }
  ],
  "movers": {
-  "t": "2026-11-20T15:20:00+00:00",
+  "t": "2026-11-20T15:25:00+00:00",
   "checked": 843,
   "rows": [
    {
     "symbol": "GAP",
-    "price": 22.08,
+    "price": 21.98,
     "prev_close": 18.79,
-    "gain_pct": 17.49,
-    "volume": 7036287
+    "gain_pct": 16.95,
+    "volume": 8155317
    },
    {
     "symbol": "FLO",
-    "price": 5.41,
+    "price": 5.33,
     "prev_close": 5.0,
-    "gain_pct": 8.1,
-    "volume": 1189322
+    "gain_pct": 6.64,
+    "volume": 1646260
    },
    {
     "symbol": "EFOR",
-    "price": 30.95,
+    "price": 30.74,
     "prev_close": 29.03,
-    "gain_pct": 6.61,
-    "volume": 96869
-   },
-   {
-    "symbol": "DRTS",
-    "price": 12.05,
-    "prev_close": 11.31,
-    "gain_pct": 6.53,
-    "volume": 133992
-   },
-   {
-    "symbol": "Z",
-    "price": 28.8,
-    "prev_close": 27.29,
-    "gain_pct": 5.53,
-    "volume": 550834
-   },
-   {
-    "symbol": "NTLA",
-    "price": 10.03,
-    "prev_close": 9.52,
-    "gain_pct": 5.39,
-    "volume": 1613696
-   },
-   {
-    "symbol": "IMMX",
-    "price": 7.41,
-    "prev_close": 7.04,
-    "gain_pct": 5.26,
-    "volume": 298420
+    "gain_pct": 5.89,
+    "volume": 108301
    },
    {
     "symbol": "BL",
-    "price": 25.82,
+    "price": 25.9,
     "prev_close": 24.54,
-    "gain_pct": 5.2,
-    "volume": 164207
+    "gain_pct": 5.54,
+    "volume": 166575
    },
    {
-    "symbol": "MAGN",
-    "price": 13.07,
-    "prev_close": 12.43,
-    "gain_pct": 5.19,
-    "volume": 118703
+    "symbol": "Z",
+    "price": 28.71,
+    "prev_close": 27.29,
+    "gain_pct": 5.2,
+    "volume": 594329
+   },
+   {
+    "symbol": "NTLA",
+    "price": 9.98,
+    "prev_close": 9.52,
+    "gain_pct": 4.83,
+    "volume": 1716886
    },
    {
     "symbol": "HDB",
-    "price": 27.59,
+    "price": 27.48,
     "prev_close": 26.24,
-    "gain_pct": 5.13,
-    "volume": 4610939
-   },
-   {
-    "symbol": "KVYO",
-    "price": 22.39,
-    "prev_close": 21.3,
-    "gain_pct": 5.12,
-    "volume": 627230
-   },
-   {
-    "symbol": "FIG",
-    "price": 17.02,
-    "prev_close": 16.26,
-    "gain_pct": 4.7,
-    "volume": 4244980
-   },
-   {
-    "symbol": "GIS",
-    "price": 36.08,
-    "prev_close": 34.48,
-    "gain_pct": 4.64,
-    "volume": 1802669
-   },
-   {
-    "symbol": "RCUS",
-    "price": 16.51,
-    "prev_close": 15.78,
-    "gain_pct": 4.63,
-    "volume": 203263
-   },
-   {
-    "symbol": "INFY",
-    "price": 12.18,
-    "prev_close": 11.65,
-    "gain_pct": 4.51,
-    "volume": 2968054
-   },
-   {
-    "symbol": "KRNT",
-    "price": 15.41,
-    "prev_close": 14.75,
-    "gain_pct": 4.47,
-    "volume": 67366
+    "gain_pct": 4.74,
+    "volume": 4975042
    },
    {
     "symbol": "SPT",
-    "price": 10.82,
+    "price": 10.86,
     "prev_close": 10.37,
-    "gain_pct": 4.34,
-    "volume": 160002
-   },
-   {
-    "symbol": "YSWY",
-    "price": 20.14,
-    "prev_close": 19.3,
-    "gain_pct": 4.33,
-    "volume": 1376887
-   },
-   {
-    "symbol": "CSGP",
-    "price": 29.94,
-    "prev_close": 28.7,
-    "gain_pct": 4.32,
-    "volume": 472754
+    "gain_pct": 4.73,
+    "volume": 163078
    },
    {
     "symbol": "TNDM",
-    "price": 17.5,
+    "price": 17.57,
     "prev_close": 16.8,
-    "gain_pct": 4.17,
-    "volume": 249998
+    "gain_pct": 4.58,
+    "volume": 266815
    },
    {
-    "symbol": "FOUR",
-    "price": 39.44,
-    "prev_close": 37.97,
-    "gain_pct": 3.87,
-    "volume": 289084
+    "symbol": "KRNT",
+    "price": 15.42,
+    "prev_close": 14.75,
+    "gain_pct": 4.54,
+    "volume": 72854
+   },
+   {
+    "symbol": "KVYO",
+    "price": 22.25,
+    "prev_close": 21.3,
+    "gain_pct": 4.46,
+    "volume": 663663
+   },
+   {
+    "symbol": "CSGP",
+    "price": 29.97,
+    "prev_close": 28.7,
+    "gain_pct": 4.43,
+    "volume": 498113
+   },
+   {
+    "symbol": "IMMX",
+    "price": 7.35,
+    "prev_close": 7.04,
+    "gain_pct": 4.4,
+    "volume": 304342
+   },
+   {
+    "symbol": "GIS",
+    "price": 35.98,
+    "prev_close": 34.48,
+    "gain_pct": 4.36,
+    "volume": 2008598
+   },
+   {
+    "symbol": "INFY",
+    "price": 12.15,
+    "prev_close": 11.65,
+    "gain_pct": 4.29,
+    "volume": 3267457
+   },
+   {
+    "symbol": "MAGN",
+    "price": 12.96,
+    "prev_close": 12.43,
+    "gain_pct": 4.22,
+    "volume": 123683
+   },
+   {
+    "symbol": "YSWY",
+    "price": 20.05,
+    "prev_close": 19.3,
+    "gain_pct": 3.91,
+    "volume": 1406780
+   },
+   {
+    "symbol": "CPNG",
+    "price": 14.59,
+    "prev_close": 14.06,
+    "gain_pct": 3.73,
+    "volume": 4057324
    },
    {
     "symbol": "DXC",
-    "price": 13.84,
+    "price": 13.82,
     "prev_close": 13.33,
-    "gain_pct": 3.83,
-    "volume": 252234
+    "gain_pct": 3.68,
+    "volume": 282277
    },
    {
-    "symbol": "GDYN",
-    "price": 12.94,
-    "prev_close": 12.49,
-    "gain_pct": 3.6,
-    "volume": 156180
-   },
-   {
-    "symbol": "BRVE",
-    "price": 19.95,
-    "prev_close": 19.27,
-    "gain_pct": 3.55,
-    "volume": 12987
+    "symbol": "DRTS",
+    "price": 11.71,
+    "prev_close": 11.31,
+    "gain_pct": 3.56,
+    "volume": 154229
    },
    {
     "symbol": "BKD",
     "price": 8.99,
     "prev_close": 8.69,
     "gain_pct": 3.51,
-    "volume": 895470
+    "volume": 960565
    },
    {
-    "symbol": "KD",
-    "price": 15.87,
-    "prev_close": 15.33,
-    "gain_pct": 3.49,
-    "volume": 218822
-   },
-   {
-    "symbol": "SUPN",
-    "price": 29.33,
-    "prev_close": 28.35,
-    "gain_pct": 3.46,
-    "volume": 353456
-   },
-   {
-    "symbol": "WHR",
-    "price": 26.19,
-    "prev_close": 25.32,
+    "symbol": "CAG",
+    "price": 15.19,
+    "prev_close": 14.68,
     "gain_pct": 3.44,
-    "volume": 542206
+    "volume": 1542876
    },
    {
     "symbol": "UPWK",
     "price": 9.06,
     "prev_close": 8.76,
     "gain_pct": 3.42,
-    "volume": 873868
+    "volume": 905379
+   },
+   {
+    "symbol": "BRVE",
+    "price": 19.92,
+    "prev_close": 19.27,
+    "gain_pct": 3.37,
+    "volume": 23468
+   },
+   {
+    "symbol": "CXM",
+    "price": 6.74,
+    "prev_close": 6.52,
+    "gain_pct": 3.37,
+    "volume": 263341
+   },
+   {
+    "symbol": "FIG",
+    "price": 16.8,
+    "prev_close": 16.26,
+    "gain_pct": 3.32,
+    "volume": 4670591
+   },
+   {
+    "symbol": "KD",
+    "price": 15.83,
+    "prev_close": 15.33,
+    "gain_pct": 3.26,
+    "volume": 232167
+   },
+   {
+    "symbol": "KEP",
+    "price": 9.36,
+    "prev_close": 9.07,
+    "gain_pct": 3.2,
+    "volume": 453279
    },
    {
     "symbol": "OTEX",
-    "price": 23.05,
+    "price": 23.02,
     "prev_close": 22.32,
-    "gain_pct": 3.27,
-    "volume": 108088
+    "gain_pct": 3.14,
+    "volume": 116647
+   },
+   {
+    "symbol": "KHC",
+    "price": 25.7,
+    "prev_close": 24.92,
+    "gain_pct": 3.13,
+    "volume": 3054131
    }
   ]
  },
@@ -21931,6 +22010,38 @@
    "rvol": 1.5,
    "in_play": false,
    "why": "it's up 2.5% on the day, I need 4%",
+   "took": false
+  },
+  {
+   "date": "2026-11-20",
+   "t": "2026-11-20T15:25:00+00:00",
+   "symbol": "CAG",
+   "time": "10:15 AM",
+   "price": 15.19,
+   "or_high": 15.19,
+   "or_low": 14.85,
+   "prev_close": 14.68,
+   "gain_pct": 3.47,
+   "stop_pct": 2.24,
+   "rvol": 1.2,
+   "in_play": false,
+   "why": "it's up 3.5% on the day, I need 4%; opening volume is 1.2x normal, I need 1.5x",
+   "took": false
+  },
+  {
+   "date": "2026-11-20",
+   "t": "2026-11-20T15:25:00+00:00",
+   "symbol": "KHC",
+   "time": "10:10 AM",
+   "price": 25.63,
+   "or_high": 25.59,
+   "or_low": 25.25,
+   "prev_close": 24.92,
+   "gain_pct": 2.85,
+   "stop_pct": 1.48,
+   "rvol": 1.73,
+   "in_play": false,
+   "why": "it's up 2.9% on the day, I need 4%",
    "took": false
   }
  ]

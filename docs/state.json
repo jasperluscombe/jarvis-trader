@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-20T06:00:00+00:00",
- "updated_local": "Fri 20 Nov 4:30 PM",
+ "updated_utc": "2026-11-20T06:30:00+00:00",
+ "updated_local": "Fri 20 Nov 5:00 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -11,6 +11,178 @@
   "cash": 51.84,
   "day_pl": 0.18,
   "start": 50.0
+ },
+ "perf": {
+  "start": 50.0,
+  "now": 51.84,
+  "return_usd": 1.84,
+  "return_pct": 3.68,
+  "realised": 2.04,
+  "unrealised": 0,
+  "trades": 23,
+  "win_rate": 0.478,
+  "profit_factor": 1.28,
+  "avg_win": 0.85,
+  "avg_loss": -0.61,
+  "avg_r": 0.269,
+  "max_dd_pct": -7.43,
+  "max_dd_usd": -4.09,
+  "sharpe": 1.79,
+  "sharpe_days": 15,
+  "fees": 0.0,
+  "avg_slip_pct": null,
+  "slip_trades": 0,
+  "by_strategy": [
+   {
+    "name": "classic",
+    "trades": 23,
+    "wins": 11,
+    "total": 2.04,
+    "avg_r": 0.269
+   }
+  ],
+  "by_symbol": [
+   {
+    "name": "MARA",
+    "trades": 1,
+    "wins": 1,
+    "total": 1.6,
+    "avg_r": 2.078
+   },
+   {
+    "name": "RUN",
+    "trades": 1,
+    "wins": 1,
+    "total": 1.57,
+    "avg_r": 2.093
+   },
+   {
+    "name": "TU",
+    "trades": 1,
+    "wins": 1,
+    "total": 1.38,
+    "avg_r": 1.095
+   },
+   {
+    "name": "RIOT",
+    "trades": 2,
+    "wins": 1,
+    "total": 1.25,
+    "avg_r": 0.612
+   },
+   {
+    "name": "COLD",
+    "trades": 1,
+    "wins": 1,
+    "total": 0.68,
+    "avg_r": 2.0
+   },
+   {
+    "name": "MOS",
+    "trades": 1,
+    "wins": 1,
+    "total": 0.59,
+    "avg_r": 1.967
+   },
+   {
+    "name": "RMIX",
+    "trades": 1,
+    "wins": 1,
+    "total": 0.56,
+    "avg_r": 0.737
+   },
+   {
+    "name": "SA",
+    "trades": 1,
+    "wins": 1,
+    "total": 0.55,
+    "avg_r": 0.47
+   },
+   {
+    "name": "AAPL",
+    "trades": 2,
+    "wins": 1,
+    "total": 0.23,
+    "avg_r": 0.328
+   },
+   {
+    "name": "SH",
+    "trades": 2,
+    "wins": 1,
+    "total": 0.15,
+    "avg_r": 0.292
+   },
+   {
+    "name": "DOW",
+    "trades": 1,
+    "wins": 1,
+    "total": 0.01,
+    "avg_r": 0.036
+   },
+   {
+    "name": "VTRS",
+    "trades": 1,
+    "wins": 0,
+    "total": -0.14,
+    "avg_r": -0.538
+   },
+   {
+    "name": "LYFT",
+    "trades": 1,
+    "wins": 0,
+    "total": -0.14,
+    "avg_r": -0.127
+   },
+   {
+    "name": "PFE",
+    "trades": 1,
+    "wins": 0,
+    "total": -0.18,
+    "avg_r": -0.947
+   },
+   {
+    "name": "QVCG",
+    "trades": 1,
+    "wins": 0,
+    "total": -0.39,
+    "avg_r": -0.361
+   },
+   {
+    "name": "WULF",
+    "trades": 1,
+    "wins": 0,
+    "total": -0.59,
+    "avg_r": -1.035
+   },
+   {
+    "name": "ZVRA",
+    "trades": 1,
+    "wins": 0,
+    "total": -1.0,
+    "avg_r": -0.625
+   },
+   {
+    "name": "RPD",
+    "trades": 1,
+    "wins": 0,
+    "total": -1.2,
+    "avg_r": -1.0
+   },
+   {
+    "name": "FUBO",
+    "trades": 1,
+    "wins": 0,
+    "total": -1.44,
+    "avg_r": -1.029
+   },
+   {
+    "name": "CAPR",
+    "trades": 1,
+    "wins": 0,
+    "total": -1.45,
+    "avg_r": -1.098
+   }
+  ]
  },
  "limits": {
   "max_loss_per_trade_usd": 1.55,
@@ -6251,7 +6423,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-20T06:30:00+00:00",
+ "next_checkin_utc": "2026-11-20T07:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6847,7 +7019,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-20T06:00:00+00:00"
+   "t": "2026-11-20T06:30:00+00:00"
   },
   {
    "id": "scanner",
@@ -6871,7 +7043,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-20T06:00:00+00:00"
+   "t": "2026-11-20T06:30:00+00:00"
   },
   {
    "id": "oracle",

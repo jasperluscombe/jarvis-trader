@@ -14459,65 +14459,12 @@
   }
  ],
  "candidates_day": "2026-11-20",
- "seen": {
-  "NTLA": "triggered",
-  "PTON": "triggered",
-  "INFY": "triggered",
-  "FIG": "triggered",
-  "BL": "triggered",
-  "QQQ": "triggered",
-  "SPY": "triggered",
-  "TSLA": "triggered",
-  "MAGN": "triggered",
-  "CPNG": "triggered",
-  "KRNT": "triggered",
-  "PINS": "triggered",
-  "SBLK": "triggered",
-  "F": "triggered",
-  "GAP": "triggered",
-  "FLO": "triggered",
-  "DRTS": "triggered",
-  "Z": "triggered",
-  "HYMC": "triggered",
-  "RUN": "triggered",
-  "KEP": "triggered",
-  "OKLO": "triggered",
-  "PAYS": "triggered",
-  "BBNX": "triggered",
-  "ORIC": "triggered",
-  "KVYO": "triggered",
-  "RCUS": "triggered",
-  "CSGP": "triggered",
-  "DXC": "triggered",
-  "RRGB": "triggered",
-  "SPT": "triggered",
-  "RKT": "triggered",
-  "TNDM": "triggered",
-  "GIS": "triggered",
-  "MLYS": "triggered",
-  "SUPN": "triggered",
-  "EFOR": "triggered",
-  "KD": "triggered",
-  "PSQ": "triggered",
-  "SH": "triggered",
-  "IMMX": "triggered",
-  "YSWY": "triggered",
-  "BRVE": "triggered",
-  "BKD": "triggered",
-  "WHR": "triggered",
-  "OTEX": "triggered",
-  "CAG": "triggered",
-  "CXM": "triggered",
-  "KHC": "triggered",
-  "FPI": "triggered",
-  "SMPL": "triggered",
-  "HRL": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-21T04:30:00+00:00"
+   "t": "2026-11-21T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14526,8 +14473,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-21T04:30:00+00:00"
+   "text": "No US market today. Resting.",
+   "t": "2026-11-21T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14550,13 +14497,8 @@
    "t": "2026-11-20T15:20:00+00:00"
   }
  },
- "seen_day": "2026-11-20",
+ "seen_day": "2026-11-21",
  "next_sessions": [
-  {
-   "date": "2026-11-20",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-23",
    "open": "09:30",
@@ -14579,6 +14521,11 @@
   },
   {
    "date": "2026-11-30",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-12-01",
    "open": "09:30",
    "close": "16:00"
   }

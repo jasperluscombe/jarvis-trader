@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-23T12:55:00+00:00",
- "updated_local": "Mon 23 Nov 11:25 PM",
+ "updated_utc": "2026-11-23T13:00:00+00:00",
+ "updated_local": "Mon 23 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -6476,7 +6476,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-23T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-23T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7076,31 +7076,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-23T12:55:00+00:00"
+   "t": "2026-11-23T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks before the open, then finds the ones in play after it.",
-   "status": "idle",
-   "text": "30 of 843 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-20T15:35:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 382 charts matched a setup, 250 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-23T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
-   "t": "2026-11-20T13:00:00+00:00"
+   "status": "working",
+   "text": "Read 5 headlines and filings for 8 stocks.",
+   "t": "2026-11-23T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-23T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-23T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -7129,57 +7129,24 @@
  ],
  "watchlist": [
   {
-   "symbol": "CMCSA",
-   "price": 24.86,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "GME",
-   "price": 26.93,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ASTS",
-   "price": 25.55,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PCG",
-   "price": 13.94,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MDLN",
-   "price": 37.84,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
    "symbol": "RKT",
-   "price": 13.19,
+   "price": 13.75,
    "setups": [
-    "bull_flag"
+    "reclaim_ma20"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "Why Did Rocket Lab Stock Fall Again?",
+     "url": "https://www.trefis.com/stock/rklb/articles/627720/why-did-rocket-lab-stock-fall-again/2026-11-23?.tsrc=rss",
+     "tags": [
+      "legal"
+     ]
+    }
+   ]
   },
   {
    "symbol": "CMG",
-   "price": 36.3,
+   "price": 35.55,
    "setups": [
     "bull_flag"
    ],
@@ -7187,115 +7154,128 @@
   },
   {
    "symbol": "HDB",
-   "price": 26.24,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "VVV",
-   "price": 36.84,
+   "price": 27.42,
    "setups": [
     "breakout_20d",
-    "reclaim_ma20"
+    "bull_flag"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "Why HDFC Bank (HDB) is Standing Strong Amid Market Turmoil",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/why-hdfc-bank-hdb-standing-041924130.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
   },
   {
-   "symbol": "TU",
-   "price": 10.78,
+   "symbol": "GIS",
+   "price": 35.74,
    "setups": [
-    "breakout_20d"
+    "reclaim_ma20"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "General Mills vs. Kraft Heinz: Which Food Dividend Is Better for Retirees?",
+     "url": "https://247wallst.com/investing/2026/11/22/general-mills-vs-kraft-heinz-which-food-dividend-is-better-for-retirees/?.tsrc=rss",
+     "tags": [
+      "capital"
+     ]
+    }
+   ]
   },
   {
    "symbol": "IBN",
-   "price": 34.9,
+   "price": 35.47,
    "setups": [
     "breakout_20d",
     "bull_flag"
    ],
+   "news": [
+    {
+     "title": "ICICI Life Guaranteed Indexed Pension plan launched, combining lifelong guaranteed income with index-linked growth potential",
+     "url": "https://finance.yahoo.com/markets/options/articles/icici-life-guaranteed-indexed-pension-110800660.html?.tsrc=rss",
+     "tags": [
+      "macro"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "TU",
+   "price": 11.07,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "Telus Corp. (TU) Could Be Worth More in a Takeover \u2014 Investors Were Betting Big",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/telus-corp-tu-could-worth-044832623.html?.tsrc=rss",
+     "tags": [
+      "deal"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "ROL",
+   "price": 37.82,
+   "setups": [
+    "bull_flag"
+   ],
    "news": []
   },
   {
-   "symbol": "S",
-   "price": 24.01,
+   "symbol": "CAG",
+   "price": 14.92,
    "setups": [
     "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "NLY",
-   "price": 16.96,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ELAN",
-   "price": 26.29,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "USAR",
-   "price": 6.87,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "BRBR",
-   "price": 15.11,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "AGNC",
-   "price": 7.86,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ADT",
-   "price": 9.88,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "SIRI",
-   "price": 31.98,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "VRDN",
-   "price": 31.44,
-   "setups": [
-    "breakout_20d"
    ],
    "news": []
   },
   {
    "symbol": "MGM",
-   "price": 33.41,
+   "price": 32.36,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ELAN",
+   "price": 25.74,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CRSP",
+   "price": 39.1,
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HRL",
+   "price": 23.54,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BAX",
+   "price": 25.39,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "AEO",
+   "price": 21.39,
    "setups": [
     "bull_flag"
    ],
@@ -7303,74 +7283,129 @@
   },
   {
    "symbol": "SARO",
-   "price": 26.96,
+   "price": 26.57,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "YMM",
-   "price": 9.06,
+   "symbol": "TAK",
+   "price": 21.77,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "RCI",
+   "price": 35.45,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "LFST",
+   "price": 13.82,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "VSNT",
-   "price": 35.6,
+   "symbol": "COLD",
+   "price": 16.03,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "FRVO",
-   "price": 11.14,
+   "symbol": "JAN",
+   "price": 31.65,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "FLYW",
-   "price": 21.4,
+   "symbol": "YSWY",
+   "price": 20.11,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PENN",
+   "price": 18.05,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "INGM",
-   "price": 27.47,
+   "symbol": "IVR",
+   "price": 5.38,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "DX",
-   "price": 9.85,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CVI",
-   "price": 33.9,
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "SGRY",
-   "price": 26.69,
+   "symbol": "XERS",
+   "price": 16.97,
    "setups": [
     "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PRVA",
+   "price": 25.05,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ENR",
+   "price": 28.56,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "NAVI",
+   "price": 6.21,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MIAX",
+   "price": 36.39,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PGNY",
+   "price": 35.71,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "OTEX",
+   "price": 22.63,
+   "setups": [
+    "oversold_bounce"
    ],
    "news": []
   }
@@ -7993,6 +8028,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-23T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-23T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 5 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-23T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 382 charts matched a setup, 250 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-21T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $50.00 account: $1.50 a trade, $5.00 a day, orders up to $45.00."
@@ -8176,21 +8226,6 @@
    "t": "2026-11-20T15:10:00+00:00",
    "bot": "risk",
    "text": "Skipped GIS: one share of GIS costs $36.04, more than your cash limit (cash $7.31 in trader/portfolio.json minus the $5.18 buffer = $2.13 / 36.04). No order."
-  },
-  {
-   "t": "2026-11-20T15:10:00+00:00",
-   "bot": "oracle",
-   "text": "GIS: target first 0%, stop first 2%, neither 98% (5000 replays). History: 29 fired, 1 won, 6 lost."
-  },
-  {
-   "t": "2026-11-20T15:10:00+00:00",
-   "bot": "entry",
-   "text": "GIS broke out at $36.04 (10:10 AM)."
-  },
-  {
-   "t": "2026-11-20T15:10:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on TNDM: not in play (it's up 3.8% on the day, I need 4%; opening volume is 0.2x normal, I need 1.5x)."
   }
  ],
  "errors": []

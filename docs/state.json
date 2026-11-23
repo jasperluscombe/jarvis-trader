@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-23T08:30:00+00:00",
- "updated_local": "Mon 23 Nov 7:00 PM",
+ "updated_utc": "2026-11-23T09:00:00+00:00",
+ "updated_local": "Mon 23 Nov 7:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -28,7 +28,7 @@
   "max_dd_pct": -9.17,
   "max_dd_usd": -5.05,
   "sharpe": 0.17,
-  "sharpe_days": 18,
+  "sharpe_days": 19,
   "fees": 0.0,
   "avg_slip_pct": 0.253,
   "slip_trades": 3,
@@ -234,10 +234,6 @@
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-13T19:10:00+00:00",
-   "eq": 54.77
-  },
   {
    "t": "2026-11-13T19:15:00+00:00",
    "eq": 54.8
@@ -1832,6 +1828,10 @@
   },
   {
    "t": "2026-11-23T03:00:00+00:00",
+   "eq": 50.0
+  },
+  {
+   "t": "2026-11-23T09:00:00+00:00",
    "eq": 50.0
   }
  ],
@@ -6476,7 +6476,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-23T09:00:00+00:00",
+ "next_checkin_utc": "2026-11-23T09:30:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7076,7 +7076,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-23T08:30:00+00:00"
+   "t": "2026-11-23T09:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -7100,7 +7100,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-23T08:30:00+00:00"
+   "t": "2026-11-23T09:00:00+00:00"
   },
   {
    "id": "oracle",

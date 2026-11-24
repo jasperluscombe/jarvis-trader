@@ -13295,11 +13295,6 @@
  "events": [
   {
    "t": "2026-11-20T15:15:00+00:00",
-   "bot": "entry",
-   "text": "EFOR broke out at $31.34 (10:10 AM)."
-  },
-  {
-   "t": "2026-11-20T15:15:00+00:00",
    "bot": "jarvis",
    "text": "Passed on EFOR: not in play (opening volume is 0.7x normal, I need 1.5x)."
   },
@@ -13692,6 +13687,11 @@
    "t": "2026-11-23T21:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-24T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $49.22 account: $1.48 a trade, $4.92 a day, orders up to $44.30."
   }
  ],
  "trades": [
@@ -14458,7 +14458,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-24T08:00:01+00:00"
+   "t": "2026-11-24T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14468,7 +14468,7 @@
   "entry": {
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-24T08:00:01+00:00"
+   "t": "2026-11-24T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14487,8 +14487,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped AMKR: one share risks $1.73 (entry 35.37 minus stop 33.64), more than your $1.50 max loss per trade. No order. Skip this trade, or plan a closer stop with trader-exit.",
-   "t": "2026-11-23T15:30:00+00:00"
+   "text": "Limits resized to your $49.22 account: $1.48 a trade, $4.92 a day, orders up to $44.30.",
+   "t": "2026-11-24T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-24",
@@ -14530,10 +14530,6 @@
   "start": 50.0
  },
  "equity_history": [
-  {
-   "t": "2026-11-06T00:00:00+00:00",
-   "eq": 48.04
-  },
   {
    "t": "2026-11-06T00:30:00+00:00",
    "eq": 49.7
@@ -17729,6 +17725,10 @@
   {
    "t": "2026-11-24T03:00:00+00:00",
    "eq": 49.24
+  },
+  {
+   "t": "2026-11-24T08:30:00+00:00",
+   "eq": 49.22
   }
  ],
  "charts": {

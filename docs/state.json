@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-24T12:55:00+00:00",
- "updated_local": "Tue 24 Nov 11:25 PM",
+ "updated_utc": "2026-11-24T13:00:00+00:00",
+ "updated_local": "Tue 24 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -6458,7 +6458,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-24T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-24T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7062,31 +7062,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-24T12:55:00+00:00"
+   "t": "2026-11-24T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks before the open, then finds the ones in play after it.",
-   "status": "idle",
-   "text": "30 of 919 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-23T15:35:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 529 charts matched a setup, 314 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-24T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "Read 5 headlines and filings for 8 stocks.",
-   "t": "2026-11-23T13:00:00+00:00"
+   "status": "working",
+   "text": "Read 45 headlines and filings for 8 stocks.",
+   "t": "2026-11-24T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-24T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-24T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -7115,54 +7115,89 @@
  ],
  "watchlist": [
   {
-   "symbol": "RKT",
-   "price": 13.75,
+   "symbol": "IREN",
+   "price": 14.64,
    "setups": [
-    "reclaim_ma20"
+    "oversold_bounce"
    ],
    "news": [
     {
-     "title": "Why Did Rocket Lab Stock Fall Again?",
-     "url": "https://www.trefis.com/stock/rklb/articles/627720/why-did-rocket-lab-stock-fall-again/2026-11-23?.tsrc=rss",
-     "tags": [
-      "legal"
-     ]
-    }
-   ]
-  },
-  {
-   "symbol": "CMG",
-   "price": 35.55,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HDB",
-   "price": 27.42,
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "news": [
-    {
-     "title": "Why HDFC Bank (HDB) is Standing Strong Amid Market Turmoil",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/why-hdfc-bank-hdb-standing-041924130.html?.tsrc=rss",
+     "title": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang\u2019s return",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/u-chip-stocks-fall-premarket-121456516.html?.tsrc=rss",
      "tags": []
     }
    ]
   },
   {
-   "symbol": "GIS",
-   "price": 35.74,
+   "symbol": "SMCI",
+   "price": 24.53,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "Nvidia, Anthropic, Intel, HPE, Sanofi, and More Stocks That Explain Today\u2019s Market",
+     "url": "https://finance.yahoo.com/m/f7fa0ed2-2c68-3b80-9261-c35639090d03/nvidia%2C-anthropic%2C-intel%2C.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "SOFI",
+   "price": 13.09,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "NVIDIA Added About $1 Trillion in Minutes on Huang\u2019s Return. Where Does the Price Target Go Now?",
+     "url": "https://247wallst.com/investing/2026/11/24/nvidia-added-about-1-trillion-in-minutes-on-huangs-return-where-does-the-price-target-go-now/?.tsrc=rss",
+     "tags": [
+      "analyst",
+      "legal",
+      "people"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "APLD",
+   "price": 13.82,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "I\u2019m Treating Applied Digital Like a Long-Term Call Option on $41B+ in Hyperscaler Leases",
+     "url": "https://247wallst.com/investing/2026/11/24/im-treating-applied-digital-like-a-long-term-call-option-on-41b-in-hyperscaler-leases/?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "IONQ",
+   "price": 23.34,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "Innodata vs. IonQ: Is the Artificial Intelligence or Quantum Computing Stock the Better Buy for 2027?",
+     "url": "https://www.fool.com/coverage/better-buy/2026/11/24/innodata-vs-ionq-is-the-artificial-intelligence-or-quantum-computing-stock-the-better-buy-for-2027/?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "MDLN",
+   "price": 38.53,
    "setups": [
     "reclaim_ma20"
    ],
    "news": [
     {
-     "title": "General Mills vs. Kraft Heinz: Which Food Dividend Is Better for Retirees?",
-     "url": "https://247wallst.com/investing/2026/11/22/general-mills-vs-kraft-heinz-which-food-dividend-is-better-for-retirees/?.tsrc=rss",
+     "title": "What Capital Group Dividend Value ETF (CGDV) Bought: Amphenol Leads on Nov. 20",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/capital-group-dividend-value-etf-110412118.html?.tsrc=rss",
      "tags": [
       "capital"
      ]
@@ -7170,73 +7205,182 @@
    ]
   },
   {
+   "symbol": "AAOI",
+   "price": 38.7,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "AOI Announces Multi-Year Long-Term Agreement with Tier-1 Hyperscale Datacenter Customer",
+     "url": "https://finance.yahoo.com/technology/ai/articles/aoi-announces-multi-long-term-120000386.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "BMNR",
+   "price": 14.42,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": [
+    {
+     "title": "Tom Lee Slams XRP as \u2018Far More Inflationary\u2019 Than Ethereum as Bulls Eye $30",
+     "url": "https://www.ccn.com/news/crypto/tom-lee-slams-xrp-far-more-inflationary-bulls-eye-wild-price-calls/?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "ASTS",
+   "price": 25.67,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "B",
+   "price": 33.92,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "UMC",
+   "price": 14.39,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
    "symbol": "IBN",
    "price": 35.47,
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "news": [
-    {
-     "title": "ICICI Life Guaranteed Indexed Pension plan launched, combining lifelong guaranteed income with index-linked growth potential",
-     "url": "https://finance.yahoo.com/markets/options/articles/icici-life-guaranteed-indexed-pension-110800660.html?.tsrc=rss",
-     "tags": [
-      "macro"
-     ]
-    }
-   ]
-  },
-  {
-   "symbol": "TU",
-   "price": 11.07,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": [
-    {
-     "title": "Telus Corp. (TU) Could Be Worth More in a Takeover \u2014 Investors Were Betting Big",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/telus-corp-tu-could-worth-044832623.html?.tsrc=rss",
-     "tags": [
-      "deal"
-     ]
-    }
-   ]
-  },
-  {
-   "symbol": "ROL",
-   "price": 37.82,
    "setups": [
     "bull_flag"
    ],
    "news": []
   },
   {
-   "symbol": "CAG",
-   "price": 14.92,
+   "symbol": "HDB",
+   "price": 27.13,
+   "setups": [
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CDE",
+   "price": 11.45,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BNAI",
+   "price": 7.32,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HL",
+   "price": 11.2,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "RIVN",
+   "price": 11.22,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CCC",
+   "price": 7.72,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HBAN",
+   "price": 14.72,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "S",
+   "price": 24.49,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "MGM",
-   "price": 32.36,
+   "symbol": "PATH",
+   "price": 11.84,
    "setups": [
-    "bull_flag"
+    "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "ELAN",
-   "price": 25.74,
+   "symbol": "CPRT",
+   "price": 31.62,
    "setups": [
-    "bull_flag"
+    "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "CRSP",
-   "price": 39.1,
+   "symbol": "FIG",
+   "price": 17.1,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PCG",
+   "price": 14.08,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "SW",
+   "price": 39.55,
+   "setups": [
+    "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "GAP",
+   "price": 21.75,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "VALE",
+   "price": 9.8,
    "setups": [
     "oversold",
     "oversold_bounce"
@@ -7244,154 +7388,26 @@
    "news": []
   },
   {
-   "symbol": "HRL",
-   "price": 23.54,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "BAX",
-   "price": 25.39,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "AEO",
-   "price": 21.39,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "SARO",
-   "price": 26.57,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "TAK",
-   "price": 21.77,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "RCI",
-   "price": 35.45,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "LFST",
-   "price": 13.82,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "COLD",
-   "price": 16.03,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "JAN",
-   "price": 31.65,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "YSWY",
-   "price": 20.11,
+   "symbol": "NLY",
+   "price": 17.14,
    "setups": [
     "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "PENN",
-   "price": 18.05,
+   "symbol": "AGNC",
+   "price": 7.95,
    "setups": [
-    "bull_flag"
+    "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "IVR",
-   "price": 5.38,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "XERS",
-   "price": 16.97,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PRVA",
-   "price": 25.05,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ENR",
-   "price": 28.56,
+   "symbol": "GME",
+   "price": 27.3,
    "setups": [
     "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "NAVI",
-   "price": 6.21,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MIAX",
-   "price": 36.39,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PGNY",
-   "price": 35.71,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "OTEX",
-   "price": 22.63,
-   "setups": [
-    "oversold_bounce"
    ],
    "news": []
   }
@@ -8054,6 +8070,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-24T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-24T13:00:00+00:00",
+   "bot": "news",
+   "text": "Read 45 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-24T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 529 charts matched a setup, 314 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-24T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $49.22 account: $1.48 a trade, $4.92 a day, orders up to $44.30."
@@ -8237,21 +8268,6 @@
    "t": "2026-11-23T15:05:00+00:00",
    "bot": "broker",
    "text": "Bought 1 SA (auto: medium confidence)."
-  },
-  {
-   "t": "2026-11-23T15:05:00+00:00",
-   "bot": "oracle",
-   "text": "SA: target first 0%, stop first 10%, neither 90% (5000 replays). History: 17 fired, 1 won, 2 lost."
-  },
-  {
-   "t": "2026-11-23T15:05:00+00:00",
-   "bot": "entry",
-   "text": "SA broke out at $19.17 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-23T15:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on SECZ: not in play (opening volume is 0.9x normal, I need 1.5x)."
   }
  ],
  "errors": []

@@ -14458,7 +14458,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-24T14:15:00+00:00"
+   "t": "2026-11-24T14:20:01+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14468,7 +14468,7 @@
   "entry": {
    "status": "idle",
    "text": "Waiting for the opening bell (1:00 AM your time).",
-   "t": "2026-11-24T14:15:00+00:00"
+   "t": "2026-11-24T14:20:01+00:00"
   },
   "oracle": {
    "status": "working",
@@ -22656,14 +22656,10 @@
   }
  },
  "telegram_health": {
-  "sent_ok": 1,
-  "at": "2026-11-24T13:00:00+00:00"
+  "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
+  "at": "2026-11-24T14:20:01+00:00"
  },
  "telegram_log": [
-  {
-   "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
-   "at": "2026-11-18T16:00:00+00:00"
-  },
   {
    "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
    "at": "2026-11-18T17:10:00+00:00"
@@ -22740,6 +22736,10 @@
   {
    "sent_ok": 1,
    "at": "2026-11-24T13:00:00+00:00"
+  },
+  {
+   "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
+   "at": "2026-11-24T14:20:01+00:00"
   }
  ],
  "news": {

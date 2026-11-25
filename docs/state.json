@@ -1,37 +1,37 @@
 {
- "updated_utc": "2026-11-25T20:55:00+00:00",
- "updated_local": "Thu 26 Nov 7:25 AM",
+ "updated_utc": "2026-11-25T21:00:00+00:00",
+ "updated_local": "Thu 26 Nov 7:30 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.49,
-  "cash": 8.64,
-  "day_pl": 0.21,
+  "equity": 49.69,
+  "cash": 22.95,
+  "day_pl": 0.41,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.49,
-  "return_usd": -0.51,
-  "return_pct": -1.02,
-  "realised": -0.44,
-  "unrealised": 0.2,
-  "trades": 29,
-  "win_rate": 0.414,
-  "profit_factor": 0.96,
-  "avg_win": 0.79,
+  "now": 49.69,
+  "return_usd": -0.31,
+  "return_pct": -0.62,
+  "realised": -0.13,
+  "unrealised": 0.1,
+  "trades": 30,
+  "win_rate": 0.433,
+  "profit_factor": 0.99,
+  "avg_win": 0.75,
   "avg_loss": -0.58,
-  "avg_r": 0.143,
+  "avg_r": 0.146,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -7.62,
+  "sharpe": -7.17,
   "sharpe_days": 15,
   "fees": 0.0,
-  "avg_slip_pct": 0.39,
-  "slip_trades": 6,
+  "avg_slip_pct": 0.263,
+  "slip_trades": 7,
   "by_strategy": [
    {
     "name": "classic",
@@ -42,10 +42,10 @@
    },
    {
     "name": "in_play",
-    "trades": 6,
-    "wins": 1,
-    "total": -2.48,
-    "avg_r": -0.34
+    "trades": 7,
+    "wins": 2,
+    "total": -2.17,
+    "avg_r": -0.255
    }
   ],
   "by_symbol": [
@@ -104,6 +104,13 @@
     "wins": 1,
     "total": 0.4,
     "avg_r": 0.162
+   },
+   {
+    "name": "BZ",
+    "trades": 1,
+    "wins": 1,
+    "total": 0.31,
+    "avg_r": 0.254
    },
    {
     "name": "AAPL",
@@ -240,18 +247,14 @@
   "risk_used": 2.51
  },
  "goals": {
-  "day_pl": 0.21,
-  "week_pl": -0.51,
+  "day_pl": 0.41,
+  "week_pl": -0.31,
   "daily_goal": 0.99,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-18T18:45:00+00:00",
-   "eq": 52.66
-  },
   {
    "t": "2026-11-18T18:50:00+00:00",
    "eq": 52.6
@@ -1847,14 +1850,18 @@
   {
    "t": "2026-11-25T20:55:00+00:00",
    "eq": 49.49
+  },
+  {
+   "t": "2026-11-25T21:00:00+00:00",
+   "eq": 49.69
   }
  ],
  "stats": {
-  "trades": 29,
-  "wins": 12,
+  "trades": 30,
+  "wins": 13,
   "losses": 17,
-  "win_rate": 0.414,
-  "avg_win": 0.79,
+  "win_rate": 0.433,
+  "avg_win": 0.75,
   "avg_loss": -0.58,
   "best": 1.92,
   "worst": -1.45,
@@ -1864,7 +1871,7 @@
  },
  "charts": {
   "date": "2026-11-25",
-  "updated": "2026-11-25T20:55:00+00:00",
+  "updated": "2026-11-25T21:00:00+00:00",
   "symbols": {
    "KSS": {
     "bars": [
@@ -2408,11 +2415,11 @@
       26.6
      ],
      [
-      1795640120,
+      1795640100,
+      26.6,
+      26.83,
       26.55,
-      26.55,
-      26.55,
-      26.55
+      26.78
      ]
     ],
     "or_high": 26.44,
@@ -2979,11 +2986,11 @@
       14.25
      ],
      [
-      1795640125,
-      14.33,
-      14.33,
-      14.33,
-      14.33
+      1795640100,
+      14.25,
+      14.36,
+      14.25,
+      14.32
      ]
     ],
     "or_high": 13.95,
@@ -3558,11 +3565,11 @@
       632.79
      ],
      [
-      1795640125,
-      633.43,
-      633.43,
-      633.43,
-      633.43
+      1795640100,
+      632.77,
+      634.59,
+      632.21,
+      634.31
      ]
     ],
     "or_high": 617.74,
@@ -4112,11 +4119,11 @@
       716.8
      ],
      [
-      1795640120,
-      717.23,
-      717.23,
-      717.23,
-      717.23
+      1795640100,
+      716.71,
+      718.41,
+      716.27,
+      717.8
      ]
     ],
     "or_high": 703.7,
@@ -4666,11 +4673,11 @@
       380.99
      ],
      [
-      1795640126,
-      381.58,
-      381.58,
-      381.58,
-      381.58
+      1795640100,
+      380.96,
+      382.23,
+      380.36,
+      380.93
      ]
     ],
     "or_high": 370.23,
@@ -5220,11 +5227,11 @@
       149.01
      ],
      [
-      1795640126,
-      148.95,
-      148.95,
-      148.95,
-      148.95
+      1795640100,
+      149.01,
+      149.42,
+      148.55,
+      149.3
      ]
     ],
     "or_high": 145.0,
@@ -5774,11 +5781,11 @@
       355.71
      ],
      [
-      1795640127,
-      356.46,
-      356.46,
-      356.46,
-      356.46
+      1795640100,
+      355.61,
+      356.75,
+      355.46,
+      355.86
      ]
     ],
     "or_high": 353.84,
@@ -6328,11 +6335,11 @@
       28.74
      ],
      [
-      1795640120,
-      28.72,
-      28.72,
-      28.72,
-      28.72
+      1795640100,
+      28.76,
+      28.76,
+      28.67,
+      28.67
      ]
     ],
     "or_high": 29.82,
@@ -6407,8 +6414,8 @@
    "t": "2026-11-25T15:35:00+00:00"
   }
  ],
- "market_open": true,
- "next_checkin_utc": "2026-11-25T21:00:00+00:00",
+ "market_open": false,
+ "next_checkin_utc": "2026-11-25T21:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -6581,24 +6588,24 @@
  },
  "lab": {
   "since": "2026-11-16",
-  "days": 7,
+  "days": 8,
   "in_play": {
-   "n": 45,
-   "win": 0.178,
-   "avg_r": -0.394,
-   "total_r": -17.75
+   "n": 48,
+   "win": 0.208,
+   "avg_r": -0.358,
+   "total_r": -17.21
   },
   "not_in_play": {
-   "n": 177,
-   "win": 0.282,
-   "avg_r": -0.294,
-   "total_r": -52.07
+   "n": 187,
+   "win": 0.294,
+   "avg_r": -0.262,
+   "total_r": -49.0
   },
   "all_old_rules": {
-   "n": 222,
-   "win": 0.261,
-   "avg_r": -0.337,
-   "total_r": -74.72
+   "n": 235,
+   "win": 0.277,
+   "avg_r": -0.3,
+   "total_r": -70.6
   },
   "curve": [
    [
@@ -6628,6 +6635,10 @@
    [
     "2026-11-24",
     -17.75
+   ],
+   [
+    "2026-11-25",
+    -17.21
    ]
   ],
   "recent": [
@@ -6641,8 +6652,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 0.6% on the day, I need 4%; opening volume is 0.6x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.959,
+    "r_new": 1.976
    },
    {
     "date": "2026-11-25",
@@ -6654,8 +6665,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.4% on the day, I need 4%; opening volume is 0.8x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.093,
+    "r_new": -1.054
    },
    {
     "date": "2026-11-25",
@@ -6667,8 +6678,8 @@
     "in_play": true,
     "took": false,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.854,
+    "r_new": 0.432
    },
    {
     "date": "2026-11-25",
@@ -6680,8 +6691,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.5% on the day, I need 4%; opening volume is 0.7x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.66,
+    "r_new": 0.407
    },
    {
     "date": "2026-11-25",
@@ -6693,8 +6704,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up -2.0% on the day, I need 4%",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.152,
+    "r_new": 1.444
    },
    {
     "date": "2026-11-25",
@@ -6706,8 +6717,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 0.2% on the day, I need 4%; opening volume is 1.1x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 1.354,
+    "r_new": 0.899
    },
    {
     "date": "2026-11-25",
@@ -6719,8 +6730,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 2.3% on the day, I need 4%; opening volume is 0.2x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 2.333,
+    "r_new": 2.195
    },
    {
     "date": "2026-11-25",
@@ -6732,8 +6743,8 @@
     "in_play": true,
     "took": true,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.037,
+    "r_new": -0.021
    },
    {
     "date": "2026-11-25",
@@ -6745,8 +6756,8 @@
     "in_play": true,
     "took": true,
     "why": "",
-    "r_old": null,
-    "r_new": null
+    "r_old": 0.233,
+    "r_new": 0.128
    },
    {
     "date": "2026-11-25",
@@ -6758,8 +6769,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up -6.3% on the day, I need 4%; opening volume is 0.7x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.065,
+    "r_new": 0.732
    },
    {
     "date": "2026-11-25",
@@ -6771,8 +6782,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up -3.1% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -1.088,
+    "r_new": 1.454
    },
    {
     "date": "2026-11-25",
@@ -6784,8 +6795,8 @@
     "in_play": false,
     "took": false,
     "why": "it's up 3.5% on the day, I need 4%; opening volume is 0.5x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": 2.024,
+    "r_new": 2.016
    },
    {
     "date": "2026-11-25",
@@ -6797,8 +6808,8 @@
     "in_play": false,
     "took": false,
     "why": "opening volume is 1.0x normal, I need 1.5x",
-    "r_old": null,
-    "r_new": null
+    "r_old": -0.861,
+    "r_new": 1.487
    },
    {
     "date": "2026-11-24",
@@ -7155,17 +7166,10 @@
  },
  "positions": [
   {
-   "symbol": "BZ",
-   "qty": 1.0,
-   "value": 14.245,
-   "pl": 0.245,
-   "entry": 14.0
-  },
-  {
    "symbol": "KSS",
    "qty": 1.0,
-   "value": 26.6,
-   "pl": -0.04,
+   "value": 26.74,
+   "pl": 0.1,
    "entry": 26.64
   }
  ],
@@ -7176,7 +7180,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-25T20:55:00+00:00"
+   "t": "2026-11-25T21:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -7199,30 +7203,30 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Entry window closed (breakouts after 10:30 New York lose more than they make). Watching open trades.",
-   "t": "2026-11-25T20:50:00+00:00"
+   "text": "Market closed. Back tomorrow.",
+   "t": "2026-11-25T21:00:00+00:00"
   },
   {
    "id": "oracle",
    "name": "Oracle",
    "role": "Replays the rest of the day thousands of times, and scores every signal after the close.",
-   "status": "idle",
-   "text": "CNH: target first 0%, stop first 0%, neither 100% (5000 replays). History: 29 fired, 2 won, 5 lost.",
-   "t": "2026-11-25T15:15:00+00:00"
+   "status": "working",
+   "text": "Scored 13 breakout signals for the shadow book.",
+   "t": "2026-11-25T21:00:00+00:00"
   },
   {
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped CNH: one share of CNH costs $11.45, more than your cash limit (cash $8.64 in trader/portfolio.json minus the $4.93 buffer = $3.71 / 11.45). No order.",
-   "t": "2026-11-25T15:15:00+00:00"
+   "status": "working",
+   "text": "Still holding 1 KSS with the market closed.",
+   "t": "2026-11-25T21:00:00+00:00"
   },
   {
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "working",
+   "status": "idle",
    "text": "Closing anything still open before the bell.",
    "t": "2026-11-25T20:55:00+00:00"
   }
@@ -7672,9 +7676,12 @@
    "source": "auto: medium confidence",
    "confidence": "medium",
    "paper": true,
-   "result": null,
+   "result": 0.31,
    "order_id": "36fbceeb-4bbf-4863-baf7-a2959c14760a",
-   "strategy": "in_play"
+   "strategy": "in_play",
+   "fill": 14.0,
+   "exit_fill": 14.31,
+   "slip_pct": -0.498
   },
   {
    "date": "2026-11-24",
@@ -8143,9 +8150,9 @@
   }
  ],
  "record": {
-  "trades": 29,
-  "wins": 12,
-  "total": -0.44
+  "trades": 30,
+  "wins": 13,
+  "total": -0.13
  },
  "sessions": [
   {
@@ -8185,6 +8192,21 @@
   }
  ],
  "events": [
+  {
+   "t": "2026-11-25T21:00:00+00:00",
+   "bot": "risk",
+   "text": "Still holding 1 KSS with the market closed."
+  },
+  {
+   "t": "2026-11-25T21:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-25T21:00:00+00:00",
+   "bot": "oracle",
+   "text": "Scored 13 breakout signals for the shadow book."
+  },
   {
    "t": "2026-11-25T20:55:00+00:00",
    "bot": "broker",
@@ -8369,21 +8391,6 @@
    "t": "2026-11-25T14:50:00+00:00",
    "bot": "entry",
    "text": "AGLT broke out at $5.58 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-25T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on OTLY: not in play (opening volume is 1.0x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-25T14:50:00+00:00",
-   "bot": "entry",
-   "text": "OTLY broke out at $13.78 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-25T13:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Sent the morning brief."
   }
  ],
  "errors": []

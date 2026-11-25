@@ -13301,21 +13301,6 @@
  "events": [
   {
    "t": "2026-11-24T14:50:00+00:00",
-   "bot": "entry",
-   "text": "CUE broke out at $6.78 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-24T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on CUE: not in play (opening volume is 0.8x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-24T14:50:00+00:00",
-   "bot": "entry",
-   "text": "PINS broke out at $19.21 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-24T14:50:00+00:00",
    "bot": "oracle",
    "text": "PINS: target first 0%, stop first 0%, neither 100% (5000 replays). History: 34 fired, 1 won, 8 lost."
   },
@@ -13698,6 +13683,21 @@
    "t": "2026-11-25T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $49.28 account: $1.48 a trade, $4.93 a day, orders up to $44.35."
+  },
+  {
+   "t": "2026-11-25T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 369 charts matched a setup, 195 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
+   "t": "2026-11-25T13:00:00+00:00",
+   "bot": "news",
+   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out"
+  },
+  {
+   "t": "2026-11-25T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
   }
  ],
  "trades": [
@@ -14170,331 +14170,333 @@
  "done": {
   "daily_goal": "2026-11-09",
   "recap": "2026-11-24",
-  "brief": "2026-11-24",
+  "brief": "2026-11-25",
   "overnight_warning": "2026-11-06"
  },
  "candidates": [
   {
-   "symbol": "IREN",
+   "symbol": "T",
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
-   "price": 14.64,
-   "close_date": "2026-11-23",
-   "rsi": 33.6,
-   "volume": 124604189
+   "price": 22.88,
+   "close_date": "2026-11-24",
+   "rsi": 57.5,
+   "volume": 42530207
   },
   {
-   "symbol": "SMCI",
+   "symbol": "CMG",
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
-   "price": 24.53,
-   "close_date": "2026-11-23",
-   "rsi": 37.9,
-   "volume": 62266922
+   "price": 37.05,
+   "close_date": "2026-11-24",
+   "rsi": 64.1,
+   "volume": 13045674
   },
   {
-   "symbol": "SOFI",
+   "symbol": "TSCO",
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
-   "price": 13.09,
-   "close_date": "2026-11-23",
-   "rsi": 33.9,
-   "volume": 52424540
+   "price": 39.45,
+   "close_date": "2026-11-24",
+   "rsi": 67.0,
+   "volume": 11948499
   },
   {
-   "symbol": "APLD",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 13.82,
-   "close_date": "2026-11-23",
-   "rsi": 39.7,
-   "volume": 46236359
-  },
-  {
-   "symbol": "IONQ",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 23.34,
-   "close_date": "2026-11-23",
-   "rsi": 36.5,
-   "volume": 26240115
-  },
-  {
-   "symbol": "MDLN",
+   "symbol": "CPNG",
    "setups": [
     "reclaim_ma20"
    ],
-   "price": 38.53,
-   "close_date": "2026-11-23",
-   "rsi": 54.3,
-   "volume": 14973715
+   "price": 16.01,
+   "close_date": "2026-11-24",
+   "rsi": 59.3,
+   "volume": 25614496
   },
   {
-   "symbol": "AAOI",
+   "symbol": "AKAN",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 5.2,
+   "close_date": "2026-11-24",
+   "rsi": 69.2,
+   "volume": 76837955
+  },
+  {
+   "symbol": "IP",
    "setups": [
     "oversold_bounce"
    ],
-   "price": 38.7,
-   "close_date": "2026-11-23",
-   "rsi": 32.7,
-   "volume": 14099410
-  },
-  {
-   "symbol": "BMNR",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 14.42,
-   "close_date": "2026-11-23",
-   "rsi": 32.1,
-   "volume": 37124772
-  },
-  {
-   "symbol": "ASTS",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 25.67,
-   "close_date": "2026-11-23",
-   "rsi": 33.1,
-   "volume": 19091146
-  },
-  {
-   "symbol": "B",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 33.92,
-   "close_date": "2026-11-23",
-   "rsi": 37.4,
-   "volume": 13579658
-  },
-  {
-   "symbol": "UMC",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 14.39,
-   "close_date": "2026-11-23",
-   "rsi": 40.6,
-   "volume": 30675135
-  },
-  {
-   "symbol": "IBN",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 35.47,
-   "close_date": "2026-11-23",
-   "rsi": 80.4,
-   "volume": 12215749
-  },
-  {
-   "symbol": "HDB",
-   "setups": [
-    "bull_flag"
-   ],
-   "price": 27.13,
-   "close_date": "2026-11-23",
-   "rsi": 74.1,
-   "volume": 14534230
-  },
-  {
-   "symbol": "CDE",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 11.45,
-   "close_date": "2026-11-23",
-   "rsi": 33.2,
-   "volume": 32842102
-  },
-  {
-   "symbol": "BNAI",
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "price": 7.32,
-   "close_date": "2026-11-23",
-   "rsi": 67.8,
-   "volume": 50767017
-  },
-  {
-   "symbol": "HL",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 11.2,
-   "close_date": "2026-11-23",
-   "rsi": 33.2,
-   "volume": 33008491
-  },
-  {
-   "symbol": "RIVN",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 11.22,
-   "close_date": "2026-11-23",
-   "rsi": 38.2,
-   "volume": 32625460
-  },
-  {
-   "symbol": "CCC",
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "price": 7.72,
-   "close_date": "2026-11-23",
-   "rsi": 63.1,
-   "volume": 46654815
-  },
-  {
-   "symbol": "HBAN",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 14.72,
-   "close_date": "2026-11-23",
+   "price": 30.62,
+   "close_date": "2026-11-24",
    "rsi": 37.8,
-   "volume": 24224769
+   "volume": 12621090
   },
   {
-   "symbol": "S",
+   "symbol": "KHC",
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
-   "price": 24.49,
-   "close_date": "2026-11-23",
-   "rsi": 55.4,
-   "volume": 14346564
+   "price": 25.57,
+   "close_date": "2026-11-24",
+   "rsi": 59.8,
+   "volume": 14256930
   },
   {
-   "symbol": "PATH",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 11.84,
-   "close_date": "2026-11-23",
-   "rsi": 38.9,
-   "volume": 26360144
-  },
-  {
-   "symbol": "CPRT",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 31.62,
-   "close_date": "2026-11-23",
-   "rsi": 57.1,
-   "volume": 9711508
-  },
-  {
-   "symbol": "FIG",
+   "symbol": "DKNG",
    "setups": [
     "oversold_bounce"
    ],
-   "price": 17.1,
-   "close_date": "2026-11-23",
-   "rsi": 37.2,
-   "volume": 17573913
+   "price": 16.11,
+   "close_date": "2026-11-24",
+   "rsi": 31.6,
+   "volume": 19992201
   },
   {
    "symbol": "PCG",
    "setups": [
     "breakout_20d"
    ],
-   "price": 14.08,
-   "close_date": "2026-11-23",
-   "rsi": 62.5,
-   "volume": 20670983
+   "price": 14.22,
+   "close_date": "2026-11-24",
+   "rsi": 64.1,
+   "volume": 21433009
   },
   {
-   "symbol": "SW",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 39.55,
-   "close_date": "2026-11-23",
-   "rsi": 38.9,
-   "volume": 7070206
-  },
-  {
-   "symbol": "GAP",
+   "symbol": "KSS",
    "setups": [
     "reclaim_ma20"
    ],
-   "price": 21.75,
-   "close_date": "2026-11-23",
-   "rsi": 51.7,
-   "volume": 12227150
+   "price": 25.33,
+   "close_date": "2026-11-24",
+   "rsi": 58.9,
+   "volume": 11531246
   },
   {
-   "symbol": "VALE",
+   "symbol": "IBN",
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "price": 35.9,
+   "close_date": "2026-11-24",
+   "rsi": 81.9,
+   "volume": 8007232
+  },
+  {
+   "symbol": "HDB",
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "price": 27.56,
+   "close_date": "2026-11-24",
+   "rsi": 76.2,
+   "volume": 10221210
+  },
+  {
+   "symbol": "AMTM",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "price": 24.8,
+   "close_date": "2026-11-24",
+   "rsi": 69.5,
+   "volume": 10302559
+  },
+  {
+   "symbol": "MMED",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 19.07,
+   "close_date": "2026-11-24",
+   "rsi": 55.7,
+   "volume": 12987358
+  },
+  {
+   "symbol": "TOST",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 33.69,
+   "close_date": "2026-11-24",
+   "rsi": 52.8,
+   "volume": 7085061
+  },
+  {
+   "symbol": "COGT",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 33.01,
+   "close_date": "2026-11-24",
+   "rsi": 60.0,
+   "volume": 7106000
+  },
+  {
+   "symbol": "CTVA",
    "setups": [
     "oversold",
     "oversold_bounce"
    ],
-   "price": 9.8,
-   "close_date": "2026-11-23",
-   "rsi": 27.0,
-   "volume": 25494065
+   "price": 8.16,
+   "close_date": "2026-11-24",
+   "rsi": 24.8,
+   "volume": 24666238
   },
   {
-   "symbol": "NLY",
+   "symbol": "ET",
    "setups": [
     "oversold_bounce"
    ],
-   "price": 17.14,
-   "close_date": "2026-11-23",
-   "rsi": 35.0,
-   "volume": 14140359
+   "price": 18.68,
+   "close_date": "2026-11-24",
+   "rsi": 35.9,
+   "volume": 10206631
   },
   {
-   "symbol": "AGNC",
+   "symbol": "INFY",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 12.49,
+   "close_date": "2026-11-24",
+   "rsi": 56.3,
+   "volume": 15162746
+  },
+  {
+   "symbol": "CSGP",
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "price": 32.64,
+   "close_date": "2026-11-24",
+   "rsi": 57.7,
+   "volume": 5692670
+  },
+  {
+   "symbol": "VICI",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 24.77,
+   "close_date": "2026-11-24",
+   "rsi": 55.2,
+   "volume": 7446918
+  },
+  {
+   "symbol": "SYM",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 37.39,
+   "close_date": "2026-11-24",
+   "rsi": 52.4,
+   "volume": 4572770
+  },
+  {
+   "symbol": "ERAS",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 15.83,
+   "close_date": "2026-11-24",
+   "rsi": 55.9,
+   "volume": 10656666
+  },
+  {
+   "symbol": "INVH",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 27.24,
+   "close_date": "2026-11-24",
+   "rsi": 54.6,
+   "volume": 6172156
+  },
+  {
+   "symbol": "BAX",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 26.98,
+   "close_date": "2026-11-24",
+   "rsi": 60.9,
+   "volume": 6202830
+  },
+  {
+   "symbol": "M",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 24.48,
+   "close_date": "2026-11-24",
+   "rsi": 53.1,
+   "volume": 6676798
+  },
+  {
+   "symbol": "IONS",
    "setups": [
     "oversold_bounce"
    ],
-   "price": 7.95,
-   "close_date": "2026-11-23",
-   "rsi": 35.1,
-   "volume": 30039121
+   "price": 29.8,
+   "close_date": "2026-11-24",
+   "rsi": 35.5,
+   "volume": 5470232
   },
   {
    "symbol": "GME",
    "setups": [
     "breakout_20d"
    ],
-   "price": 27.3,
-   "close_date": "2026-11-23",
-   "rsi": 65.6,
-   "volume": 8111880
+   "price": 27.48,
+   "close_date": "2026-11-24",
+   "rsi": 66.6,
+   "volume": 5737028
+  },
+  {
+   "symbol": "AEO",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 22.79,
+   "close_date": "2026-11-24",
+   "rsi": 68.1,
+   "volume": 6764419
+  },
+  {
+   "symbol": "HLN",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 9.27,
+   "close_date": "2026-11-24",
+   "rsi": 50.9,
+   "volume": 16042047
   }
  ],
- "candidates_day": "2026-11-24",
+ "candidates_day": "2026-11-25",
  "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-25T12:55:00+00:00"
+   "t": "2026-11-25T13:00:00+00:00"
   },
   "scanner": {
    "status": "working",
-   "text": "30 of 826 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-24T15:35:00+00:00"
+   "text": "Scanned the US market: 369 charts matched a setup, 195 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-25T13:00:00+00:00"
   },
   "entry": {
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-25T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-25T13:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14508,8 +14510,8 @@
   },
   "news": {
    "status": "working",
-   "text": "Read 45 headlines and filings for 8 stocks.",
-   "t": "2026-11-24T13:00:00+00:00"
+   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
+   "t": "2026-11-25T13:00:00+00:00"
   },
   "risk": {
    "status": "working",
@@ -22755,13 +22757,9 @@
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-24T21:00:00+00:00"
+  "at": "2026-11-25T13:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 3,
-   "at": "2026-11-19T14:50:00+00:00"
-  },
   {
    "updates_error": "<urlopen error [Errno 104] Connection reset by peer>",
    "at": "2026-11-19T17:05:00+00:00"
@@ -22837,166 +22835,13 @@
   {
    "sent_ok": 1,
    "at": "2026-11-24T21:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-25T13:00:00+00:00"
   }
  ],
- "news": {
-  "AAOI": {
-   "headlines": [
-    {
-     "title": "AOI Announces Multi-Year Long-Term Agreement with Tier-1 Hyperscale Datacenter Customer",
-     "url": "https://finance.yahoo.com/technology/ai/articles/aoi-announces-multi-long-term-120000386.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  "APLD": {
-   "headlines": [
-    {
-     "title": "I\u2019m Treating Applied Digital Like a Long-Term Call Option on $41B+ in Hyperscaler Leases",
-     "url": "https://247wallst.com/investing/2026/11/24/im-treating-applied-digital-like-a-long-term-call-option-on-41b-in-hyperscaler-leases/?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Dead Cat Bounce? AI Stocks Climb 20%+, but IREN, Applied Digital Stay Down 50%+",
-     "url": "https://beincrypto.com/ai-stocks-dead-cat-bounce-iren/?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Applied Digital Stock Surged 20% on a Hyperscaler Deal. What to Know About Its $41 Billion in Leases",
-     "url": "https://www.fool.com/investing/2026/11/23/applied-digital-stock-surged-20-on-a-hyperscaler-deal-what-to-know-about-its-usd41-billion-in-leases/?.tsrc=rss",
-     "tags": [
-      "deal"
-     ]
-    }
-   ]
-  },
-  "BMNR": {
-   "headlines": [
-    {
-     "title": "Tom Lee Slams XRP as \u2018Far More Inflationary\u2019 Than Ethereum as Bulls Eye $30",
-     "url": "https://www.ccn.com/news/crypto/tom-lee-slams-xrp-far-more-inflationary-bulls-eye-wild-price-calls/?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "What Bitmine\u2019s Ethereum Buying Cap Could Mean For BMNR Stock",
-     "url": "https://finance.yahoo.com/markets/crypto/articles/bitmine-ethereum-buying-cap-could-121616580.html?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Bitmine Stock: Tom Lee Calls ETH \u2018Hard Money\u2019 \u2013 But BMNR Share Count Jumps 164%",
-     "url": "https://www.coinspeaker.com/bitmine-stock-tom-lee-hard-money-shares/?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  "IONQ": {
-   "headlines": [
-    {
-     "title": "Innodata vs. IonQ: Is the Artificial Intelligence or Quantum Computing Stock the Better Buy for 2027?",
-     "url": "https://www.fool.com/coverage/better-buy/2026/11/24/innodata-vs-ionq-is-the-artificial-intelligence-or-quantum-computing-stock-the-better-buy-for-2027/?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "IonQ Stock And Quantum Peers Tied To Energy Grid Demand",
-     "url": "https://finance.yahoo.com/energy/articles/ionq-stock-quantum-peers-tied-042830780.html?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Investor Warns: Quantum \u201cOne of the Most Overhyped Technologies of Our Time.\u201d IonQ Is Down 25% in a Month",
-     "url": "https://www.tikr.com/blog/investor-warns-quantum-one-of-the-most-overhyped-technologies-of-our-time-ionq-is-down-25-in-a-month?ref=yahoofinance&tlnk=yf-261123-vp9vfhjr&.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  "IREN": {
-   "headlines": [
-    {
-     "title": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang\u2019s return",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/u-chip-stocks-fall-premarket-121456516.html?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Anthropic Backer Dismisses Musk as \u201ca Glorified Compute Reseller.\u201d Here\u2019s What Reselling Earns SpaceX",
-     "url": "https://www.tikr.com/blog/anthropic-backer-dismisses-musk-as-a-glorified-compute-reseller-heres-what-reselling-earns-spacex?ref=yahoofinance&tlnk=yf-261124-4wp2mjrm&.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "CRWV, NBIS And IREN Rally In A \u2018Good Day\u2019 For Neoclouds \u2014 Databricks Co-Founder Flags Security Gaps At \u2018Top\u2019 Neoclouds",
-     "url": "https://stocktwits.com/news-articles/markets/equity/crwv-nbis-iren-rally-good-day-neoclouds-databricks-co-founder-security-gaps-top-neoclouds/cNbsRgYR9kB?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  "MDLN": {
-   "headlines": [
-    {
-     "title": "What Capital Group Dividend Value ETF (CGDV) Bought: Amphenol Leads on Nov. 20",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/capital-group-dividend-value-etf-110412118.html?.tsrc=rss",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Medline Inc. announces closing of secondary offering of Class A common stock and full exercise of underwriters\u2019 option to purchase additional shares",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/medline-inc-announces-closing-secondary-025500114.html?.tsrc=rss",
-     "tags": [
-      "capital"
-     ]
-    },
-    {
-     "title": "Moody\u2019s affirms Medline at Ba1, sees post-IPO deleveraging driving upgrade path",
-     "url": "https://finance.yahoo.com/healthcare/articles/moody-affirms-medline-ba1-sees-204016740.html?.tsrc=rss",
-     "tags": [
-      "analyst"
-     ]
-    }
-   ]
-  },
-  "SMCI": {
-   "headlines": [
-    {
-     "title": "Nvidia, Anthropic, Intel, HPE, Sanofi, and More Stocks That Explain Today\u2019s Market",
-     "url": "https://finance.yahoo.com/m/f7fa0ed2-2c68-3b80-9261-c35639090d03/nvidia%2C-anthropic%2C-intel%2C.html?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Jim Cramer Says Dell Is \u201cOne of the Few\u201d AI Stocks to Ride. Its November 24 Report Must Prove It",
-     "url": "https://www.tikr.com/blog/jim-cramer-says-dell-is-one-of-the-few-ai-stocks-to-ride-its-november-24-report-must-prove-it?ref=yahoofinance&tlnk=yf-261124-63mj9xvw&.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Dell Fell 37% Before Its November 24 Report. Now Its Thin Margin Has to Hold",
-     "url": "https://www.tikr.com/blog/dell-fell-37-before-its-november-24-report-now-its-thin-margin-has-to-hold?ref=yahoofinance&tlnk=yf-261124-vmf83ggf&.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  "SOFI": {
-   "headlines": [
-    {
-     "title": "NVIDIA Added About $1 Trillion in Minutes on Huang\u2019s Return. Where Does the Price Target Go Now?",
-     "url": "https://247wallst.com/investing/2026/11/24/nvidia-added-about-1-trillion-in-minutes-on-huangs-return-where-does-the-price-target-go-now/?.tsrc=rss",
-     "tags": [
-      "analyst",
-      "legal",
-      "people"
-     ]
-    },
-    {
-     "title": "I\u2019m Treating Applied Digital Like a Long-Term Call Option on $41B+ in Hyperscaler Leases",
-     "url": "https://247wallst.com/investing/2026/11/24/im-treating-applied-digital-like-a-long-term-call-option-on-41b-in-hyperscaler-leases/?.tsrc=rss",
-     "tags": []
-    },
-    {
-     "title": "Jim Cramer Calls CrowdStrike\u2019s Zscaler Deal the Biggest in Cybersecurity History. What It Means for Both Stocks",
-     "url": "https://247wallst.com/investing/2026/11/24/jim-cramer-calls-crowdstrikes-zscaler-deal-the-biggest-in-cybersecurity-history-what-it-means-for-both-stocks/?.tsrc=rss",
-     "tags": [
-      "deal"
-     ]
-    }
-   ]
-  }
- },
+ "news": {},
  "managed": [
   {
    "symbol": "AAPL",

@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-25T12:55:00+00:00",
- "updated_local": "Wed 25 Nov 11:25 PM",
+ "updated_utc": "2026-11-25T13:00:00+00:00",
+ "updated_local": "Wed 25 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -6433,7 +6433,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-25T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-25T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7041,31 +7041,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-25T12:55:00+00:00"
+   "t": "2026-11-25T13:00:00+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks before the open, then finds the ones in play after it.",
-   "status": "idle",
-   "text": "30 of 826 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-24T15:35:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 369 charts matched a setup, 195 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-25T13:00:00+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "Read 45 headlines and filings for 8 stocks.",
-   "t": "2026-11-24T13:00:00+00:00"
+   "status": "working",
+   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
+   "t": "2026-11-25T13:00:00+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-25T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-25T13:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -7094,240 +7094,64 @@
  ],
  "watchlist": [
   {
-   "symbol": "IREN",
-   "price": 14.64,
+   "symbol": "T",
+   "price": 22.88,
    "setups": [
-    "oversold_bounce"
-   ],
-   "news": [
-    {
-     "title": "U.S. chip stocks fall premarket after Nvidia-led rally on Huang\u2019s return",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/u-chip-stocks-fall-premarket-121456516.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "SMCI",
-   "price": 24.53,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": [
-    {
-     "title": "Nvidia, Anthropic, Intel, HPE, Sanofi, and More Stocks That Explain Today\u2019s Market",
-     "url": "https://finance.yahoo.com/m/f7fa0ed2-2c68-3b80-9261-c35639090d03/nvidia%2C-anthropic%2C-intel%2C.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "SOFI",
-   "price": 13.09,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": [
-    {
-     "title": "NVIDIA Added About $1 Trillion in Minutes on Huang\u2019s Return. Where Does the Price Target Go Now?",
-     "url": "https://247wallst.com/investing/2026/11/24/nvidia-added-about-1-trillion-in-minutes-on-huangs-return-where-does-the-price-target-go-now/?.tsrc=rss",
-     "tags": [
-      "analyst",
-      "legal",
-      "people"
-     ]
-    }
-   ]
-  },
-  {
-   "symbol": "APLD",
-   "price": 13.82,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": [
-    {
-     "title": "I\u2019m Treating Applied Digital Like a Long-Term Call Option on $41B+ in Hyperscaler Leases",
-     "url": "https://247wallst.com/investing/2026/11/24/im-treating-applied-digital-like-a-long-term-call-option-on-41b-in-hyperscaler-leases/?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "IONQ",
-   "price": 23.34,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": [
-    {
-     "title": "Innodata vs. IonQ: Is the Artificial Intelligence or Quantum Computing Stock the Better Buy for 2027?",
-     "url": "https://www.fool.com/coverage/better-buy/2026/11/24/innodata-vs-ionq-is-the-artificial-intelligence-or-quantum-computing-stock-the-better-buy-for-2027/?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "MDLN",
-   "price": 38.53,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": [
-    {
-     "title": "What Capital Group Dividend Value ETF (CGDV) Bought: Amphenol Leads on Nov. 20",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/capital-group-dividend-value-etf-110412118.html?.tsrc=rss",
-     "tags": [
-      "capital"
-     ]
-    }
-   ]
-  },
-  {
-   "symbol": "AAOI",
-   "price": 38.7,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": [
-    {
-     "title": "AOI Announces Multi-Year Long-Term Agreement with Tier-1 Hyperscale Datacenter Customer",
-     "url": "https://finance.yahoo.com/technology/ai/articles/aoi-announces-multi-long-term-120000386.html?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "BMNR",
-   "price": 14.42,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": [
-    {
-     "title": "Tom Lee Slams XRP as \u2018Far More Inflationary\u2019 Than Ethereum as Bulls Eye $30",
-     "url": "https://www.ccn.com/news/crypto/tom-lee-slams-xrp-far-more-inflationary-bulls-eye-wild-price-calls/?.tsrc=rss",
-     "tags": []
-    }
-   ]
-  },
-  {
-   "symbol": "ASTS",
-   "price": 25.67,
-   "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "B",
-   "price": 33.92,
+   "symbol": "CMG",
+   "price": 37.05,
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "UMC",
-   "price": 14.39,
+   "symbol": "TSCO",
+   "price": 39.45,
    "setups": [
-    "oversold_bounce"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "IBN",
-   "price": 35.47,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HDB",
-   "price": 27.13,
-   "setups": [
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CDE",
-   "price": 11.45,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "BNAI",
-   "price": 7.32,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HL",
-   "price": 11.2,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "RIVN",
-   "price": 11.22,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CCC",
-   "price": 7.72,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HBAN",
-   "price": 14.72,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "S",
-   "price": 24.49,
+   "symbol": "CPNG",
+   "price": 16.01,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "PATH",
-   "price": 11.84,
+   "symbol": "AKAN",
+   "price": 5.2,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "IP",
+   "price": 30.62,
    "setups": [
     "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "CPRT",
-   "price": 31.62,
+   "symbol": "KHC",
+   "price": 25.57,
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "FIG",
-   "price": 17.1,
+   "symbol": "DKNG",
+   "price": 16.11,
    "setups": [
     "oversold_bounce"
    ],
@@ -7335,31 +7159,74 @@
   },
   {
    "symbol": "PCG",
-   "price": 14.08,
+   "price": 14.22,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "SW",
-   "price": 39.55,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "GAP",
-   "price": 21.75,
+   "symbol": "KSS",
+   "price": 25.33,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "VALE",
-   "price": 9.8,
+   "symbol": "IBN",
+   "price": 35.9,
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HDB",
+   "price": 27.56,
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "AMTM",
+   "price": 24.8,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "MMED",
+   "price": 19.07,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "TOST",
+   "price": 33.69,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "COGT",
+   "price": 33.01,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CTVA",
+   "price": 8.16,
    "setups": [
     "oversold",
     "oversold_bounce"
@@ -7367,16 +7234,81 @@
    "news": []
   },
   {
-   "symbol": "NLY",
-   "price": 17.14,
+   "symbol": "ET",
+   "price": 18.68,
    "setups": [
     "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "AGNC",
-   "price": 7.95,
+   "symbol": "INFY",
+   "price": 12.49,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CSGP",
+   "price": 32.64,
+   "setups": [
+    "breakout_20d",
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "VICI",
+   "price": 24.77,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "SYM",
+   "price": 37.39,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "ERAS",
+   "price": 15.83,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "INVH",
+   "price": 27.24,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BAX",
+   "price": 26.98,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "M",
+   "price": 24.48,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "IONS",
+   "price": 29.8,
    "setups": [
     "oversold_bounce"
    ],
@@ -7384,9 +7316,25 @@
   },
   {
    "symbol": "GME",
-   "price": 27.3,
+   "price": 27.48,
    "setups": [
     "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "AEO",
+   "price": 22.79,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HLN",
+   "price": 9.27,
+   "setups": [
+    "reclaim_ma20"
    ],
    "news": []
   }
@@ -8069,6 +8017,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-25T13:00:00+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-25T13:00:00+00:00",
+   "bot": "news",
+   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out"
+  },
+  {
+   "t": "2026-11-25T13:00:00+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 369 charts matched a setup, 195 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-25T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $49.28 account: $1.48 a trade, $4.93 a day, orders up to $44.35."
@@ -8252,21 +8215,6 @@
    "t": "2026-11-24T15:00:00+00:00",
    "bot": "jarvis",
    "text": "Passed on IONS: not in play (opening volume is 0.5x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-24T15:00:00+00:00",
-   "bot": "entry",
-   "text": "IONS broke out at $29.65 (9:55 AM)."
-  },
-  {
-   "t": "2026-11-24T15:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on GDYN: not in play (it's up 3.9% on the day, I need 4%; opening volume is 0.8x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-24T15:00:00+00:00",
-   "bot": "entry",
-   "text": "GDYN broke out at $13.98 (9:50 AM)."
   }
  ],
  "errors": []

@@ -14479,54 +14479,12 @@
   }
  ],
  "candidates_day": "2026-11-24",
- "seen": {
-  "SPY": "triggered",
-  "AAPL": "triggered",
-  "CUE": "triggered",
-  "PINS": "triggered",
-  "HELP": "triggered",
-  "CPNG": "triggered",
-  "TNDM": "triggered",
-  "RPD": "triggered",
-  "ACAD": "triggered",
-  "SNDX": "triggered",
-  "PRCT": "triggered",
-  "KURA": "triggered",
-  "GRRR": "triggered",
-  "YELP": "triggered",
-  "ECVT": "triggered",
-  "QQQ": "triggered",
-  "NAMS": "triggered",
-  "KC": "triggered",
-  "VRDN": "triggered",
-  "KLAR": "triggered",
-  "AVTX": "triggered",
-  "GDYN": "triggered",
-  "IONS": "triggered",
-  "ORIC": "triggered",
-  "BCAX": "triggered",
-  "CSGP": "triggered",
-  "SKYD": "triggered",
-  "TTD": "triggered",
-  "IMNM": "triggered",
-  "AMLX": "triggered",
-  "VSNT": "triggered",
-  "VSTM": "triggered",
-  "FUN": "triggered",
-  "SYM": "triggered",
-  "RCUS": "triggered",
-  "FIVN": "triggered",
-  "VERX": "triggered",
-  "PSQ": "triggered",
-  "MMED": "triggered",
-  "IMXI": "triggered",
-  "XRAY": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-25T04:30:00+00:00"
+   "t": "2026-11-25T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14535,8 +14493,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-25T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-25T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14559,13 +14517,8 @@
    "t": "2026-11-24T15:30:00+00:00"
   }
  },
- "seen_day": "2026-11-24",
+ "seen_day": "2026-11-25",
  "next_sessions": [
-  {
-   "date": "2026-11-24",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-25",
    "open": "09:30",
@@ -14588,6 +14541,11 @@
   },
   {
    "date": "2026-12-02",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-12-03",
    "open": "09:30",
    "close": "16:00"
   }

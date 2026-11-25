@@ -1,24 +1,24 @@
 {
- "updated_utc": "2026-11-25T20:50:00+00:00",
- "updated_local": "Thu 26 Nov 7:20 AM",
+ "updated_utc": "2026-11-25T20:55:00+00:00",
+ "updated_local": "Thu 26 Nov 7:25 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.4,
+  "equity": 49.49,
   "cash": 8.64,
-  "day_pl": 0.12,
+  "day_pl": 0.21,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.4,
-  "return_usd": -0.6,
-  "return_pct": -1.2,
+  "now": 49.49,
+  "return_usd": -0.51,
+  "return_pct": -1.02,
   "realised": -0.44,
-  "unrealised": 0.12,
+  "unrealised": 0.2,
   "trades": 29,
   "win_rate": 0.414,
   "profit_factor": 0.96,
@@ -27,7 +27,7 @@
   "avg_r": 0.143,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -7.81,
+  "sharpe": -7.62,
   "sharpe_days": 15,
   "fees": 0.0,
   "avg_slip_pct": 0.39,
@@ -240,18 +240,14 @@
   "risk_used": 2.51
  },
  "goals": {
-  "day_pl": 0.12,
-  "week_pl": -0.6,
+  "day_pl": 0.21,
+  "week_pl": -0.51,
   "daily_goal": 0.99,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-18T18:40:00+00:00",
-   "eq": 52.86
-  },
   {
    "t": "2026-11-18T18:45:00+00:00",
    "eq": 52.66
@@ -1847,6 +1843,10 @@
   {
    "t": "2026-11-25T20:50:00+00:00",
    "eq": 49.4
+  },
+  {
+   "t": "2026-11-25T20:55:00+00:00",
+   "eq": 49.49
   }
  ],
  "stats": {
@@ -1864,7 +1864,7 @@
  },
  "charts": {
   "date": "2026-11-25",
-  "updated": "2026-11-25T20:50:00+00:00",
+  "updated": "2026-11-25T20:55:00+00:00",
   "symbols": {
    "KSS": {
     "bars": [
@@ -2398,14 +2398,21 @@
       26.32,
       26.63,
       26.29,
-      26.55
+      26.46
      ],
      [
-      1795639798,
+      1795639800,
       26.47,
-      26.47,
-      26.47,
-      26.47
+      26.67,
+      26.43,
+      26.6
+     ],
+     [
+      1795640120,
+      26.55,
+      26.55,
+      26.55,
+      26.55
      ]
     ],
     "or_high": 26.44,
@@ -2965,11 +2972,18 @@
       14.27
      ],
      [
-      1795639796,
+      1795639800,
       14.27,
-      14.27,
-      14.27,
-      14.27
+      14.29,
+      14.23,
+      14.25
+     ],
+     [
+      1795640125,
+      14.33,
+      14.33,
+      14.33,
+      14.33
      ]
     ],
     "or_high": 13.95,
@@ -2984,6 +2998,14 @@
      }
     ],
     "fills": [
+     {
+      "symbol": "BZ",
+      "side": "sell",
+      "price": 14.31,
+      "qty": 1.0,
+      "t": "2026-11-25T20:55:19.181713Z",
+      "type": "market"
+     },
      {
       "symbol": "BZ",
       "side": "buy",
@@ -3530,10 +3552,17 @@
      ],
      [
       1795639800,
-      632.82,
-      632.82,
-      632.82,
-      632.82
+      633.75,
+      633.93,
+      632.27,
+      632.79
+     ],
+     [
+      1795640125,
+      633.43,
+      633.43,
+      633.43,
+      633.43
      ]
     ],
     "or_high": 617.74,
@@ -4056,10 +4085,10 @@
      ],
      [
       1795638900,
-      714.66,
+      714.64,
       714.91,
       713.59,
-      714.0
+      714.01
      ],
      [
       1795639200,
@@ -4071,16 +4100,23 @@
      [
       1795639500,
       715.19,
-      716.48,
+      716.88,
       714.71,
-      716.19
+      716.53
      ],
      [
-      1795639799,
-      716.49,
-      716.49,
-      716.49,
-      716.49
+      1795639800,
+      716.57,
+      717.74,
+      716.57,
+      716.8
+     ],
+     [
+      1795640120,
+      717.23,
+      717.23,
+      717.23,
+      717.23
      ]
     ],
     "or_high": 703.7,
@@ -4624,10 +4660,17 @@
      ],
      [
       1795639800,
-      382.14,
-      382.14,
-      382.14,
-      382.14
+      382.11,
+      382.37,
+      380.77,
+      380.99
+     ],
+     [
+      1795640126,
+      381.58,
+      381.58,
+      381.58,
+      381.58
      ]
     ],
     "or_high": 370.23,
@@ -5171,10 +5214,17 @@
      ],
      [
       1795639800,
-      148.87,
-      148.87,
-      148.87,
-      148.87
+      148.54,
+      149.46,
+      148.53,
+      149.01
+     ],
+     [
+      1795640126,
+      148.95,
+      148.95,
+      148.95,
+      148.95
      ]
     ],
     "or_high": 145.0,
@@ -5718,10 +5768,17 @@
      ],
      [
       1795639800,
-      354.96,
-      354.96,
-      354.96,
-      354.96
+      354.86,
+      356.14,
+      354.86,
+      355.71
+     ],
+     [
+      1795640127,
+      356.46,
+      356.46,
+      356.46,
+      356.46
      ]
     ],
     "or_high": 353.84,
@@ -6261,14 +6318,21 @@
       28.83,
       28.83,
       28.74,
-      28.78
+      28.74
      ],
      [
-      1795639796,
+      1795639800,
       28.74,
-      28.74,
-      28.74,
+      28.76,
+      28.69,
       28.74
+     ],
+     [
+      1795640120,
+      28.72,
+      28.72,
+      28.72,
+      28.72
      ]
     ],
     "or_high": 29.82,
@@ -6344,7 +6408,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-25T20:55:00+00:00",
+ "next_checkin_utc": "2026-11-25T21:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7093,15 +7157,15 @@
   {
    "symbol": "BZ",
    "qty": 1.0,
-   "value": 14.275,
-   "pl": 0.275,
+   "value": 14.245,
+   "pl": 0.245,
    "entry": 14.0
   },
   {
    "symbol": "KSS",
    "qty": 1.0,
-   "value": 26.48,
-   "pl": -0.16,
+   "value": 26.6,
+   "pl": -0.04,
    "entry": 26.64
   }
  ],
@@ -7112,7 +7176,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-25T20:50:00+00:00"
+   "t": "2026-11-25T20:55:00+00:00"
   },
   {
    "id": "scanner",
@@ -7158,9 +7222,9 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "idle",
-   "text": "Bought 1 KSS (auto: medium confidence).",
-   "t": "2026-11-25T15:00:00+00:00"
+   "status": "working",
+   "text": "Closing anything still open before the bell.",
+   "t": "2026-11-25T20:55:00+00:00"
   }
  ],
  "watchlist": [
@@ -8122,6 +8186,16 @@
  ],
  "events": [
   {
+   "t": "2026-11-25T20:55:00+00:00",
+   "bot": "broker",
+   "text": "Couldn't close KSS: Alpaca DELETE /v2/positions/KSS: HTTP 403 {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"1\",\"held_for_orders\":\"1\",\"message\":\"insufficient qty available for order (requested: 1, available: 0)\",\"symbol\":\"KSS\"}"
+  },
+  {
+   "t": "2026-11-25T20:55:00+00:00",
+   "bot": "broker",
+   "text": "Sell order for 1 BZ sent but not filled yet (status pending_new). I'll check again."
+  },
+  {
    "t": "2026-11-25T15:35:00+00:00",
    "bot": "entry",
    "text": "NWL broke out 30 min ago: too late to chase."
@@ -8310,16 +8384,6 @@
    "t": "2026-11-25T13:00:00+00:00",
    "bot": "jarvis",
    "text": "Sent the morning brief."
-  },
-  {
-   "t": "2026-11-25T13:00:00+00:00",
-   "bot": "news",
-   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out"
-  },
-  {
-   "t": "2026-11-25T13:00:00+00:00",
-   "bot": "scanner",
-   "text": "Scanned the US market: 369 charts matched a setup, 195 fit your $5-$40 price range. Watching the top 30."
   }
  ],
  "errors": []

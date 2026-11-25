@@ -1,24 +1,24 @@
 {
- "updated_utc": "2026-11-25T21:05:00+00:00",
- "updated_local": "Thu 26 Nov 7:35 AM",
+ "updated_utc": "2026-11-25T21:10:00+00:00",
+ "updated_local": "Thu 26 Nov 7:40 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.6,
+  "equity": 49.65,
   "cash": 22.95,
-  "day_pl": 0.32,
+  "day_pl": 0.37,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.6,
-  "return_usd": -0.4,
-  "return_pct": -0.8,
+  "now": 49.65,
+  "return_usd": -0.35,
+  "return_pct": -0.7,
   "realised": -0.13,
-  "unrealised": 0.01,
+  "unrealised": 0.06,
   "trades": 30,
   "win_rate": 0.433,
   "profit_factor": 0.99,
@@ -27,7 +27,7 @@
   "avg_r": 0.146,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -7.38,
+  "sharpe": -7.26,
   "sharpe_days": 15,
   "fees": 0.0,
   "avg_slip_pct": 0.263,
@@ -247,18 +247,14 @@
   "risk_used": 2.51
  },
  "goals": {
-  "day_pl": 0.32,
-  "week_pl": -0.4,
+  "day_pl": 0.37,
+  "week_pl": -0.35,
   "daily_goal": 0.99,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-18T18:55:00+00:00",
-   "eq": 52.49
-  },
   {
    "t": "2026-11-18T19:00:00+00:00",
    "eq": 52.4
@@ -1854,6 +1850,10 @@
   {
    "t": "2026-11-25T21:05:00+00:00",
    "eq": 49.6
+  },
+  {
+   "t": "2026-11-25T21:10:00+00:00",
+   "eq": 49.65
   }
  ],
  "stats": {
@@ -1871,7 +1871,7 @@
  },
  "charts": {
   "date": "2026-11-25",
-  "updated": "2026-11-25T21:05:00+00:00",
+  "updated": "2026-11-25T21:10:00+00:00",
   "symbols": {
    "KSS": {
     "bars": [
@@ -2409,7 +2409,7 @@
      ],
      [
       1795639800,
-      26.47,
+      26.46,
       26.67,
       26.43,
       26.6
@@ -4129,7 +4129,7 @@
       1795639800,
       716.57,
       717.74,
-      716.57,
+      716.5,
       716.8
      ],
      [
@@ -6457,7 +6457,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-25T21:10:00+00:00",
+ "next_checkin_utc": "2026-11-25T21:15:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7210,8 +7210,8 @@
   {
    "symbol": "KSS",
    "qty": 1.0,
-   "value": 26.65,
-   "pl": 0.01,
+   "value": 26.7,
+   "pl": 0.06,
    "entry": 26.64
   }
  ],
@@ -7222,7 +7222,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-25T21:05:00+00:00"
+   "t": "2026-11-25T21:10:00+00:00"
   },
   {
    "id": "scanner",
@@ -7246,7 +7246,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-25T21:05:00+00:00"
+   "t": "2026-11-25T21:10:00+00:00"
   },
   {
    "id": "oracle",

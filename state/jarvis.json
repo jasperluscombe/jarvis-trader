@@ -13309,11 +13309,6 @@
  "events": [
   {
    "t": "2026-11-24T15:05:01+00:00",
-   "bot": "jarvis",
-   "text": "Passed on ORIC: not in play (opening volume is 0.2x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-24T15:05:01+00:00",
    "bot": "entry",
    "text": "BCAX broke out at $9.33 (10:00 AM)."
   },
@@ -13704,6 +13699,11 @@
   },
   {
    "t": "2026-11-25T21:00:00+00:00",
+   "bot": "risk",
+   "text": "Still holding 1 KSS with the market closed."
+  },
+  {
+   "t": "2026-11-26T05:00:00+00:00",
    "bot": "risk",
    "text": "Still holding 1 KSS with the market closed."
   }
@@ -14216,7 +14216,7 @@
   "daily_goal": "2026-11-09",
   "recap": "2026-11-25",
   "brief": "2026-11-25",
-  "overnight_warning": "2026-11-25"
+  "overnight_warning": "2026-11-26"
  },
  "candidates": [
   {
@@ -14526,34 +14526,12 @@
   }
  ],
  "candidates_day": "2026-11-25",
- "seen": {
-  "OTLY": "triggered",
-  "AGLT": "triggered",
-  "QQQ": "triggered",
-  "NVDA": "triggered",
-  "BZ": "triggered",
-  "KSS": "triggered",
-  "CUE": "triggered",
-  "LBRT": "triggered",
-  "SPY": "triggered",
-  "SEDG": "triggered",
-  "NRDS": "triggered",
-  "GRNT": "triggered",
-  "UGP": "triggered",
-  "CNH": "triggered",
-  "INFY": "triggered",
-  "OFRM": "triggered",
-  "CAG": "triggered",
-  "CPB": "triggered",
-  "MBC": "triggered",
-  "VRDN": "triggered",
-  "NWL": "triggered"
- },
+ "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-26T04:30:00+00:00"
+   "t": "2026-11-26T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14562,8 +14540,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-26T04:30:00+00:00"
+   "text": "No US market today. Resting.",
+   "t": "2026-11-26T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14583,16 +14561,11 @@
   "risk": {
    "status": "working",
    "text": "Still holding 1 KSS with the market closed.",
-   "t": "2026-11-25T21:00:00+00:00"
+   "t": "2026-11-26T05:00:00+00:00"
   }
  },
- "seen_day": "2026-11-25",
+ "seen_day": "2026-11-26",
  "next_sessions": [
-  {
-   "date": "2026-11-25",
-   "open": "09:30",
-   "close": "16:00"
-  },
   {
    "date": "2026-11-27",
    "open": "09:30",
@@ -14615,6 +14588,11 @@
   },
   {
    "date": "2026-12-03",
+   "open": "09:30",
+   "close": "16:00"
+  },
+  {
+   "date": "2026-12-04",
    "open": "09:30",
    "close": "16:00"
   }
@@ -22600,14 +22578,10 @@
   }
  },
  "telegram_health": {
-  "sent_ok": 2,
-  "at": "2026-11-25T21:00:00+00:00"
+  "sent_ok": 1,
+  "at": "2026-11-26T05:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 2,
-   "at": "2026-11-20T14:50:00+00:00"
-  },
   {
    "sent_ok": 1,
    "at": "2026-11-20T14:55:00+00:00"
@@ -22683,6 +22657,10 @@
   {
    "sent_ok": 2,
    "at": "2026-11-25T21:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-26T05:00:00+00:00"
   }
  ],
  "news": {},

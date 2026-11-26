@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-26T04:30:00+00:00",
- "updated_local": "Thu 26 Nov 3:00 PM",
+ "updated_utc": "2026-11-26T05:00:00+00:00",
+ "updated_local": "Thu 26 Nov 3:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -243,8 +243,8 @@
   "flat_by": "15:55"
  },
  "today": {
-  "trades": 2,
-  "risk_used": 2.51
+  "trades": 0,
+  "risk_used": 0
  },
  "goals": {
   "day_pl": 0.37,
@@ -6457,7 +6457,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-26T05:00:00+00:00",
+ "next_checkin_utc": "2026-11-26T05:30:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7077,7 +7077,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-26T04:30:00+00:00"
+   "t": "2026-11-26T05:00:00+00:00"
   },
   {
    "id": "scanner",
@@ -7100,8 +7100,8 @@
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Market closed. Back tomorrow.",
-   "t": "2026-11-26T04:30:00+00:00"
+   "text": "No US market today. Resting.",
+   "t": "2026-11-26T05:00:00+00:00"
   },
   {
    "id": "oracle",
@@ -7115,9 +7115,9 @@
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
+   "status": "working",
    "text": "Still holding 1 KSS with the market closed.",
-   "t": "2026-11-25T21:00:00+00:00"
+   "t": "2026-11-26T05:00:00+00:00"
   },
   {
    "id": "broker",
@@ -8053,13 +8053,6 @@
  },
  "sessions": [
   {
-   "date": "2026-11-25",
-   "open_utc": "2026-11-25T14:30:00+00:00",
-   "close_utc": "2026-11-25T21:00:00+00:00",
-   "open_local": "Thu 26 Nov 1:00 AM",
-   "close_local": "7:30 AM"
-  },
-  {
    "date": "2026-11-27",
    "open_utc": "2026-11-27T14:30:00+00:00",
    "close_utc": "2026-11-27T18:00:00+00:00",
@@ -8086,9 +8079,21 @@
    "close_utc": "2026-12-02T21:00:00+00:00",
    "open_local": "Thu 3 Dec 1:00 AM",
    "close_local": "7:30 AM"
+  },
+  {
+   "date": "2026-12-03",
+   "open_utc": "2026-12-03T14:30:00+00:00",
+   "close_utc": "2026-12-03T21:00:00+00:00",
+   "open_local": "Fri 4 Dec 1:00 AM",
+   "close_local": "7:30 AM"
   }
  ],
  "events": [
+  {
+   "t": "2026-11-26T05:00:00+00:00",
+   "bot": "risk",
+   "text": "Still holding 1 KSS with the market closed."
+  },
   {
    "t": "2026-11-25T21:00:00+00:00",
    "bot": "risk",
@@ -8283,11 +8288,6 @@
    "t": "2026-11-25T14:50:00+00:00",
    "bot": "jarvis",
    "text": "Passed on AGLT: not in play (it's up 3.5% on the day, I need 4%; opening volume is 0.5x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-25T14:50:00+00:00",
-   "bot": "entry",
-   "text": "AGLT broke out at $5.58 (9:50 AM)."
   }
  ],
  "errors": []

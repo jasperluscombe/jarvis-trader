@@ -20,6 +20,30 @@ Then it runs in the shadow book for ≥ 20 trading days before it can trade.
 
 ---
 
+## E8 · 26 Nov 2026 · Fair value gap, ICT style (`research/fvg.py`)
+
+*Question:* does buying the return into a bullish fair value gap beat a random entry with the same stop and target?
+Rules fixed before running: three candles where candle 3's low is ≥ 0.2 % above candle 1's high; limit buy at the
+gap's top if price returns within 12 bars (5-minute) or 5 days (daily); stop at the gap's bottom (fills with a stop
+< 0.2 % away skipped); 2R target; out at 15:55 or after 10 days; 0.05 % exit slippage. Control: same stock, same
+stop % and target, bought at a random bar's open in the same window, no entry slippage either.
+
+Two bugs were found and fixed before the numbers below: tiny-risk fills (R blew up), and a look-ahead bias (on a
+bar where the limit filled partway through, that bar's high could count as the target although it may have come
+before the fill; now only the stop can count on the fill bar).
+
+| Data | FVG | Random entry, same stop and target |
+|---|---|---|
+| 5-minute, 60 days | 37,183 trades, 34 % win, **−0.077R** (−0.116 to −0.036) | −0.169R |
+| Daily, ~2 years | 7,988 trades, 35 % win, +0.130R (+0.059 to +0.200) | −0.267R |
+
+*Verdict:* on 5-minute bars, which show the order of moves well, **the FVG loses money** (−0.08R a trade, before
+any entry slippage), less badly than random. On daily bars the stop and target are often inside one day's range,
+so which came first is unknown and "stop first" is assumed for both: the daily figures can't be trusted until
+re-checked on hourly bars. Not adopted.
+
+---
+
 ## E6 · 16 Nov 2026 · Five candidate changes (`research/candidates.py`)
 
 Each candidate is ONE change to the baseline (A), fixed before running. Hourly = two years, out of sample for every

@@ -13309,11 +13309,6 @@
  "events": [
   {
    "t": "2026-11-24T15:05:01+00:00",
-   "bot": "entry",
-   "text": "BCAX broke out at $9.33 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-24T15:05:01+00:00",
    "bot": "jarvis",
    "text": "Passed on BCAX: not in play (opening volume is 0.3x normal, I need 1.5x)."
   },
@@ -13706,6 +13701,11 @@
    "t": "2026-11-26T05:00:00+00:00",
    "bot": "risk",
    "text": "Still holding 1 KSS with the market closed."
+  },
+  {
+   "t": "2026-11-26T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $49.63 account: $1.49 a trade, $4.96 a day, orders up to $44.67."
   }
  ],
  "trades": [
@@ -14531,7 +14531,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-26T08:00:00+00:00"
+   "t": "2026-11-26T08:30:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14541,7 +14541,7 @@
   "entry": {
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-26T08:00:00+00:00"
+   "t": "2026-11-26T08:30:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14560,8 +14560,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Still holding 1 KSS with the market closed.",
-   "t": "2026-11-26T05:00:00+00:00"
+   "text": "Limits resized to your $49.63 account: $1.49 a trade, $4.96 a day, orders up to $44.67.",
+   "t": "2026-11-26T08:30:00+00:00"
   }
  },
  "seen_day": "2026-11-26",
@@ -14603,10 +14603,6 @@
   "start": 50.0
  },
  "equity_history": [
-  {
-   "t": "2026-11-10T16:55:00+00:00",
-   "eq": 54.33
-  },
   {
    "t": "2026-11-10T17:00:00+00:00",
    "eq": 54.27
@@ -17802,6 +17798,10 @@
   {
    "t": "2026-11-26T03:30:00+00:00",
    "eq": 49.65
+  },
+  {
+   "t": "2026-11-26T08:30:00+00:00",
+   "eq": 49.63
   }
  ],
  "charts": {

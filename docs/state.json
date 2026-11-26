@@ -1,22 +1,22 @@
 {
- "updated_utc": "2026-11-26T08:00:00+00:00",
- "updated_local": "Thu 26 Nov 6:30 PM",
+ "updated_utc": "2026-11-26T08:30:00+00:00",
+ "updated_local": "Thu 26 Nov 7:00 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.65,
-  "cash": 22.95,
-  "day_pl": 0.37,
+  "equity": 49.63,
+  "cash": 22.93,
+  "day_pl": 0.0,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.65,
-  "return_usd": -0.35,
-  "return_pct": -0.7,
+  "now": 49.63,
+  "return_usd": -0.37,
+  "return_pct": -0.74,
   "realised": -0.13,
   "unrealised": 0.06,
   "trades": 30,
@@ -27,8 +27,8 @@
   "avg_r": 0.146,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -7.26,
-  "sharpe_days": 15,
+  "sharpe": -7.04,
+  "sharpe_days": 16,
   "fees": 0.0,
   "avg_slip_pct": 0.263,
   "slip_trades": 7,
@@ -234,8 +234,8 @@
   ]
  },
  "limits": {
-  "max_loss_per_trade_usd": 1.48,
-  "max_daily_loss_usd": 4.93,
+  "max_loss_per_trade_usd": 1.49,
+  "max_daily_loss_usd": 4.96,
   "max_trades_per_day": 10,
   "min_reward_risk": 1.5,
   "no_entries_before": "09:45",
@@ -247,18 +247,14 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": 0.37,
-  "week_pl": -0.35,
+  "day_pl": 0.0,
+  "week_pl": -0.37,
   "daily_goal": 0.99,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-18T19:35:00+00:00",
-   "eq": 52.08
-  },
   {
    "t": "2026-11-18T19:45:00+00:00",
    "eq": 52.1
@@ -1854,6 +1850,10 @@
   {
    "t": "2026-11-26T03:30:00+00:00",
    "eq": 49.65
+  },
+  {
+   "t": "2026-11-26T08:30:00+00:00",
+   "eq": 49.63
   }
  ],
  "stats": {
@@ -6457,7 +6457,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-26T08:30:00+00:00",
+ "next_checkin_utc": "2026-11-26T09:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7077,7 +7077,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-26T08:00:00+00:00"
+   "t": "2026-11-26T08:30:00+00:00"
   },
   {
    "id": "scanner",
@@ -7101,7 +7101,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-26T08:00:00+00:00"
+   "t": "2026-11-26T08:30:00+00:00"
   },
   {
    "id": "oracle",
@@ -7115,9 +7115,9 @@
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Still holding 1 KSS with the market closed.",
-   "t": "2026-11-26T05:00:00+00:00"
+   "status": "working",
+   "text": "Limits resized to your $49.63 account: $1.49 a trade, $4.96 a day, orders up to $44.67.",
+   "t": "2026-11-26T08:30:00+00:00"
   },
   {
    "id": "broker",
@@ -8090,6 +8090,11 @@
  ],
  "events": [
   {
+   "t": "2026-11-26T08:30:00+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $49.63 account: $1.49 a trade, $4.96 a day, orders up to $44.67."
+  },
+  {
    "t": "2026-11-26T05:00:00+00:00",
    "bot": "risk",
    "text": "Still holding 1 KSS with the market closed."
@@ -8283,11 +8288,6 @@
    "t": "2026-11-25T15:00:00+00:00",
    "bot": "entry",
    "text": "QQQ broke out at $618.23 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-25T14:50:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on AGLT: not in play (it's up 3.5% on the day, I need 4%; opening volume is 0.5x normal, I need 1.5x)."
   }
  ],
  "errors": []

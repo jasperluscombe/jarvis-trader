@@ -744,22 +744,60 @@ class Jarvis:
             m["stop_order_id"] = "self-watch"
         return True
 
-    def close_position(self, sym):
-        """Sell everything held in sym at market. A bracket's stop and target legs hold the shares, so Alpaca
-        refuses the sell (HTTP 403 "insufficient qty available") until they are cancelled: cancel this symbol's
-        open orders, wait until Alpaca confirms they're gone, then sell and wait briefly for the fill.
-        Returns (filled, order)."""
+    LIVE_ORDER = {"new", "accepted", "pending_new", "held", "partially_filled", "accepted_for_bidding",
+                  "pending_replace", "calculated", "done_for_day"}
+
+    def live_orders(self, sym):
+        """Every order and bracket leg for sym that could still hold shares. A bracket's parent counts as done once
+        its buy fills, and the open-orders list can then leave out the stop and target legs underneath it (KSS,
+        25 Nov), so look at recent orders of every status, legs included."""
         q = urllib.parse.quote(sym)
-        for o in self.alpaca.get("/v2/orders?status=open&nested=true&symbols=%s" % q) or []:
+        found = {}
+        for path in ("/v2/orders?status=open&nested=false&symbols=%s&limit=100" % q,
+                     "/v2/orders?status=all&nested=true&symbols=%s&limit=50" % q):
+            try:
+                for o in self.alpaca.get(path) or []:
+                    for x in [o] + (o.get("legs") or []):
+                        if x.get("status") in self.LIVE_ORDER:
+                            found[x["id"]] = x
+            except Exception as e:
+                print("order list failed for", sym, e, file=sys.stderr)
+        return list(found.values())
+
+    def shares_free(self, sym):
+        """True once Alpaca says every share of sym is free to sell (none held for orders)."""
+        try:
+            p = self.alpaca.get("/v2/positions/%s" % urllib.parse.quote(sym)) or {}
+        except Exception:
+            return True  # no position left
+        return float(p.get("qty_available") or 0) >= float(p.get("qty") or 0) > 0
+
+    def free_shares(self, sym, wait=20):
+        for o in self.live_orders(sym):
             try:
                 self.alpaca.call("DELETE", "/v2/orders/%s" % o["id"])
             except Exception as e:
                 print("cancel failed for", sym, o.get("id"), e, file=sys.stderr)
-        for _ in range(15):
-            if not self.alpaca.get("/v2/orders?status=open&nested=true&symbols=%s" % q):
-                break
+        for _ in range(wait):
+            if self.shares_free(sym):
+                return True
             time.sleep(1)
-        order = self.alpaca.call("DELETE", "/v2/positions/%s" % q) or {}
+        return False
+
+    def close_position(self, sym):
+        """Sell everything held in sym at market. A bracket's stop and target legs hold the shares, so Alpaca
+        refuses the sell (HTTP 403 "insufficient qty available") until they are cancelled: cancel them, wait
+        until Alpaca says the shares are free, then sell; if it still refuses, cancel again and retry once.
+        Then wait briefly for the fill. Returns (filled, order)."""
+        q = urllib.parse.quote(sym)
+        self.free_shares(sym)
+        try:
+            order = self.alpaca.call("DELETE", "/v2/positions/%s" % q) or {}
+        except Exception as e:
+            if "held_for_orders" not in str(e) and "insufficient qty" not in str(e):
+                raise
+            self.free_shares(sym, wait=30)
+            order = self.alpaca.call("DELETE", "/v2/positions/%s" % q) or {}
         for _ in range(10):
             if order.get("status") == "filled" or not order.get("id"):
                 break
@@ -1404,6 +1442,28 @@ class Jarvis:
         self.tg.send("\n".join(lines))
         self.event("jarvis", "Sent the day's recap.")
 
+    def close_leftovers(self):
+        """A day trader holds nothing overnight. Anything still held from an earlier day (a close that failed)
+        has lost its stop (the bracket's orders were good for one day only), so sell it as soon as the market
+        is open instead of leaving it unprotected until 3:55 PM."""
+        bought_today = {t["symbol"] for t in self.st["trades"] if t["date"] == self.today}
+        for pos in list(self.positions):
+            sym = pos["symbol"]
+            if sym in bought_today or self.args.dry_run or self.st.setdefault("leftover_tries", {}).get(sym) == self.today:
+                continue
+            self.st["leftover_tries"][sym] = self.today  # one try a day, so a stuck sell can't loop every check-in
+            try:
+                filled, order = self.close_position(sym)
+                pl = money(float(pos.get("unrealized_pl") or 0), sign=True)
+                self.log_order({"date": self.today, "at": self.now_utc.isoformat(timespec="seconds"), "symbol": sym,
+                                "side": "sell", "kind": "exit", "qty": pos["qty"], "status": "filled" if filled else "placed",
+                                "broker_id": order.get("id"), "source": "left over from an earlier day"})
+                self.event("broker", "Sold %s %s left over from an earlier day (about %s)." % (pos["qty"], sym, pl))
+                self.tg.send("🧹 Sold <b>%s %s</b> left over from an earlier day: about %s." % (pos["qty"], sym, pl))
+            except Exception as e:
+                self.event("broker", "Couldn't sell leftover %s: %s" % (sym, e))
+                self.tg.send("⚠️ I couldn't sell the leftover %s: %s. Please check Alpaca." % (sym, esc(e)))
+
     def warn_overnight(self):
         """Jarvis day-trades: anything held while the market is shut is a close that didn't go through."""
         in_session = bool(self.cal) and self.cal[0] <= self.ny.time() < self.cal[1]
@@ -1435,6 +1495,7 @@ class Jarvis:
         if self.cal:
             open_t, close_t = self.cal
             if open_t <= t < close_t:
+                self.close_leftovers()
                 self.manage_open()
             flat = min(hhmm(self.cfg.get("flat_by", "15:55")),
                        (dt.datetime.combine(self.ny.date(), close_t) - dt.timedelta(minutes=5)).time())

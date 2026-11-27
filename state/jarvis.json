@@ -13309,11 +13309,6 @@
  "events": [
   {
    "t": "2026-11-24T15:05:01+00:00",
-   "bot": "jarvis",
-   "text": "Passed on BCAX: not in play (opening volume is 0.3x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-24T15:05:01+00:00",
    "bot": "entry",
    "text": "CSGP broke out at $31.40 (9:50 AM)."
   },
@@ -13706,6 +13701,11 @@
    "t": "2026-11-26T08:30:00+00:00",
    "bot": "risk",
    "text": "Limits resized to your $49.63 account: $1.49 a trade, $4.96 a day, orders up to $44.67."
+  },
+  {
+   "t": "2026-11-27T05:00:00+00:00",
+   "bot": "risk",
+   "text": "Still holding 1 KSS with the market closed."
   }
  ],
  "trades": [
@@ -14216,7 +14216,7 @@
   "daily_goal": "2026-11-09",
   "recap": "2026-11-25",
   "brief": "2026-11-25",
-  "overnight_warning": "2026-11-26"
+  "overnight_warning": "2026-11-27"
  },
  "candidates": [
   {
@@ -14531,7 +14531,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-27T04:30:00+00:00"
+   "t": "2026-11-27T05:00:00+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14540,8 +14540,8 @@
   },
   "entry": {
    "status": "idle",
-   "text": "No US market today. Resting.",
-   "t": "2026-11-27T04:30:00+00:00"
+   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
+   "t": "2026-11-27T05:00:00+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14560,11 +14560,11 @@
   },
   "risk": {
    "status": "working",
-   "text": "Limits resized to your $49.63 account: $1.49 a trade, $4.96 a day, orders up to $44.67.",
-   "t": "2026-11-26T08:30:00+00:00"
+   "text": "Still holding 1 KSS with the market closed.",
+   "t": "2026-11-27T05:00:00+00:00"
   }
  },
- "seen_day": "2026-11-26",
+ "seen_day": "2026-11-27",
  "next_sessions": [
   {
    "date": "2026-11-27",
@@ -22579,13 +22579,9 @@
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-26T05:00:00+00:00"
+  "at": "2026-11-27T05:00:00+00:00"
  },
  "telegram_log": [
-  {
-   "sent_ok": 1,
-   "at": "2026-11-20T14:55:00+00:00"
-  },
   {
    "updates_error": "<urlopen error [Errno 101] Network is unreachable>",
    "at": "2026-11-20T20:15:00+00:00"
@@ -22661,6 +22657,10 @@
   {
    "sent_ok": 1,
    "at": "2026-11-26T05:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-27T05:00:00+00:00"
   }
  ],
  "news": {},

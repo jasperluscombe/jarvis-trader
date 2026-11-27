@@ -13309,21 +13309,6 @@
  "events": [
   {
    "t": "2026-11-24T15:05:01+00:00",
-   "bot": "entry",
-   "text": "CSGP broke out at $31.40 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-24T15:05:01+00:00",
-   "bot": "jarvis",
-   "text": "Passed on CSGP: not in play (it's up 4.0% on the day, I need 4%; opening volume is 0.4x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-24T15:05:01+00:00",
-   "bot": "entry",
-   "text": "SKYD broke out at $6.57 (9:50 AM)."
-  },
-  {
-   "t": "2026-11-24T15:05:01+00:00",
    "bot": "jarvis",
    "text": "Passed on SKYD: not in play (it's up 3.8% on the day, I need 4%)."
   },
@@ -13706,6 +13691,21 @@
    "t": "2026-11-27T05:00:00+00:00",
    "bot": "risk",
    "text": "Still holding 1 KSS with the market closed."
+  },
+  {
+   "t": "2026-11-27T13:00:01+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 374 charts matched a setup, 197 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
+   "t": "2026-11-27T13:00:01+00:00",
+   "bot": "news",
+   "text": "Read 5 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-27T13:00:01+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
   }
  ],
  "trades": [
@@ -14215,109 +14215,210 @@
  "done": {
   "daily_goal": "2026-11-09",
   "recap": "2026-11-25",
-  "brief": "2026-11-25",
+  "brief": "2026-11-27",
   "overnight_warning": "2026-11-27"
  },
  "candidates": [
+  {
+   "symbol": "HPQ",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 31.15,
+   "close_date": "2026-11-25",
+   "rsi": 57.5,
+   "volume": 39060684
+  },
   {
    "symbol": "T",
    "setups": [
     "breakout_20d"
    ],
-   "price": 22.88,
-   "close_date": "2026-11-24",
-   "rsi": 57.5,
-   "volume": 42530207
+   "price": 22.97,
+   "close_date": "2026-11-25",
+   "rsi": 58.5,
+   "volume": 40323952
+  },
+  {
+   "symbol": "RKT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 15.3,
+   "close_date": "2026-11-25",
+   "rsi": 67.5,
+   "volume": 59541943
+  },
+  {
+   "symbol": "BMNR",
+   "setups": [
+    "oversold_bounce"
+   ],
+   "price": 13.44,
+   "close_date": "2026-11-25",
+   "rsi": 30.5,
+   "volume": 50619323
+  },
+  {
+   "symbol": "NU",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 12.36,
+   "close_date": "2026-11-25",
+   "rsi": 48.2,
+   "volume": 52045089
+  },
+  {
+   "symbol": "CMCSA",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 25.73,
+   "close_date": "2026-11-25",
+   "rsi": 65.4,
+   "volume": 23641370
+  },
+  {
+   "symbol": "F",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 12.17,
+   "close_date": "2026-11-25",
+   "rsi": 53.8,
+   "volume": 49059043
   },
   {
    "symbol": "CMG",
    "setups": [
     "breakout_20d"
    ],
-   "price": 37.05,
-   "close_date": "2026-11-24",
-   "rsi": 64.1,
-   "volume": 13045674
-  },
-  {
-   "symbol": "TSCO",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 39.45,
-   "close_date": "2026-11-24",
-   "rsi": 67.0,
-   "volume": 11948499
-  },
-  {
-   "symbol": "CPNG",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 16.01,
-   "close_date": "2026-11-24",
-   "rsi": 59.3,
-   "volume": 25614496
-  },
-  {
-   "symbol": "AKAN",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 5.2,
-   "close_date": "2026-11-24",
-   "rsi": 69.2,
-   "volume": 76837955
-  },
-  {
-   "symbol": "IP",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 30.62,
-   "close_date": "2026-11-24",
-   "rsi": 37.8,
-   "volume": 12621090
+   "price": 37.4,
+   "close_date": "2026-11-25",
+   "rsi": 65.4,
+   "volume": 13371606
   },
   {
    "symbol": "KHC",
    "setups": [
     "breakout_20d"
    ],
-   "price": 25.57,
-   "close_date": "2026-11-24",
-   "rsi": 59.8,
-   "volume": 14256930
+   "price": 26.51,
+   "close_date": "2026-11-25",
+   "rsi": 66.7,
+   "volume": 17660947
   },
   {
-   "symbol": "DKNG",
+   "symbol": "PBR",
+   "setups": [
+    "oversold",
+    "oversold_bounce"
+   ],
+   "price": 16.05,
+   "close_date": "2026-11-25",
+   "rsi": 25.3,
+   "volume": 28815474
+  },
+  {
+   "symbol": "VALE",
    "setups": [
     "oversold_bounce"
    ],
-   "price": 16.11,
-   "close_date": "2026-11-24",
-   "rsi": 31.6,
-   "volume": 19992201
+   "price": 9.81,
+   "close_date": "2026-11-25",
+   "rsi": 32.4,
+   "volume": 45533290
+  },
+  {
+   "symbol": "PINS",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 19.71,
+   "close_date": "2026-11-25",
+   "rsi": 53.1,
+   "volume": 21081578
+  },
+  {
+   "symbol": "KMI",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 31.69,
+   "close_date": "2026-11-25",
+   "rsi": 49.7,
+   "volume": 12236900
+  },
+  {
+   "symbol": "HDB",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 28.35,
+   "close_date": "2026-11-25",
+   "rsi": 79.7,
+   "volume": 13089232
+  },
+  {
+   "symbol": "CPRT",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 33.17,
+   "close_date": "2026-11-25",
+   "rsi": 66.6,
+   "volume": 10895587
+  },
+  {
+   "symbol": "INFY",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 13.02,
+   "close_date": "2026-11-25",
+   "rsi": 63.0,
+   "volume": 27560648
+  },
+  {
+   "symbol": "QXO",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 11.97,
+   "close_date": "2026-11-25",
+   "rsi": 52.3,
+   "volume": 28441961
+  },
+  {
+   "symbol": "CNH",
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "price": 11.88,
+   "close_date": "2026-11-25",
+   "rsi": 52.8,
+   "volume": 24702492
+  },
+  {
+   "symbol": "BAX",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 27.26,
+   "close_date": "2026-11-25",
+   "rsi": 62.5,
+   "volume": 10036531
   },
   {
    "symbol": "PCG",
    "setups": [
     "breakout_20d"
    ],
-   "price": 14.22,
-   "close_date": "2026-11-24",
-   "rsi": 64.1,
-   "volume": 21433009
-  },
-  {
-   "symbol": "KSS",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 25.33,
-   "close_date": "2026-11-24",
-   "rsi": 58.9,
-   "volume": 11531246
+   "price": 14.26,
+   "close_date": "2026-11-25",
+   "rsi": 64.5,
+   "volume": 18903462
   },
   {
    "symbol": "IBN",
@@ -14325,223 +14426,119 @@
     "breakout_20d",
     "bull_flag"
    ],
-   "price": 35.9,
-   "close_date": "2026-11-24",
-   "rsi": 81.9,
-   "volume": 8007232
+   "price": 36.5,
+   "close_date": "2026-11-25",
+   "rsi": 84.0,
+   "volume": 6927442
   },
   {
-   "symbol": "HDB",
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "price": 27.56,
-   "close_date": "2026-11-24",
-   "rsi": 76.2,
-   "volume": 10221210
-  },
-  {
-   "symbol": "AMTM",
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "price": 24.8,
-   "close_date": "2026-11-24",
-   "rsi": 69.5,
-   "volume": 10302559
-  },
-  {
-   "symbol": "MMED",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 19.07,
-   "close_date": "2026-11-24",
-   "rsi": 55.7,
-   "volume": 12987358
-  },
-  {
-   "symbol": "TOST",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 33.69,
-   "close_date": "2026-11-24",
-   "rsi": 52.8,
-   "volume": 7085061
-  },
-  {
-   "symbol": "COGT",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 33.01,
-   "close_date": "2026-11-24",
-   "rsi": 60.0,
-   "volume": 7106000
-  },
-  {
-   "symbol": "CTVA",
-   "setups": [
-    "oversold",
-    "oversold_bounce"
-   ],
-   "price": 8.16,
-   "close_date": "2026-11-24",
-   "rsi": 24.8,
-   "volume": 24666238
-  },
-  {
-   "symbol": "ET",
+   "symbol": "PAAS",
    "setups": [
     "oversold_bounce"
    ],
-   "price": 18.68,
-   "close_date": "2026-11-24",
-   "rsi": 35.9,
-   "volume": 10206631
+   "price": 32.56,
+   "close_date": "2026-11-25",
+   "rsi": 34.7,
+   "volume": 7631108
   },
   {
-   "symbol": "INFY",
+   "symbol": "AS",
    "setups": [
     "reclaim_ma20"
    ],
-   "price": 12.49,
-   "close_date": "2026-11-24",
-   "rsi": 56.3,
-   "volume": 15162746
+   "price": 30.91,
+   "close_date": "2026-11-25",
+   "rsi": 54.7,
+   "volume": 7872624
+  },
+  {
+   "symbol": "KSS",
+   "setups": [
+    "breakout_20d"
+   ],
+   "price": 26.7,
+   "close_date": "2026-11-25",
+   "rsi": 62.9,
+   "volume": 9068590
   },
   {
    "symbol": "CSGP",
    "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
+    "breakout_20d"
    ],
-   "price": 32.64,
-   "close_date": "2026-11-24",
-   "rsi": 57.7,
-   "volume": 5692670
+   "price": 34.02,
+   "close_date": "2026-11-25",
+   "rsi": 61.9,
+   "volume": 6828741
   },
   {
-   "symbol": "VICI",
+   "symbol": "COGT",
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
-   "price": 24.77,
-   "close_date": "2026-11-24",
-   "rsi": 55.2,
-   "volume": 7446918
+   "price": 36.08,
+   "close_date": "2026-11-25",
+   "rsi": 66.7,
+   "volume": 6127264
   },
   {
-   "symbol": "SYM",
+   "symbol": "SONY",
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
-   "price": 37.39,
-   "close_date": "2026-11-24",
-   "rsi": 52.4,
-   "volume": 4572770
+   "price": 28.49,
+   "close_date": "2026-11-25",
+   "rsi": 72.9,
+   "volume": 7469005
   },
   {
-   "symbol": "ERAS",
+   "symbol": "CAG",
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
-   "price": 15.83,
-   "close_date": "2026-11-24",
-   "rsi": 55.9,
-   "volume": 10656666
+   "price": 15.67,
+   "close_date": "2026-11-25",
+   "rsi": 61.1,
+   "volume": 13440283
   },
   {
    "symbol": "INVH",
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
-   "price": 27.24,
-   "close_date": "2026-11-24",
-   "rsi": 54.6,
-   "volume": 6172156
+   "price": 27.82,
+   "close_date": "2026-11-25",
+   "rsi": 60.6,
+   "volume": 7478569
   },
   {
-   "symbol": "BAX",
+   "symbol": "DBX",
    "setups": [
     "breakout_20d"
    ],
-   "price": 26.98,
-   "close_date": "2026-11-24",
-   "rsi": 60.9,
-   "volume": 6202830
-  },
-  {
-   "symbol": "M",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 24.48,
-   "close_date": "2026-11-24",
-   "rsi": 53.1,
-   "volume": 6676798
-  },
-  {
-   "symbol": "IONS",
-   "setups": [
-    "oversold_bounce"
-   ],
-   "price": 29.8,
-   "close_date": "2026-11-24",
-   "rsi": 35.5,
-   "volume": 5470232
-  },
-  {
-   "symbol": "GME",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 27.48,
-   "close_date": "2026-11-24",
-   "rsi": 66.6,
-   "volume": 5737028
-  },
-  {
-   "symbol": "AEO",
-   "setups": [
-    "breakout_20d"
-   ],
-   "price": 22.79,
-   "close_date": "2026-11-24",
-   "rsi": 68.1,
-   "volume": 6764419
-  },
-  {
-   "symbol": "HLN",
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "price": 9.27,
-   "close_date": "2026-11-24",
-   "rsi": 50.9,
-   "volume": 16042047
+   "price": 37.41,
+   "close_date": "2026-11-25",
+   "rsi": 63.8,
+   "volume": 5520902
   }
  ],
- "candidates_day": "2026-11-25",
+ "candidates_day": "2026-11-27",
  "seen": {},
  "bots": {
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-27T12:55:00+00:00"
+   "t": "2026-11-27T13:00:01+00:00"
   },
   "scanner": {
    "status": "working",
-   "text": "20 of 819 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-25T15:35:00+00:00"
+   "text": "Scanned the US market: 374 charts matched a setup, 197 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-27T13:00:01+00:00"
   },
   "entry": {
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-27T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-27T13:00:01+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14555,8 +14552,8 @@
   },
   "news": {
    "status": "working",
-   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
-   "t": "2026-11-25T13:00:00+00:00"
+   "text": "Read 5 headlines and filings for 8 stocks.",
+   "t": "2026-11-27T13:00:01+00:00"
   },
   "risk": {
    "status": "working",
@@ -22579,13 +22576,9 @@
  },
  "telegram_health": {
   "sent_ok": 1,
-  "at": "2026-11-27T05:00:00+00:00"
+  "at": "2026-11-27T13:00:01+00:00"
  },
  "telegram_log": [
-  {
-   "updates_error": "<urlopen error [Errno 101] Network is unreachable>",
-   "at": "2026-11-20T20:15:00+00:00"
-  },
   {
    "sent_ok": 1,
    "at": "2026-11-20T21:00:00+00:00"
@@ -22661,9 +22654,78 @@
   {
    "sent_ok": 1,
    "at": "2026-11-27T05:00:00+00:00"
+  },
+  {
+   "sent_ok": 1,
+   "at": "2026-11-27T13:00:01+00:00"
   }
  ],
- "news": {},
+ "news": {
+  "BMNR": {
+   "headlines": []
+  },
+  "CMCSA": {
+   "headlines": [
+    {
+     "title": "A 72-Year-Old With $1,000,000 in Comcast, Noble and First Interstate BancSystem Collects $4,323 a Month in Dividends. How Safe Is Each Check?",
+     "url": "https://www.tikr.com/blog/a-72-year-old-with-1000000-in-comcast-noble-and-first-interstate-bancsystem-collects-4385-a-month-in-dividends-how-safe-is-each-check?ref=yahoofinancedividend&tlnk=yf-261126-hrr93vmw&.tsrc=rss",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    }
+   ]
+  },
+  "CMG": {
+   "headlines": []
+  },
+  "F": {
+   "headlines": [
+    {
+     "title": "This Dividend Stock Yields 5% and Trades Near 52-Week Lows. Buy It for 2027 and Beyond.",
+     "url": "https://www.barchart.com/story/news/9025589/this-dividend-stock-yields-5-and-trades-near-52-week-lows-buy-it-for-2027-and-beyond?.tsrc=rss",
+     "tags": [
+      "capital"
+     ]
+    },
+    {
+     "title": "Ford CEO on Le Mans, New Electric Pickup and Trade Talks",
+     "url": "https://finance.yahoo.com/video/ford-ceo-le-mans-electric-200809913.html?.tsrc=rss",
+     "tags": [
+      "people"
+     ]
+    }
+   ]
+  },
+  "HPQ": {
+   "headlines": [
+    {
+     "title": "HP Stock Just Had Its Best Day Since May and Blew Past Wall Street\u2019s Price Target",
+     "url": "https://247wallst.com/investing/2026/11/26/hp-stock-just-had-its-best-day-since-may-and-blew-past-wall-streets-price-target/?.tsrc=rss",
+     "tags": [
+      "earnings",
+      "analyst",
+      "people"
+     ]
+    }
+   ]
+  },
+  "NU": {
+   "headlines": [
+    {
+     "title": "Nu Holdings (NU) Stock Jumps 8.3% Premarket Without Company News",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nu-holdings-nu-stock-jumps-120019786.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  "RKT": {
+   "headlines": []
+  },
+  "T": {
+   "headlines": []
+  }
+ },
  "managed": [
   {
    "symbol": "AAPL",

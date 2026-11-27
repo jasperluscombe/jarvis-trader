@@ -1,6 +1,6 @@
 {
- "updated_utc": "2026-11-27T12:55:00+00:00",
- "updated_local": "Fri 27 Nov 11:25 PM",
+ "updated_utc": "2026-11-27T13:00:01+00:00",
+ "updated_local": "Fri 27 Nov 11:30 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
@@ -6457,7 +6457,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-27T13:00:00+00:00",
+ "next_checkin_utc": "2026-11-27T13:05:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7077,31 +7077,31 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-27T12:55:00+00:00"
+   "t": "2026-11-27T13:00:01+00:00"
   },
   {
    "id": "scanner",
    "name": "Scout",
    "role": "Scans ~6,000 US stocks before the open, then finds the ones in play after it.",
-   "status": "idle",
-   "text": "20 of 819 liquid stocks are up 3% or more right now.",
-   "t": "2026-11-25T15:35:00+00:00"
+   "status": "working",
+   "text": "Scanned the US market: 374 charts matched a setup, 197 fit your $5-$40 price range. Watching the top 30.",
+   "t": "2026-11-27T13:00:01+00:00"
   },
   {
    "id": "news",
    "name": "Herald",
    "role": "Reads headlines and SEC filings for the watchlist.",
-   "status": "idle",
-   "text": "News check failed: n3.12/ssl.py\", line 1116, in read\n    return self._sslobj.read(len, buffer)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out",
-   "t": "2026-11-25T13:00:00+00:00"
+   "status": "working",
+   "text": "Read 5 headlines and filings for 8 stocks.",
+   "t": "2026-11-27T13:00:01+00:00"
   },
   {
    "id": "entry",
    "name": "Spotter",
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
-   "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-27T12:55:00+00:00"
+   "text": "Waiting for the opening bell (1:00 AM your time).",
+   "t": "2026-11-27T13:00:01+00:00"
   },
   {
    "id": "oracle",
@@ -7130,139 +7130,113 @@
  ],
  "watchlist": [
   {
-   "symbol": "T",
-   "price": 22.88,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CMG",
-   "price": 37.05,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "TSCO",
-   "price": 39.45,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CPNG",
-   "price": 16.01,
+   "symbol": "HPQ",
+   "price": 31.15,
    "setups": [
     "reclaim_ma20"
    ],
-   "news": []
+   "news": [
+    {
+     "title": "HP Stock Just Had Its Best Day Since May and Blew Past Wall Street\u2019s Price Target",
+     "url": "https://247wallst.com/investing/2026/11/26/hp-stock-just-had-its-best-day-since-may-and-blew-past-wall-streets-price-target/?.tsrc=rss",
+     "tags": [
+      "earnings",
+      "analyst",
+      "people"
+     ]
+    }
+   ]
   },
   {
-   "symbol": "AKAN",
-   "price": 5.2,
+   "symbol": "T",
+   "price": 22.97,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "IP",
-   "price": 30.62,
+   "symbol": "RKT",
+   "price": 15.3,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "BMNR",
+   "price": 13.44,
    "setups": [
     "oversold_bounce"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "NU",
+   "price": 12.36,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": [
+    {
+     "title": "Nu Holdings (NU) Stock Jumps 8.3% Premarket Without Company News",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nu-holdings-nu-stock-jumps-120019786.html?.tsrc=rss",
+     "tags": []
+    }
+   ]
+  },
+  {
+   "symbol": "CMCSA",
+   "price": 25.73,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": [
+    {
+     "title": "A 72-Year-Old With $1,000,000 in Comcast, Noble and First Interstate BancSystem Collects $4,323 a Month in Dividends. How Safe Is Each Check?",
+     "url": "https://www.tikr.com/blog/a-72-year-old-with-1000000-in-comcast-noble-and-first-interstate-bancsystem-collects-4385-a-month-in-dividends-how-safe-is-each-check?ref=yahoofinancedividend&tlnk=yf-261126-hrr93vmw&.tsrc=rss",
+     "tags": [
+      "earnings",
+      "capital"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "F",
+   "price": 12.17,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": [
+    {
+     "title": "This Dividend Stock Yields 5% and Trades Near 52-Week Lows. Buy It for 2027 and Beyond.",
+     "url": "https://www.barchart.com/story/news/9025589/this-dividend-stock-yields-5-and-trades-near-52-week-lows-buy-it-for-2027-and-beyond?.tsrc=rss",
+     "tags": [
+      "capital"
+     ]
+    }
+   ]
+  },
+  {
+   "symbol": "CMG",
+   "price": 37.4,
+   "setups": [
+    "breakout_20d"
    ],
    "news": []
   },
   {
    "symbol": "KHC",
-   "price": 25.57,
+   "price": 26.51,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "DKNG",
-   "price": 16.11,
-   "setups": [
-    "oversold_bounce"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "PCG",
-   "price": 14.22,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "KSS",
-   "price": 25.33,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "IBN",
-   "price": 35.9,
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HDB",
-   "price": 27.56,
-   "setups": [
-    "breakout_20d",
-    "bull_flag"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "AMTM",
-   "price": 24.8,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "MMED",
-   "price": 19.07,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "TOST",
-   "price": 33.69,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "COGT",
-   "price": 33.01,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "CTVA",
-   "price": 8.16,
+   "symbol": "PBR",
+   "price": 16.05,
    "setups": [
     "oversold",
     "oversold_bounce"
@@ -7270,57 +7244,64 @@
    "news": []
   },
   {
-   "symbol": "ET",
-   "price": 18.68,
+   "symbol": "VALE",
+   "price": 9.81,
    "setups": [
     "oversold_bounce"
    ],
    "news": []
   },
   {
+   "symbol": "PINS",
+   "price": 19.71,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "KMI",
+   "price": 31.69,
+   "setups": [
+    "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "HDB",
+   "price": 28.35,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CPRT",
+   "price": 33.17,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
    "symbol": "INFY",
-   "price": 12.49,
+   "price": 13.02,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "QXO",
+   "price": 11.97,
    "setups": [
     "reclaim_ma20"
    ],
    "news": []
   },
   {
-   "symbol": "CSGP",
-   "price": 32.64,
-   "setups": [
-    "breakout_20d",
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "VICI",
-   "price": 24.77,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "SYM",
-   "price": 37.39,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "ERAS",
-   "price": 15.83,
-   "setups": [
-    "reclaim_ma20"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "INVH",
-   "price": 27.24,
+   "symbol": "CNH",
+   "price": 11.88,
    "setups": [
     "reclaim_ma20"
    ],
@@ -7328,49 +7309,98 @@
   },
   {
    "symbol": "BAX",
-   "price": 26.98,
+   "price": 27.26,
    "setups": [
     "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "M",
-   "price": 24.48,
+   "symbol": "PCG",
+   "price": 14.26,
    "setups": [
-    "reclaim_ma20"
+    "breakout_20d"
    ],
    "news": []
   },
   {
-   "symbol": "IONS",
-   "price": 29.8,
+   "symbol": "IBN",
+   "price": 36.5,
+   "setups": [
+    "breakout_20d",
+    "bull_flag"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "PAAS",
+   "price": 32.56,
    "setups": [
     "oversold_bounce"
    ],
    "news": []
   },
   {
-   "symbol": "GME",
-   "price": 27.48,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "AEO",
-   "price": 22.79,
-   "setups": [
-    "breakout_20d"
-   ],
-   "news": []
-  },
-  {
-   "symbol": "HLN",
-   "price": 9.27,
+   "symbol": "AS",
+   "price": 30.91,
    "setups": [
     "reclaim_ma20"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "KSS",
+   "price": 26.7,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CSGP",
+   "price": 34.02,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "COGT",
+   "price": 36.08,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "SONY",
+   "price": 28.49,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "CAG",
+   "price": 15.67,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "INVH",
+   "price": 27.82,
+   "setups": [
+    "breakout_20d"
+   ],
+   "news": []
+  },
+  {
+   "symbol": "DBX",
+   "price": 37.41,
+   "setups": [
+    "breakout_20d"
    ],
    "news": []
   }
@@ -8090,6 +8120,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-27T13:00:01+00:00",
+   "bot": "jarvis",
+   "text": "Sent the morning brief."
+  },
+  {
+   "t": "2026-11-27T13:00:01+00:00",
+   "bot": "news",
+   "text": "Read 5 headlines and filings for 8 stocks."
+  },
+  {
+   "t": "2026-11-27T13:00:01+00:00",
+   "bot": "scanner",
+   "text": "Scanned the US market: 374 charts matched a setup, 197 fit your $5-$40 price range. Watching the top 30."
+  },
+  {
    "t": "2026-11-27T05:00:00+00:00",
    "bot": "risk",
    "text": "Still holding 1 KSS with the market closed."
@@ -8273,21 +8318,6 @@
    "t": "2026-11-25T15:00:00+00:00",
    "bot": "entry",
    "text": "BZ broke out at $14.07 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-25T15:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on NVDA: not in play (it's up -6.3% on the day, I need 4%; opening volume is 0.7x normal, I need 1.5x)."
-  },
-  {
-   "t": "2026-11-25T15:00:00+00:00",
-   "bot": "entry",
-   "text": "NVDA broke out at $145.62 (10:00 AM)."
-  },
-  {
-   "t": "2026-11-25T15:00:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on QQQ: not in play (it's up -3.1% on the day, I need 4%; opening volume is 1.3x normal, I need 1.5x)."
   }
  ],
  "errors": []

@@ -1,24 +1,24 @@
 {
- "updated_utc": "2026-11-27T11:00:00+00:00",
- "updated_local": "Fri 27 Nov 9:30 PM",
+ "updated_utc": "2026-11-27T11:30:00+00:00",
+ "updated_local": "Fri 27 Nov 10:00 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.93,
+  "equity": 49.86,
   "cash": 22.93,
-  "day_pl": 0.3,
+  "day_pl": 0.23,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.93,
-  "return_usd": -0.07,
-  "return_pct": -0.14,
+  "now": 49.86,
+  "return_usd": -0.14,
+  "return_pct": -0.28,
   "realised": -0.13,
-  "unrealised": 0.36,
+  "unrealised": 0.29,
   "trades": 30,
   "win_rate": 0.433,
   "profit_factor": 0.99,
@@ -27,7 +27,7 @@
   "avg_r": 0.146,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -6.22,
+  "sharpe": -6.36,
   "sharpe_days": 17,
   "fees": 0.0,
   "avg_slip_pct": 0.263,
@@ -247,18 +247,14 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": 0.3,
-  "week_pl": -0.07,
+  "day_pl": 0.23,
+  "week_pl": -0.14,
   "daily_goal": 0.99,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-18T20:10:00+00:00",
-   "eq": 51.88
-  },
   {
    "t": "2026-11-18T20:15:00+00:00",
    "eq": 51.91
@@ -1854,6 +1850,10 @@
   {
    "t": "2026-11-27T09:30:00+00:00",
    "eq": 49.93
+  },
+  {
+   "t": "2026-11-27T11:30:00+00:00",
+   "eq": 49.86
   }
  ],
  "stats": {
@@ -6457,7 +6457,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-27T11:30:00+00:00",
+ "next_checkin_utc": "2026-11-27T12:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7065,8 +7065,8 @@
   {
    "symbol": "KSS",
    "qty": 1.0,
-   "value": 27.0,
-   "pl": 0.36,
+   "value": 26.93,
+   "pl": 0.29,
    "entry": 26.64
   }
  ],
@@ -7077,7 +7077,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-27T11:00:00+00:00"
+   "t": "2026-11-27T11:30:00+00:00"
   },
   {
    "id": "scanner",
@@ -7101,7 +7101,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Trading day ahead: morning brief at 11:30 PM, market opens 1:00 AM (your time).",
-   "t": "2026-11-27T11:00:00+00:00"
+   "t": "2026-11-27T11:30:00+00:00"
   },
   {
    "id": "oracle",

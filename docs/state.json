@@ -1,24 +1,24 @@
 {
- "updated_utc": "2026-11-27T14:00:00+00:00",
- "updated_local": "Sat 28 Nov 12:30 AM",
+ "updated_utc": "2026-11-27T14:05:00+00:00",
+ "updated_local": "Sat 28 Nov 12:35 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.9,
+  "equity": 49.79,
   "cash": 22.93,
-  "day_pl": 0.27,
+  "day_pl": 0.16,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.9,
-  "return_usd": -0.1,
-  "return_pct": -0.2,
+  "now": 49.79,
+  "return_usd": -0.21,
+  "return_pct": -0.42,
   "realised": -0.13,
-  "unrealised": 0.33,
+  "unrealised": 0.22,
   "trades": 30,
   "win_rate": 0.433,
   "profit_factor": 0.99,
@@ -27,7 +27,7 @@
   "avg_r": 0.146,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -6.28,
+  "sharpe": -6.49,
   "sharpe_days": 17,
   "fees": 0.0,
   "avg_slip_pct": 0.263,
@@ -247,18 +247,14 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": 0.27,
-  "week_pl": -0.1,
+  "day_pl": 0.16,
+  "week_pl": -0.21,
   "daily_goal": 0.99,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-18T20:40:00+00:00",
-   "eq": 51.75
-  },
   {
    "t": "2026-11-18T20:45:00+00:00",
    "eq": 51.81
@@ -1854,6 +1850,10 @@
   {
    "t": "2026-11-27T13:40:01+00:00",
    "eq": 49.9
+  },
+  {
+   "t": "2026-11-27T14:05:00+00:00",
+   "eq": 49.79
   }
  ],
  "stats": {
@@ -6457,7 +6457,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-27T14:05:00+00:00",
+ "next_checkin_utc": "2026-11-27T14:10:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -7065,8 +7065,8 @@
   {
    "symbol": "KSS",
    "qty": 1.0,
-   "value": 26.97,
-   "pl": 0.33,
+   "value": 26.86,
+   "pl": 0.22,
    "entry": 26.64
   }
  ],
@@ -7077,7 +7077,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-27T14:00:00+00:00"
+   "t": "2026-11-27T14:05:00+00:00"
   },
   {
    "id": "scanner",
@@ -7101,7 +7101,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "Waiting for the opening bell (1:00 AM your time).",
-   "t": "2026-11-27T14:00:00+00:00"
+   "t": "2026-11-27T14:05:00+00:00"
   },
   {
    "id": "oracle",

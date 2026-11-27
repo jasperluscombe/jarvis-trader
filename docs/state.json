@@ -1,24 +1,24 @@
 {
- "updated_utc": "2026-11-27T17:50:00+00:00",
- "updated_local": "Sat 28 Nov 4:20 AM",
+ "updated_utc": "2026-11-27T17:55:00+00:00",
+ "updated_local": "Sat 28 Nov 4:25 AM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.29,
+  "equity": 49.26,
   "cash": 13.26,
-  "day_pl": -0.34,
+  "day_pl": -0.37,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.29,
-  "return_usd": -0.71,
-  "return_pct": -1.42,
+  "now": 49.26,
+  "return_usd": -0.74,
+  "return_pct": -1.48,
   "realised": -0.13,
-  "unrealised": -0.51,
+  "unrealised": -0.54,
   "trades": 30,
   "win_rate": 0.433,
   "profit_factor": 0.99,
@@ -27,7 +27,7 @@
   "avg_r": 0.146,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -8.03,
+  "sharpe": -8.08,
   "sharpe_days": 16,
   "fees": 0.0,
   "avg_slip_pct": 0.263,
@@ -247,18 +247,14 @@
   "risk_used": 1.35
  },
  "goals": {
-  "day_pl": -0.34,
-  "week_pl": -0.71,
+  "day_pl": -0.37,
+  "week_pl": -0.74,
   "daily_goal": 0.99,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-19T17:20:00+00:00",
-   "eq": 51.3
-  },
   {
    "t": "2026-11-19T17:25:01+00:00",
    "eq": 51.7
@@ -1854,6 +1850,10 @@
   {
    "t": "2026-11-27T17:50:00+00:00",
    "eq": 49.29
+  },
+  {
+   "t": "2026-11-27T17:55:00+00:00",
+   "eq": 49.26
   }
  ],
  "stats": {
@@ -1871,7 +1871,7 @@
  },
  "charts": {
   "date": "2026-11-27",
-  "updated": "2026-11-27T17:50:00+00:00",
+  "updated": "2026-11-27T17:55:00+00:00",
   "symbols": {
    "PAGS": {
     "bars": [
@@ -2156,11 +2156,18 @@
       8.25
      ],
      [
-      1795801797,
-      8.25,
-      8.25,
-      8.25,
+      1795801800,
+      8.24,
+      8.27,
+      8.24,
       8.25
+     ],
+     [
+      1795802134,
+      8.26,
+      8.26,
+      8.26,
+      8.26
      ]
     ],
     "or_high": 8.39,
@@ -2175,6 +2182,14 @@
      }
     ],
     "fills": [
+     {
+      "symbol": "PAGS",
+      "side": "sell",
+      "price": 8.26,
+      "qty": 2.0,
+      "t": "2026-11-27T17:55:31.012363Z",
+      "type": "market"
+     },
      {
       "symbol": "PAGS",
       "side": "buy",
@@ -2463,16 +2478,23 @@
      [
       1795801500,
       9.93,
-      9.95,
+      9.96,
       9.92,
       9.95
      ],
      [
-      1795801792,
+      1795801800,
       9.95,
-      9.95,
-      9.95,
+      9.97,
+      9.94,
       9.95
+     ],
+     [
+      1795802136,
+      9.98,
+      9.98,
+      9.98,
+      9.98
      ]
     ],
     "or_high": 10.07,
@@ -2487,6 +2509,14 @@
      }
     ],
     "fills": [
+     {
+      "symbol": "PAX",
+      "side": "sell",
+      "price": 9.97,
+      "qty": 1.0,
+      "t": "2026-11-27T17:55:36.751299Z",
+      "type": "market"
+     },
      {
       "symbol": "PAX",
       "side": "buy",
@@ -2777,14 +2807,21 @@
       9.6,
       9.6,
       9.55,
-      9.56
+      9.59
      ],
      [
-      1795801792,
-      9.59,
-      9.59,
-      9.59,
-      9.59
+      1795801800,
+      9.58,
+      9.58,
+      9.5,
+      9.53
+     ],
+     [
+      1795802136,
+      9.55,
+      9.55,
+      9.55,
+      9.55
      ]
     ],
     "or_high": 9.53,
@@ -2799,6 +2836,14 @@
      }
     ],
     "fills": [
+     {
+      "symbol": "CMPS",
+      "side": "sell",
+      "price": 9.52,
+      "qty": 1.0,
+      "t": "2026-11-27T17:55:10.772878Z",
+      "type": "market"
+     },
      {
       "symbol": "CMPS",
       "side": "buy",
@@ -3093,10 +3138,17 @@
      ],
      [
       1795801800,
-      645.64,
-      645.64,
-      645.64,
-      645.64
+      645.96,
+      647.71,
+      645.57,
+      647.18
+     ],
+     [
+      1795802137,
+      647.18,
+      647.18,
+      647.18,
+      647.18
      ]
     ],
     "or_high": 645.89,
@@ -3388,10 +3440,17 @@
      ],
      [
       1795801800,
-      725.46,
-      725.46,
-      725.46,
-      725.46
+      725.64,
+      726.97,
+      725.4,
+      726.52
+     ],
+     [
+      1795802136,
+      726.24,
+      726.24,
+      726.24,
+      726.24
      ]
     ],
     "or_high": 726.09,
@@ -3683,10 +3742,17 @@
      ],
      [
       1795801800,
-      398.1,
-      398.1,
-      398.1,
-      398.1
+      398.26,
+      399.26,
+      397.14,
+      398.75
+     ],
+     [
+      1795802137,
+      398.17,
+      398.17,
+      398.17,
+      398.17
      ]
     ],
     "or_high": 395.25,
@@ -3978,10 +4044,17 @@
      ],
      [
       1795801800,
-      148.79,
-      148.79,
-      148.79,
-      148.79
+      148.83,
+      149.51,
+      148.74,
+      149.24
+     ],
+     [
+      1795802138,
+      149.43,
+      149.43,
+      149.43,
+      149.43
      ]
     ],
     "or_high": 151.98,
@@ -4273,10 +4346,17 @@
      ],
      [
       1795801800,
-      358.42,
-      358.42,
-      358.42,
-      358.42
+      358.5,
+      359.0,
+      358.34,
+      358.6
+     ],
+     [
+      1795802138,
+      357.78,
+      357.78,
+      357.78,
+      357.78
      ]
     ],
     "or_high": 358.9,
@@ -4352,7 +4432,7 @@
   }
  ],
  "market_open": true,
- "next_checkin_utc": "2026-11-27T17:55:00+00:00",
+ "next_checkin_utc": "2026-11-27T18:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5175,22 +5255,22 @@
   {
    "symbol": "CMPS",
    "qty": 1.0,
-   "value": 9.59,
-   "pl": 0.0,
+   "value": 9.53,
+   "pl": -0.06,
    "entry": 9.59
   },
   {
    "symbol": "PAGS",
    "qty": 2.0,
-   "value": 16.49,
-   "pl": -0.33,
+   "value": 16.51,
+   "pl": -0.31,
    "entry": 8.41
   },
   {
    "symbol": "PAX",
    "qty": 1.0,
-   "value": 9.95,
-   "pl": -0.18,
+   "value": 9.96,
+   "pl": -0.17,
    "entry": 10.13
   }
  ],
@@ -5201,7 +5281,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-27T17:50:00+00:00"
+   "t": "2026-11-27T17:55:00+00:00"
   },
   {
    "id": "scanner",
@@ -5247,9 +5327,9 @@
    "id": "broker",
    "name": "Trader",
    "role": "Sends approved orders to Alpaca and closes by the bell.",
-   "status": "idle",
-   "text": "Bought 2 PAGS (auto: high confidence).",
-   "t": "2026-11-27T15:30:00+00:00"
+   "status": "working",
+   "text": "Closing anything still open before the bell.",
+   "t": "2026-11-27T17:55:00+00:00"
   }
  ],
  "watchlist": [
@@ -6295,6 +6375,21 @@
  ],
  "events": [
   {
+   "t": "2026-11-27T17:55:00+00:00",
+   "bot": "broker",
+   "text": "Closed 1 PAX before the bell (-$0.17)."
+  },
+  {
+   "t": "2026-11-27T17:55:00+00:00",
+   "bot": "broker",
+   "text": "Sell order for 2 PAGS sent but not filled yet (status partially_filled). I'll check again."
+  },
+  {
+   "t": "2026-11-27T17:55:00+00:00",
+   "bot": "broker",
+   "text": "Closed 1 CMPS before the bell (-$0.06)."
+  },
+  {
    "t": "2026-11-27T15:30:00+00:00",
    "bot": "broker",
    "text": "Bought 2 PAGS (auto: high confidence)."
@@ -6478,21 +6573,6 @@
    "t": "2026-11-27T15:05:00+00:00",
    "bot": "broker",
    "text": "Bought 1 CMPS (auto: medium confidence)."
-  },
-  {
-   "t": "2026-11-27T15:05:00+00:00",
-   "bot": "oracle",
-   "text": "CMPS: target first 0%, stop first 2%, neither 98% (5000 replays). History: 29 fired, 2 won, 10 lost."
-  },
-  {
-   "t": "2026-11-27T15:05:00+00:00",
-   "bot": "entry",
-   "text": "CMPS broke out at $9.59 (10:05 AM)."
-  },
-  {
-   "t": "2026-11-27T15:05:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on JBIO: not in play (it's up 3.6% on the day, I need 4%; opening volume is 0.4x normal, I need 1.5x)."
   }
  ],
  "errors": []

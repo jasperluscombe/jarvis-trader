@@ -1,22 +1,22 @@
 {
- "updated_utc": "2026-11-28T08:00:00+00:00",
- "updated_local": "Sat 28 Nov 6:30 PM",
+ "updated_utc": "2026-11-28T08:30:01+00:00",
+ "updated_local": "Sat 28 Nov 7:00 PM",
  "timezone": "Adelaide",
  "tz": "Australia/Adelaide",
  "mode": "PAPER",
  "paused": false,
  "auto_trade": true,
  "account": {
-  "equity": 49.27,
-  "cash": 49.27,
-  "day_pl": -0.36,
+  "equity": 49.25,
+  "cash": 49.25,
+  "day_pl": 0.0,
   "start": 50.0
  },
  "perf": {
   "start": 50.0,
-  "now": 49.27,
-  "return_usd": -0.73,
-  "return_pct": -1.46,
+  "now": 49.25,
+  "return_usd": -0.75,
+  "return_pct": -1.5,
   "realised": -0.43,
   "unrealised": 0,
   "trades": 34,
@@ -27,7 +27,7 @@
   "avg_r": 0.092,
   "max_dd_pct": -11.43,
   "max_dd_usd": -6.29,
-  "sharpe": -7.78,
+  "sharpe": -7.81,
   "sharpe_days": 17,
   "fees": 0.0,
   "avg_slip_pct": 0.211,
@@ -262,8 +262,8 @@
   ]
  },
  "limits": {
-  "max_loss_per_trade_usd": 1.49,
-  "max_daily_loss_usd": 4.96,
+  "max_loss_per_trade_usd": 1.48,
+  "max_daily_loss_usd": 4.92,
   "max_trades_per_day": 10,
   "min_reward_risk": 1.5,
   "no_entries_before": "09:45",
@@ -275,18 +275,14 @@
   "risk_used": 0
  },
  "goals": {
-  "day_pl": -0.36,
-  "week_pl": -0.73,
-  "daily_goal": 0.99,
+  "day_pl": 0.0,
+  "week_pl": -0.75,
+  "daily_goal": 0.98,
   "weekly_goal": 4.0,
   "day_hit": false,
   "week_hit": false
  },
  "equity_history": [
-  {
-   "t": "2026-11-19T17:45:00+00:00",
-   "eq": 51.62
-  },
   {
    "t": "2026-11-19T17:50:01+00:00",
    "eq": 51.55
@@ -1882,6 +1878,10 @@
   {
    "t": "2026-11-28T06:30:00+00:00",
    "eq": 49.27
+  },
+  {
+   "t": "2026-11-28T08:30:01+00:00",
+   "eq": 49.25
   }
  ],
  "stats": {
@@ -4502,7 +4502,7 @@
   }
  ],
  "market_open": false,
- "next_checkin_utc": "2026-11-28T08:30:00+00:00",
+ "next_checkin_utc": "2026-11-28T09:00:00+00:00",
  "settings": {
   "auto": "ON for high and medium confidence",
   "target": "2R",
@@ -5118,7 +5118,7 @@
    "role": "Your buddy. Messages you, takes your yes.",
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-28T08:00:00+00:00"
+   "t": "2026-11-28T08:30:01+00:00"
   },
   {
    "id": "scanner",
@@ -5142,7 +5142,7 @@
    "role": "Watches each chart for a breakout above the opening range.",
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-28T08:00:00+00:00"
+   "t": "2026-11-28T08:30:01+00:00"
   },
   {
    "id": "oracle",
@@ -5156,9 +5156,9 @@
    "id": "risk",
    "name": "Guard",
    "role": "Sizes the trade to your $ limits and blocks anything over them.",
-   "status": "idle",
-   "text": "Skipped SEDG: one share of SEDG costs $21.17, more than your cash limit (cash $22.93 in trader/portfolio.json minus the $4.96 buffer = $17.97 / 21.17). No order.",
-   "t": "2026-11-27T15:25:00+00:00"
+   "status": "working",
+   "text": "Limits resized to your $49.25 account: $1.48 a trade, $4.92 a day, orders up to $44.33.",
+   "t": "2026-11-28T08:30:01+00:00"
   },
   {
    "id": "broker",
@@ -6224,6 +6224,11 @@
  ],
  "events": [
   {
+   "t": "2026-11-28T08:30:01+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $49.25 account: $1.48 a trade, $4.92 a day, orders up to $44.33."
+  },
+  {
    "t": "2026-11-27T18:00:01+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
@@ -6417,11 +6422,6 @@
    "t": "2026-11-27T15:10:00+00:00",
    "bot": "entry",
    "text": "LPTH broke out at $5.96 (10:10 AM)."
-  },
-  {
-   "t": "2026-11-27T15:10:00+00:00",
-   "bot": "jarvis",
-   "text": "Passed on AVEX: not in play (opening volume is 0.7x normal, I need 1.5x)."
   }
  ],
  "errors": []

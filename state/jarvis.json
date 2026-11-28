@@ -13204,11 +13204,6 @@
   {
    "t": "2026-11-25T20:55:00+00:00",
    "bot": "broker",
-   "text": "Sell order for 1 BZ sent but not filled yet (status pending_new). I'll check again."
-  },
-  {
-   "t": "2026-11-25T20:55:00+00:00",
-   "bot": "broker",
    "text": "Couldn't close KSS: Alpaca DELETE /v2/positions/KSS: HTTP 403 {\"available\":\"0\",\"code\":40310000,\"existing_qty\":\"1\",\"held_for_orders\":\"1\",\"message\":\"insufficient qty available for order (requested: 1, available: 0)\",\"symbol\":\"KSS\"}"
   },
   {
@@ -13600,6 +13595,11 @@
    "t": "2026-11-27T18:00:01+00:00",
    "bot": "jarvis",
    "text": "Sent the day's recap."
+  },
+  {
+   "t": "2026-11-28T08:30:01+00:00",
+   "bot": "risk",
+   "text": "Limits resized to your $49.25 account: $1.48 a trade, $4.92 a day, orders up to $44.33."
   }
  ],
  "trades": [
@@ -14485,7 +14485,7 @@
   "jarvis": {
    "status": "idle",
    "text": "All good. Next check-in in about 5 minutes.",
-   "t": "2026-11-28T08:00:00+00:00"
+   "t": "2026-11-28T08:30:01+00:00"
   },
   "scanner": {
    "status": "working",
@@ -14495,7 +14495,7 @@
   "entry": {
    "status": "idle",
    "text": "No US market today. Resting.",
-   "t": "2026-11-28T08:00:00+00:00"
+   "t": "2026-11-28T08:30:01+00:00"
   },
   "oracle": {
    "status": "working",
@@ -14514,8 +14514,8 @@
   },
   "risk": {
    "status": "working",
-   "text": "Skipped SEDG: one share of SEDG costs $21.17, more than your cash limit (cash $22.93 in trader/portfolio.json minus the $4.96 buffer = $17.97 / 21.17). No order.",
-   "t": "2026-11-27T15:25:00+00:00"
+   "text": "Limits resized to your $49.25 account: $1.48 a trade, $4.92 a day, orders up to $44.33.",
+   "t": "2026-11-28T08:30:01+00:00"
   }
  },
  "seen_day": "2026-11-28",
@@ -14557,10 +14557,6 @@
   "start": 50.0
  },
  "equity_history": [
-  {
-   "t": "2026-11-11T17:40:00+00:00",
-   "eq": 54.81
-  },
   {
    "t": "2026-11-11T17:45:00+00:00",
    "eq": 54.82
@@ -17756,6 +17752,10 @@
   {
    "t": "2026-11-28T06:30:00+00:00",
    "eq": 49.27
+  },
+  {
+   "t": "2026-11-28T08:30:01+00:00",
+   "eq": 49.25
   }
  ],
  "charts": {
